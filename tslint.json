@@ -1,0 +1,20 @@
+{
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "import-name": false,
+    "no-console": false,
+    "jsx-boolean-value": false,
+    "object-literal-sort-keys": false,
+    "object-shorthand-properties-first": false,
+    "jsx-no-lambda": false,
+    "prefer-array-literal": false
+  }
+}

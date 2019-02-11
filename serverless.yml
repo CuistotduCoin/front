@@ -1,0 +1,67 @@
+service: serverless-ssr
+
+plugins:
+  - serverless-offline
+  - serverless-apigw-binary
+  - serverless-sentry
+  - serverless-stage-manager
+
+frameworkVersion: ">=1.21.0 <2.0.0"
+
+custom:
+  stages:
+    - development
+    - staging
+    - production
+  apigwBinary:
+    types:
+      - '*/*'
+  sentry:
+    dsn: ${self:provider.environment.SENTRY_DSN}
+    organization: cuistotducoin
+    project: front
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage,'development'}
+  region: eu-west-1
+  deploymentBucket: ${self:provider.environment.AWS_DEPLOYMENT_BUCKET}
+  endpointType: regional
+  environment:
+    NODE_ENV: ${self:provider.stage}
+    AWS_REGION_IRELAND: ${self:provider.region}
+    AWS_DEPLOYMENT_BUCKET: ${ssm:/cuistot/front/deployment-bucket~true}
+    AWS_USERPOOL_ID: ${ssm:/cuistot/userpool-id~true}
+    AWS_IDENTITY_POOL_ID: ${ssm:/cuistot/identity-pool-id~true}
+    AWS_STORE_BUCKET: ${ssm:/cuistot/store-bucket~true}
+    AWS_APP_CLIENT_ID: ${ssm:/cuistot/app-client-id~true}
+    GRAPHQL_API_URL: ${ssm:/cuistot/front/graphql-api-url~true}
+    GUEST_USERNAME: ${ssm:/cuistot/front/guest-username~true}
+    GUEST_PASSWORD: ${ssm:/cuistot/front/guest-password~true}
+    ALGOLIASEARCH_SEARCH_APP_ID: ${ssm:/cuistot/front/algolia-search-app-id~true}
+    ALGOLIASEARCH_SEARCH_KEY: ${ssm:/cuistot/front/algolia-search-key~true}
+    ALGOLIASEARCH_PLACES_APP_ID: ${ssm:/cuistot/front/algolia-places-app-id~true}
+    ALGOLIASEARCH_PLACES_KEY: ${ssm:/cuistot/front/algolia-places-key~true}
+    SENTRY_DSN: ${ssm:/cuistot/front/sentry-dsn~true}
+    SLS_DEBUG: "*"
+
+package:
+  exclude:
+    - ./**
+  include:
+    - build/**
+
+functions:
+  ssr:
+    timeout: 30
+    handler: build/lambda.handler
+    events:
+      - http:
+          method: get
+          cors: true
+          path: /
+      - http:
+          method: any
+          cors: true
+          path: /{proxy+}
