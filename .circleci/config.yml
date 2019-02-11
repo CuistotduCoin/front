@@ -1,0 +1,74 @@
+version: 2
+jobs:
+  deploy-front-prod:
+    docker:
+      - image: circleci/node:8.10
+    environment:
+      GOPATH: /home/circleci/go
+      AWS_CONFIG_PATH: /home/circleci/.aws
+    steps:
+      - checkout
+      - restore_cache: &restore_front_cache
+          key: dependency-cache-{{ checksum "frontend/yarn.lock" }}
+      - run: *install_assume_role
+      - run: *build_aws_config
+      - run: &install_front_dependencies
+          name: Install dependencies
+          command: |
+            cd frontend
+            sudo npm i -g serverless
+            yarn install
+      - save_cache: &save_front_cache
+          key: dependency-cache-{{ checksum "frontend/yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Build frontend
+          command: |
+            cd frontend
+            yarn build:prod
+      - run:
+          name: Deploy frontend
+          command: |
+            cd frontend
+            yarn deploy:prod
+
+  deploy-front-stage:
+    docker:
+      - image: circleci/node:8.10
+    environment:
+      GOPATH: /home/circleci/go
+      AWS_CONFIG_PATH: /home/circleci/.aws
+    steps:
+      - checkout
+      - restore_cache: *restore_front_cache
+      - run: *install_assume_role
+      - run: *build_aws_config
+      - run: *install_front_dependencies
+      - save_cache: *save_front_cache
+      - run:
+          name: Build frontend
+          command: |
+            cd frontend
+            yarn build:stage
+      - run:
+          name: Deploy frontend
+          command: |
+            cd frontend
+            yarn deploy:stage
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy-front-prod:
+          context: production
+          filters:
+            branches:
+              only:
+                - master
+      - deploy-front-stage:
+          context: staging
+          filters:
+            branches:
+              only: /release-.+/
