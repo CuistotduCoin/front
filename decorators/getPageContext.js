@@ -2,7 +2,7 @@ import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
 import red from '@material-ui/core/colors/red';
 import green from '@material-ui/core/colors/green';
-import theme from './theme'
+import theme from '../decorators/theme'
 
 //https://github.com/mui-org/material-ui/tree/master/examples/nextjs
 

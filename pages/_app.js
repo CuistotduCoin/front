@@ -3,7 +3,7 @@ import App, { Container } from 'next/app';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
-import getPageContext from './getPageContext';
+import getPageContext from '../decorators/getPageContext';
 import ProvidedApp from '../components/App';
 import Raven from 'raven-js'
 import Head from '../components/Head';

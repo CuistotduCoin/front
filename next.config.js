@@ -10,9 +10,6 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const nextConfig = {
   target: 'serverless',
   distDir: 'build',
-  generateBuildId: async () => {
-    return 'cuistot'
-  },
   webpack: (config) => {
 
     config.plugins.push(
