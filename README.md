@@ -16,6 +16,6 @@
     * Uses TypeScript for types with Javascript
     * Uses MaterialUI for Generic Components
     * Uses Formik for form validation
-    * Uses Next for universal server-rendereding
+    * Uses Next for universal server-rendering
     * Uses Apollo, aws-amplify, aws-appsync for providing API calls directly to components.
     * Uses Algolia for search
