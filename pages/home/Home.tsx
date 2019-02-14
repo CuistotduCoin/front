@@ -7,30 +7,15 @@ import Link from "next/link";
 import React from "react";
 import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-import Slider from "react-slick";
 import { compose } from "recompose";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import Gallery from "../../components/Gallery";
 import Layout from "../../components/Layout";
 import MailchimpForm from "../../components/MailchimpForm";
-import StarRating from "../../components/StarRating";
+import TestimonySlider from "../../components/TestimonySlider";
 import { withData } from "../../decorators";
 import { GetWorkshops } from "../../queries";
 
 const styles = (theme: Theme) => ({
-  '@global': {
-    ".slick-prev:before, .slick-next:before": {
-      color: "black"
-    }
-  },
-  block: {
-    height: "100%",
-    overflow: "hidden",
-    position: "relative"
-  },
-  cell: {
-    cursor: "grab"
-  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -43,23 +28,8 @@ const styles = (theme: Theme) => ({
   },
   slider: {
     margin: "0px auto",
-    paddingBottom: 75,
-    width: "calc(100% - 120px)",
-  },
-  sliderImage: {
-    height: 100,
-    width: 100
-  },
-  tile: {
-    alignItems: "center",
-    background: "rgba(0, 0, 0, 0.4)",
-    display: "flex",
-    height: "100%",
-    left: 0,
-    position: "absolute",
-    right: 0,
-    textAlign: "center",
-    top: 0
+    paddingBottom: 30,
+    width: "calc(100% - 100px)",
   },
   typography: {
     marginTop: 15
@@ -76,28 +46,8 @@ export class Home extends React.Component<IHomeProps, {}> {
     const urlMailChimp =
       "https://cuistotducoin.us12.list-manage.com/subscribe/post?u=892dbf9576b5acc9068d06a13&id=5e528d7fa8";
     const { classes } = this.props;
-    const sliderSettings = {
-      dots: true,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 960,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ],
-      slidesToScroll: 3,
-      slidesToShow: 3
-    };
 
-    const participants = [
+    const testimonies = [
       {
         context: "banquet",
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
@@ -146,6 +96,17 @@ export class Home extends React.Component<IHomeProps, {}> {
         name: "Agence Hippocampe",
         rating: 5
       }
+    ];
+
+    const photos = [
+      { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 1, height: 1, caption: "Test", alt: "test" },
+      { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
     ];
 
     return (
@@ -260,12 +221,12 @@ export class Home extends React.Component<IHomeProps, {}> {
             >
               Vous êtes une entreprise
             </Typography>
-            <Typography variant="body1" align="justify">
+            <Typography variant="body1" align="justify" gutterBottom={true}>
               Réunissez vos collaborateurs et partagez des moments conviviaux le temps d’un repas ou à l’occasion d’une journée de travail, rythmée par un atelier de cuisine inspirant et privilégiant la cohésion d’équipe. Nous organisons de A à Z vos événements.
             </Typography>
             <Grid container alignItems="center" justify="center">
               <Link href="/business" passHref>
-                <Button variant="outlined" color="primary">En savoir plus</Button>
+                <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
           </Grid>
@@ -286,12 +247,12 @@ export class Home extends React.Component<IHomeProps, {}> {
             >
               Vous êtes un particulier
             </Typography>
-            <Typography variant="body1" align="justify">
+            <Typography variant="body1" align="justify" gutterBottom={true}>
               Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile. Réunissez-vous autour d’un buffet authentiques en toutes occasions.
             </Typography>
             <Grid container alignItems="center" justify="center">
               <Link href="/individual" passHref>
-                <Button variant="outlined" color="primary">En savoir plus</Button>
+                <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
           </Grid>
@@ -315,21 +276,7 @@ export class Home extends React.Component<IHomeProps, {}> {
           Ils nous font confiance :
         </Typography>
         <div className={classes.slider}>
-          <Slider {...sliderSettings}>
-            {participants.map((participant, index) => (
-              <Grid key={index} className={classes.cell}>
-                <Typography variant="subtitle1">{participant.name}</Typography>
-                <Typography variant="subtitle2">{participant.context}</Typography>
-                <img
-                  src={participant.image}
-                  alt={participant.name}
-                  className={classes.sliderImage}
-                />
-                <Typography variant="body1">{participant.comment}</Typography>
-                <StarRating rating={participant.rating} />
-              </Grid>
-            ))}
-          </Slider>
+          <TestimonySlider testimonies={testimonies} />
         </div>
         <Typography
           variant="h5"
@@ -369,6 +316,7 @@ export class Home extends React.Component<IHomeProps, {}> {
             />
           </Grid>
         </Grid>
+        <Gallery photos={photos} />
       </Layout >
     );
   }

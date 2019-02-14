@@ -4,10 +4,10 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import KitchenIcon from "@material-ui/icons/LocationOn";
 import WorkshopIcon from "@material-ui/icons/RestaurantMenu";
+import { format } from "date-fns";
 import { ErrorMessage, Field } from "formik";
 import { Select } from "formik-material-ui";
 import gql from "graphql-tag";
-import moment from "moment";
 import Router from "next/router";
 import React from "react";
 import { graphql, Query } from "react-apollo";
@@ -54,7 +54,7 @@ const initialValues = {
   duration: '',
   minGourmet: '',
   maxGourmet: '',
-  date: moment().format("YYYY-MM-DD"),
+  date: format("YYYY-MM-DD"),
   kitchenId: '',
   gourmetRange: { min: 4, max: 8 },
 };

@@ -92,10 +92,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Link href="/subscription">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Abonnement</Typography></a>
               </Link>
-              <Link href="/how-it-works#pour-les-gourmets">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Comment ça marche</Typography></a>
-              </Link>
-              <Link href="/testimony">
+              <Link href="/testimony-gourmet">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
               </Link>
               <Link href="/gift">
@@ -116,10 +113,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Cuistots
               </Typography>
-              <Link href="/how-it-works#pour-les-cuistots">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Comment ça marche</Typography></a>
-              </Link>
-              <Link href="/testimony">
+              <Link href="/testimony-cook">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
               </Link>
               <Link href="/become-cook">
@@ -137,10 +131,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Entreprises
               </Typography>
-              <Link href="/how-it-works#pour-les-entreprises">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Comment ça marche</Typography></a>
-              </Link>
-              <Link href="/testimony">
+              <Link href="/testimony-business">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
               </Link>
               <Link href="/invite-business">
@@ -161,13 +152,10 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Partenaires
               </Typography>
-              <Link href="/how-it-works#pour-les-partenaires">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Comment ça marche</Typography></a>
-              </Link>
-              <Link href="/testimony">
+              <Link href="/testimony-partner">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
               </Link>
-              <Link href="/invite-business">
+              <Link href="/become-partner">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Devenir partenaires</Typography></a>
               </Link>
             </Grid>

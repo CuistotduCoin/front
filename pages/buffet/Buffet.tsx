@@ -7,19 +7,11 @@ import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 import React from "react";
-import Slider from "react-slick";
+import Gallery from "../../components/Gallery";
 import Layout from "../../components/Layout";
-import StarRating from "../../components/StarRating";
+import TestimonySlider from "../../components/TestimonySlider";
 
 const styles = (theme: Theme) => ({
-  '@global': {
-    ".slick-prev:before, .slick-next:before": {
-      color: "black"
-    }
-  },
-  cell: {
-    cursor: "grab"
-  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -27,12 +19,8 @@ const styles = (theme: Theme) => ({
   },
   slider: {
     margin: "0px auto",
-    paddingBottom: 75,
-    width: "calc(100% - 120px)",
-  },
-  sliderImage: {
-    height: 100,
-    width: 100
+    paddingBottom: 30,
+    width: "calc(100% - 100px)",
   },
   stepper: {
     backgroundColor: "#fafafa"
@@ -46,28 +34,8 @@ interface IBuffetProps {
 export class Buffet extends React.Component<IBuffetProps, {}> {
   public render() {
     const { classes } = this.props;
-    const sliderSettings = {
-      dots: true,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 960,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ],
-      slidesToScroll: 3,
-      slidesToShow: 3
-    };
 
-    const participants = [
+    const testimonies = [
       {
         context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
         comment: "Très bien !",
@@ -92,6 +60,17 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         name: "Arkea",
         rating: 5
       }
+    ];
+
+    const photos = [
+      { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 1, height: 1, caption: "Test", alt: "test" },
+      { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 1, height: 1 },
+      { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
     ];
 
     return (
@@ -230,22 +209,9 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           Ils nous font confiance :
         </Typography>
         <div className={classes.slider}>
-          <Slider {...sliderSettings}>
-            {participants.map((participant, index) => (
-              <Grid key={index} className={classes.cell}>
-                <Typography variant="subtitle1">{participant.name}</Typography>
-                <Typography variant="subtitle2">{participant.context}</Typography>
-                <img
-                  src={participant.image}
-                  alt={participant.name}
-                  className={classes.sliderImage}
-                />
-                <Typography variant="body1">{participant.comment}</Typography>
-                <StarRating rating={participant.rating} />
-              </Grid>
-            ))}
-          </Slider>
+          <TestimonySlider testimonies={testimonies} />
         </div>
+        <Gallery photos={photos} />
       </Layout >
     );
   }
