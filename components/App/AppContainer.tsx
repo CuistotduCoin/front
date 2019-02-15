@@ -1,5 +1,5 @@
 import { Container } from "unstated";
-import initApollo from '../../pages/initApollo';
+import initApollo from '../../decorators/initApollo';
 import { GetCurrentGourmetImage } from "../../queries";
 import { apolloConfig } from '../../shared/config';
 

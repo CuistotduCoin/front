@@ -5,7 +5,7 @@ import { compose } from "recompose";
 import { Subscribe } from "unstated";
 import { AppContainer } from ".";
 import Snackbar from "../../components/Snackbar";
-import initApollo from '../../pages/initApollo';
+import initApollo from '../../decorators/initApollo';
 import { GetCurrentGourmet, UpdateGourmet } from "../../queries";
 import { apolloConfig } from '../../shared/config';
 
