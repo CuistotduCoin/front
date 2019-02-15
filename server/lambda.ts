@@ -18,12 +18,8 @@ const matches = [
   { route: route("/workshops/:id"), page: "/workshop" },
 ];
 
-// for local development (serverless offline)
-if (!isProduction) {
-  // host the static files
-  app.use("/_next/static", express.static("../static"));
-  app.use("/static", express.static("../static"));
-}
+app.use("/_next/static", express.static(__dirname + "../static"));
+app.use("/static", express.static(__dirname + "../static"));
 
 app.get('/', require('../serverless/pages/index').render);
 app.get('*', (req, res) => {
