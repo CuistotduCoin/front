@@ -1,9 +1,10 @@
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
-import Content from "../../content/mission.mdx";
 import Layout from "../components/Layout";
 import components from "../content/components";
+// @ts-ignore
+import Content from "../content/mission.mdx";
 
 const styles = (theme: Theme) => ({
   grid: {

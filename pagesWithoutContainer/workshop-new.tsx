@@ -4,7 +4,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import KitchenIcon from "@material-ui/icons/LocationOn";
 import WorkshopIcon from "@material-ui/icons/RestaurantMenu";
-import { format } from "date-fns";
 import { ErrorMessage, Field } from "formik";
 import { Select } from "formik-material-ui";
 import gql from "graphql-tag";
@@ -19,6 +18,7 @@ import WizardForm from "../components/WizardForm";
 import WorkshopForm from "../components/WorkshopForm";
 import { withRedirect } from "../decorators";
 import { CreateWorkshop, GetKitchens } from "../queries";
+import { format } from "../shared/date-utils";
 
 const styles = {
     form: {
@@ -54,7 +54,7 @@ const initialValues = {
     duration: '',
     minGourmet: '',
     maxGourmet: '',
-    date: format("YYYY-MM-DD"),
+    date: format,
     kitchenId: '',
     gourmetRange: { min: 4, max: 8 },
 };
@@ -215,7 +215,6 @@ class WorkshopNew extends React.Component<IWorkshopNewProps> {
                                                             <ErrorMessage
                                                                 name="kitchenId"
                                                                 component="div"
-                                                                // @ts-ignore
                                                                 className={classes.error}
                                                             />
                                                         </>

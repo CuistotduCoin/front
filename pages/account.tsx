@@ -1,9 +1,9 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
 import { compose } from "recompose";
-import AccountForm from "../../components/AccountForm";
-import Header from "../../components/Header";
-import { withAuth, withData } from '../../decorators';
+import AccountForm from "../components/AccountForm";
+import Header from "../components/Header";
+import { withAuth, withData } from '../decorators';
 
 const styles = (theme: Theme) => ({
   container: {
