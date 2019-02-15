@@ -12,12 +12,14 @@ import Router from "next/router";
 import React from "react";
 import { graphql, Query } from "react-apollo";
 import { compose } from "recompose";
+import { Subscribe } from "unstated";
 import * as Yup from "yup";
+import { AppContainer } from "../../components/App";
 import Layout from "../../components/Layout";
 import Loading from "../../components/Loading";
 import WizardForm from "../../components/WizardForm";
 import WorkshopForm from "../../components/WorkshopForm";
-import { withRedirect } from "../../decorators";
+import { withAuth, withData, withRedirect } from "../../decorators";
 import { CreateWorkshop, GetKitchens } from "../../queries";
 
 const styles = {
@@ -233,6 +235,26 @@ class WorkshopNew extends React.Component<IWorkshopNewProps> {
     );
   }
 };
+
+// tslint:disable-next-line
+const WorkshopNewContainer: React.SFC<{}> = props => (
+  <Subscribe to={[AppContainer]}>
+    {(app: any) => (
+      <WorkshopNew
+        {...props}
+        openSnackbar={app.openSnackbar}
+        currentGourmet={app.state.currentGourmet}
+      />
+    )}
+  </Subscribe>
+);
+
+const enhance = compose(
+  withData,
+  withAuth,
+);
+
+export default enhance(WorkshopNewContainer);
 
 const enhance = compose(
   withRedirect,
