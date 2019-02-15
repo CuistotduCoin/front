@@ -2,8 +2,8 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import Banner from "../../components/Banner";
-import Layout from "../../components/Layout";
+import Banner from "../components/Banner";
+import Layout from "../components/Layout";
 
 const styles = (theme: Theme) => ({
   card: {

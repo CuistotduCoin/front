@@ -17,7 +17,7 @@ import {
   GoogleMapsLoader
 } from "react-instantsearch-dom-maps";
 import { createInstantSearch } from "react-instantsearch-dom/server";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 
 const { InstantSearch, findResultsState } = createInstantSearch();
 

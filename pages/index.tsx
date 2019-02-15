@@ -8,12 +8,12 @@ import React from "react";
 import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { compose } from "recompose";
-import Gallery from "../../components/Gallery";
-import Layout from "../../components/Layout";
-import MailchimpForm from "../../components/MailchimpForm";
-import TestimonySlider from "../../components/TestimonySlider";
-import { withData } from "../../decorators";
-import { GetWorkshops } from "../../queries";
+import Gallery from "../components/Gallery";
+import Layout from "../components/Layout";
+import MailchimpForm from "../components/MailchimpForm";
+import TestimonySlider from "../components/TestimonySlider";
+import { withData } from "../decorators";
+import { GetWorkshops } from "../queries";
 
 const styles = (theme: Theme) => ({
   grid: {

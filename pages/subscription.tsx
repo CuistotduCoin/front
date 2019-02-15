@@ -8,7 +8,7 @@ import {
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 
 const styles = (theme: Theme) => ({
   card: {

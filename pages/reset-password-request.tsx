@@ -2,8 +2,8 @@ import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Link from "next/link";
 import React from "react";
-import Logo from "../../components/Logo";
-import ResetPasswordRequestForm from "../../components/ResetPasswordRequestForm";
+import Logo from "../components/Logo";
+import ResetPasswordRequestForm from "../components/ResetPasswordRequestForm";
 
 const styles = (theme: Theme) => ({
   container: {

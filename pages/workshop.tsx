@@ -22,18 +22,18 @@ import Scroll from "react-scroll";
 import Slider from "react-slick";
 import Waypoint from "react-waypoint";
 import { compose } from "recompose";
-import BookForm from "../../components/BookForm";
-import CommentBlock from "../../components/CommentBlock";
-import Cover from "../../components/Cover";
-import Layout from "../../components/Layout";
-import Loading from "../../components/Loading";
-import ProfileImage from "../../components/ProfileImage";
-import S3Image from "../../components/S3Image";
-import StarRating from "../../components/StarRating";
-import { withData } from "../../decorators";
-import { GetWorkshop } from "../../queries";
-import { format } from "../../shared/date-utils";
-import { formatName } from "../../shared/util";
+import BookForm from "../components/BookForm";
+import CommentBlock from "../components/CommentBlock";
+import Cover from "../components/Cover";
+import Layout from "../components/Layout";
+import Loading from "../components/Loading";
+import ProfileImage from "../components/ProfileImage";
+import S3Image from "../components/S3Image";
+import StarRating from "../components/StarRating";
+import { withData } from "../decorators";
+import { GetWorkshop } from "../queries";
+import { format } from "../shared/date-utils";
+import { formatName } from "../shared/util";
 
 const styles = (theme: Theme) => ({
   avatar: {

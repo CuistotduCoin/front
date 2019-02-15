@@ -2,9 +2,9 @@ import { withStyles } from "@material-ui/core/styles";
 import { withRouter } from "next/router";
 import React from "react";
 import { compose } from "recompose";
-import Layout from "../../components/Layout";
-import WorkshopEditForm from "../../components/WorkshopEditForm";
-import { withAuth, withData } from '../../decorators';
+import Layout from "../components/Layout";
+import WorkshopEditForm from "../components/WorkshopEditForm";
+import { withAuth, withData } from '../decorators';
 
 const styles = () => ({
   container: {

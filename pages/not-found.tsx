@@ -1,6 +1,6 @@
 import { withStyles } from "@material-ui/core/styles";
-import Layout from "../../components/Layout";
 import React from "react";
+import Layout from "../components/Layout";
 
 const styles = () => ({
   container: {

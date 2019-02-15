@@ -1,8 +1,8 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import AccountConfirmationForm from "../../components/AccountConfirmationForm";
-import Logo from "../../components/Logo";
+import AccountConfirmationForm from "../components/AccountConfirmationForm";
+import Logo from "../components/Logo";
 
 const styles = (theme: Theme) => ({
   container: {

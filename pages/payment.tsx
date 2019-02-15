@@ -7,8 +7,8 @@ import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import Layout from "../../components/Layout";
-import PaymentCardForm from "../../components/PaymentCardForm";
+import Layout from "../components/Layout";
+import PaymentCardForm from "../components/PaymentCardForm";
 
 const styles = (theme: Theme) => ({
   grid: {

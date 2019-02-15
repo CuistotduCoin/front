@@ -4,7 +4,7 @@ import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Link from "next/link";
 import React from "react";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 
 const styles = (theme: Theme) => ({
   grid: {
