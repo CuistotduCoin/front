@@ -109,6 +109,12 @@ MyDocument.getInitialProps = ctx => {
     return WrappedComponent;
   });
 
+  let css;
+  // It might be undefined, e.g. after an error.
+  if (pageContext) {
+    css = pageContext.sheetsRegistry.toString();
+  }
+
   return {
     ...page,
     pageContext,
@@ -118,7 +124,7 @@ MyDocument.getInitialProps = ctx => {
         <style
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
+          dangerouslySetInnerHTML={{ __html: css }}
         />
         {flush() || null}
       </React.Fragment>

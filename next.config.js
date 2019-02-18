@@ -9,7 +9,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 
 const nextConfig = {
-  target: 'serverless',  //TODO: Fix using phase
+  target: 'serverless',
   distDir: 'build',
   generateBuildId: async () => {
     return 'cuistot'
