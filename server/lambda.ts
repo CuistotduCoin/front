@@ -1,10 +1,11 @@
+const awsServerlessExpress = require("aws-serverless-express");
 const compression = require("compression");
 const express = require("express");
-const { parse } = require("url");
-const serverless = require("serverless-http");
+const path = require("path");
 const pathMatch = require("path-match");
-
-const isProduction = process.env.NODE_ENV === "production";
+const raven = require("raven");
+const ravenLambdaWrapper = require("serverless-sentry-lib");
+const { parse } = require("url");
 
 // setup Express and hook up Next.js handler
 const app = express();
@@ -17,9 +18,9 @@ const matches = [
   { route: route("/workshops/new"), page: "/workshop-new" },
   { route: route("/workshops/:id"), page: "/workshop" },
 ];
+const binaryMimeTypes = ['*/*'];
 
-app.use("/_next/static", express.static(__dirname + "../static"));
-app.use("/static", express.static(__dirname + "../static"));
+app.use("/_next/static", express.static(path.join(__dirname, "../static")));
 
 app.get('/', require('../serverless/pages/index').render);
 app.get('*', (req, res) => {
@@ -52,5 +53,9 @@ app.get('*', (req, res) => {
 // 404 handler
 app.get("*", require('../serverless/pages/_error').render);
 
+const server = awsServerlessExpress.createServer(app, null, binaryMimeTypes);
+const lambda = (event, context) => awsServerlessExpress.proxy(server, event, context);
+const ravenHandler = ravenLambdaWrapper.handler(raven, lambda);
+
 // export the wrapped handler for the Lambda runtime
-exports.handler = serverless(app);
+exports.handler = ravenHandler;

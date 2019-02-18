@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import Head from 'next/head';
 import initApollo from '../initApollo';
@@ -15,9 +14,6 @@ export default (appSyncConfig) => {
   return (ComposedComponent) => {
     return class WithData extends React.Component {
       static displayName = `WithData(${getComponentDisplayName(ComposedComponent)})`;
-      static propTypes = {
-        serverState: PropTypes.object.isRequired
-      };
 
       static async getInitialProps(ctx) {
         // Initial serverState with apollo (empty)
