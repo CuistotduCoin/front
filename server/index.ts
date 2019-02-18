@@ -1,19 +1,16 @@
 import { createServer } from "http";
 import * as next from "next";
 import { parse } from "url";
-import config from "../next.config.js"
 
 // tslint:disable-next-line
 const pathMatch = require("path-match");
 // @ts-ignore
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== "production";
-const conf = { ...config, target: 'server' };
-const app = next({ dev, conf });
+const dev = true;
+const app = next({ dev });
 const handle = app.getRequestHandler();
 const route = pathMatch();
 const matches = [
-  { route: route("/"), page: "/home" },
   { route: route("/workshops/:id/edit"), page: "/workshop-edit" },
   { route: route("/workshops/new"), page: "/workshop-new" },
   { route: route("/workshops/:id"), page: "/workshop" },
