@@ -10,10 +10,10 @@
     "create-env:dev": "assume-role development node loadenv",
     "create-env:stage": "assume-role stage node loadenv",
     "create-env:prod": "assume-role production node loadenv",
-    "dev": "env-cmd .env cross-env NODE_ENV=development nodemon server/index.ts",
+    "dev": "env-cmd .env cross-env nodemon server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json",
-    "lambda": "env-cmd .env cross-env EXECUTION_ENV=lambda serverless offline start",
-    "deploy": "env-cmd .env cross-env EXECUTION_ENV=lambda serverless deploy",
+    "lambda": "env-cmd .env cross-env serverless offline start",
+    "deploy": "env-cmd .env cross-env serverless deploy",
     "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
