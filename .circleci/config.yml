@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - restore_cache: &restore_front_cache
-          key: dependency-cache-{{ checksum "frontend/yarn.lock" }}
+          key: dependency-cache-{{ checksum "./yarn.lock" }}
       - run: &install_assume_role
           name: Install assume role tool
           command: |
@@ -33,17 +33,21 @@ jobs:
             sudo npm i -g serverless
             yarn install
       - save_cache: &save_front_cache
-          key: dependency-cache-{{ checksum "frontend/yarn.lock" }}
+          key: dependency-cache-{{ checksum "./yarn.lock" }}
           paths:
             - ./node_modules
       - run:
+          name: Build env
+          command: |
+            yarn create-env:prod
+      - run:
           name: Build frontend
           command: |
-            yarn build:prod
+            yarn build
       - run:
           name: Deploy frontend
           command: |
-            yarn deploy:prod
+            yarn deploy
 
   deploy-front-stage:
     docker:
@@ -59,13 +63,17 @@ jobs:
       - run: *install_front_dependencies
       - save_cache: *save_front_cache
       - run:
+          name: Build env
+          command: |
+            yarn create-env:stage
+      - run:
           name: Build frontend
           command: |
-            yarn build:stage
+            yarn build
       - run:
           name: Deploy frontend
           command: |
-            yarn deploy:stage
+            yarn deploy
 
 workflows:
   version: 2

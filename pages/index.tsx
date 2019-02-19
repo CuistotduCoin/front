@@ -2,7 +2,10 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import HowToReg from "@material-ui/icons/HowToReg";
+import StoreMallDirectory from "@material-ui/icons/StoreMallDirectory";
 import get from "lodash.get";
+import { MathCompass } from 'mdi-material-ui'
 import Link from "next/link";
 import React from "react";
 import { graphql } from "react-apollo";
@@ -12,6 +15,7 @@ import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
 import MailchimpForm from "../components/MailchimpForm";
 import TestimonySlider from "../components/TestimonySlider";
+import ThreeSteps from "../components/ThreeSteps";
 import { withData } from "../decorators";
 import { GetWorkshops } from "../queries";
 
@@ -99,14 +103,20 @@ export class Home extends React.Component<IHomeProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 1, height: 1, caption: "Test", alt: "test" },
-      { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-bresilien.jpg', width: 1, height: 1, caption: "Atelier bresilien", alt: "Atelier bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cocktail.jpg', width: 1, height: 1, caption: "Atelier cocktail", alt: "Atelier cocktail" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-japonais.jpg', width: 1, height: 1, caption: "Atelier japonais", alt: "Atelier japonais" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-monde.jpg', width: 1, height: 1, caption: "Atelier monde", alt: "Atelier monde" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-1.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-2.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-3.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+    ];
+
+    const steps = [
+      { icon: <MathCompass />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
+      { icon: <HowToReg />, title: 'Les meilleurs cuistots', content: "Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux." },
+      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans vos entreprises ou à votre domicile." }
     ];
 
     return (
@@ -137,65 +147,8 @@ export class Home extends React.Component<IHomeProps, {}> {
           spacing={16}
           className={classes.grid}
         >
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Un service sur mesure
-              </Typography>
-              <Typography variant="body1" align="justify">
-                De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Les meilleurs cuistots
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Des lieux adaptés
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans vos entreprises ou à votre domicile.
-              </Typography>
-            </Grid>
-          </Grid>
+          <ThreeSteps steps={steps} />
         </Grid>
-
         <Grid
           container
           justify="space-around"
@@ -221,7 +174,7 @@ export class Home extends React.Component<IHomeProps, {}> {
             >
               Vous êtes une entreprise
             </Typography>
-            <Typography variant="body1" align="justify" gutterBottom={true}>
+            <Typography variant="body1" align="justify" gutterBottom>
               Réunissez vos collaborateurs et partagez des moments conviviaux le temps d’un repas ou à l’occasion d’une journée de travail, rythmée par un atelier de cuisine inspirant et privilégiant la cohésion d’équipe. Nous organisons de A à Z vos événements.
             </Typography>
             <Grid container alignItems="center" justify="center">
@@ -247,7 +200,7 @@ export class Home extends React.Component<IHomeProps, {}> {
             >
               Vous êtes un particulier
             </Typography>
-            <Typography variant="body1" align="justify" gutterBottom={true}>
+            <Typography variant="body1" align="justify" gutterBottom>
               Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile. Réunissez-vous autour d’un buffet authentiques en toutes occasions.
             </Typography>
             <Grid container alignItems="center" justify="center">

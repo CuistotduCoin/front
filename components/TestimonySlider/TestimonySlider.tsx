@@ -68,7 +68,7 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
     return (
       <Slider {...sliderSettings}>
         {testimonies.map((testimony, index) => (
-          <Grid container={true} className={classes.container} key={index} >
+          <Grid container className={classes.container} key={index} >
             <Grid className={classes.cell}>
               <Typography variant="subtitle1">{testimony.name}</Typography>
               <Typography variant="subtitle2">{testimony.context}</Typography>

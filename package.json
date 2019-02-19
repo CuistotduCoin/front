@@ -8,6 +8,7 @@
   },
   "scripts": {
     "create-env:dev": "assume-role development node loadenv",
+    "create-env:stage": "assume-role stage node loadenv",
     "create-env:prod": "assume-role production node loadenv",
     "dev": "env-cmd .env cross-env NODE_ENV=development nodemon server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json",
@@ -100,6 +101,7 @@
     "cross-env": "^5.2.0",
     "dotenv": "^6.2.0",
     "env-cmd": "^8.0.2",
+    "fs": "^0.0.1-security",
     "next-compose-plugins": "^2.1.1",
     "node": "^11.9.0",
     "nodemon": "^1.18.10",

@@ -77,11 +77,11 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       <Layout valueProposition="Concoctez avec nous une expérience culinaire authentique et gourmande pour vos salariés !"
         component={
           <Grid
-            container={true}
+            container
             justify="space-around"
             className={classes.grid}
           >
-            <Grid item={true}>
+            <Grid item>
               <Button
                 variant="contained"
                 color="secondary"
@@ -175,20 +175,20 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           className={classes.grid}
         >
           <Stepper orientation="vertical" className={classes.stepper}>
-            <Step active={true}>
+            <Step active>
               <StepLabel>Faîtes-nous part de vos souhaits</StepLabel>
               <StepContent>
                 <Typography>Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial.
                 Précisez-nous le contexte de ce buffet et le budget alloué à cette prestation.</Typography>
               </StepContent>
             </Step>
-            <Step active={true}>
+            <Step active>
               <StepLabel>Plutôt cuisine du monde ou cuisine terroir ?</StepLabel>
               <StepContent>
                 <Typography>Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !</Typography>
               </StepContent>
             </Step>
-            <Step active={true}>
+            <Step active>
               <StepLabel>Vous êtes tranquille, on s'occupe de tout</StepLabel>
               <StepContent>
                 <Typography>Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots.

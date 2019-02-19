@@ -1,15 +1,16 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Step from '@material-ui/core/Step';
-import StepContent from '@material-ui/core/StepContent';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
+import Mood from "@material-ui/icons/Mood";
+import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
+import MathCompass from "mdi-material-ui/MathCompass";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
+import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -81,15 +82,36 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
     ];
 
+    const steps = [
+      { icon: <Mood />, title: 'Engagement', content: "Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de buffets pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation." },
+      { icon: <MathCompass />, title: 'Sur mesure', content: "Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions." },
+      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous prenons en main l’organisation de ces temps en équipe de A à Z. ne vous souciez de rien et soyez serein ! Vous n’avez plus qu’à préparer vos temps de travail avec vos équipes." }
+    ];
+
+    const stepsFAQ = [
+      {
+        title: 'Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.',
+        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez- nous le contexte de ce buffet et le budget alloué à cette prestation.`
+      },
+      {
+        title: 'Plutôt cuisine du monde ou cuisine terroir ?',
+        content: `Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
+      },
+      {
+        title: `Vous êtes tranquille, on s'occupe de tout`,
+        content: `Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots. Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas. Le jour J, nous assurons la livraison et si besoin la mise en place et le service. Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.`
+      },
+    ];
+
     return (
       <Layout valueProposition="Concoctez avec nous une expérience culinaire authentique et gourmande pour vos salariés !"
         component={
           <Grid
-            container={true}
+            container
             justify="space-around"
             className={classes.grid}
           >
-            <Grid item={true}>
+            <Grid item>
               <Button
                 variant="contained"
                 color="secondary"
@@ -108,63 +130,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           spacing={16}
           className={classes.grid}
         >
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Engagement
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de buffets pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Sur mesure
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Sérénité
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous prenons en main l’organisation de ces temps en équipe de A à Z. ne vous souciez de rien et soyez serein ! Vous n’avez plus qu’à préparer vos temps de travail avec vos équipes.
-              </Typography>
-            </Grid>
-          </Grid>
+          <ThreeSteps steps={steps} />
         </Grid>
         <Typography
           variant="h5"
@@ -182,30 +148,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           spacing={16}
           className={classes.grid}
         >
-          <Stepper orientation="vertical" className={classes.stepper}>
-            <Step active={true}>
-              <StepLabel>Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.</StepLabel>
-              <StepContent>
-                <Typography>Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial.
-                Précisez-nous le contexte de ce buffet et le budget alloué à cette prestation.</Typography>
-              </StepContent>
-            </Step>
-            <Step active={true}>
-              <StepLabel>Plutôt cuisine du monde ou cuisine terroir ?</StepLabel>
-              <StepContent>
-                <Typography>Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !</Typography>
-              </StepContent>
-            </Step>
-            <Step active={true}>
-              <StepLabel>Vous êtes tranquille, on s'occupe de tout</StepLabel>
-              <StepContent>
-                <Typography>Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots.
-                Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas.
-                Le jour J, nous assurons la livraison et si besoin la mise en place et le service.
-                Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.</Typography>
-              </StepContent>
-            </Step>
-          </Stepper>
+          <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Typography
           variant="h5"

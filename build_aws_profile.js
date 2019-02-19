@@ -2,24 +2,20 @@
 
 const fs = require('fs');
 
-let content;
+let content = `\
+[profile default]
+region = eu-west-1
 
-if (process.env.STAGE && process.env.AWS_CROSS_ACCOUNT_ID) {
-  content = [
-    "[profile default]",
-    "region = eu-west-1",
-    "\n",
-    `[profile ${process.env.STAGE}]`,
-    `role_arn = arn:aws:iam::${process.env.AWS_CROSS_ACCOUNT_ID}:role/DeveloperAccess`,
-    "source_profile = default",
-    "region = eu-west-1"
-  ].join("\n");
+[profile ${process.env.STAGE}]
+role_arn = arn:aws:iam::${process.env.AWS_CROSS_ACCOUNT_ID}:role/DeveloperAccess
+source_profile = default
+region = eu-west-1
+`;
 
-  fs.writeFile(`${process.env.AWS_CONFIG_PATH}/config`, content, (err) => {
-    if (err) throw err;
-    console.log('aws config saved...');
-  });
-}
+fs.writeFile(`${process.env.AWS_CONFIG_PATH}/config`, content, (err) => {
+  if (err) throw err;
+  console.log('aws config saved...');
+});
 
 content = `\
 [default]
