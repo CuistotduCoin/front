@@ -93,23 +93,13 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.0.0", "@babel/generator@^7.2.2", "@babel/generator@^7.3.3":
+"@babel/generator@^7.0.0", "@babel/generator@^7.1.2", "@babel/generator@^7.2.2", "@babel/generator@^7.3.3":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.3.3.tgz#185962ade59a52e00ca2bdfcfd1d58e528d4e39e"
   dependencies:
     "@babel/types" "^7.3.3"
     jsesc "^2.5.1"
     lodash "^4.17.11"
-    source-map "^0.5.0"
-    trim-right "^1.0.1"
-
-"@babel/generator@^7.1.2":
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.3.2.tgz#fff31a7b2f2f3dad23ef8e01be45b0d5c2fc0132"
-  dependencies:
-    "@babel/types" "^7.3.2"
-    jsesc "^2.5.1"
-    lodash "^4.17.10"
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
@@ -282,13 +272,9 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.1.3", "@babel/parser@^7.2.2", "@babel/parser@^7.2.3", "@babel/parser@^7.3.3":
+"@babel/parser@^7.1.0", "@babel/parser@^7.1.2", "@babel/parser@^7.1.3", "@babel/parser@^7.2.2", "@babel/parser@^7.2.3", "@babel/parser@^7.3.3":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.3.tgz#092d450db02bdb6ccb1ca8ffd47d8774a91aef87"
-
-"@babel/parser@^7.1.2":
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.2.tgz#95cdeddfc3992a6ca2a1315191c1679ca32c55cd"
 
 "@babel/plugin-proposal-async-generator-functions@^7.1.0", "@babel/plugin-proposal-async-generator-functions@^7.2.0":
   version "7.2.0"
@@ -899,20 +885,12 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
-"@babel/types@^7.0.0", "@babel/types@^7.1.6", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.3.2", "@babel/types@^7.3.3":
+"@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.6", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.3.3":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.3.3.tgz#6c44d1cdac2a7625b624216657d5bc6c107ab436"
   dependencies:
     esutils "^2.0.2"
     lodash "^4.17.11"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.1.2":
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.3.2.tgz#424f5be4be633fff33fb83ab8d67e4a8290f5a2f"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
 "@emotion/cache@^0.8.8":
@@ -6968,9 +6946,9 @@ next-seo@^1.10.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.11.1.tgz#fd17a522b84e3d21c367e5b54e801731c8c1c3ba"
 
-next-server@8.0.2-canary.4:
-  version "8.0.2-canary.4"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.2-canary.4.tgz#7778726a7c1349a57a144e520b0f9a9f85eac1ee"
+next-server@8.0.2-canary.5:
+  version "8.0.2-canary.5"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.2-canary.5.tgz#908292002721135a7ffb2828d99971323605fa94"
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -6985,8 +6963,8 @@ next-tick@1:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
 next@^v8.0.2-canary.4:
-  version "8.0.2-canary.4"
-  resolved "https://registry.yarnpkg.com/next/-/next-8.0.2-canary.4.tgz#2c0fd2003afc469b73b06e3b6a17c022ae44d4e5"
+  version "8.0.2-canary.5"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.2-canary.5.tgz#c4c3a3813d8ee646154321cdf04ac02d3494f62d"
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -7023,7 +7001,7 @@ next@^v8.0.2-canary.4:
     loader-utils "1.1.0"
     mkdirp-then "1.2.0"
     nanoid "1.2.1"
-    next-server "8.0.2-canary.4"
+    next-server "8.0.2-canary.5"
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "4.0.0"
@@ -7132,9 +7110,15 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.0.0-alpha.11, node-releases@^1.1.3:
+node-releases@^1.0.0-alpha.11:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.7.tgz#b09a10394d0ed8f7778f72bb861dde68b146303b"
+  dependencies:
+    semver "^5.3.0"
+
+node-releases@^1.1.3:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.8.tgz#32a63fff63c5e51b7e0f540ac95947d220fc6862"
   dependencies:
     semver "^5.3.0"
 
@@ -7217,8 +7201,8 @@ npm-bundled@^1.0.1:
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
 
 npm-packlist@^1.1.6:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.3.0.tgz#7f01e8e44408341379ca98cfd756e7b29bd2626c"
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.4.0.tgz#b2c0867af2a396e0734343d2b6b3f7934db935f2"
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
@@ -8209,17 +8193,13 @@ react-is@16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
 
-react-is@^16.3.2:
-  version "16.8.1"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.1.tgz#a80141e246eb894824fb4f2901c0c50ef31d4cdb"
+react-is@^16.3.2, react-is@^16.8.1:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
 
 react-is@^16.6.3, react-is@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
-
-react-is@^16.8.1:
-  version "16.8.2"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
 
 react-jss@^8.6.1:
   version "8.6.1"

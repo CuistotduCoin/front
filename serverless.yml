@@ -17,7 +17,7 @@ custom:
     types:
       - '*/*'
   sentry:
-    dsn: ${self:provider.environment.SENTRY_DSN}
+    dsn: ${env:SENTRY_DSN}
     organization: cuistotducoin
     project: front
 
@@ -26,24 +26,24 @@ provider:
   runtime: nodejs8.10
   stage: ${opt:stage,'development'}
   region: eu-west-1
-  deploymentBucket: ${self:provider.environment.AWS_DEPLOYMENT_BUCKET}
+  deploymentBucket: ${env:AWS_DEPLOYMENT_BUCKET}
   endpointType: regional
   environment:
-    AWS_DOMAIN: ${ssm:/cuistot/front/domain~true}
-    AWS_REGION_IRELAND: ${self:provider.region}
-    AWS_DEPLOYMENT_BUCKET: ${ssm:/cuistot/front/deployment-bucket~true}
-    AWS_USERPOOL_ID: ${ssm:/cuistot/userpool-id~true}
-    AWS_IDENTITY_POOL_ID: ${ssm:/cuistot/identity-pool-id~true}
-    AWS_STORE_BUCKET: ${ssm:/cuistot/store-bucket~true}
-    AWS_APP_CLIENT_ID: ${ssm:/cuistot/app-client-id~true}
-    GRAPHQL_API_URL: ${ssm:/cuistot/front/graphql-api-url~true}
-    GUEST_USERNAME: ${ssm:/cuistot/front/guest-username~true}
-    GUEST_PASSWORD: ${ssm:/cuistot/front/guest-password~true}
-    ALGOLIASEARCH_SEARCH_APP_ID: ${ssm:/cuistot/front/algolia-search-app-id~true}
-    ALGOLIASEARCH_SEARCH_KEY: ${ssm:/cuistot/front/algolia-search-key~true}
-    ALGOLIASEARCH_PLACES_APP_ID: ${ssm:/cuistot/front/algolia-places-app-id~true}
-    ALGOLIASEARCH_PLACES_KEY: ${ssm:/cuistot/front/algolia-places-key~true}
-    SENTRY_DSN: ${ssm:/cuistot/front/sentry-dsn~true}
+    AWS_DOMAIN: ${env:AWS_DOMAIN}
+    AWS_REGION_IRELAND: ${env:AWS_REGION_IRELAND}
+    AWS_DEPLOYMENT_BUCKET: ${env:AWS_DEPLOYMENT_BUCKET}
+    AWS_USERPOOL_ID: ${env:AWS_USERPOOL_ID}
+    AWS_IDENTITY_POOL_ID: ${env:AWS_IDENTITY_POOL_ID}
+    AWS_STORE_BUCKET: ${env:AWS_STORE_BUCKET}
+    AWS_APP_CLIENT_ID: ${env:AWS_APP_CLIENT_ID}
+    GRAPHQL_API_URL: ${env:GRAPHQL_API_URL}
+    GUEST_USERNAME: ${env:GUEST_USERNAME}
+    GUEST_PASSWORD: ${env:GUEST_PASSWORD}
+    ALGOLIASEARCH_SEARCH_APP_ID: ${env:ALGOLIASEARCH_SEARCH_APP_ID}
+    ALGOLIASEARCH_SEARCH_KEY: ${env:ALGOLIASEARCH_SEARCH_KEY}
+    ALGOLIASEARCH_PLACES_APP_ID: ${env:ALGOLIASEARCH_PLACES_APP_ID}
+    ALGOLIASEARCH_PLACES_KEY: ${env:ALGOLIASEARCH_PLACES_KEY}
+    SENTRY_DSN: ${env:SENTRY_DSN}
     SLS_DEBUG: "*"
 
 package:
