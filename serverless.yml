@@ -24,7 +24,7 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage, 'development'}
+  stage: ${opt:stage,'development'}
   region: eu-west-1
   deploymentBucket: ${self:provider.environment.AWS_DEPLOYMENT_BUCKET}
   endpointType: regional
