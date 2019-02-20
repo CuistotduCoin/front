@@ -115,7 +115,6 @@
     "serverless-offline": "^4.4.0",
     "serverless-sentry": "^1.2.0",
     "serverless-sentry-lib": "^1.1.2",
-    "serverless-stage-manager": "^1.0.5",
     "sw-precache-webpack-plugin": "^0.11.5",
     "ts-jest": "^23.10.5",
     "ts-loader": "^5.3.3",

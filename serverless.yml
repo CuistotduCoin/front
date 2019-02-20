@@ -4,7 +4,6 @@ plugins:
   - serverless-offline
   - serverless-apigw-binary
   - serverless-sentry
-  - serverless-stage-manager
 
 frameworkVersion: ">=1.21.0 <2.0.0"
 
