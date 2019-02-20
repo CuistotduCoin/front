@@ -16,7 +16,7 @@ const styles = (theme: Theme) => ({
   cell: {
     backgroundColor: "white",
     border: "1px solid rgba(0,0,0,0.1)",
-    borderRadius: 8,
+    borderRadius: theme.shape.borderRadius * 2,
     cursor: "grab",
     padding: 20
   },

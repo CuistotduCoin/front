@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   image: {
     height: "100%",
@@ -79,8 +79,8 @@ export class Business extends React.Component<IBusinessProps, {}> {
             <Grid container justify="center">
               <img
                 className={classes.image}
-                alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/passez-a-table.jpg"
+                alt="Organisez un atelier Cuistot du Coin"
+                src="https://static.cuistotducoin.com/img/business/organisez-un-atelier.jpg"
               />
             </Grid>
           </Grid>
@@ -96,8 +96,8 @@ export class Business extends React.Component<IBusinessProps, {}> {
             <Grid container justify="center">
               <img
                 className={classes.image}
-                alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/organisez.jpg"
+                alt="Organisez un buffet Cuistot du Coin"
+                src="https://static.cuistotducoin.com/img/business/organisez-un-buffet.jpg"
               />
             </Grid>
           </Grid>
@@ -149,8 +149,8 @@ export class Business extends React.Component<IBusinessProps, {}> {
             <Grid container justify="center">
               <img
                 className={classes.image}
-                alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/passez-a-table.jpg"
+                alt="Organisez votre journée entière"
+                src="https://static.cuistotducoin.com/img/business/organisez-une-journee-entiere.jpg"
               />
             </Grid>
           </Grid>
@@ -165,8 +165,8 @@ export class Business extends React.Component<IBusinessProps, {}> {
               <Grid container justify="center">
                 <img
                   className={classes.image}
-                  alt="Atelier Cuistot du Coin"
-                  src="https://static.cuistotducoin.com/img/business/organisez.jpg"
+                  alt="Activité Comité d'entreprise"
+                  src="https://static.cuistotducoin.com/img/business/activite-comite-entreprise.jpg"
                 />
               </Grid>
             </Grid>
@@ -184,7 +184,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
             </Typography>
               <Grid container alignItems="center" justify="center">
                 <Link href="/works-council" passHref>
-                  <Button variant="outlined" color="secondary">En savoir plus</Button>
+                  <Button variant="contained" color="secondary">En savoir plus</Button>
                 </Link>
               </Grid>
             </Grid>

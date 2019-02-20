@@ -1,17 +1,17 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/core/styles";
+import { Theme, withStyles } from "@material-ui/core/styles";
 import { Formik } from "formik";
 import isEmpty from 'lodash.isempty';
 import React from "react";
 import { compose } from "recompose";
 import ProgressBar from "../../components/ProgressBar";
 
-const styles = {
+const styles = (theme: Theme) => ({
   form: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: 24,
+    padding: theme.spacing.unit * 3,
     paddingTop: 0,
     minHeight: 300
   },

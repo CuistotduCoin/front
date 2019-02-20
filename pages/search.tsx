@@ -33,7 +33,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   map: {
     height: 500

@@ -16,15 +16,12 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
     width: "calc(100% - 100px)",
-  },
-  stepper: {
-    backgroundColor: "#fafafa"
   }
 });
 
@@ -35,6 +32,27 @@ interface IBuffetProps {
 export class Buffet extends React.Component<IBuffetProps, {}> {
   public render() {
     const { classes } = this.props;
+
+    const steps = [
+      { icon: <Mood />, title: 'Engagement', content: "Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de buffets pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation." },
+      { icon: <MathCompass />, title: 'Sur mesure', content: "Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions." },
+      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous prenons en main l’organisation de ces temps en équipe de A à Z. ne vous souciez de rien et soyez serein ! Vous n’avez plus qu’à préparer vos temps de travail avec vos équipes." }
+    ];
+
+    const stepsFAQ = [
+      {
+        title: 'Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.',
+        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez- nous le contexte de ce buffet et le budget alloué à cette prestation.`
+      },
+      {
+        title: 'Plutôt cuisine du monde ou cuisine terroir ?',
+        content: `Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
+      },
+      {
+        title: `Vous êtes tranquille, on s'occupe de tout`,
+        content: `Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots. Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas. Le jour J, nous assurons la livraison et si besoin la mise en place et le service. Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.`
+      },
+    ];
 
     const testimonies = [
       {
@@ -72,35 +90,10 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 1, height: 1, caption: "Test", alt: "test" },
-      { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
-    ];
-
-    const steps = [
-      { icon: <Mood />, title: 'Engagement', content: "Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de buffets pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation." },
-      { icon: <MathCompass />, title: 'Sur mesure', content: "Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions." },
-      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous prenons en main l’organisation de ces temps en équipe de A à Z. ne vous souciez de rien et soyez serein ! Vous n’avez plus qu’à préparer vos temps de travail avec vos équipes." }
-    ];
-
-    const stepsFAQ = [
-      {
-        title: 'Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.',
-        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez- nous le contexte de ce buffet et le budget alloué à cette prestation.`
-      },
-      {
-        title: 'Plutôt cuisine du monde ou cuisine terroir ?',
-        content: `Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
-      },
-      {
-        title: `Vous êtes tranquille, on s'occupe de tout`,
-        content: `Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots. Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas. Le jour J, nous assurons la livraison et si besoin la mise en place et le service. Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.`
-      },
+      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/atelier-entreprise.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/atelier-et-travail.jpg', width: 1, height: 1, caption: "Atelier suivi d'une location d'une salle de réunion", alt: "Atelier et travail" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/galerie.jpg', width: 1, height: 1, caption: "Atelier dans une gallerie", alt: "Atelier gallerie" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/presentation-entreprise.jpg', width: 1, height: 1, caption: "Présentation d'entreprise après un atelier", alt: "Présentation entreprise" },
     ];
 
     return (
@@ -127,7 +120,6 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="flex-start"
-          spacing={16}
           className={classes.grid}
         >
           <ThreeSteps steps={steps} />
@@ -137,7 +129,6 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           align="center"
           component="h2"
           gutterBottom
-          className={classes.typography}
         >
           Comment ça marche
         </Typography>
@@ -145,7 +136,6 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
           className={classes.grid}
         >
           <StaticSteper steps={stepsFAQ} />
@@ -155,7 +145,6 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           align="center"
           component="h2"
           gutterBottom
-          className={classes.typography}
         >
           Ils nous font confiance :
         </Typography>

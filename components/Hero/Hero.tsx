@@ -1,9 +1,9 @@
 import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/core/styles";
+import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 
-const styles = () => ({
+const styles = (theme: Theme) => ({
   backgroundImage: {
     bottom: 0,
     left: "50%",
@@ -23,7 +23,7 @@ const styles = () => ({
   gridSearchForm: {
     margin: "0px auto",
     maxWidth: 500,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   home: {
     color: "#fff",

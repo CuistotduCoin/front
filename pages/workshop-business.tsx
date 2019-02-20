@@ -1,20 +1,22 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Step from '@material-ui/core/Step';
-import StepContent from '@material-ui/core/StepContent';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
+import Mood from "@material-ui/icons/Mood";
+import ArrowDecision from "mdi-material-ui/ArrowDecision";
+import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
+import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
+import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   slider: {
     margin: "0px auto",
@@ -31,12 +33,37 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
   public render() {
     const { classes } = this.props;
 
+    const steps = [
+      { icon: <Mood />, title: 'Cohésion', content: "Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations." },
+      { icon: <ArrowDecision />, title: 'Diversité', content: "Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe." },
+      { icon: <EmoticonCool />, title: 'Sérénité', content: "L’atelier est organisé de A à Z par nos soins. Vous n’avez à vous souciez de rien. Au sein de votre entreprise ou dans l’un de nos lieux partenaires, nous prévoyons tous les ingrédients et le matériel nécessaire. Enfilez un véritable tablier coloré et passez aux fourneaux avec votre équipe. Conservez un souvenir de l’atelier avec notre sélection de photos prises lors de l’atelier." }
+    ];
+
+    const stepsFAQ = [
+      {
+        title: `Partagez-nous vos attentes`,
+        content: `Faîtes-nous part du contexte dans lequel vous souhaitez organiser cet atelier en rendez-vous ou lors d’un échange téléphonique. `
+      },
+      {
+        title: `Nous nous chargeons de l’organisation de l’atelier de A à Z.`,
+        content: `Nous vous transmettons une proposition de devis adaptée, en fonction de vos impératifs et selon la disponibilité de nos cuistots et de nos lieux partenaires. Nous restons à votre écoute pour personnaliser nos proposition et répondre au plus près à vos attentes.`
+      },
+      {
+        title: `Participez à une activité fédératrice`,
+        content: `Enfilez le tablier avec votre équipe et participez à une activité collaborative. Le challenge de votre équipe réside dans la bonne réalisation de recettes authentiques et savoureuses. découvrez de nouvelles saveurs, impliquez-vous aux fourneaux dans une ambiance propice aux échanges et au partage.`
+      },
+      {
+        title: `Après l’effort, le réconfort !`,
+        content: `Dégustez vos préparations en fin d’atelier autour d’un buffet ou d’un repas convivial. Chaque gourmet repart avec son livret de recettes. Et pourquoi ne pas leur offrir le tablier ? Nous récoltons votre avis en fin d’atelier et vous transmettons une sélection de photos.`
+      },
+    ];
+
     const testimonies = [
       {
         context: "Atelier pour une équipe de 25 collaborateurs",
         comment: "Grand merci pour votre prestation. Les retours sont top et correspondent vraiment aux attentes de mon associé et moi même, bravo.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
+          "https://static.cuistotducoin.com/img/testimony/bourhis.jpg",
         name: "Cabinet Bourhis",
         rating: 5
       },
@@ -44,7 +71,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Atelier pour une équipe de 70 collaborateurs",
         comment: "Génial ! Merci pour cette prestation.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
+          "https://static.cuistotducoin.com/img/testimony/apside.jpg",
         name: "Apside",
         rating: 5
       },
@@ -52,7 +79,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Atelier pour une équipe de 15 collaborateurs",
         comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où se sent vite très bien. Merci pour cette respiration.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
         name: "CM Arkea",
         rating: 5
       },
@@ -60,7 +87,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Atelier pour une équipe de 15 collaborateurss",
         comment: "Lieu magnifique, prestation au top. Tout était parfait : l'atelier, l'animation, l'organisation ainsi que le lieu.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
+          "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
         name: "Lidl",
         rating: 5
       },
@@ -68,7 +95,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "atelier pour les membres du CA",
         comment: "Super, moment de détente, très professionnel, de superbes astuces …",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
+          "https://static.cuistotducoin.com/img/testimony/cpme.jpg",
         name: "CPME 29",
         rating: 5
       },
@@ -76,10 +103,17 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Atelier pour une équipe de 17 collaborateurss",
         comment: `L'équipe BeAble et moi-même avons passé un excellent moment. Des "profs" de qualités et à notre écoute. En prime, la dégustation a eu un franc succès et s'est avérée très copieuse. Merci à l'équipe Cuistot du coin pour ce bon moment.`,
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/beable.jpg",
         name: "Be Able",
         rating: 5
       }
+    ];
+
+    const photos = [
+      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/ananas-flambe.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-et-repas.jpg', width: 1, height: 1, caption: "Atelier suivi d'une repas convivial", alt: "Atelier et repas" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-fraisier.jpg', width: 1, height: 1, caption: "Atelier patisserie : Fraisier", alt: "Atelier fraisier" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-pasta.jpg', width: 1, height: 1, caption: "Atelier pasta", alt: "Atelier pasta" },
     ];
 
     return (
@@ -106,73 +140,15 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="flex-start"
-          spacing={16}
           className={classes.grid}
         >
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Cohésion
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Diversité
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Sérénité
-              </Typography>
-              <Typography variant="body1" align="justify">
-                L’atelier est organisé de A à Z par nos soins. Vous n’avez à vous souciez de rien. Au sein de votre entreprise ou dans l’un de nos lieux partenaires, nous prévoyons tous les ingrédients et le matériel nécessaire. Enfilez un véritable tablier coloré et passez aux fourneaux avec votre équipe. Conservez un souvenir de l’atelier avec notre sélection de photos prises lors de l’atelier.
-              </Typography>
-            </Grid>
-          </Grid>
+          <ThreeSteps steps={steps} />
         </Grid>
         <Typography
           variant="h5"
           align="center"
           component="h2"
           gutterBottom
-          className={classes.typography}
         >
           Comment ça marche
         </Typography>
@@ -180,46 +156,22 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
           className={classes.grid}
         >
-          <Stepper orientation="vertical" className={classes.stepper}>
-            <Step active>
-              <StepLabel>Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.</StepLabel>
-              <StepContent>
-                <Typography>Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial.
-                Précisez-nous le contexte de ce buffet et le budget alloué à cette prestation.</Typography>
-              </StepContent>
-            </Step>
-            <Step active>
-              <StepLabel>Plutôt cuisine du monde ou cuisine terroir ?</StepLabel>
-              <StepContent>
-                <Typography>Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !</Typography>
-              </StepContent>
-            </Step>
-            <Step active>
-              <StepLabel>Vous êtes tranquille, on s'occupe de tout</StepLabel>
-              <StepContent>
-                <Typography>Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots.
-                Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas.
-                Le jour J, nous assurons la livraison et si besoin la mise en place et le service.
-                Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.</Typography>
-              </StepContent>
-            </Step>
-          </Stepper>
+          <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Typography
           variant="h5"
           align="center"
           component="h2"
           gutterBottom
-          className={classes.typography}
         >
           Ils nous font confiance :
         </Typography>
         <div className={classes.slider}>
           <TestimonySlider testimonies={testimonies} />
         </div>
+        <Gallery photos={photos} />
       </Layout >
     );
   }

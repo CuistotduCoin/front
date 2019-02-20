@@ -23,7 +23,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: 24
+    padding: theme.spacing.unit * 3
   },
   image: {
     height: "100%",
@@ -47,9 +47,13 @@ interface IHomeProps {
 
 export class Home extends React.Component<IHomeProps, {}> {
   public render() {
-    const urlMailChimp =
-      "https://cuistotducoin.us12.list-manage.com/subscribe/post?u=892dbf9576b5acc9068d06a13&id=5e528d7fa8";
     const { classes } = this.props;
+
+    const steps = [
+      { icon: <MathCompass />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
+      { icon: <HowToReg />, title: 'Les meilleurs cuistots', content: "Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux." },
+      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans vos entreprises ou à votre domicile." }
+    ];
 
     const testimonies = [
       {
@@ -102,21 +106,18 @@ export class Home extends React.Component<IHomeProps, {}> {
       }
     ];
 
+    const urlMailChimp =
+      "https://cuistotducoin.us12.list-manage.com/subscribe/post?u=892dbf9576b5acc9068d06a13&id=5e528d7fa8";
+
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-bresilien.jpg', width: 1, height: 1, caption: "Atelier bresilien", alt: "Atelier bresilien" },
       { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cocktail.jpg', width: 1, height: 1, caption: "Atelier cocktail", alt: "Atelier cocktail" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-3.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-1.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
       { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-japonais.jpg', width: 1, height: 1, caption: "Atelier japonais", alt: "Atelier japonais" },
       { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-monde.jpg', width: 1, height: 1, caption: "Atelier monde", alt: "Atelier monde" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-1.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cocktail.jpg', width: 1, height: 1, caption: "Atelier cocktail", alt: "Atelier cocktail" },
       { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-2.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/index/buffet-bresilien-3.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
-    ];
-
-    const steps = [
-      { icon: <MathCompass />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
-      { icon: <HowToReg />, title: 'Les meilleurs cuistots', content: "Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux." },
-      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans vos entreprises ou à votre domicile." }
+      { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-bresilien.jpg', width: 1, height: 1, caption: "Atelier bresilien", alt: "Atelier bresilien" },
     ];
 
     return (
@@ -161,7 +162,7 @@ export class Home extends React.Component<IHomeProps, {}> {
               <img
                 className={classes.image}
                 alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/organisez.jpg"
+                src="https://static.cuistotducoin.com/img/home/entreprise.jpg"
               />
             </Grid>
           </Grid>
@@ -214,7 +215,7 @@ export class Home extends React.Component<IHomeProps, {}> {
               <img
                 className={classes.image}
                 alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/passez-a-table.jpg"
+                src="https://static.cuistotducoin.com/img/home/particuliers.jpg"
               />
             </Grid>
           </Grid>

@@ -16,7 +16,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: 24,
+    padding: theme.spacing.unit * 3,
     paddingTop: 0
   },
   textField: {
