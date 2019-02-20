@@ -63,7 +63,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
         comment: "Très bien !",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
+          "https://static.cuistotducoin.com/img/testimony/cedre.jpg",
         name: "Cedre",
         rating: 5
       },
@@ -71,7 +71,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
         comment: "Très bonnes saveurs. Cuisine de qualité.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
+          "https://static.cuistotducoin.com/img/testimony/seimi.jpg",
         name: "Seimi",
         rating: 5
       },
@@ -79,7 +79,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Buffet aux couleurs de la cuisine brésilienne pour 15 collaborateurs",
         comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où on se sent vite très bien. Merci pour cette respiration",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
         name: "Arkea",
         rating: 5
       }

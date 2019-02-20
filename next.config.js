@@ -33,6 +33,10 @@ const nextConfig = {
       new webpack.EnvironmentPlugin(process.env)
     )
 
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop')
+    )
+
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
       use: {

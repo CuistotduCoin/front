@@ -183,7 +183,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
                 Nous construisons à vos côtés un programme d’ateliers de cuisine privatisés dans nos lieux partenaires pour vos salariés. Les ateliers proposés sont accessibles à tous, amateurs ou passionnés avertis. Nos formats d’ateliers et la diversité des univers culinaires de nos cuistots permettront de satisfaire le plus grand nombre, tout en garantissant des moments conviviaux.
             </Typography>
               <Grid container alignItems="center" justify="center">
-                <Link href="/works-council" passHref>
+                <Link href="/work-council" passHref>
                   <Button variant="contained" color="secondary">En savoir plus</Button>
                 </Link>
               </Grid>

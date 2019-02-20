@@ -1,5 +1,5 @@
 import { AWSAppSyncClient } from "aws-appsync";
-import fetch from "node-fetch";
+import fetch from "cross-fetch";
 
 // https://github.com/dabit3/next-apollo-appsync
 let apolloClient = null;
@@ -14,8 +14,8 @@ function create(initialState, appsyncConfig) {
     ...appsyncConfig,
     disableOffline: true
   }, {
-    ssrMode: true
-  });
+      ssrMode: true
+    });
 
   if (initialState) {
     client.cache.restore(initialState);

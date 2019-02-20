@@ -41,49 +41,49 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
 
     const stepsFAQ = [
       {
-        title: 'Faîtes-nous part de vos attentes en rendez-vous ou lors d’un échange téléphonique.',
-        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez- nous le contexte de ce buffet et le budget alloué à cette prestation.`
+        title: 'Faîtes-nous part de vos attentes !',
+        content: `Faîtes-nous part du contexte dans lequel vous souhaitez réunir vos collaborateurs et de certains éléments opérationnels : nombre d epersonnes, date, besoins techniques éventuels, contraintes horaires, ..; Echangeons de vives voix par téléphone. Nous pouvons aussi venir à votre rencontre si vous le souhaitez.`
       },
       {
-        title: 'Plutôt cuisine du monde ou cuisine terroir ?',
-        content: `Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
+        title: 'Nous assurons l’organisation de A à Z',
+        content: `Une fois vos besoins identifiés, nous vous faisons parvenir une proposition de devis, selon la disponibilité de nos lieux partenaires et de nos cuistots. Présents sur chaque étapes de votre projet, nous vous apportons toute la sérénité nécessaire pour vous permettre de vous concentrer sur la préparation de vos réunions.`
       },
       {
-        title: `Vous êtes tranquille, on s'occupe de tout`,
-        content: `Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots. Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas. Le jour J, nous assurons la livraison et si besoin la mise en place et le service. Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.`
+        title: `Nous réunissons les meilleurs prestataires autour de votre projet`,
+        content: `Ces événements sont sur mesure pour répondre au mieux à vos attentes : proposition d’un lieu adapté, original et chaleureux, sélection de cuistots passionnés pour éveiller vos papilles du café d’accueil au déjeuner, en passant par le goûter ou le cocktail dinatoire, collaboration avec des partenaires locaux.`
       },
     ];
 
     const testimonies = [
       {
-        context: "Atelier pour une équipe de 25 collaborateurs",
+        context: "Atelier et workshop pour une équipe de 25 collaborateurs",
         comment: "Grand merci pour votre prestation. Les retours sont top et correspondent vraiment aux attentes de mon associé et moi même, bravo.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
+          "https://static.cuistotducoin.com/img/testimony/bourhis.jpg",
         name: "Cabinet Bourhis",
         rating: 5
       },
       {
-        context: "Atelier pour une équipe de 70 collaborateurs",
+        context: "Atelier et présentation pour une équipe de 70 collaborateurs",
         comment: "Génial ! Merci pour cette prestation.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
+          "https://static.cuistotducoin.com/img/testimony/apside.jpg",
         name: "Apside",
         rating: 5
       },
       {
-        context: "Atelier pour une équipe de 15 collaborateurs",
+        context: "Atelier, repas, location et séance de travail pour une équipe de 15 collaborateurs",
         comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où se sent vite très bien. Merci pour cette respiration.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
         name: "CM Arkea",
         rating: 5
       },
       {
-        context: "Atelier pour une équipe de 15 collaborateurss",
+        context: "Atelier, repas, location et réunion pour une équipe de 15 collaborateurs",
         comment: "Lieu magnifique, prestation au top. Tout était parfait : l'atelier, l'animation, l'organisation ainsi que le lieu.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
+          "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
         name: "Lidl",
         rating: 5
       }

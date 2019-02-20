@@ -18,7 +18,7 @@ const styles = (theme: Theme) => ({
   buttons: {
     marginTop: '30px'
   }
-};
+});
 
 interface IWizardFormProps {
   classes?: any;
