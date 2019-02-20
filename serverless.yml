@@ -24,7 +24,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: ${opt:stage,'development'}
-  region: eu-west-1
+  region: ${env:AWS_REGION_IRELAND}
   deploymentBucket: ${env:AWS_DEPLOYMENT_BUCKET}
   endpointType: regional
   environment:
