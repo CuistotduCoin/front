@@ -57,53 +57,54 @@ export class Home extends React.Component<IHomeProps, {}> {
 
     const testimonies = [
       {
-        context: "banquet",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        context: "Buffet aux couleurs de la cuisine brésilienne pour 15 collaborateurs",
+        comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où on se sent vite très bien. Merci pour cette respiration",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
         name: "Arkea",
         rating: 5
       },
       {
-        context: "test",
-        comment: "Lorem ipsum dolor sit amet",
+        context: "Atelier, repas, location et réunion pour une équipe de 15 collaborateurs",
+        comment: "Lieu magnifique, prestation au top. Tout était parfait : l'atelier, l'animation, l'organisation ainsi que le lieu.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
-        name: "Brest metropole et ville",
+          "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
+        name: "Lidl",
         rating: 5
       },
       {
-        context: "test 3",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        context: "Atelier pour une équipe de 25 collaborateurs",
+        comment: "Grand merci pour votre prestation. Les retours sont top et correspondent vraiment aux attentes de mon associé et moi même, bravo.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/cadiou.jpg",
-        name: "Cadiou",
+          "https://static.cuistotducoin.com/img/testimony/bourhis.jpg",
+        name: "Cabinet Bourhis",
         rating: 5
       },
       {
-        context: "test 4",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
+        comment: "Très bonnes saveurs. Cuisine de qualité.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/fortuneo.jpg",
-        name: "Fortuneo",
+          "https://static.cuistotducoin.com/img/testimony/seimi.jpg",
+        name: "Seimi",
         rating: 5
       },
       {
-        context: "test 5",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        context: "Atelier pour une équipe de 70 collaborateurs",
+        comment: "Génial ! Merci pour cette prestation.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/gl-events.jpg",
-        name: "Gl events",
+          "https://static.cuistotducoin.com/img/testimony/apside.jpg",
+        name: "Apside",
         rating: 5
       },
       {
-        context: "test 6 test 7",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini",
+        context: "Atelier pour une équipe de 70 collaborateurs",
+        comment: `Que des retours positifs concernant le cuistot et la soirée. Très bonne prestation.
+        L’Atelier a été apprécié par tout le monde, que ce soit l’activité où la bonne humeur du cuistot. Les plats dégustés lors du repas en fin d’atelier étaient très bons.`,
         image:
-          "https://static.cuistotducoin.com/img/business/participants/hippocampe.jpg",
-        name: "Agence Hippocampe",
+          "https://static.cuistotducoin.com/img/testimony/ixblue.jpg",
+        name: "CE Ixblue",
         rating: 5
-      }
+      },
     ];
 
     const urlMailChimp =

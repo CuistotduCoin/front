@@ -45,6 +45,10 @@ jobs:
           command: |
             yarn build
       - run:
+          name: Move assets
+          command: |
+            yarn move-assets
+      - run:
           name: Deploy frontend
           command: |
             yarn deploy

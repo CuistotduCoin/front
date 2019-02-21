@@ -12,6 +12,7 @@
     "create-env:prod": "assume-role production node loadenv",
     "dev": "env-cmd .env nodemon server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json",
+    "move-assets": "node move-assets.js",
     "lambda": "env-cmd .env serverless offline start",
     "deploy": "env-cmd .env serverless deploy",
     "storybook": "start-storybook -p 9001"
@@ -101,6 +102,7 @@
     "dotenv": "^6.2.0",
     "env-cmd": "^8.0.2",
     "fs": "^0.0.1-security",
+    "ncp": "^2.0.0",
     "next-compose-plugins": "^2.1.1",
     "node": "^11.10.0",
     "node-noop": "^1.0.0",
