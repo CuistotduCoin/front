@@ -8,10 +8,6 @@ plugins:
 frameworkVersion: ">=1.21.0 <2.0.0"
 
 custom:
-  stages:
-    - development
-    - staging
-    - production
   apigwBinary:
     types:
       - '*/*'
@@ -23,7 +19,6 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage,'development'}
   region: ${env:AWS_REGION_IRELAND}
   deploymentBucket: ${env:AWS_DEPLOYMENT_BUCKET}
   endpointType: regional
