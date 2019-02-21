@@ -21,6 +21,8 @@ ALGOLIASEARCH_PLACES_KEY=${process.env['algolia-places-key']}
 SENTRY_DSN=${process.env['sentry-dsn']}
 `;
 
+console.log(content);
+
 fs.writeFile('.env', content, (err) => {
   if (err) throw err;
   console.log('.env saved...');
