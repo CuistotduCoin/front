@@ -50,6 +50,7 @@ functions:
   ssr:
     timeout: 30
     handler: build/lambda.handler
+    name: ${env:AWS_LAMBDA_NAME}
     events:
       - http:
           method: any

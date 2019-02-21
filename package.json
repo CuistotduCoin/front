@@ -14,7 +14,7 @@
     "build": "next build && tsc --project tsconfig.server.json",
     "move-assets": "node move-assets.js",
     "lambda": "env-cmd .env serverless offline start",
-    "deploy": "assume-role production env-cmd .env serverless deploy",
+    "deploy": "env-cmd .env serverless deploy",
     "storybook": "start-storybook -p 9001"
   },
   "dependencies": {

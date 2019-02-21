@@ -7,6 +7,7 @@ const content = `\
 AWS_DOMAIN=${process.env['domain']}
 AWS_REGION_IRELAND=eu-west-1
 AWS_DEPLOYMENT_BUCKET=${process.env['deployment-bucket']}
+AWS_LAMBDA_NAME=${process.env['lambda-name']}
 AWS_USERPOOL_ID=${process.env['userpool-id']}
 AWS_IDENTITY_POOL_ID=${process.env['identity-pool-id']}
 AWS_STORE_BUCKET=${process.env['store-bucket']}
