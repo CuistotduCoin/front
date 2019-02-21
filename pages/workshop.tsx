@@ -20,7 +20,7 @@ import React from "react";
 import { Query } from "react-apollo";
 import Scroll from "react-scroll";
 import Slider from "react-slick";
-import Waypoint from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 import { compose } from "recompose";
 import BookForm from "../components/BookForm";
 import CommentBlock from "../components/CommentBlock";
