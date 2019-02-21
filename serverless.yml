@@ -18,6 +18,7 @@ custom:
 
 provider:
   name: aws
+  stage: ${env:STAGE}
   runtime: nodejs8.10
   region: ${env:AWS_REGION_IRELAND}
   deploymentBucket: ${env:AWS_DEPLOYMENT_BUCKET}
