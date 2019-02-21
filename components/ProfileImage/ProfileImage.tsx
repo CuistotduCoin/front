@@ -1,8 +1,8 @@
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from "@material-ui/core/styles";
-import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
-import PersonIcon from "@material-ui/icons/Person";
 import cx from 'classnames';
+import PersonIcon from "mdi-material-ui/Account";
+import AddAPhotoIcon from "mdi-material-ui/ImagePlus";
 import React from 'react';
 import S3Image from "../../components/S3Image";
 

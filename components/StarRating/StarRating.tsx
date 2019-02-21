@@ -1,7 +1,7 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
-import Star from "@material-ui/icons/Star";
-import StarBorder from "@material-ui/icons/StarBorder";
-import StarHalf from "@material-ui/icons/StarHalf";
+import Star from "mdi-material-ui/Star";
+import StarHalf from "mdi-material-ui/StarHalf";
+import StarBorder from "mdi-material-ui/StarOutline";
 import React from "react";
 
 const styles = (theme: Theme) => ({});

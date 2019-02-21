@@ -2,10 +2,10 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import HowToReg from "@material-ui/icons/HowToReg";
-import StoreMallDirectory from "@material-ui/icons/StoreMallDirectory";
 import get from "lodash.get";
-import { MathCompass } from 'mdi-material-ui'
+import HowToReg from "mdi-material-ui/AccountCheck";
+import MathCompass from 'mdi-material-ui/MathCompass'
+import StoreMallDirectory from "mdi-material-ui/Store";
 import Link from "next/link";
 import React from "react";
 import { graphql } from "react-apollo";

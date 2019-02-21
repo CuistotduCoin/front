@@ -1,14 +1,10 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Step from '@material-ui/core/Step';
-import StepContent from '@material-ui/core/StepContent';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
-import Mood from "@material-ui/icons/Mood";
+import Charity from "mdi-material-ui/Charity";
 import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
-import MathCompass from "mdi-material-ui/MathCompass";
+import Mood from "mdi-material-ui/EmoticonOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
@@ -43,7 +39,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const steps = [
       { icon: <Mood />, title: 'Vous allez plaire', content: `Cuisiner est une activité accessible à tous et qui permet de partager des moments conviviaux tout en découvrant des saveurs d’ici et d’ailleurs, des savoir-faire authentiques et des recettes chargées d’histoire.` },
       { icon: <EmoticonCool />, title: 'Soyez serein', content: `Nous sélectionnons les ateliers les plus adaptés et nous nous chargeons de toute l’organisation. Les salariés participant aux ateliers n’ont plus qu’à se rendre aux fourneaux, à enfiler le tablier et à partager un moment convivial et savoureux !` },
-      { icon: <EmoticonCool />, title: `Un accompagnement au top`, content: `Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.` }
+      { icon: <Charity />, title: `Un accompagnement au top`, content: `Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.` }
     ];
 
     const stepsFAQ = [

@@ -9,9 +9,9 @@ import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Face from "@material-ui/icons/Face";
-import HourglassFull from "@material-ui/icons/HourglassFull";
-import Place from "@material-ui/icons/Place";
+import Face from "mdi-material-ui/Face";
+import Place from "mdi-material-ui/MapMarker";
+import HourglassFull from "mdi-material-ui/TimerSandFull";
 import React from "react";
 import StarRating from "../StarRating";
 
