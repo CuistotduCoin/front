@@ -6,10 +6,15 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Stepper from "@material-ui/core/Stepper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
+import Mood from "@material-ui/icons/Mood";
+import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
+import MathCompass from "mdi-material-ui/MathCompass";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
+import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -35,12 +40,49 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
   public render() {
     const { classes } = this.props;
 
+    const steps = [
+      { icon: <Mood />, title: 'Vous allez plaire', content: `Cuisiner est une activité accessible à tous et qui permet de partager des moments conviviaux tout en découvrant des saveurs d’ici et d’ailleurs, des savoir-faire authentiques et des recettes chargées d’histoire.` },
+      { icon: <EmoticonCool />, title: 'Soyez serein', content: `Nous sélectionnons les ateliers les plus adaptés et nous nous chargeons de toute l’organisation. Les salariés participant aux ateliers n’ont plus qu’à se rendre aux fourneaux, à enfiler le tablier et à partager un moment convivial et savoureux !` },
+      { icon: <EmoticonCool />, title: `Un accompagnement au top`, content: `Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.` }
+    ];
+
+    const stepsFAQ = [
+      {
+        title: 'Prenons rendez-vous !',
+        content: `Nous venons à votre rencontre pour échanger de vives voix sur le fonctionnement de votre CE, cerner vos attentes et vous présenter nos ateliers.`
+      },
+      {
+        title: 'Choisissons des formats d’ateliers adaptés',
+        content: `Initiation ou approfondissement, conviez vos salariés à découvrir nos différents univers culinaires lors d’ateliers conviviaux. Les gourmets partagent une dégustation ou un repas à l’issue des ateliers.`
+      },
+      {
+        title: `Découvrez nos univers culinaires`,
+        content: `Invitez vos salariés à voyager par le biais de la cuisine et à s’ouvrir à de nouveaux horizons en leur faisant découvrir nos différents univers autour de la cuisine du monde, du terroir, du bien-être, de la boulangerie et de la pâtisserie. Les petits gourmets sont aussi conviés lors d’ateliers ludiques et créatifs avec leurs parents.`
+      },
+      {
+        title: 'Découvrez nos lieux partenaires',
+        content: `Nous dénichons des lieux adaptés et chaleureux pour inviter vos salariés à partager des moments conviviaux aux fourneaux lors de ces ateliers privatisés.`
+      },
+      {
+        title: `Construisons un programme d’ateliers sur mesure pour votre CE.`,
+        content: `Nous échangeons sur la période à laquelle vous souhaitez proposer cette activité. Nous définissons les modalités de participation aux ateliers : budget, nombre d’ateliers envisagés, jours et horaires, lieux, nombre de participants minimum pour maintenir l’atelier et maximum par atelier pour privilégier une ambiance conviviale et la bonne implication de chacun. Selon vos souhaits et en fonction de la disponibilité de nos cuistots, nous vous faisons parvenir une proposition de devis adaptée avec un descriptif détaillé des ateliers et les informations pratiques à transmettre aux personnes inscrites.`
+      },
+      {
+        title: 'Nous vous apportons un accompagnement personnalisé',
+        content: `Une fois le programme des ateliers validé, vous n’avez plus qu’à le partager au sein de votre entreprise et à inviter les salariés à s’y inscrire. Nous suivons avec vous les inscriptions et vous proposons des points réguliers pour confirmer les dates proposées, envisager le report de certaines ou au contraire prévoir de nouvelles sessions.`
+      },
+      {
+        title: `Gardons le contact à l’issue des ateliers`,
+        content: `Un retour est fait après chaque atelier pour s’assurer de son bon déroulé et vous transmettre une sélection de photos prises en atelier. Nous revenons à votre rencontre à l’issue de la période des ateliers pour faire le bilan et éventuellement poursuivre le voyage des papilles en proposant aux salariés de nouveaux univers.`
+      }
+    ];
+
     const testimonies = [
       {
         context: "Atelier pour une équipe de 25 collaborateurs",
         comment: `On a proposé des ateliers de cuisine du monde à nos salariés. ils étaient très satisfaits et ont découvert de nouvelles saveurs. Le but est maintenant de prolonger l’opération en proposant de nouveaux ateliers. L’offre est très adaptée, variée. Les salariés se retrouvent en atelier dans une ambiance conviviale. En 3 mots : de la passion, du voyage et des rencontres.`,
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
         name: "CE Arkea",
         rating: 5
       },
@@ -49,7 +91,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         comment: `Que des retours positifs concernant le cuistot et la soirée. Très bonne prestation.
         L’Atelier a été apprécié par tout le monde, que ce soit l’activité où la bonne humeur du cuistot. Les plats dégustés lors du repas en fin d’atelier étaient très bons.`,
         image:
-          "https://static.cuistotducoin.com/img/business/participants/brest-metropole.jpg",
+          "https://static.cuistotducoin.com/img/testimony/ixblue.jpg",
         name: "CE Ixblue",
         rating: 5
       },
@@ -57,21 +99,17 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         context: "Atelier pour une équipe de 15 collaborateurs",
         comment: "Les participants se sont amusés et se sont régalés lors de l’atelier de cuisine japonaise.",
         image:
-          "https://static.cuistotducoin.com/img/business/participants/arkea.jpg",
+          "https://static.cuistotducoin.com/img/testimony/apacib.jpg",
         name: "APACIB",
         rating: 5
       }
     ];
 
     const photos = [
-      { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 1, height: 1, caption: "Test", alt: "test" },
-      { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 1, height: 1 },
-      { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 1, height: 1 },
+      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-patisserie.jpg', width: 1, height: 1, caption: "Atelier patisserie", alt: "Atelier patisserie" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-sushi-maki.jpg', width: 1, height: 1, caption: "Atelier sushi et maki", alt: "Atelier sushi et maki" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/degustation-apres-atelier.jpg', width: 1, height: 1, caption: "Dégustation après un atelier créole", alt: "Dégustation après un atelier créole" },
     ];
 
     return (
@@ -101,63 +139,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           spacing={16}
           className={classes.grid}
         >
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Vous allez plaire !
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Cuisiner est une activité accessible à tous et qui permet de partager des moments conviviaux tout en découvrant des saveurs d’ici et d’ailleurs, des savoir-faire authentiques et des recettes chargées d’histoire.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Soyez serein !
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Nous sélectionnons les ateliers les plus adaptés et nous nous chargeons de toute l’organisation. Les salariés participant aux ateliers n’ont plus qu’à se rendre aux fourneaux, à enfiler le tablier et à partager un moment convivial et savoureux !
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Un accompagnement au top !
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.
-              </Typography>
-            </Grid>
-          </Grid>
+          <ThreeSteps steps={steps} />
         </Grid>
         <Typography
           variant="h5"
@@ -175,69 +157,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           spacing={16}
           className={classes.grid}
         >
-          <Stepper orientation="vertical" className={classes.stepper}>
-            <Step active>
-              <StepLabel>Prenons rendez-vous !</StepLabel>
-              <StepContent>
-                <Typography>Nous venons à votre rencontre pour échanger de vives voix sur le fonctionnement de votre CE, cerner vos attentes et vous présenter nos ateliers.</Typography>
-              </StepContent>
-            </Step>
-            <Step active>
-              <StepLabel>Plutôt cuisine du monde ou cuisine terroir ?</StepLabel>
-              <StepContent>
-                <Typography>Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !</Typography>
-              </StepContent>
-            </Step>
-            <Step active>
-              <StepLabel>Vous êtes tranquille, on s'occupe de tout</StepLabel>
-              <StepContent>
-                <Typography>Dès réception de votre demande, nous construisons une proposition sur mesure pour répondre à vos attentes et selon la disponibilité de nos cuistots.
-                Si besoin, nous dénichons un lieu chaleureux pour vous réunir le temps du repas.
-                Le jour J, nous assurons la livraison et si besoin la mise en place et le service.
-                Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial pour limiter les déchets et le gaspillage.</Typography>
-              </StepContent>
-            </Step>
-          </Stepper>
-        </Grid>
-        <Grid
-          container
-          justify="space-around"
-          alignItems="center"
-          spacing={16}
-          className={classes.grid}
-        >
-          <Typography
-            variant="h5"
-            align="center"
-            component="h2"
-            gutterBottom
-            className={classes.typography}
-          >
-            Nous construisons un programme d’ateliers sur mesure pour votre CE.
-        </Typography>
-          <Typography variant="body1" paragraph>
-            Nous échangeons sur la période à laquelle vous souhaitez proposer cette activité.
-            Nous définissons les modalités de participation aux ateliers : budget, nombre d’ateliers envisagés, jours et horaires, lieux, nombre de participants minimum pour maintenir l’atelier et maximum par atelier pour privilégier une ambiance conviviale et la bonne implication de chacun.
-        </Typography>
-          <Typography variant="body1" paragraph>
-            Selon vos souhaits et en fonction de la disponibilité de nos cuistots, nous vous faisons parvenir une proposition de devis adaptée avec un descriptif détaillé des ateliers et les informations pratiques à transmettre aux personnes inscrites.
-        </Typography>
-          <Typography
-            variant="h5"
-            align="center"
-            component="h2"
-            gutterBottom
-            className={classes.typography}
-          >
-            Nous vous apportons un accompagnement personnalisé.
-        </Typography>
-          <Typography variant="body1" paragraph>
-            Une fois le programme des ateliers validé, vous n’avez plus qu’à le partager au sein de votre entreprise et à inviter les salariés à s’y inscrire.
-            Nous suivons avec vous les inscriptions et vous proposons des points réguliers pour confirmer les dates proposées, envisager le report de certaines ou au contraire prévoir de nouvelles sessions.
-        </Typography>
-          <Typography variant="body1" paragraph>
-            Un retour est fait après chaque atelier pour s’assurer de son bon déroulé et vous transmettre une sélection de photos prises en atelier. Nous revenons à votre rencontre à l’issue de la période des ateliers pour faire le bilan et éventuellement poursuivre le voyage des papilles en proposant aux salariés de nouveaux univers.
-        </Typography>
+          <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Typography
           variant="h5"
