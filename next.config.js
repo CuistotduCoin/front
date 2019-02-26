@@ -6,7 +6,6 @@ const withTypescript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
 const withMDX = require('@zeit/next-mdx')()
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 
 const nextConfig = {
   target: 'serverless',

@@ -1,11 +1,11 @@
-const awsServerlessExpress = require("aws-serverless-express");
-const compression = require("compression");
-const express = require("express");
-const path = require("path");
-const pathMatch = require("path-match");
-const raven = require("raven");
-const ravenLambdaWrapper = require("serverless-sentry-lib");
-const { parse } = require("url");
+import awsServerlessExpress from "aws-serverless-express";
+import compression from "compression";
+import express from "express";
+import path from "path";
+import pathMatch from "path-match";
+import raven from "raven";
+import ravenLambdaWrapper from "serverless-sentry-lib";
+import { parse } from "url";
 
 // setup Express and hook up Next.js handler
 const app = express();
