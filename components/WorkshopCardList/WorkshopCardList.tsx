@@ -23,16 +23,6 @@ export interface IWorkshopCardListProps {
 }
 
 export class WorkshopCardList extends React.Component<IWorkshopCardListProps, {}> {
-
-  public renderBanner() {
-    return (
-      <>
-        <Banner title="Offre étudiante à Brest" subtitle="Sous présentation de ta carte étudiante, paye votre premier atelier de cuisine collectif à 5€ !" />
-        <Banner title="Carte CEZAM" subtitle="Bénéficiez de -10% sur tous nos ateliers !" />
-        <Banner title="Offrez une carte cadeau à votre proche" subtitle="Il disposera d’une année pour participer à l’atelier de son choix !" /></>
-    );
-  }
-
   public render() {
     const { classes, workshops, ads } = this.props;
 

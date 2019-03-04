@@ -174,7 +174,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
     const ads = [
       {
         title: "Offre étudiante à Brest",
-        subtitle: "Sous présentation de ta carte étudiante, paye votre premier atelier de cuisine collectif à 5€ !"
+        subtitle: "Sous présentation de ta carte étudiante, paye ton premier atelier de cuisine collectif à 5€ !"
       },
       {
         title: "Carte CEZAM",
