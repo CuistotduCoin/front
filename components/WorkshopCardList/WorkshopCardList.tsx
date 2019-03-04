@@ -1,6 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
+import Banner from "../Banner";
 import WorkshopCard from "../WorkshopCard";
 
 const styles = (theme: Theme) => ({
@@ -18,23 +19,36 @@ const styles = (theme: Theme) => ({
 export interface IWorkshopCardListProps {
   classes?: any;
   workshops: any;
+  ads: any;
 }
 
-export class WorkshopCardList extends React.Component<
-  IWorkshopCardListProps,
-  {}
-> {
+export class WorkshopCardList extends React.Component<IWorkshopCardListProps, {}> {
+
+  public renderBanner() {
+    return (
+      <>
+        <Banner title="Offre étudiante à Brest" subtitle="Sous présentation de ta carte étudiante, paye votre premier atelier de cuisine collectif à 5€ !" />
+        <Banner title="Carte CEZAM" subtitle="Bénéficiez de -10% sur tous nos ateliers !" />
+        <Banner title="Offrez une carte cadeau à votre proche" subtitle="Il disposera d’une année pour participer à l’atelier de son choix !" /></>
+    );
+  }
+
   public render() {
-    const { classes, workshops } = this.props;
+    const { classes, workshops, ads } = this.props;
 
     return (
       <Grid container justify="space-around" className={classes.grid}>
-        {workshops.map((workshop, index) => (
-          <Grid key={index} item xs={12} md={6} lg={4}>
-            <Grid container justify="center" className={classes.card}>
-              <WorkshopCard {...workshop} />
+        {workshops.map((workshop, index: number) => (
+          <>
+            <Grid key={index} item xs={12} md={6} lg={4}>
+              <Grid container justify="center" className={classes.card}>
+                <WorkshopCard {...workshop} />
+              </Grid>
             </Grid>
-          </Grid>
+            {index === 2 && ads[0] ? <Banner title={ads[0].title} subtitle={ads[0].subtitle} /> : <></>}
+            {index === 5 && ads[1] ? <Banner title={ads[1].title} subtitle={ads[1].subtitle} /> : <></>}
+            {index === 8 && ads[2] ? <Banner title={ads[2].title} subtitle={ads[2].subtitle} /> : <></>}
+          </>
         ))}
       </Grid>
     );

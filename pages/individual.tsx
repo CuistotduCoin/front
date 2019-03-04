@@ -1,37 +1,19 @@
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import ArrowDecision from 'mdi-material-ui/ArrowDecision'
+import CheckAll from "mdi-material-ui/CheckAll";
+import StoreMallDirectory from "mdi-material-ui/Store";
 import React from "react";
-import Banner from "../components/Banner";
 import Layout from "../components/Layout";
+import ThreeSteps from "../components/ThreeSteps";
+import WorkshopCardList from "../components/WorkshopCardList";
 
 const styles = (theme: Theme) => ({
-  card: {
-    width: 300
-  },
-  cardHeader: {
-    background: "rgba(0, 0, 0, 0.4)",
-    color: "fff",
-    height: 60,
-    marginTop: -60
-  },
-  cardShortContent: {
-    height: 80
-  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
     padding: theme.spacing.unit * 3
   },
-  media: {
-    height: 135
-  },
-  title: {
-    color: "white"
-  },
-  typography: {
-    marginTop: 15
-  }
 });
 
 export interface IIndividualProps {
@@ -42,6 +24,168 @@ export class Individual extends React.Component<IIndividualProps, {}> {
   public render() {
     const { classes } = this.props;
 
+    const steps = [
+      { icon: <ArrowDecision />, title: 'Diversité', content: "Ateliers de cuisine, dégustation, buffets, repas. Nous organisons une expérience culinaire qui vous ressemble." },
+      { icon: <CheckAll />, title: 'Pour toutes les occassions', content: "Une fête d'anniversaire, une communion, une soirée thématique, une grande fête de famille, toutes les occasions sont bonnes pour célébrer et surtout en profiter !" },
+      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Vous serez les bienvenus chez nos partenaires sélectionnés avec soin. Itinérants, nous intervenons aussi à votre domicile." }
+    ];
+
+    const workshops = [
+      {
+        availableSeat: 6,
+        date: "jeudi 7 mars, 18h-20h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/takako-atelier-japonais.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Inédit : Atelier Japonais et dégustation de fromages et sakés",
+        nameCook: "Takako",
+        price: 55,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/BQBcPg"
+      },
+      {
+        availableSeat: 8,
+        date: "samedi 9 mars, 10h-13h",
+        duration: 3,
+        image: "https://static.cuistotducoin.com/img/workshops/karim-mafe.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/karim.jpg",
+        name: "Cuisine Africaine - Mafé",
+        nameCook: "Karim",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/jRQFcs"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 9 mars, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-number-cake.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Number Cake",
+        nameCook: "Audrey",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/hlXofN"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 9 mars, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Initiation au tournage de crêpes",
+        nameCook: "Nadine",
+        price: 25,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/GZxQiN"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 23 mars, 10h-12h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Initiation au tournage de galettes + Repas",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/ypvH53"
+      },
+      {
+        availableSeat: 0,
+        date: "vendredi 29 mars, 17h30-20h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisu.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
+        name: "Atelier approfondissement à la cuisine italienne",
+        nameCook: "Luis",
+        price: 50,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/O2QlLL"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 30 mars, 9h30-13h",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-tarte-chocolat.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Revisite de la tarte au chocolat",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/xkQuu1"
+      },
+      {
+        availableSeat: 8,
+        date: "samedi 6 avril, 10h-13h",
+        duration: 3,
+        image: "https://static.cuistotducoin.com/img/workshops/karim-tiep.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/karim.jpg",
+        name: "Cuisine Africaine - Tiep",
+        nameCook: "Karim",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/Q3Mz5I"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 6 avril, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Initiation au tournage de crêpes",
+        nameCook: "Nadine",
+        price: 25,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/DRfUsS"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 13 avril, 10h-12h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Initiation au tournage de galettes + Repas",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/cR7RRd"
+      }
+    ];
+
+    const ads = [
+      {
+        title: "Offre étudiante à Brest",
+        subtitle: "Sous présentation de ta carte étudiante, paye votre premier atelier de cuisine collectif à 5€ !"
+      },
+      {
+        title: "Carte CEZAM",
+        subtitle: "Bénéficiez de -10% sur tous nos ateliers !"
+      },
+      {
+        title: "Offrez une carte cadeau à votre proche",
+        subtitle: "Il disposera d’une année pour participer à l’atelier de son choix !"
+      },
+    ];
+
     return (
       <Layout
         valueProposition="Participez à des ateliers de cuisine authentiques et en toute convivialité !"
@@ -51,72 +195,13 @@ export class Individual extends React.Component<IIndividualProps, {}> {
         <Grid
           container
           justify="space-around"
-          alignItems="flex-start"
           spacing={16}
           className={classes.grid}
         >
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Diversité
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Ateliers de cuisine, dégustation, buffets, repas. Nous organisons une expérience culinaire qui vous ressemble.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Pour toutes les occassions
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Une fête d'anniversaire, une communion, une soirée thématique, une grande fête de famille, toutes les occasions sont bonnes pour célébrer et surtout en profiter !
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography
-                variant="h6"
-                component="h3"
-                gutterBottom
-              >
-                Des lieux adaptés
-              </Typography>
-              <Typography variant="body1" align="justify">
-                Vous serez les bienvenus chez nos partenaires sélectionnés avec soin. Itinérants, nous intervenons aussi à votre domicile.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Banner title="Offre étudiante à Brest" subtitle="Sous présentation de ta carte étudiante, paye votre premier atelier de cuisine collectif à 5€ !" />
-          <Banner title="Carte CEZAM" subtitle="Bénéficiez de -10% sur tous nos ateliers !" />
-          <Banner title="Offrez une carte cadeau à votre proche" subtitle="Il disposera d’une année pour participer à l’atelier de son choix !" />
+          <ThreeSteps steps={steps} />
         </Grid>
-      </Layout>
+        <WorkshopCardList workshops={workshops} ads={ads} />
+      </Layout >
     );
   }
 }
