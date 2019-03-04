@@ -54,6 +54,10 @@ functions:
     name: ${env:AWS_LAMBDA_NAME}
     events:
       - http:
+          method: get
+          path: /
+          cors: true
+      - http:
           method: any
           cors: true
           path: /{proxy+}
