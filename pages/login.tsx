@@ -21,7 +21,7 @@ const Login: React.SFC<{ classes: any }> = ({ classes }) => (
     <LoginForm />
     <Typography align="center" gutterBottom>
       Pas encore membre ?{' '}
-      <Link href="/signup">
+      <Link href="/sign-up">
         <a>Inscrivez vous !</a>
       </Link>
     </Typography>

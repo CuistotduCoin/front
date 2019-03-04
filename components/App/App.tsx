@@ -32,7 +32,7 @@ export class App extends React.Component<IAppProps, {}> {
         .then(user => {
           console.log(`Authenticated as ${user.username}`);
           if (user.username !== "guest") {
-            if (router.asPath !== "/login" && router.asPath !== "/signup") {
+            if (router.asPath !== "/login" && router.asPath !== "/sign-up") {
               // Don't redirect to home page if user is already connected (except for login and signup pages)
               setReferer(undefined);
             }

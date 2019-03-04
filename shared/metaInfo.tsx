@@ -63,7 +63,7 @@ export default {
   },
   signup: {
     description: "Inscription",
-    href: "https://www.cuistotducoin.com/signup",
+    href: "https://www.cuistotducoin.com/sign-up",
     title: "Devenez un gourmet Cuistot du Coin"
   },
   'reset-password-request': {

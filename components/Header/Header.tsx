@@ -72,10 +72,10 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
   public render() {
     const {
       classes,
-      hideSignUpLogin,
       isLoggedIn
     } = this.props;
 
+    const hideSignUpLogin = true;
     let rightElement;
 
     if (isLoggedIn) {
@@ -96,7 +96,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         );
       } else {
         rightElement = (
-          <Link href="/signup" passHref>
+          <Link href="/sign-up" passHref>
             <Button
               className={classes.accountButton}
               variant="contained"
