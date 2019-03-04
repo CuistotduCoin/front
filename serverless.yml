@@ -50,7 +50,7 @@ package:
 functions:
   ssr:
     timeout: 30
-    handler: build/lambda.handler
+    handler: build/lambda_prod.handler
     name: ${env:AWS_LAMBDA_NAME}
     events:
       - http:

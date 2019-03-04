@@ -7,26 +7,38 @@ import getPageContext from '../decorators/getPageContext';
 import ProvidedApp from '../components/App';
 import Raven from 'raven-js'
 import Head from '../components/Head';
-
-const SENTRY_PUBLIC_DSN = '';
+import { initGA, logPageView } from '../shared/analytics'
+import Router from 'next/router'
 
 class MyApp extends App {
   constructor(props) {
     super(props);
     this.pageContext = getPageContext();
-    Raven.config(SENTRY_PUBLIC_DSN).install()
+    Raven.config(process.env.SENTRY_PUBLIC_DSN).install()
+  }
+
+  static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {}
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
+
+    return { pageProps }
   }
 
   pageContext = null;
 
   componentDidCatch(error, errorInfo) {
     Raven.captureException(error, { extra: errorInfo })
-
     // This is needed to render errors correctly in development / production
     super.componentDidCatch(error, errorInfo)
   }
 
   componentDidMount() {
+    initGA();
+    logPageView();
+    Router.router.events.on('routeChangeComplete', logPageView);
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode) {

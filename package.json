@@ -12,6 +12,7 @@
     "create-env:prod": "assume-role production node loadenv",
     "dev": "env-cmd .env nodemon server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json",
+    "build-lambda": "yarn webpack",
     "move-assets": "node move-assets.js",
     "lambda": "env-cmd .env serverless offline start",
     "deploy": "assume-role production env-cmd .env serverless deploy",
@@ -49,6 +50,7 @@
     "react-credit-cards": "latest",
     "react-dom": "latest",
     "react-dropzone": "latest",
+    "react-ga": "latest",
     "react-images": "latest",
     "react-input-range": "latest",
     "react-instantsearch-dom": "latest",
@@ -104,7 +106,7 @@
     "fs": "latest-security",
     "ncp": "latest",
     "next-compose-plugins": "latest",
-    "node": "^11.10.0",
+    "node": "latest",
     "node-noop": "latest",
     "nodemon": "latest",
     "path": "latest",
@@ -129,6 +131,8 @@
     "tslint-react": "latest",
     "typescript": "latest",
     "unstated-debug": "latest",
-    "url-loader": "latest"
+    "url-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
   }
 }
