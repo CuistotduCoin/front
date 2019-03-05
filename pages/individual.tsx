@@ -129,6 +129,19 @@ export class Individual extends React.Component<IIndividualProps, {}> {
         typeform: "https://cuistotducoin.typeform.com/to/xkQuu1"
       },
       {
+        availableSeat: 6,
+        date: "samedi 6 avril, 10h-13h",
+        duration: 3,
+        image: "https://static.cuistotducoin.com/img/workshops/vanessa-amuses-bouches-exotiques.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/vanessa.jpg",
+        name: "Repas Antillais",
+        nameCook: "Vanessa",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/zrj25z"
+      },
+      {
         availableSeat: 8,
         date: "samedi 6 avril, 10h-13h",
         duration: 3,
