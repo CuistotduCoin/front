@@ -103,12 +103,34 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
       );
     }
 
-    return (
+    let tag: string;
+    if (this.props.availableSeat < 1) {
+      tag = "complet";
+    } else if (this.props.price === 0) {
+      tag = "gratuit";
+    } else {
+      tag = `${this.props.price} €`;
+    }
+
+    function container(props, children) {
+      const isFull = props.availableSeat < 1;
+
+      if (isFull) {
+        return <div className={classes.link}>{children}</div>;
+      }
+      return (
+        <a className={classes.link} href={props.typeform} target="_blank">
+          {children}
+        </a>
+      );
+    }
+
+    const cardComp = (
       <a href={this.props.typeform} target="_blank">
         <Card className={classes.card}>
           <CardHeader
             className={classes.cardHeaderUp}
-            avatar={<Chip label={`${this.props.price} €`} />}
+            avatar={<Chip label={tag} />}
             classes={{ avatar: classes.chip }}
           />
           <CardMedia
@@ -183,6 +205,8 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
         </Card>
       </a>
     );
+
+    return container(this.props, cardComp);
   }
 }
 
