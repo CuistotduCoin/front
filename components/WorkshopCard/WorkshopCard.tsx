@@ -26,7 +26,7 @@ const styles = (theme: Theme) => ({
     marginTop: -40
   },
   bottomContentCardItem: {
-    padding: 4
+    paddingTop: 12
   },
   card: {
     width: 360
@@ -126,84 +126,82 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
     }
 
     const cardComp = (
-      <a href={this.props.typeform} target="_blank">
-        <Card className={classes.card}>
-          <CardHeader
-            className={classes.cardHeaderUp}
-            avatar={<Chip label={tag} />}
-            classes={{ avatar: classes.chip }}
-          />
-          <CardMedia
-            className={classes.media}
-            image={this.props.image}
-            title={this.props.name}
-          />
-          <CardContent className={classes.cardContent}>
-            <Grid container justify="space-between">
-              <Grid item>
-                <Grid container>
-                  <Grid item>{avatar}</Grid>
-                  <Grid item>
-                    <Typography className={classes.nameCook} variant="body1">
-                      Rencontrez {this.props.nameCook}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              {this.props.rating && (
+      <Card className={classes.card}>
+        <CardHeader
+          className={classes.cardHeaderUp}
+          avatar={<Chip label={tag} />}
+          classes={{ avatar: classes.chip }}
+        />
+        <CardMedia
+          className={classes.media}
+          image={this.props.image}
+          title={this.props.name}
+        />
+        <CardContent className={classes.cardContent}>
+          <Grid container justify="space-between">
+            <Grid item>
+              <Grid container>
+                <Grid item>{avatar}</Grid>
                 <Grid item>
-                  <Grid container justify="flex-end">
-                    <StarRating rating={this.props.rating} />
-                    {this.props.ratingNumber && (
-                      <Typography
-                        variant="caption"
-                        className={classes.ratingNumber}
-                      >
-                        ({this.props.ratingNumber})
-                      </Typography>
-                    )}
-                  </Grid>
-                </Grid>
-              )}
-            </Grid>
-            <Grid
-              container
-              alignItems="center"
-              direction="column"
-              className={classes.bottomContentCard}
-            >
-              <Grid item className={classes.bottomContentCardItem}>
-                <Chip label="Atelier collectif" className={classes.chip} />
-              </Grid>
-              <Grid item className={classes.bottomContentCardItem}>
-                <Typography align="center" variant="h6">
-                  {this.props.name}
-                </Typography>
-              </Grid>
-              <Grid item className={classes.bottomContentCardItem}>
-                <Typography variant="subtitle1">{this.props.date}</Typography>
-              </Grid>
-            </Grid>
-            <Divider />
-            <Grid container>
-              <Grid item xs={6}>
-                <Grid container justify="center">
-                  <Place className={classes.icon} />
-                  <Typography variant="caption">{this.props.spot}</Typography>
-                </Grid>
-              </Grid>
-              <Grid item xs={6}>
-                <Grid container justify="center">
-                  <HourglassFull className={classes.icon} />
-                  <Typography variant="caption">
-                    {this.props.duration}h
+                  <Typography className={classes.nameCook} variant="body1">
+                    Rencontrez {this.props.nameCook}
                   </Typography>
                 </Grid>
               </Grid>
             </Grid>
-          </CardContent>
-        </Card>
-      </a>
+            {this.props.rating && (
+              <Grid item>
+                <Grid container justify="flex-end">
+                  <StarRating rating={this.props.rating} />
+                  {this.props.ratingNumber && (
+                    <Typography
+                      variant="caption"
+                      className={classes.ratingNumber}
+                    >
+                      ({this.props.ratingNumber})
+                      </Typography>
+                  )}
+                </Grid>
+              </Grid>
+            )}
+          </Grid>
+          <Grid
+            container
+            alignItems="center"
+            direction="column"
+            className={classes.bottomContentCard}
+          >
+            <Grid item className={classes.bottomContentCardItem}>
+              <Chip label="Atelier collectif" className={classes.chip} />
+            </Grid>
+            <Grid item >
+              <Typography align="center" variant="h6">
+                {this.props.name}
+              </Typography>
+            </Grid>
+            <Grid item >
+              <Typography variant="subtitle1">{this.props.date}</Typography>
+            </Grid>
+          </Grid>
+          <Divider />
+          <Grid container>
+            <Grid item xs={6}>
+              <Grid container justify="center">
+                <Place className={classes.icon} />
+                <Typography variant="caption">{this.props.spot}</Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs={6}>
+              <Grid container justify="center">
+                <HourglassFull className={classes.icon} />
+                <Typography variant="caption">
+                  {this.props.duration}h
+                  </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </Card>
     );
 
     return container(this.props, cardComp);

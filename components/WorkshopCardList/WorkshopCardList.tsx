@@ -29,8 +29,8 @@ export class WorkshopCardList extends React.Component<IWorkshopCardListProps, {}
     return (
       <Grid container justify="space-around" className={classes.grid}>
         {workshops.map((workshop, index: number) => (
-          <>
-            <Grid key={index} item xs={12} md={6} lg={4}>
+          <React.Fragment key={index}>
+            <Grid item xs={12} md={6} lg={4}>
               <Grid container justify="center" className={classes.card}>
                 <WorkshopCard {...workshop} />
               </Grid>
@@ -38,7 +38,7 @@ export class WorkshopCardList extends React.Component<IWorkshopCardListProps, {}
             {index === 2 && ads[0] ? <Banner title={ads[0].title} subtitle={ads[0].subtitle} /> : <></>}
             {index === 5 && ads[1] ? <Banner title={ads[1].title} subtitle={ads[1].subtitle} /> : <></>}
             {index === 8 && ads[2] ? <Banner title={ads[2].title} subtitle={ads[2].subtitle} /> : <></>}
-          </>
+          </React.Fragment>
         ))}
       </Grid>
     );
