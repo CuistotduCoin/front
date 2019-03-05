@@ -16,7 +16,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   slider: {
     margin: "0px auto",
@@ -132,7 +132,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="flex-start"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <ThreeSteps steps={steps} />
@@ -150,7 +150,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <StaticSteper steps={stepsFAQ} />

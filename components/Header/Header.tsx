@@ -16,17 +16,17 @@ const styles = (theme: Theme) => ({
     boxShadow: "none"
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   accountButton: {
     extend: "button",
     color: "white"
   },
   logo: {
-    marginRight: theme.spacing.unit
+    marginRight: theme.spacing(1)
   },
   logoText: {
-    marginRight: theme.spacing.unit
+    marginRight: theme.spacing(1)
   }
 });
 

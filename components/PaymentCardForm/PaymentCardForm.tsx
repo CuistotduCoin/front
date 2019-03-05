@@ -90,7 +90,7 @@ export class PaymentCardForm extends React.Component<
     ) => (
         <Form autoComplete="off" className={classes.form}>
           <FormControl>
-            <Grid container justify="space-around" spacing={16}>
+            <Grid container justify="space-around" spacing={2}>
               <Grid item xs={12}>
                 <Card
                   cvc={props.values.cvc || ""}

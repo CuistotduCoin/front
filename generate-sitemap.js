@@ -40,10 +40,6 @@ const setup = ({ server }) => {
             res.send(xml)
         })
     })
-
-    server.get('/robots.txt', (req, res) => {
-        res.sendFile(path.join(__dirname, '../static', 'robots.txt'))
-    })
 }
 
 //test

@@ -9,13 +9,13 @@ import React from "react";
 
 const styles = (theme: Theme) => ({
   formControl: {
-    marginTop: theme.spacing.unit,
+    marginTop: theme.spacing(1),
     width: "100%"
   },
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   textField: {
     width: "100%"

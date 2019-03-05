@@ -9,7 +9,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   textField: {
     width: "100%"
@@ -41,7 +41,7 @@ const BUTTON_TITLES = {
 // tslint:disable-next-line
 const CookForm: React.SFC<ICookFormProps> = ({ classes, values, action }) => (
   <Form autoComplete="off">
-    <Grid container className={classes.grid} spacing={16}>
+    <Grid container className={classes.grid} spacing={2}>
       <Grid item xs={12}>
         <Field
           type="text"
@@ -113,7 +113,7 @@ const CookForm: React.SFC<ICookFormProps> = ({ classes, values, action }) => (
             />
           </Grid>
           <Grid item xs={12}>
-            <Grid container spacing={16}>
+            <Grid container spacing={2}>
               <Grid item xs={6}>
                 <Field
                   id="legal_first_name"

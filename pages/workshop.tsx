@@ -42,38 +42,38 @@ const styles = (theme: Theme) => ({
     width: 80
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   cancellation: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
   commentBlock: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   img: {
     verticalAlign: "middle"
   },
   infoReservartion: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
   innerGrid: {
     paddingBottom: 24,
     paddingTop: 24
   },
   itemGrid: {
-    paddingBottom: theme.spacing.unit,
-    paddingTop: theme.spacing.unit
+    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(1)
   },
   leftGrid: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
   paragraph: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
   popover: {
     pointerEvents: "none"
@@ -81,7 +81,7 @@ const styles = (theme: Theme) => ({
   slider: {
     margin: "0px auto",
     maxWidth: 950,
-    padding: theme.spacing.unit,
+    padding: theme.spacing(1),
     width: "calc(100% - 120px)"
   },
   sliderImage: {

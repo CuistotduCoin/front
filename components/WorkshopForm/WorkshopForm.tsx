@@ -21,7 +21,7 @@ interface IWorkshopFormProps {
 
 // tslint:disable-next-line
 const WorkshopForm: React.SFC<IWorkshopFormProps> = ({ classes }) => (
-  <Grid container spacing={16}>
+  <Grid container spacing={2}>
     <Grid item xs={12}>
       <Field
         type="text"

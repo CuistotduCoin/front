@@ -12,7 +12,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   root: {
     backgroundColor: grey[900]

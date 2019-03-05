@@ -7,8 +7,10 @@
   - Copy the provided secrets file to the root (look at .env-example)
   - `yarn` to install dependencies
   - `yarn dev` for development server
-  - `yarn build` for production server (lambda)
-  - `yarn lambda` for development serverless (use build before lambda)
+  - `yarn build` for production server (pages)
+  - `yarn build-lambda` for production server (lambda)
+  - `yarn build-assets` for production files (robots, sitemap)
+  - `yarn lambda` for development serverless (use build-phase before lambda)
   - `yarn deploy` for deploying on AWS (circleCI will handle that)
  
  ## TECHNOLOGIES:

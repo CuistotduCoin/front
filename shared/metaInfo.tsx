@@ -13,7 +13,7 @@ export default {
     title:
       "Cadeau cours cuisine - Offrez un atelier de cuisine Cuistot du coin à vos proches"
   },
-  home: {
+  index: {
     description:
       "Faîtes voyager vos papilles et ouvrez-vous à de nouvelles cultures par le biais de la cuisine aux côtés de nos Cuistots d'ailleurs.",
     href: "https://www.cuistotducoin.com",

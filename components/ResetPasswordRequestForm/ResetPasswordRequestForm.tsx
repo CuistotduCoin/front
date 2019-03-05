@@ -14,7 +14,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     paddingTop: 0
   },
   textField: {
@@ -57,7 +57,7 @@ export class ResetPasswordRequestForm extends React.Component<
 
     const resetPasswordRequestFormComponent = () => (
       <Form autoComplete="off">
-        <Grid container className={classes.grid} spacing={16}>
+        <Grid container className={classes.grid} spacing={2}>
           <Grid item xs={12}>
             <Grid item xs={12}>
               <Field

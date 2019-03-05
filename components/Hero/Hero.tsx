@@ -23,7 +23,7 @@ const styles = (theme: Theme) => ({
   gridSearchForm: {
     margin: "0px auto",
     maxWidth: 500,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   home: {
     color: "#fff",

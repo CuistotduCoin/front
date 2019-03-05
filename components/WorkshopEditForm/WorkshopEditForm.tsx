@@ -31,7 +31,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   textField: {
     width: "100%"
@@ -56,7 +56,7 @@ const styles = (theme: Theme) => ({
   },
   warningIcon: {
     color: 'white',
-    marginRight: theme.spacing.unit
+    marginRight: theme.spacing(1)
   },
   gridList: {
     flexWrap: 'nowrap',

@@ -20,7 +20,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   media: {
     height: 135
@@ -42,7 +42,7 @@ export class Invite extends React.Component<IInviteProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <Content components={components} />
@@ -51,7 +51,7 @@ export class Invite extends React.Component<IInviteProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <Grid item xs={12}>

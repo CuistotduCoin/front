@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   }
 });
 
@@ -28,7 +28,7 @@ export class Mission extends React.Component<IMissionProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <Content components={components} />

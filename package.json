@@ -13,7 +13,7 @@
     "dev": "env-cmd .env nodemon server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json",
     "build-lambda": "yarn webpack",
-    "move-assets": "node move-assets.js",
+    "build-assets": "node build-assets.js",
     "lambda": "env-cmd .env serverless offline start",
     "deploy": "assume-role production env-cmd .env serverless deploy",
     "storybook": "start-storybook -p 9001"
@@ -22,7 +22,7 @@
     "@aws-amplify/auth": "latest",
     "@aws-amplify/core": "latest",
     "@aws-amplify/storage": "latest",
-    "@material-ui/core": "latest",
+    "@material-ui/core": "next",
     "algolia-places-react": "latest",
     "apollo-cache-inmemory": "latest",
     "apollo-client": "latest",

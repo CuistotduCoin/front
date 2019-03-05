@@ -12,7 +12,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
 });
 
@@ -195,7 +195,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
         <Grid
           container
           justify="space-around"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <ThreeSteps steps={steps} />

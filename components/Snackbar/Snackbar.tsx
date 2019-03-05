@@ -42,7 +42,7 @@ const styles = (theme: Theme) => ({
   },
   iconVariant: {
     extend: "icon",
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(1),
     opacity: 0.9
   },
   message: {

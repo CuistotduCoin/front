@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import components from "../content/components";
 // @ts-ignore
-import Content from "../content/invite.mdx";
+import Content from "../content/testimony.mdx";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -14,16 +14,16 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IInviteBusinessProps {
+interface ITestimonyProps {
   classes?: any;
 }
 
-export class InviteBusiness extends React.Component<IInviteBusinessProps, {}> {
+export class Testimony extends React.Component<ITestimonyProps, {}> {
   public render() {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Invitez vos proches">
+      <Layout valueProposition="Ils nous font confiance">
         <Grid
           container
           justify="space-around"
@@ -38,4 +38,4 @@ export class InviteBusiness extends React.Component<IInviteBusinessProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(InviteBusiness as any) as any;
+export default withStyles(styles as any)(Testimony as any) as any;

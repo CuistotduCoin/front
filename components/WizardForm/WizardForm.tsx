@@ -11,7 +11,7 @@ const styles = (theme: Theme) => ({
   form: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     paddingTop: 0,
     minHeight: 300
   },

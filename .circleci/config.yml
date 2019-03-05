@@ -49,9 +49,9 @@ jobs:
           command: |
             yarn build-lambda
       - run:
-          name: Move assets
+          name: Build assets
           command: |
-            yarn move-assets
+            yarn build-assets
       - run:
           name: Deploy frontend
           command: |
@@ -83,9 +83,9 @@ jobs:
           command: |
             yarn build-lambda
       - run:
-          name: Move assets
+          name: Build assets
           command: |
-            yarn move-assets
+            yarn build-assets
       - run:
           name: Deploy frontend
           command: |

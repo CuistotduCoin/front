@@ -33,7 +33,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   map: {
     height: 500
@@ -149,7 +149,7 @@ export class Search extends React.Component<ISearchProps, ISearchState> {
           <Grid
             container
             justify="space-around"
-            spacing={16}
+            spacing={2}
             className={classes.grid}
           >
             <Grid container justify="flex-start" alignItems="center">

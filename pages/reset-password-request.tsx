@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
     textAlign: "center"
   },
   logo: {
-    margin: 3 * theme.spacing.unit
+    margin: theme.spacing(3)
   }
 });
 

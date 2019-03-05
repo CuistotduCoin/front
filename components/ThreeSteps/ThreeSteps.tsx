@@ -6,7 +6,7 @@ import React from "react";
 
 const styles = (theme: Theme) => ({
   padding: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   },
 });
 

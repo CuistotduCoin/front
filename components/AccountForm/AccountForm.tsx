@@ -30,7 +30,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 540,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   textField: {
     width: "100%"
@@ -139,7 +139,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
 
     const updateInfoFormComponent = () => (
       <Form autoComplete="off">
-        <Grid container className={classes.grid} spacing={16}>
+        <Grid container className={classes.grid} spacing={2}>
           <Grid item xs={12}>
             <Grid item xs={12}>
               <Field
@@ -165,7 +165,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
                 disabled
               />
             </Grid>
-            <Grid container spacing={16} className={classes.block}>
+            <Grid container spacing={2} className={classes.block}>
               <Grid item xs={2}>
                 <Field
                   id="gender"
@@ -287,7 +287,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
 
     const updatePasswordFormComponent = () => (
       <Form autoComplete="off">
-        <Grid container className={classes.grid} spacing={16}>
+        <Grid container className={classes.grid} spacing={2}>
           <Grid item xs={12}>
             <Field
               type="password"

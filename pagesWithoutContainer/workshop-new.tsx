@@ -190,7 +190,7 @@ class WorkshopNew extends React.Component<IWorkshopNewProps> {
                                     >
                                         Lieu souhaité
                   </Typography>
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <Query query={GetKitchens}>
                                                 {({ loading: kitchensLoading, error: kitchensError, data: kitchensData }) => {

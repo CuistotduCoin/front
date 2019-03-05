@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   image: {
     height: "100%",
@@ -55,7 +55,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
           justify="space-around"
           alignItems="center"
           className={classes.grid}
-          spacing={16}
+          spacing={2}
         >
           <Grid item sm={6} xs={12}>
             <Typography
@@ -90,7 +90,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
           justify="space-around"
           alignItems="center"
           className={classes.grid}
-          spacing={16}
+          spacing={2}
         >
           <Grid item sm={6} xs={12}>
             <Grid container justify="center">
@@ -125,7 +125,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
           justify="space-around"
           alignItems="center"
           className={classes.grid}
-          spacing={16}
+          spacing={2}
         >
           <Grid item sm={6} xs={12}>
             <Typography
@@ -159,7 +159,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
             justify="space-around"
             alignItems="center"
             className={classes.grid}
-            spacing={16}
+            spacing={2}
           >
             <Grid item sm={6} xs={12}>
               <Grid container justify="center">

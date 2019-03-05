@@ -19,7 +19,7 @@ export class CommentBlock extends React.Component<ICommentBlock, {}> {
     const { authorIdentityId, authorImageKey, name, rating, comment, date } = this.props;
     return (
       <>
-        <Grid container spacing={16}>
+        <Grid container spacing={2}>
           <Grid item>
             <ProfileImage
               imageKey={authorImageKey}
@@ -29,7 +29,7 @@ export class CommentBlock extends React.Component<ICommentBlock, {}> {
             />
           </Grid>
           <Grid item style={{ flex: 1 }}>
-            <Grid container spacing={8} direction="column">
+            <Grid container spacing={1} direction="column">
               <Grid item container justify="space-between" alignItems="center">
                 <Grid item>
                   <Typography variant="subtitle1" component="span">

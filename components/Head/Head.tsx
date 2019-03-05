@@ -57,8 +57,8 @@ export class Head extends React.Component<IHeadProps, {}> {
     }
 
     if (metaInfo[cleanPath] && metaInfo[cleanPath].href) {
-      configSEO.canonical = metaInfo[cleanPath].url;
-      configSEO.openGraph.url = metaInfo[cleanPath].url;
+      configSEO.canonical = metaInfo[cleanPath].href;
+      configSEO.openGraph.url = metaInfo[cleanPath].href;
     }
 
     if (metaInfo[cleanPath] && metaInfo[cleanPath].title) {

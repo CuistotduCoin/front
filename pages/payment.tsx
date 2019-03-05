@@ -14,10 +14,10 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   infoReservartion: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   }
 });
 
@@ -124,7 +124,7 @@ export class Payment extends React.Component<IPaymentProps, IPaymentState> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={16}
+          spacing={2}
           className={classes.grid}
         >
           <Grid item xs={12}>

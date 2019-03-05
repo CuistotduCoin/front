@@ -23,28 +23,33 @@ app.use("/_next/static", express.static(path.join(__dirname, "./static")));
 
 app.get('/', __non_webpack_require__('./serverless/pages/index').render);
 app.get('*', (req, res) => {
-
   const parsedUrl = parse(req.url, true);
   const { pathname, query } = parsedUrl;
-  let hasMatch = false;
 
-  for (const match of matches) {
-    const params = match.route(pathname);
-    if (params) {
-      try {
-        __non_webpack_require__(`./serverless/pages${pathname}`).render(req, res, match.page, Object.assign(params, query))
-      } catch (err) {
-        __non_webpack_require__('./serverless/pages/_error').render(req, res, match.page, Object.assign(params, query))
+  const rootStaticFiles = ['/robots.txt', '/sitemap.xml', '/browserconfig.xml', 'manifest.json']
+  if (rootStaticFiles.indexOf(pathname) > -1) {
+    const pathStatic = path.join(__dirname, './static', pathname);
+    res.sendFile(pathStatic);
+  } else {
+    let hasMatch = false;
+    for (const match of matches) {
+      const params = match.route(pathname);
+      if (params) {
+        try {
+          __non_webpack_require__(`./serverless/pages${pathname}`).render(req, res, match.page, Object.assign(params, query))
+        } catch (err) {
+          __non_webpack_require__('./serverless/pages/_error').render(req, res, match.page, Object.assign(params, query))
+        }
+        hasMatch = true;
+        break;
       }
-      hasMatch = true;
-      break;
     }
-  }
-  if (!hasMatch) {
-    try {
-      __non_webpack_require__(`./serverless/pages${pathname}`).render(req, res, parsedUrl)
-    } catch (err) {
-      __non_webpack_require__('./serverless/pages/_error').render(req, res, parsedUrl)
+    if (!hasMatch) {
+      try {
+        __non_webpack_require__(`./serverless/pages${pathname}`).render(req, res, parsedUrl)
+      } catch (err) {
+        __non_webpack_require__('./serverless/pages/_error').render(req, res, parsedUrl)
+      }
     }
   }
 })

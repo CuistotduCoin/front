@@ -7,7 +7,7 @@ const styles = (theme: Theme) => ({
   banner: {
     width: "100%",
     background: "#f6f6f6",
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   text: {
     marginLeft: 50
@@ -26,7 +26,7 @@ export class Banner extends React.Component<IBannerProps, {}> {
 
     return <Grid container
       justify="space-between"
-      spacing={16}
+      spacing={2}
       className={classes.banner}
     >
       <Grid item className={classes.text}>
