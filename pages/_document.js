@@ -168,6 +168,11 @@ class MyDocument extends Document {
               __html: `_linkedin_partner_id = "419348"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id);(function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})();`
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(52599466,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});`
+            }}
+          />
         </Head>
         <body>
           <Main />
