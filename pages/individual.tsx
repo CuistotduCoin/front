@@ -170,6 +170,20 @@ export class Individual extends React.Component<IIndividualProps, {}> {
       },
       {
         availableSeat: 6,
+        date: "samedi 6 avril, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcakes-paques.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier enfant : Cupcakes de Pâques",
+        nameCook: "Audrey",
+        price: 30,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/EGTYOu"
+      },
+      {
+        availableSeat: 6,
         date: "samedi 13 avril, 10h-12h",
         duration: 2,
         image:
