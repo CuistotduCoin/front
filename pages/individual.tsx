@@ -150,7 +150,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/paule-charlotte.jpg",
         name: "Atelier initiation à la cuisine Ivoirienne",
         nameCook: "Paule Charlotte",
-        price: 30,
+        price: 35,
         spot: "Cuisinella, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/iGOu9g"
