@@ -147,7 +147,7 @@ class MyDocument extends Document {
             color: black;
           }
           `}</style>
-          <script src="https://gl.hostcg.com/js/genlead.js" defer={true} />
+          <script src="https://gl.hostcg.com/js/genlead.js" defer />
           <script
             dangerouslySetInnerHTML={{
               __html: `window.ltwAsyncInit = function(){init_multiplegl('https://gl.hostcg.com/',[['https://gl.hostcg.com/','2346','svolxbjcwm']]);};`
