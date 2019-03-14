@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
@@ -7,6 +8,9 @@ import components from "../content/components";
 import Content from "../content/gift.mdx";
 
 const styles = (theme: Theme) => ({
+  button: {
+    margin: 18,
+  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -28,10 +32,19 @@ export class Gift extends React.Component<IGiftProps, {}> {
           container
           justify="space-around"
           alignItems="center"
-          spacing={2}
           className={classes.grid}
         >
           <Content components={components} />
+          <Button
+            variant="contained"
+            color="secondary"
+            href="https://cuistotducoin.typeform.com/to/nPpUDU"
+            target="_blank"
+            className={classes.button}
+            size="large"
+          >
+            Offrir ma carte cadeau
+          </Button>
         </Grid>
       </Layout>
     );
