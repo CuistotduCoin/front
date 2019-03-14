@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import components from "../content/components";
 // @ts-ignore
-import Content from "../content/invite.mdx";
+import Content from "../content/invite-business.mdx";
 
 const styles = (theme: Theme) => ({
   grid: {
