@@ -17,7 +17,7 @@ export class Logo extends React.Component<ILogoProps, {}> {
 
     return (
       <img
-        src="https://static.cuistotducoin.com/img/logo.svg"
+        src="https://static.cuistotducoin.com/logo.svg"
         alt="Logo de Cuistot du coin"
         height={height}
         width={width}

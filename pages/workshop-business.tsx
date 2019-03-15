@@ -34,9 +34,9 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <Mood />, title: 'Cohésion', content: "Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations." },
-      { icon: <ArrowDecision />, title: 'Diversité', content: "Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe." },
-      { icon: <EmoticonCool />, title: 'Sérénité', content: "L’atelier est organisé de A à Z par nos soins. Vous n’avez à vous souciez de rien. Au sein de votre entreprise ou dans l’un de nos lieux partenaires, nous prévoyons tous les ingrédients et le matériel nécessaire. Enfilez un véritable tablier coloré et passez aux fourneaux avec votre équipe. Conservez un souvenir de l’atelier avec notre sélection de photos prises lors de l’atelier." }
+      { icon: <Mood fontSize="large" />, title: 'Cohésion', content: "Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations." },
+      { icon: <ArrowDecision fontSize="large" />, title: 'Diversité', content: "Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe." },
+      { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "L’atelier est organisé de A à Z par nos soins. Vous n’avez à vous souciez de rien. Au sein de votre entreprise ou dans l’un de nos lieux partenaires, nous prévoyons tous les ingrédients et le matériel nécessaire. Enfilez un véritable tablier coloré et passez aux fourneaux avec votre équipe. Conservez un souvenir de l’atelier avec notre sélection de photos prises lors de l’atelier." }
     ];
 
     const stepsFAQ = [
@@ -100,7 +100,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         rating: 5
       },
       {
-        context: "Atelier pour une équipe de 17 collaborateurss",
+        context: "Atelier pour une équipe de 17 collaborateurs",
         comment: `L'équipe BeAble et moi-même avons passé un excellent moment. Des "profs" de qualité et à notre écoute. En prime, la dégustation a eu un franc succès et s'est avérée très copieuse. Merci à l'équipe Cuistot du coin pour ce bon moment.`,
         image:
           "https://static.cuistotducoin.com/img/testimony/beable.jpg",

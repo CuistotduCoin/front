@@ -13,11 +13,15 @@ const styles = (theme: Theme) => ({
       color: "black"
     }
   },
+  blockImage: {
+    marginBottom: 10
+  },
   cell: {
     backgroundColor: "white",
     border: "1px solid rgba(0,0,0,0.1)",
     borderRadius: theme.shape.borderRadius * 2,
     cursor: "grab",
+    height: 290,
     padding: 20
   },
   container: {
@@ -69,16 +73,22 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
       <Slider {...sliderSettings}>
         {testimonies.map((testimony, index) => (
           <Grid container className={classes.container} key={index} >
-            <Grid className={classes.cell}>
-              <Typography variant="subtitle1">{testimony.name}</Typography>
-              <Typography variant="subtitle2">{testimony.context}</Typography>
-              <img
-                src={testimony.image}
-                alt={testimony.name}
-                className={classes.sliderImage}
-              />
-              <Typography align="justify" variant="body1">{testimony.comment}</Typography>
-              <StarRating rating={testimony.rating} />
+            <Grid className={classes.cell} container justify="space-between" direction="column">
+              <Grid container justify="space-between" className={classes.blockImage}>
+                <Grid>
+                  <Typography variant="subtitle1" component="p">{testimony.name}</Typography>
+                  <Typography variant="subtitle2" component="p">{testimony.context}</Typography>
+                </Grid>
+                <img
+                  src={testimony.image}
+                  alt={testimony.name}
+                  className={classes.sliderImage}
+                />
+              </Grid>
+              <Grid>
+                <Typography align="justify" variant="body1" gutterBottom>{testimony.comment}</Typography>
+                <StarRating rating={testimony.rating} />
+              </Grid>
             </Grid>
           </Grid>
         ))}

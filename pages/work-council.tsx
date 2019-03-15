@@ -37,9 +37,9 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <Mood />, title: 'Vous allez plaire', content: `Cuisiner est une activité accessible à tous et qui permet de partager des moments conviviaux tout en découvrant des saveurs d’ici et d’ailleurs, des savoir-faire authentiques et des recettes chargées d’histoire.` },
-      { icon: <EmoticonCool />, title: 'Soyez serein', content: `Nous sélectionnons les ateliers les plus adaptés et nous nous chargeons de toute l’organisation. Les salariés participant aux ateliers n’ont plus qu’à se rendre aux fourneaux, à enfiler le tablier et à partager un moment convivial et savoureux !` },
-      { icon: <Charity />, title: `Un accompagnement au top`, content: `Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.` }
+      { icon: <Mood fontSize="large" />, title: 'Vous allez plaire', content: `Cuisiner est une activité accessible à tous et qui permet de partager des moments conviviaux tout en découvrant des saveurs d’ici et d’ailleurs, des savoir-faire authentiques et des recettes chargées d’histoire.` },
+      { icon: <EmoticonCool fontSize="large" />, title: 'Soyez serein', content: `Nous sélectionnons les ateliers les plus adaptés et nous nous chargeons de toute l’organisation. Les salariés participant aux ateliers n’ont plus qu’à se rendre aux fourneaux, à enfiler le tablier et à partager un moment convivial et savoureux !` },
+      { icon: <Charity fontSize="large" />, title: `Un accompagnement au top`, content: `Un membre de l’équipe reste à votre écoute sur la période des inscriptions aux ateliers. Il répond à toutes vos questions et s’assure du bon déroulé des ateliers.` }
     ];
 
     const stepsFAQ = [

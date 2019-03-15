@@ -37,9 +37,9 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
-      { icon: <AccountMultiple />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
-      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
+      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
+      { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
+      { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
     ];
 
 

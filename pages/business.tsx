@@ -66,7 +66,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
             >
               Vous souhaitez organiser un atelier
             </Typography>
-            <Typography variant="body1" align="justify" gutterBottom>
+            <Typography variant="body1" align="justify" paragraph>
               A la recherche d’une activité fédératrice, propice à la cohésion d’équipe et au partage ? Enfilez le tablier avec vos collaborateurs et rejoignez nos cuistots passionnés aux fourneaux. Nos ateliers laissent place à la collaboration et encouragent l’esprit d’équipe et la créativité. Chaque atelier se termine par la dégustation des préparations autour d’un buffet convivial, voir d’un repas.
             </Typography>
             <Grid container alignItems="center" justify="center">
@@ -110,7 +110,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
             >
               Vous souhaitez organiser un cocktail
             </Typography>
-            <Typography variant="body1" align="justify" gutterBottom>
+            <Typography variant="body1" align="justify" paragraph>
               A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Nos Cocktails sont une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
             </Typography>
             <Grid container alignItems="center" justify="center">
@@ -136,7 +136,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
             >
               Vous souhaitez organiser une journée de travail conviviale
             </Typography>
-            <Typography variant="body1" align="justify" gutterBottom>
+            <Typography variant="body1" align="justify" paragraph>
               Pour que le travail en équipe et vos réunions riment avec motivation, cohésion et inspiration, confiez-nous l’organisation de vos journées entre collaborateurs. Nous dénichons le lieu adapté pour vos temps de travail, tout en s’assurant d’une ambiance chaleureuse et conviviale. Ces temps productifs seront marqués par la découverte de recettes authentiques au travers de cocktail déjeunatoires pour vous restaurer ou lors d’un atelier si le timing le permet !
             </Typography>
             <Grid container alignItems="center" justify="center">
@@ -179,7 +179,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
               >
                 Vous êtes un Comité d’Entreprise
             </Typography>
-              <Typography variant="body1" align="justify" gutterBottom>
+              <Typography variant="body1" align="justify" paragraph>
                 Nous construisons à vos côtés un programme d’ateliers de cuisine privatisés dans nos lieux partenaires pour vos salariés. Les ateliers proposés sont accessibles à tous, amateurs ou passionnés avertis. Nos formats d’ateliers et la diversité des univers culinaires de nos cuistots permettront de satisfaire le plus grand nombre, tout en garantissant des moments conviviaux.
             </Typography>
               <Grid container alignItems="center" justify="center">

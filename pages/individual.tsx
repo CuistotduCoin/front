@@ -25,9 +25,9 @@ export class Individual extends React.Component<IIndividualProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <ArrowDecision />, title: 'Diversité', content: "Ateliers de cuisine, dégustation, buffets, repas. Nous organisons une expérience culinaire qui vous ressemble." },
-      { icon: <CheckAll />, title: 'Pour toutes les occassions', content: "Une fête d'anniversaire, une communion, une soirée thématique, une grande fête de famille, toutes les occasions sont bonnes pour célébrer et surtout en profiter !" },
-      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Vous serez les bienvenus chez nos partenaires sélectionnés avec soin. Itinérants, nous intervenons aussi à votre domicile." }
+      { icon: <ArrowDecision fontSize="large" />, title: 'Diversité', content: "Ateliers de cuisine, dégustation, buffets, repas. Nous organisons une expérience culinaire qui vous ressemble." },
+      { icon: <CheckAll fontSize="large" />, title: 'Pour toutes les occassions', content: "Une fête d'anniversaire, une communion, une soirée thématique, une grande fête de famille, toutes les occasions sont bonnes pour célébrer et surtout en profiter !" },
+      { icon: <StoreMallDirectory fontSize="large" />, title: 'Des lieux adaptés', content: "Vous serez les bienvenus chez nos partenaires sélectionnés avec soin. Itinérants, nous intervenons aussi à votre domicile." }
     ];
 
     const workshops = [
