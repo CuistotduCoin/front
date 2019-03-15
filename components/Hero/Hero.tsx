@@ -75,7 +75,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
           <Grid container direction="column">
             <Grid item>
               <Typography
-                variant="h5"
+                variant="h4"
                 align="center"
                 component="h1"
                 color="inherit"
@@ -84,7 +84,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
               </Typography>
               {this.props.description && (
                 <Typography
-                  variant="subtitle1"
+                  variant="h5"
                   align="center"
                   component="p"
                   color="inherit"
@@ -102,15 +102,17 @@ export class Hero extends React.Component<IHeroProps, {}> {
         </div>
 
         <div className={classes.backgroundImage} style={this.innerBackground} />
-        <video
-          className={classes.video}
-          autoPlay
-          muted
-          loop
-          poster={this.props.imageURL}
-        >
-          <source src={this.props.videoURL} type="video/mp4" />
-        </video>
+        {this.props.videoURL &&
+          <video
+            className={classes.video}
+            autoPlay
+            muted
+            loop
+            poster={this.props.imageURL}
+          >
+            <source src={this.props.videoURL} type="video/mp4" />
+          </video>
+        }
       </div>
     );
   }

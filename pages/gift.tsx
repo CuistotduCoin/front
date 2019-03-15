@@ -27,7 +27,7 @@ export class Gift extends React.Component<IGiftProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Concoctez avec nous une expérience culinaire authentique et gourmande pour vos salariés !">
+      <Layout valueProposition="Offrez un moment culinaire authentique et convivial à vos proches avec notre carte cadeau, valable 1 an pour tous nos ateliers Cuistot du Coin">
         <Grid
           container
           justify="space-around"

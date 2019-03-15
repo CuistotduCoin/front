@@ -74,7 +74,10 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Link href="/terms">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Conditions légales</Typography></a>
               </Link>
-              <a href="http://www.blog.cuistotducoin.com" target="_blank">
+              <a href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer">
+                <Typography variant="subtitle1" className={classes.subheading}>FAQ</Typography>
+              </a>
+              <a href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer">
                 <Typography variant="subtitle1" className={classes.subheading}>Blog</Typography>
               </a>
             </Grid>
@@ -162,9 +165,9 @@ export class Footer extends React.Component<IFooterProps, {}> {
           </Grid>
         </Grid>
         <div className={classes.icons}>
-          <a href="https://www.facebook.com/cuistotducoin/" target="_blank"><FacebookIcon /></a>
-          <a href="https://twitter.com/cuistotducoin?lang=fr" target="_blank"><TwitterIcon /></a>
-          <a href="https://www.instagram.com/cuistotducoin/" target="_blank"><InstagramIcon /></a>
+          <a href="https://www.facebook.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><FacebookIcon titleAccess="facebook" /></a>
+          <a href="https://twitter.com/cuistotducoin?lang=fr" target="_blank" rel="noopener noreferrer"><TwitterIcon titleAccess="twitter" /></a>
+          <a href="https://www.instagram.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><InstagramIcon titleAccess="instagram" /></a>
         </div>
       </div>
     );

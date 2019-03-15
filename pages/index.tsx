@@ -52,7 +52,7 @@ export class Home extends React.Component<IHomeProps, {}> {
     const steps = [
       { icon: <MathCompass />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
       { icon: <HowToReg />, title: 'Les meilleurs cuistots', content: "Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux." },
-      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans vos entreprises ou à votre domicile." }
+      { icon: <StoreMallDirectory />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans votre entreprise ou à votre domicile." }
     ];
 
     const testimonies = [
@@ -124,7 +124,7 @@ export class Home extends React.Component<IHomeProps, {}> {
     return (
       <Layout
         valueProposition="Cuistot du Coin, le renouveau du traiteur événementiel"
-        description="Buffet cocktail, ateliers de cuisine, journée de séminaire... Pour que tous vos événements vous ressemble !"
+        description="Buffet cocktail, ateliers de cuisine, journée de séminaire... Pour que tous vos événements vous ressemblent !"
       >
         <Typography
           variant="h5"
@@ -203,7 +203,7 @@ export class Home extends React.Component<IHomeProps, {}> {
               Vous êtes un particulier
             </Typography>
             <Typography variant="body1" align="justify" gutterBottom>
-              Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile. Réunissez-vous autour d’un buffet authentiques en toutes occasions.
+              Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile ou participez à nos ateliers collectifs. Pour organisation un repas ou un cocktail, en toutes occasions, n’hésitez pas à nous contacter.
             </Typography>
             <Grid container alignItems="center" justify="center">
               <Link href="/individual" passHref>

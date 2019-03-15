@@ -41,7 +41,6 @@ export class Layout extends React.Component<ILayoutProps, {}> {
           {valueProposition && (
             <Hero
               imageURL="https://static.cuistotducoin.com/img/home/landing.jpg"
-              videoURL="https://static.cuistotducoin.com/video/landing-video.mp4"
               valueProposition={valueProposition}
               description={description}
             >
