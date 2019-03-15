@@ -30,7 +30,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
     return (
       <Layout
         valueProposition="Apportez de la saveur à vos événements d’entreprise"
-        description="Journées d’équipe, temps-forts en entreprise, activités collaboratives, buffets savoureux"
+        description="Journées d’équipe, temps-forts en entreprise, activités collaboratives, cocktails savoureux"
         component={
           <Grid
             container
@@ -96,8 +96,8 @@ export class Business extends React.Component<IBusinessProps, {}> {
             <Grid container justify="center">
               <img
                 className={classes.image}
-                alt="Organisez un buffet Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/business/organisez-un-buffet.jpg"
+                alt="Organisez un cocktail Cuistot du Coin"
+                src="https://static.cuistotducoin.com/img/business/organisez-un-cocktail.jpg"
               />
             </Grid>
           </Grid>
@@ -108,13 +108,13 @@ export class Business extends React.Component<IBusinessProps, {}> {
               component="h2"
               gutterBottom
             >
-              Vous souhaitez organiser un buffet
+              Vous souhaitez organiser un cocktail
             </Typography>
             <Typography variant="body1" align="justify" gutterBottom>
-              A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Nos buffets sont une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
+              A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Nos Cocktails sont une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/buffet" passHref>
+              <Link href="/cocktail" passHref>
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
@@ -137,7 +137,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
               Vous souhaitez organiser une journée de travail conviviale
             </Typography>
             <Typography variant="body1" align="justify" gutterBottom>
-              Pour que le travail en équipe et vos réunions riment avec motivation, cohésion et inspiration, confiez-nous l’organisation de vos journées entre collaborateurs. nous dénichons le lieu adapté pour vos temps de travail, tout en s’assurant d’une ambiance chaleureuse et conviviale. Ces temps productifs seront marqués par la découverte de recettes authentiques au travers de buffets pour vous restaurer ou lors d’un atelier si le timing le permet !
+              Pour que le travail en équipe et vos réunions riment avec motivation, cohésion et inspiration, confiez-nous l’organisation de vos journées entre collaborateurs. Nous dénichons le lieu adapté pour vos temps de travail, tout en s’assurant d’une ambiance chaleureuse et conviviale. Ces temps productifs seront marqués par la découverte de recettes authentiques au travers de cocktail déjeunatoires pour vous restaurer ou lors d’un atelier si le timing le permet !
             </Typography>
             <Grid container alignItems="center" justify="center">
               <Link href="/working-day" passHref>

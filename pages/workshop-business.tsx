@@ -42,11 +42,11 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const stepsFAQ = [
       {
         title: `Partagez-nous vos attentes`,
-        content: `Faîtes-nous part du contexte dans lequel vous souhaitez organiser cet atelier en rendez-vous ou lors d’un échange téléphonique. `
+        content: `Faîtes-nous part du contexte dans lequel vous souhaitez organiser cet atelier. Un membre de l’équipe Cuistot du Coin vient à votre rencontre ou prend un temps d’échange par téléphone avec vous, selon vos disponibilités.`
       },
       {
         title: `Nous nous chargeons de l’organisation de l’atelier de A à Z.`,
-        content: `Nous vous transmettons une proposition de devis adaptée, en fonction de vos impératifs et selon la disponibilité de nos cuistots et de nos lieux partenaires. Nous restons à votre écoute pour personnaliser nos proposition et répondre au plus près à vos attentes.`
+        content: `Nous vous transmettons une proposition de devis adaptée, en fonction de vos impératifs et selon la disponibilité de nos cuistots et de nos lieux partenaires. Nous restons à votre écoute pour personnaliser nos propositions et répondre au mieux à vos attentes.`
       },
       {
         title: `Participez à une activité fédératrice`,
@@ -93,7 +93,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       },
       {
         context: "atelier pour les membres du CA",
-        comment: "Super, moment de détente, très professionnel, de superbes astuces …",
+        comment: "Super, moment de détente, très professionnel, de superbes astuces…",
         image:
           "https://static.cuistotducoin.com/img/testimony/cpme.jpg",
         name: "CPME 29",
@@ -101,7 +101,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       },
       {
         context: "Atelier pour une équipe de 17 collaborateurss",
-        comment: `L'équipe BeAble et moi-même avons passé un excellent moment. Des "profs" de qualités et à notre écoute. En prime, la dégustation a eu un franc succès et s'est avérée très copieuse. Merci à l'équipe Cuistot du coin pour ce bon moment.`,
+        comment: `L'équipe BeAble et moi-même avons passé un excellent moment. Des "profs" de qualité et à notre écoute. En prime, la dégustation a eu un franc succès et s'est avérée très copieuse. Merci à l'équipe Cuistot du coin pour ce bon moment.`,
         image:
           "https://static.cuistotducoin.com/img/testimony/beable.jpg",
         name: "Be Able",

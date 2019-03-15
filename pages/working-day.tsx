@@ -34,15 +34,15 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <Mood />, title: 'Engagement', content: "Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de buffets pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation." },
-      { icon: <MathCompass />, title: 'Sur mesure', content: "Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions." },
-      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous prenons en main l’organisation de ces temps en équipe de A à Z. ne vous souciez de rien et soyez serein ! Vous n’avez plus qu’à préparer vos temps de travail avec vos équipes." }
+      { icon: <Mood />, title: 'Engagement', content: "Nous préparons une recette adaptée pour motiver vos équipes lors de réunions de travail. De l’accueil soigné dans nos lieux partenaires à l’organisation des salles de travail en passant par la mise en place de cocktails pour vous restaurer et savourer des recettes authentiques. Et si le temps le permet, passez aux fourneaux avec vos collaborateurs pour faire le plein de motivation." },
+      { icon: <MathCompass />, title: 'Sur mesure', content: "Nous nous adaptons à vos impératifs : budgets, contraintes horaires, secteurs géographiques. Faîtes-nous part du nombre de collaborateurs que vous souhaitez réunir et du contexte de ces temps forts et nous personnalisons nos propositions." },
+      { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous prenons en main l’organisation de ces temps en équipe de A à Z. Ne vous souciez de rien et soyez serein ! Vous pourrez vous concentrer sur la préparation de vos temps de travail avec vos équipes." }
     ];
 
     const stepsFAQ = [
       {
         title: 'Faîtes-nous part de vos attentes !',
-        content: `Faîtes-nous part du contexte dans lequel vous souhaitez réunir vos collaborateurs et de certains éléments opérationnels : nombre d epersonnes, date, besoins techniques éventuels, contraintes horaires, ..; Echangeons de vives voix par téléphone. Nous pouvons aussi venir à votre rencontre si vous le souhaitez.`
+        content: `Faîtes-nous part du contexte dans lequel vous souhaitez réunir vos collaborateurs et de certains éléments opérationnels : nombre de personnes, date, besoins techniques éventuels, contraintes horaires, ..; Echangeons de vives voix par téléphone. Nous pouvons aussi venir à votre rencontre si vous le souhaitez.`
       },
       {
         title: 'Nous assurons l’organisation de A à Z',

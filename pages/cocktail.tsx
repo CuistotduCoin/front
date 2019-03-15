@@ -28,16 +28,16 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IBuffetProps {
+interface ICocktailProps {
   classes?: any;
 }
 
-export class Buffet extends React.Component<IBuffetProps, {}> {
+export class Cocktail extends React.Component<ICocktailProps, {}> {
   public render() {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque buffet est une invitation au voyage." },
+      { icon: <CompassOutline />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
       { icon: <AccountMultiple />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
       { icon: <EmoticonCool />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
     ];
@@ -46,7 +46,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const stepsFAQ = [
       {
         title: `Faîtes-nous part de vos attentes.`,
-        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez-nous le contexte de ce buffet et le budget alloué à cette prestation. Plutôt cuisine du monde ou cuisine terroir ? Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
+        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez-nous le contexte de ce cocktail et le budget alloué à cette prestation. Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
       },
       {
         title: `Nous vous apportons un accompagnement sur mesure`,
@@ -54,7 +54,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       },
       {
         title: `Nous proposons des formats propices au partage`,
-        content: `Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial. Nous limitons les déchets et le gaspillage.`
+        content: `Nous veillons à privilégier des mets qui se dégustent facilement autour d’un buffet convivial. Nous pensons à la planète et limitons les déchets et le gaspillage.`
       }
     ];
 
@@ -86,18 +86,18 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-asiatique.jpg', width: 1, height: 1, caption: "Buffet au saveur de l'Asie", alt: "buffet asiatique" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-bresilien-1.jpg', width: 1, height: 1, caption: "Pièce cocktail au saveur du Brésil", alt: "buffet brésilien" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-bresilien-2.jpg', width: 1, height: 1, caption: "Buffet au saveur du Brésil", alt: "buffet brésilien 2" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-bresilien-3.jpg', width: 1, height: 1, caption: "Buffet pour le réseau entreprendre", alt: "buffet brésilien 3" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-bresilien-4.jpg', width: 1, height: 1, caption: "Buffet complet au saveur du Brésil", alt: "buffet brésilien 4" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-crepes.jpg', width: 1, height: 1, caption: "Buffet crêpes au billig", alt: "Buffet crepes" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-reseau-entreprendre.jpg', width: 1, height: 1, caption: "Buffet pour le réseau entreprendre (suite)", alt: "Buffet reseau" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/buffet/buffet-vegetal.jpg', width: 1, height: 1, caption: "Buffet végétal à la suite d'un atelier", alt: "Buffet atelier" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-asiatique.jpg', width: 1, height: 1, caption: "Cocktail au saveur de l'Asie", alt: "Cocktail asiatique" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-bresilien-1.jpg', width: 1, height: 1, caption: "Pièce cocktail au saveur du Brésil", alt: "Cocktail brésilien" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-bresilien-2.jpg', width: 1, height: 1, caption: "Cocktail au saveur du Brésil", alt: "Cocktail brésilien 2" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-bresilien-3.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre", alt: "Cocktail brésilien 3" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-bresilien-4.jpg', width: 1, height: 1, caption: "Cocktail complet au saveur du Brésil", alt: "Cocktail brésilien 4" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/buffet-crepes.jpg', width: 1, height: 1, caption: "Buffet crêpes au billig", alt: "Buffet crepes" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-reseau-entreprendre.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre (suite)", alt: "Cocktail reseau" },
+      { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
     return (
-      <Layout valueProposition="Concoctez avec nous une expérience culinaire authentique et gourmande pour vos salariés !"
+      <Layout valueProposition="Cuisine du monde, saveurs d’ici et d’ailleurs, cocktails déjeunatoires ou dinatoires sur mesure !"
         component={
           <Grid
             container
@@ -161,4 +161,4 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Buffet as any) as any;
+export default withStyles(styles as any)(Cocktail as any) as any;
