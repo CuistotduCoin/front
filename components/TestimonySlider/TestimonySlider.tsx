@@ -77,7 +77,7 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
               <Grid container justify="space-between" className={classes.blockImage}>
                 <Grid>
                   <Typography variant="subtitle1" component="p">{testimony.name}</Typography>
-                  <Typography variant="subtitle2" component="p">{testimony.context}</Typography>
+                  <Typography variant="caption" component="p">{testimony.context}</Typography>
                 </Grid>
                 <img
                   src={testimony.image}
