@@ -23,7 +23,8 @@ const styles = (theme: Theme) => ({
     width: 60
   },
   bottomContentCard: {
-    marginTop: -40
+    marginTop: -40,
+    minHeight: 136
   },
   bottomContentCardItem: {
     paddingTop: 12
@@ -34,7 +35,7 @@ const styles = (theme: Theme) => ({
   cardContent: {
     "&:last-child": { padding: 0 },
     marginTop: -25,
-    padding: 0
+    padding: 0,
   },
   cardHeaderUp: {
     alignItems: "flex-end",

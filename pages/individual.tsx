@@ -1,20 +1,10 @@
-import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
-import ArrowDecision from 'mdi-material-ui/ArrowDecision'
-import CheckAll from "mdi-material-ui/CheckAll";
-import StoreMallDirectory from "mdi-material-ui/Store";
 import React from "react";
 import Layout from "../components/Layout";
-import ThreeSteps from "../components/ThreeSteps";
+
 import WorkshopCardList from "../components/WorkshopCardList";
 
-const styles = (theme: Theme) => ({
-  grid: {
-    margin: "0px auto",
-    maxWidth: 1080,
-    padding: theme.spacing(3)
-  },
-});
+const styles = (theme: Theme) => ({});
 
 export interface IIndividualProps {
   classes?: any;
@@ -23,12 +13,6 @@ export interface IIndividualProps {
 export class Individual extends React.Component<IIndividualProps, {}> {
   public render() {
     const { classes } = this.props;
-
-    const steps = [
-      { icon: <ArrowDecision fontSize="large" />, title: 'Diversité', content: "Ateliers de cuisine, dégustation, buffets, repas. Nous organisons une expérience culinaire qui vous ressemble." },
-      { icon: <CheckAll fontSize="large" />, title: 'Pour toutes les occassions', content: "Une fête d'anniversaire, une communion, une soirée thématique, une grande fête de famille, toutes les occasions sont bonnes pour célébrer et surtout en profiter !" },
-      { icon: <StoreMallDirectory fontSize="large" />, title: 'Des lieux adaptés', content: "Vous serez les bienvenus chez nos partenaires sélectionnés avec soin. Itinérants, nous intervenons aussi à votre domicile." }
-    ];
 
     const workshops = [
       {
@@ -174,14 +158,6 @@ export class Individual extends React.Component<IIndividualProps, {}> {
 
     return (
       <Layout showSearchForm={true}>
-        <Grid
-          container
-          justify="space-around"
-          spacing={2}
-          className={classes.grid}
-        >
-          <ThreeSteps steps={steps} />
-        </Grid>
         <WorkshopCardList workshops={workshops} ads={ads} />
       </Layout >
     );
