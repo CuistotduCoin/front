@@ -1,7 +1,6 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
 import Layout from "../components/Layout";
-
 import WorkshopCardList from "../components/WorkshopCardList";
 
 const styles = (theme: Theme) => ({});
@@ -157,7 +156,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
     ];
 
     return (
-      <Layout showSearchForm={true}>
+      <Layout>
         <WorkshopCardList workshops={workshops} ads={ads} />
       </Layout >
     );

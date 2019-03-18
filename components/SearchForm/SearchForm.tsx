@@ -1,5 +1,5 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
-// import AlgoliaPlaces from 'algolia-places-react';
+import AlgoliaPlaces from 'algolia-places-react';
 import Router from 'next/router'
 import React from "react";
 
@@ -36,7 +36,7 @@ export class SearchForm extends React.Component<ISearchForm, {}> {
 
   public render() {
     return (
-      /*<AlgoliaPlaces
+      <AlgoliaPlaces
         placeholder="Entrez votre ville"
         options={{
           apiKey: this.props.apiKey,
@@ -47,8 +47,7 @@ export class SearchForm extends React.Component<ISearchForm, {}> {
           useDeviceLocation: true
         }}
         onChange={this.handleAddressSelection}
-      />*/
-      <div />
+      />
     );
   }
 }

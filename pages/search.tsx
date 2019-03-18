@@ -1,8 +1,10 @@
 import { FormControlLabel, Switch } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
+import dynamic from 'next/dynamic'
 // import { parse } from "query-string";
 import React, { Fragment } from "react";
+
 import {
   connectHits,
   Highlight,
@@ -136,6 +138,9 @@ export class Search extends React.Component<ISearchProps, ISearchState> {
   public render() {
     const { classes } = this.props;
     const initialPosition = { lat: 0, lng: 0 };
+
+    // @ts-ignore
+    // const searchForm = dynamic(() => import('../components/SearchForm'), { ssr: false });
 
     return (
       <Layout>
