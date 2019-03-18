@@ -1,6 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../decorators/getPageContext';
@@ -55,9 +55,9 @@ class MyApp extends App {
             registry={this.pageContext.sheetsRegistry}
             generateClassName={this.pageContext.generateClassName}
           >
-            {/* MuiThemeProvider makes the theme available down the React
+            {/* ThemeProvider makes the theme available down the React
                 tree thanks to React context. */}
-            <MuiThemeProvider
+            <ThemeProvider
               theme={this.pageContext.theme}
               sheetsManager={this.pageContext.sheetsManager}
             >
@@ -66,7 +66,7 @@ class MyApp extends App {
               {/* Pass pageContext to the _document though the renderPage enhancer
                   to render collected styles on server side. */}
               <Component pageContext={this.pageContext} {...pageProps} />
-            </MuiThemeProvider>
+            </ThemeProvider>
           </JssProvider>
         </ProvidedApp>
       </Container>

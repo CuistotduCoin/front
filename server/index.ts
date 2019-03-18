@@ -34,7 +34,8 @@ app.prepare().then(() => {
     if (!hasMatch) {
       handle(req, res, parsedUrl);
     }
-  }).listen(port, err => {
+    // @ts-ignore
+  }).listen(port, (err: any) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
