@@ -23,7 +23,7 @@ export class Join extends React.Component<IJoinProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Rejoignez l'équipe de Cuistot du Coin">
+      <Layout>
         <Grid
           container
           justify="space-around"

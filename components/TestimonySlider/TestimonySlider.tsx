@@ -11,6 +11,17 @@ const styles = (theme: Theme) => ({
   '@global': {
     ".slick-prev:before, .slick-next:before": {
       color: "black"
+    },
+    ".slick-track": {
+      display: "flex"
+    },
+    ".slick-slide": {
+      display: "flex",
+      height: "auto"
+    },
+    ".slick-slide>div": {
+      display: "flex",
+      minHeight: "100%"
     }
   },
   blockImage: {
@@ -21,11 +32,12 @@ const styles = (theme: Theme) => ({
     border: "1px solid rgba(0,0,0,0.1)",
     borderRadius: theme.shape.borderRadius * 2,
     cursor: "grab",
-    height: 290,
-    padding: 20
+    padding: 20,
+    height: "100%"
   },
   container: {
-    padding: 20
+    padding: 20,
+    minHeight: "100%"
   },
   slider: {
     margin: "0px auto",
@@ -49,19 +61,22 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
 
     const { classes, testimonies } = this.props;
     const sliderSettings = {
+      className: 'slick-flex',
       dots: true,
       infinite: true,
       responsive: [
         {
           breakpoint: 960,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 2,
+            slidesToScroll: 2
           }
         },
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }
       ],
@@ -72,7 +87,7 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
     return (
       <Slider {...sliderSettings}>
         {testimonies.map((testimony, index) => (
-          <Grid container className={classes.container} key={index} >
+          <Grid container className={classes.container} key={index}>
             <Grid className={classes.cell} container justify="space-between" direction="column">
               <Grid container justify="space-between" className={classes.blockImage}>
                 <Grid>

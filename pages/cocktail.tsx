@@ -97,7 +97,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
     ];
 
     return (
-      <Layout valueProposition="Cuisine du monde, saveurs d’ici et d’ailleurs, cocktails déjeunatoires ou dinatoires sur mesure !"
+      <Layout
         component={
           <Grid
             container

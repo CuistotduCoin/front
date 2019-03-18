@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/react";
-import SearchForm from "../../components/SearchForm";
 import React from "react";
+import SearchForm from "../../components/SearchForm";
 import Hero from "./Hero";
 
 storiesOf("Cuistot/components/Hero", module).add("default", () => (

@@ -138,7 +138,7 @@ export class Search extends React.Component<ISearchProps, ISearchState> {
     const initialPosition = { lat: 0, lng: 0 };
 
     return (
-      <Layout valueProposition="Ateliers de cuisine autour de vous">
+      <Layout>
         <InstantSearch
           appId="appId"
           apiKey="apiKey"

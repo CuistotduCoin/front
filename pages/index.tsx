@@ -122,10 +122,7 @@ export class Home extends React.Component<IHomeProps, {}> {
     ];
 
     return (
-      <Layout
-        valueProposition="Cuistot du Coin, le renouveau du traiteur événementiel"
-        description="Cocktail, ateliers de cuisine, journée de séminaire... Pour que tous vos événements vous ressemblent !"
-      >
+      <Layout>
         <Typography
           variant="h5"
           align="center"

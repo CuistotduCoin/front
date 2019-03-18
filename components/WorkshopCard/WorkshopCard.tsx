@@ -113,11 +113,6 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
     }
 
     function container(props, children) {
-      const isFull = props.availableSeat < 1;
-
-      if (isFull) {
-        return <div className={classes.link}>{children}</div>;
-      }
       return (
         <a className={classes.link} href={props.typeform} target="_blank">
           {children}

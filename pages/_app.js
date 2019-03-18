@@ -6,7 +6,6 @@ import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../decorators/getPageContext';
 import ProvidedApp from '../components/App';
 import Raven from 'raven-js'
-import Head from '../components/Head';
 import { initGA, logPageView } from '../shared/analytics'
 import Router from 'next/router'
 
@@ -66,7 +65,6 @@ class MyApp extends App {
               <CssBaseline />
               {/* Pass pageContext to the _document though the renderPage enhancer
                   to render collected styles on server side. */}
-              <Head />
               <Component pageContext={this.pageContext} {...pageProps} />
             </MuiThemeProvider>
           </JssProvider>

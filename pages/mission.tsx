@@ -23,7 +23,7 @@ export class Mission extends React.Component<IMissionProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Nos mission à Cuistot du Coin">
+      <Layout>
         <Grid
           container
           justify="space-around"

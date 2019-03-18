@@ -23,7 +23,7 @@ export class Terms extends React.Component<ITermsProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Conditions légales">
+      <Layout>
         <Grid
           container
           justify="space-around"

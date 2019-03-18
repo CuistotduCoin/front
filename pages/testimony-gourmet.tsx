@@ -23,7 +23,7 @@ export class Testimony extends React.Component<ITestimonyProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Ils nous font confiance">
+      <Layout>
         <Grid
           container
           justify="space-around"

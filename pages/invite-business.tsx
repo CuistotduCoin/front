@@ -23,7 +23,7 @@ export class InviteBusiness extends React.Component<IInviteBusinessProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Invitez votre entreprise à découvrir des saveurs originales !">
+      <Layout>
         <Grid
           container
           justify="space-around"

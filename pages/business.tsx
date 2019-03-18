@@ -29,8 +29,6 @@ export class Business extends React.Component<IBusinessProps, {}> {
 
     return (
       <Layout
-        valueProposition="Apportez de la saveur à vos événements d’entreprise"
-        description="Journées d’équipe, temps-forts en entreprise, activités collaboratives, cocktails savoureux"
         component={
           <Grid
             container

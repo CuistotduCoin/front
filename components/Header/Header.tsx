@@ -103,7 +103,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               color="primary"
               onScroll={this.handleScroll}
             >
-              S'inscrire
+              Premiers pas avec Cuistot du Coin
             </Button>
           </Link>
         );

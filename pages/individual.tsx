@@ -173,11 +173,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
     ];
 
     return (
-      <Layout
-        valueProposition="Participez à des ateliers de cuisine authentiques et en toute convivialité !"
-        description="Ateliers de Cuisine, Dégustations, Repas authentiques et conviviaux"
-        showSearchForm={true}
-      >
+      <Layout showSearchForm={true}>
         <Grid
           container
           justify="space-around"

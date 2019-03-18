@@ -56,7 +56,6 @@ interface IHeroProps {
 export class Hero extends React.Component<IHeroProps, {}> {
   public static defaultProps: Partial<IHeroProps> = {
     height: 400,
-    valueProposition: "Des saveurs à partager"
   };
 
   private innerBackground = {

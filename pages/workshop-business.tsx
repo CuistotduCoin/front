@@ -117,7 +117,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     return (
-      <Layout valueProposition="Concoctez avec nous une expérience culinaire authentique et gourmande pour vos salariés !"
+      <Layout
         component={
           <Grid
             container

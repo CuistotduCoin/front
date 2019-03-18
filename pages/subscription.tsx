@@ -43,10 +43,7 @@ export class Subscription extends React.Component<ISubscriptionProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout
-        valueProposition="Abonnement : Atelier de cuisine pour enfant"
-        description="Marre des activités extra-scolaires classiques ? Faites découvrir la pâtisserie à vos enfants !"
-      >
+      <Layout>
         <Grid
           container
           justify="space-around"

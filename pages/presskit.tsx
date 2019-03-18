@@ -23,7 +23,7 @@ export class Presskit extends React.Component<IPresskitProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Presskit">
+      <Layout>
         <Grid
           container
           justify="space-around"

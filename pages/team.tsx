@@ -23,7 +23,7 @@ export class Team extends React.Component<ITeamProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Qui sommes-nous ? l'équipe de Cuistot du Coin">
+      <Layout>
         <Grid
           container
           justify="space-around"

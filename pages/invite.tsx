@@ -37,7 +37,7 @@ export class Invite extends React.Component<IInviteProps, {}> {
     const { classes } = this.props;
 
     return (
-      <Layout valueProposition="Invitez votre entourage à nous découvrir !">
+      <Layout>
         <Grid
           container
           justify="space-around"
