@@ -45,14 +45,6 @@ jobs:
           command: |
             yarn build
       - run:
-          name: Build lambda
-          command: |
-            yarn build-lambda
-      - run:
-          name: Build assets
-          command: |
-            yarn build-assets
-      - run:
           name: Deploy frontend
           command: |
             yarn deploy
@@ -78,14 +70,6 @@ jobs:
           name: Build frontend
           command: |
             yarn build
-      - run:
-          name: Build lambda
-          command: |
-            yarn build-lambda
-      - run:
-          name: Build assets
-          command: |
-            yarn build-assets
       - run:
           name: Deploy frontend
           command: |

@@ -1100,6 +1100,18 @@
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
 
+"@mapbox/eslint-config-mapbox@^1.0.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/eslint-config-mapbox/-/eslint-config-mapbox-1.2.1.tgz#f0dc80d29a336a5477b146d9d32a75afc310a5e4"
+
+"@mapbox/s3urls@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@mapbox/s3urls/-/s3urls-1.5.3.tgz#8578f51941af2ba836623f4941a761515ce92ff1"
+  dependencies:
+    "@mapbox/eslint-config-mapbox" "^1.0.0"
+    minimist "^1.1.0"
+    s3signed "^0.1.0"
+
 "@material-ui/core@^4.0.0-alpha.4":
   version "4.0.0-alpha.4"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.0-alpha.4.tgz#e7a4bd231fee1d11ed3f58223daa19ff3321858f"
@@ -2771,7 +2783,7 @@ aws-sdk@2.329.0:
     uuid "3.1.0"
     xml2js "0.4.19"
 
-aws-sdk@^2.423.0:
+aws-sdk@^2.0.4, aws-sdk@^2.423.0:
   version "2.423.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.423.0.tgz#bc67427fb602b88a652143fafd2febde94a8141d"
   dependencies:
@@ -6331,7 +6343,7 @@ js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.12.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
+js-yaml@^3.12.0, js-yaml@^3.12.1, js-yaml@^3.7.0, js-yaml@^3.9.0:
   version "3.12.2"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
   dependencies:
@@ -6619,6 +6631,12 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
+klaw@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/klaw/-/klaw-3.0.0.tgz#b11bec9cf2492f06756d6e809ab73a2910259146"
+  dependencies:
+    graceful-fs "^4.1.9"
+
 latest-version@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
@@ -6737,6 +6755,10 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -6780,6 +6802,10 @@ lodash.isplainobject@^4.0.6:
 lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
+
+lodash.merge@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
 
 lodash.mergewith@^4.6.1:
   version "4.6.1"
@@ -7142,7 +7168,7 @@ mime@^1.4.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
 
-mime@^2.0.3, mime@^2.3.1:
+mime@^2.0.3, mime@^2.3.1, mime@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.0.tgz#e051fd881358585f3279df333fe694da0bcffdd6"
 
@@ -7201,7 +7227,7 @@ minimist@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
-minimist@^1.1.3, minimist@^1.2.0:
+minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
@@ -8551,7 +8577,7 @@ react-docgen@^3.0.0:
     node-dir "^0.1.10"
     recast "^0.16.0"
 
-react-dom@^16.8.1, react-dom@^16.8.4:
+react-dom@^16.8.1, react-dom@^16.8.3, react-dom@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.4.tgz#1061a8e01a2b3b0c8160037441c3bf00a0e3bc48"
   dependencies:
@@ -8849,7 +8875,7 @@ react-waypoint@^9.0.1:
     prop-types "^15.0.0"
     react-is "^16.6.3"
 
-react@^16.8.1, react@^16.8.4:
+react@^16.8.1, react@^16.8.3, react@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
   dependencies:
@@ -9315,6 +9341,12 @@ rxjs@^6.1.0, rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
+s3signed@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/s3signed/-/s3signed-0.1.0.tgz#ae03b86259413215ed43e99285c8c347579735fb"
+  dependencies:
+    aws-sdk "^2.0.4"
+
 safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -9463,9 +9495,25 @@ serverless-apigw-binary@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/serverless-apigw-binary/-/serverless-apigw-binary-0.4.4.tgz#f3cffd8365322a2a1d8bde5fd94b306b7a64d4fb"
 
+serverless-nextjs-plugin@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/serverless-nextjs-plugin/-/serverless-nextjs-plugin-1.2.0.tgz#25bb15c4cd689b678dadfc788601115789efa533"
+  dependencies:
+    "@mapbox/s3urls" "^1.5.3"
+    chalk "^2.4.2"
+    fs-extra "^7.0.1"
+    js-yaml "^3.12.1"
+    klaw "^3.0.0"
+    lodash.clonedeep "^4.5.0"
+    lodash.merge "^4.6.1"
+    mime "^2.4.0"
+    next "^8.0.3"
+    react "^16.8.3"
+    react-dom "^16.8.3"
+
 serverless-offline@^4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-4.9.1.tgz#a88f9b063bc5d28ac94a98e8459b6c4ffb771aef"
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-4.9.2.tgz#388bd9e2b3b94797bde1b346ee270b3155ca5c1f"
   dependencies:
     boom "^7.3.0"
     cryptiles "^4.1.3"

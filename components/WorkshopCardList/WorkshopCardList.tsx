@@ -9,10 +9,8 @@ const styles = (theme: Theme) => ({
     padding: 10
   },
   grid: {
-    margin: "0px auto",
-    maxWidth: 1300,
-    paddingBottom: 24,
-    paddingTop: 12
+    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(1)
   }
 });
 

@@ -11,11 +11,9 @@
     "create-env:stage": "assume-role stage node loadenv",
     "create-env:prod": "assume-role production node loadenv",
     "dev": "env-cmd .env nodemon server/index.ts",
-    "build": "next build && tsc --project tsconfig.server.json",
-    "build-lambda": "yarn webpack",
-    "build-assets": "node build-assets.js",
+    "build": "serverless package ",
     "lambda": "env-cmd .env serverless offline start",
-    "deploy": "assume-role production env-cmd .env serverless deploy",
+    "deploy": "assume-role production env-cmd .env serverless deploy --package .serverless",
     "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
@@ -113,7 +111,8 @@
     "raven": "^2.6.4",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "serverless-apigw-binary": "^0.4.4",
-    "serverless-offline": "^4.9.1",
+    "serverless-nextjs-plugin": "^1.2.0",
+    "serverless-offline": "^4.9.2",
     "serverless-sentry": "^1.2.0",
     "serverless-sentry-lib": "^1.1.2",
     "sw-precache-webpack-plugin": "^0.11.5",

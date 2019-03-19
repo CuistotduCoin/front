@@ -1,32 +1,37 @@
 service: serverless-ssr
 
 plugins:
+  - serverless-nextjs-plugin
   - serverless-offline
-  - serverless-apigw-binary
   - serverless-sentry
 
 frameworkVersion: ">=1.21.0 <2.0.0"
 
 custom:
-  apigwBinary:
-    types:
-      - '*/*'
   sentry:
     dsn: ${env:SENTRY_DSN}
     organization: cuistotducoin
     project: front
+  serverless-nextjs:
+    nextConfigDir: ./
+    pageConfig:
+      workshop:
+        events:
+          - http:
+              path: workshop
+              request:
+                parameters:
+                  paths:
+                    workshopId: true
 
 provider:
   name: aws
   stage: ${env:STAGE}
   runtime: nodejs8.10
   region: ${env:AWS_REGION_IRELAND}
-  deploymentBucket: ${env:AWS_DEPLOYMENT_BUCKET}
   endpointType: regional
   environment:
-    AWS_DOMAIN: ${env:AWS_DOMAIN}
     AWS_REGION_IRELAND: ${env:AWS_REGION_IRELAND}
-    AWS_DEPLOYMENT_BUCKET: ${env:AWS_DEPLOYMENT_BUCKET}
     AWS_USERPOOL_ID: ${env:AWS_USERPOOL_ID}
     AWS_IDENTITY_POOL_ID: ${env:AWS_IDENTITY_POOL_ID}
     AWS_STORE_BUCKET: ${env:AWS_STORE_BUCKET}
@@ -43,21 +48,4 @@ provider:
 
 package:
   exclude:
-    - ./**
-  include:
-    - build/**
-
-functions:
-  ssr:
-    timeout: 30
-    handler: build/lambda_prod.handler
-    name: ${env:AWS_LAMBDA_NAME}
-    events:
-      - http:
-          method: get
-          path: /
-          cors: true
-      - http:
-          method: any
-          cors: true
-          path: /{proxy+}
+    - ./**/*

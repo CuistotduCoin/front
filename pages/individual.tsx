@@ -1,17 +1,48 @@
+import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 import React from "react";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
 
-const styles = (theme: Theme) => ({});
+const styles = (theme: Theme) => ({
+  grid: {
+    margin: "0px auto",
+    maxWidth: 1300
+  },
+  tabs: {
+
+  }
+});
 
 export interface IIndividualProps {
   classes?: any;
 }
 
-export class Individual extends React.Component<IIndividualProps, {}> {
+interface IIndividualState {
+  tab: number;
+}
+
+export class Individual extends React.Component<IIndividualProps, IIndividualState> {
+  constructor(props: IIndividualProps) {
+    super(props);
+
+    this.state = {
+      tab: 1
+    };
+
+  }
+
+  public handleChange = (event, tab: number) => {
+    this.setState({ tab });
+  };
+
+
+
   public render() {
     const { classes } = this.props;
+    const { tab } = this.state;
 
     const workshops = [
       {
@@ -140,6 +171,8 @@ export class Individual extends React.Component<IIndividualProps, {}> {
       }
     ];
 
+    const privateWorkshops = [];
+
     const ads = [
       {
         title: "Offrez une carte cadeau à votre proche",
@@ -157,7 +190,15 @@ export class Individual extends React.Component<IIndividualProps, {}> {
 
     return (
       <Layout>
-        <WorkshopCardList workshops={workshops} ads={ads} />
+        <Grid className={classes.grid}>
+          <Tabs value={tab} onChange={this.handleChange} centered={true}>
+            <Tab label="Atelier collectif" />
+            <Tab label="Atelier privatif" />
+          </Tabs>
+          {tab === 0 &&
+            <WorkshopCardList workshops={workshops} ads={ads} />}
+          {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
+        </Grid>
       </Layout >
     );
   }
