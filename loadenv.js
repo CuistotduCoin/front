@@ -5,7 +5,6 @@ awsParamEnv.load('/cuistot', { region: 'eu-west-1' });
 
 const content = `\
 AWS_REGION_IRELAND=eu-west-1
-AWS_LAMBDA_NAME=${process.env['lambda-name']}
 AWS_USERPOOL_ID=${process.env['userpool-id']}
 AWS_IDENTITY_POOL_ID=${process.env['identity-pool-id']}
 AWS_STORE_BUCKET=${process.env['store-bucket']}
