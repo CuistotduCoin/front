@@ -43,7 +43,7 @@ export class Individual extends React.Component<IIndividualProps, {}> {
         typeform: "https://cuistotducoin.typeform.com/to/O2QlLL"
       },
       {
-        availableSeat: 6,
+        availableSeat: 0,
         date: "samedi 30 mars, 9h30-13h",
         duration: 4,
         image:
