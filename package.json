@@ -97,6 +97,7 @@
     "dotenv": "^7.0.0",
     "env-cmd": "^8.0.2",
     "fs": "0.0.2",
+    "ncp": "^2.0.0",
     "next-compose-plugins": "^2.1.1",
     "node": "^11.12.0",
     "node-noop": "^1.0.0",

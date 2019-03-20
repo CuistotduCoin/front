@@ -15,8 +15,6 @@ const nextConfig = {
     return 'cuistot'
   },
   webpack: (config) => {
-    config.optimization.minimize = false
-
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
         verbose: true,
