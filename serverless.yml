@@ -49,6 +49,3 @@ provider:
 package:
   exclude:
     - ./**
-  include:
-    - .serverless/**
-    - ./build
