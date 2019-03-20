@@ -48,4 +48,6 @@ provider:
 
 package:
   exclude:
-    - ./**/*
+    - ./**
+  include:
+    - .serverless/**
