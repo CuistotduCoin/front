@@ -26,8 +26,6 @@ jobs:
           name: Build AWS config
           command: |
             sudo mkdir $AWS_CONFIG_PATH
-            echo $AWS_MASTER_ACCESS_KEY_ID
-            echo $AWS_MASTER_SECRET_ACCESS_KEY
             sudo AWS_CONFIG_PATH=$AWS_CONFIG_PATH AWS_CROSS_ACCOUNT_ID=$AWS_CROSS_ACCOUNT_ID STAGE=$STAGE AWS_MASTER_ACCESS_KEY_ID=$AWS_MASTER_ACCESS_KEY_ID AWS_MASTER_SECRET_ACCESS_KEY=$AWS_MASTER_SECRET_ACCESS_KEY node build_aws_profile
       - run: &install_front_dependencies
           name: Install dependencies
