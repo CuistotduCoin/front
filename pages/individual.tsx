@@ -89,6 +89,20 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
+        date: "samedi 6 avril, 9h30-14h",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier + Dégustation : Cuisine ayurvédique",
+        nameCook: "Michel",
+        price: 40,
+        spot: "Michel, Plougastel",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/hsumHc"
+      },
+      {
+        availableSeat: 6,
         date: "samedi 6 avril, 10h-13h",
         duration: 3,
         image: "https://static.cuistotducoin.com/img/workshops/vanessa-poulet-colombo.jpg",
@@ -157,6 +171,34 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
+        date: "samedi 13 avril, 10h-13h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/Anuja-initiation.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anuja.jpg",
+        name: "Initiation à la cuisine Mauricienne",
+        nameCook: "Anuja",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/QyyRzR"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 20 avril, 9h30-13h",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-paques.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Pièce en chocolat pour Pâques",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/pBE4rj"
+      },
+      {
+        availableSeat: 6,
         date: "samedi 20 avril, 10h-13h",
         duration: 3,
         image:
@@ -168,7 +210,21 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Cuisinella, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/iGOu9g"
-      }
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 27 avril, 14h-17h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Macarons",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/BBlIht"
+      },
     ];
 
     const privateWorkshops = [];
