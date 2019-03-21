@@ -11,9 +11,9 @@
     "create-env:stage": "assume-role stage node loadenv",
     "create-env:prod": "assume-role production node loadenv",
     "dev": "env-cmd .env nodemon server/index.ts",
-    "build": "env-cmd .env serverless package",
+    "build": "assume-role production env-cmd .env serverless package",
     "lambda": "env-cmd .env serverless offline start",
-    "deploy": "env-cmd .env serverless deploy --package .serverless",
+    "deploy": "assume-role production env-cmd .env serverless deploy --package .serverless",
     "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
