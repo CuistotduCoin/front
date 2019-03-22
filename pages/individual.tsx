@@ -29,7 +29,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     super(props);
 
     this.state = {
-      tab: 1
+      tab: 0
     };
 
   }
@@ -37,8 +37,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
   public handleChange = (event, tab: number) => {
     this.setState({ tab });
   };
-
-
 
   public render() {
     const { classes } = this.props;
@@ -174,7 +172,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         date: "samedi 13 avril, 10h-13h",
         duration: 3,
         image:
-          "https://static.cuistotducoin.com/img/workshops/Anuja-initiation.jpg",
+          "https://static.cuistotducoin.com/img/workshops/anuja-initiation-cuisine-mauricienne.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/anuja.jpg",
         name: "Initiation à la cuisine Mauricienne",
         nameCook: "Anuja",
