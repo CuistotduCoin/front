@@ -41,11 +41,11 @@ export default {
     metaTitle: "Rejoignez la communauté des cuistots de Cuistot du Coin",
   },
   'gift': {
-    description: "Offrez un moment culinaire authentique et convivial à vos proches avec notre carte cadeau pour un atelier de cuisine, valable 1 an pour tous nos ateliers Cuistot du Coin",
+    description: "Obtenez votre carte en un clic et offrez un cadeau original !",
     href: "https://www.cuistotducoin.com/gift",
-    metaDescription: "Offrez un moment culinaire authentique et convivial à vos proches avec notre carte cadeau pour un atelier de cuisine, valable 1 an pour tous nos ateliers Cuistot du Coin",
-    title: "Cadeau cours cuisine - Offrez un atelier de cuisine Cuistot du coin à vos proches",
-    metaTitle: "Cadeau cours cuisine - Offrez un atelier de cuisine Cuistot du coin à vos proches",
+    metaDescription: "Faites plaisir à vos proches avec une carte cadeau pour un atelier de cuisine",
+    title: "Carte cadeau ",
+    metaTitle: "Carte cadeau pour un atelier de cuisine",
   },
   'index': {
     description: "Embarquez pour une expérience culinaire savoureuse",
@@ -62,18 +62,18 @@ export default {
     metaTitle: "Activité à Brest : Nos cours de cuisine dans le Finistère",
   },
   'invite-business': {
-    description: "Cuistot du Coin vous régale en buffets et ateliers de cuisine",
+    description: "Obtenez des réductions sur vos événements en entreprise",
     href: "https://www.cuistotducoin.com/invite-business",
-    metaDescription: "Cuistot du Coin vous régale en buffets et ateliers de cuisine",
-    title: "Invitez votre entreprise à découvrir des saveurs originales !",
-    metaTitle: "Invitez votre entreprise à découvrir des saveurs originales !",
+    metaDescription: "Obtenez des réductions et avantages sur les prestations professionnelles de Cuistot du Coin",
+    title: "Parrainez vos contacts professionnels",
+    metaTitle: "Parrainage Cuistot du Coin pour les entreprises",
   },
   'invite': {
-    description: "Cuistot du Coin vous régale en buffets et ateliers de cuisine",
+    description: "En un clic obtenez une réduction ou un atelier de cuisine gratuitement",
     href: "https://www.cuistotducoin.com/invite",
-    metaDescription: "Cuistot du Coin vous régale en buffets et ateliers de cuisine",
-    title: "Invitez votre entourage à nous découvrir !",
-    metaTitle: "Invitez votre entourage à nous découvrir !",
+    metaDescription: "Obtenez des réductions sur nos ateliers de cuisine",
+    title: "Parrainez vos proches ",
+    metaTitle: "Parrainage Cuistot du Coin pour les particuliers",
   },
   'join': {
     description: "",
@@ -86,11 +86,11 @@ export default {
     noindex: true
   },
   'mission': {
-    description: "",
+    description: "Découvrez les valeurs que nous portons",
     href: "https://www.cuistotducoin.com/mission",
-    metaDescription: "",
-    title: "Nos mission à Cuistot du Coin",
-    metaTitle: "Nos mission à Cuistot du Coin",
+    metaDescription: "Découvrez les valeurs et engagements de Cuistot du Coin",
+    title: "Les missions de Cuistot du Coin",
+    metaTitle: "Nos missions à travers l'organisation d'évenements culinaire",
   },
   'not-found': {
     noindex: true
@@ -99,11 +99,11 @@ export default {
     noindex: true
   },
   'presskit': {
-    description: "",
+    description: "Communiqué de presse et contact de l'équipe des Cuistots du Coin",
     href: "https://www.cuistotducoin.com/invite-business",
-    metaDescription: "",
-    title: "Presskit : Dossier de presse",
-    metaTitle: "Presskit : Dossier de presse",
+    metaDescription: "Communiqué de presse et contact de l'équipe des Cuistots du Coin",
+    title: "Contact presse",
+    metaTitle: "Contact presse - Cuistot du Coin ",
   },
   'profile': {
     noindex: true
@@ -128,11 +128,11 @@ export default {
     metaTitle: "Abonnement : Atelier de cuisine pour enfant",
   },
   'team': {
-    description: "",
+    description: "Découvrez l'équipe de Cuistot du Coin",
     href: "https://www.cuistotducoin.com/team",
-    metaDescription: "",
-    title: "",
-    metaTitle: "",
+    metaDescription: "Créée en 2017 par Anaëlle et Romain Quellec, Cuistot du Coin est une entreprise qui organise des événements culinaire...",
+    title: "Qui sommes-nous ?",
+    metaTitle: "L'équipe - Cuistot du Coin",
   },
   'terms-pro': {
     noindex: true
@@ -141,32 +141,32 @@ export default {
     noindex: true
   },
   'testimony-business': {
-    description: "",
+    description: "Découvrez les témoignages sur nos prestations pour les entreprises",
     href: "https://www.cuistotducoin.com/testimony-business",
-    metaDescription: "",
-    title: "Les entreprises nous font confiance",
-    metaTitle: "Les entreprises nous font confiance",
+    metaDescription: "Retrouvez ici les avis de nos clients sur leurs événements d'entreprise réalisés par Cuistot du Coin",
+    title: "Les avis de nos clients",
+    metaTitle: "Témoignage sur nos événements d'entreprises",
   },
   'testimony-cook': {
-    description: "",
+    description: "Vivez l'expérience dans les yeux de nos Cuistots",
     href: "https://www.cuistotducoin.com/testimony-cook",
-    metaDescription: "",
-    title: "Une communauté unie de cuistots autour de Cuistot du Coin",
-    metaTitle: "Une communauté unie de cuistots autour de Cuistot du Coin",
+    metaDescription: "Le regard de nos Cuistots sur leur travail avec nous",
+    title: "Les avis de nos Cuistots",
+    metaTitle: "Témoignage de nos Cuistots",
   },
   'testimony-gourmet': {
-    description: "",
+    description: "Les témoignages sur nos ateliers de cuisine collectifs et privatifs",
     href: "https://www.cuistotducoin.com/testimony-gourmet",
-    metaDescription: "",
-    title: "Les gourmets nous aiment",
-    metaTitle: "Les gourmets nous aiment",
+    metaDescription: "Découvrez les témoignages sur nos ateliers de cuisine",
+    title: "Les avis de nos Gourmets",
+    metaTitle: "Avis sur nos ateliers de cuisine ",
   },
   'testimony-partner': {
-    description: "",
+    description: "Différents témoignages sur les partenariats avec Cuistot du Coin",
     href: "https://www.cuistotducoin.com/testimony-partner",
-    metaDescription: "",
-    title: "",
-    metaTitle: "",
+    metaDescription: "Ce qu'ils disent sur notre partenariat",
+    title: "Les avis de nos partenaires",
+    metaTitle: "Nos partenaires",
   },
   'work-council': {
     description: "Une offre qui plaira à tous et adaptée au fonctionnement de votre comité d'entreprise",
