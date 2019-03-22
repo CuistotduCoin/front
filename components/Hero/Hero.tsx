@@ -20,11 +20,6 @@ const styles = (theme: Theme) => ({
     background: "rgba(0, 0, 0, 0.5)",
     display: "flex"
   },
-  gridSearchForm: {
-    margin: "0px auto",
-    maxWidth: 500,
-    padding: theme.spacing(3)
-  },
   home: {
     color: "#fff",
     overflow: "hidden",
@@ -91,11 +86,9 @@ export class Hero extends React.Component<IHeroProps, {}> {
                   {this.props.description}
                 </Typography>
               )}
-              <Grid container>
-                <Grid item className={classes.gridSearchForm}>
-                  {this.props.children}
-                </Grid>
-              </Grid>
+              <>
+                {this.props.children}
+              </>
             </Grid>
           </Grid>
         </div>

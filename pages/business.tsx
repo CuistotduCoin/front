@@ -35,7 +35,6 @@ export class Business extends React.Component<IBusinessProps, {}> {
             justify="space-around"
             className={classes.grid}
           >
-            <Grid item>
               <Button
                 variant="contained"
                 color="secondary"
@@ -44,7 +43,6 @@ export class Business extends React.Component<IBusinessProps, {}> {
               >
                 Obtenir un devis
               </Button>
-            </Grid>
           </Grid>
         }
       >
