@@ -114,6 +114,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
       <AppBar
         position={this.props.static ? "static" : "sticky"}
         className={classes.appBar}
+        color="inherit"
       >
         <Toolbar>
           <Grid container justify="flex-start" alignItems="center">

@@ -92,14 +92,11 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Gourmets
               </Typography>
-              <Link href="/subscription">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Abonnement</Typography></a>
-              </Link>
               <Link href="/testimony-gourmet">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
               </Link>
               <Link href="/gift">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Offrir</Typography></a>
+                <a><Typography variant="subtitle1" className={classes.subheading}>Carte Cadeau</Typography></a>
               </Link>
               <Link href="/invite">
                 <a><Typography variant="subtitle1" className={classes.subheading}>Parrainage</Typography></a>

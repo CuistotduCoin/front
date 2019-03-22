@@ -249,8 +249,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
             <Tab label="Atelier collectif" />
             <Tab label="Atelier privatif" />
           </Tabs>
-          {tab === 0 &&
-            <WorkshopCardList workshops={workshops} ads={ads} />}
+          {tab === 0 && <WorkshopCardList workshops={workshops} ads={ads} />}
           {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
         </Grid>
       </Layout >
