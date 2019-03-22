@@ -37,7 +37,6 @@ export class Layout extends React.Component<ILayoutProps, {}> {
   };
 
   public renderSEO(meta, cleanPath) {
-
     if (meta[cleanPath] && meta[cleanPath].noindex) {
       const noIndex = { noindex: true }
       return <NextSeo config={noIndex} />
@@ -104,7 +103,10 @@ export class Layout extends React.Component<ILayoutProps, {}> {
   public render() {
     const { classes, component, children, headerProps, className } = this.props;
     const { pathname } = this.props.router;
-    const cleanPath = pathname.substr(1);
+    let cleanPath = pathname.substr(1);
+
+    // index case
+    if (cleanPath === '') cleanPath = 'index';
 
     let title: string;
     if (this.props.title) {

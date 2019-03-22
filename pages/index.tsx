@@ -130,15 +130,7 @@ export class Home extends React.Component<IHomeProps, {}> {
           gutterBottom
           className={classes.typography}
         >
-          Un traiteur authentique et convivial
-        </Typography>
-        <Typography
-          variant="body1"
-          align="center"
-          gutterBottom
-          className={classes.typography}
-        >
-          Ras le bol des traiteurs traditionnels ? Avec nos cuistots, nous développons une nouvelle approche du métier de traiteur et imaginons des prestations qui vous ressemblent.
+          Nous révelons les saveurs et les talents pour vous garantir une expérience authentique et conviviale !
         </Typography>
         <Grid
           container

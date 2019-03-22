@@ -28,11 +28,11 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface ICocktailProps {
+interface ICaterProps {
   classes?: any;
 }
 
-export class Cocktail extends React.Component<ICocktailProps, {}> {
+export class Cater extends React.Component<ICaterProps, {}> {
   public render() {
     const { classes } = this.props;
 
@@ -161,4 +161,4 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cocktail as any) as any;
+export default withStyles(styles as any)(Cater as any) as any;

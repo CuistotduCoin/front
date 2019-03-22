@@ -1766,9 +1766,13 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^11.11.3":
+"@types/node@*":
   version "11.11.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.4.tgz#8808bd5a82bbf6f5d412eff1c228d178e7c24bb3"
+
+"@types/node@^11.11.5":
+  version "11.11.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.5.tgz#0c57e12eb44d44e5b6735593925286553ee7cebf"
 
 "@types/prop-types@*", "@types/prop-types@^15.7.0":
   version "15.7.0"
@@ -2799,9 +2803,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.424.0:
-  version "2.425.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.425.0.tgz#8f125e5783646b54658b91c80881a3b14955f11c"
+aws-sdk@^2.426.0:
+  version "2.426.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.426.0.tgz#cf17361c987daf518f945218f06135fbc1a3690d"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3274,10 +3278,6 @@ braces@^2.3.1, braces@^2.3.2:
     snapdragon-node "^2.0.1"
     split-string "^3.0.2"
     to-regex "^3.0.1"
-
-brcast@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/brcast/-/brcast-3.0.1.tgz#6256a8349b20de9eed44257a9b24d71493cd48dd"
 
 brorand@^1.0.1:
   version "1.1.0"
@@ -4164,12 +4164,6 @@ css-tree@1.0.0-alpha.29:
 css-url-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/css-url-regex/-/css-url-regex-1.1.0.tgz#83834230cc9f74c457de59eebd1543feeb83b7ec"
-
-css-vendor@^0.3.8:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-0.3.8.tgz#6421cfd3034ce664fe7673972fd0119fc28941fa"
-  dependencies:
-    is-in-browser "^1.0.2"
 
 css-vendor@^2.0.0:
   version "2.0.0"
@@ -5605,7 +5599,7 @@ hoist-non-react-statics@3.2.0:
   dependencies:
     react-is "^16.3.2"
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0, hoist-non-react-statics@^2.5.5:
+hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.5:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
@@ -5689,7 +5683,7 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hyphenate-style-name@^1.0.1, hyphenate-style-name@^1.0.2, hyphenate-style-name@^1.0.3:
+hyphenate-style-name@^1.0.1, hyphenate-style-name@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
 
@@ -6404,42 +6398,6 @@ jsonwebtoken@^8.5.0:
     ms "^2.1.1"
     semver "^5.6.0"
 
-jss-camel-case@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jss-camel-case/-/jss-camel-case-6.1.0.tgz#ccb1ff8d6c701c02a1fed6fb6fb6b7896e11ce44"
-  dependencies:
-    hyphenate-style-name "^1.0.2"
-
-jss-compose@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/jss-compose/-/jss-compose-5.0.0.tgz#ce01b2e4521d65c37ea42cf49116e5f7ab596484"
-  dependencies:
-    warning "^3.0.0"
-
-jss-default-unit@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/jss-default-unit/-/jss-default-unit-8.0.2.tgz#cc1e889bae4c0b9419327b314ab1c8e2826890e6"
-
-jss-expand@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/jss-expand/-/jss-expand-5.3.0.tgz#02be076efe650125c842f5bb6fb68786fe441ed6"
-
-jss-extend@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/jss-extend/-/jss-extend-6.2.0.tgz#4af09d0b72fb98ee229970f8ca852fec1ca2a8dc"
-  dependencies:
-    warning "^3.0.0"
-
-jss-global@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/jss-global/-/jss-global-3.0.0.tgz#e19e5c91ab2b96353c227e30aa2cbd938cdaafa2"
-
-jss-nested@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/jss-nested/-/jss-nested-6.0.1.tgz#ef992b79d6e8f63d939c4397b9d99b5cbbe824ca"
-  dependencies:
-    warning "^3.0.0"
-
 jss-plugin-camel-case@^10.0.0-alpha.12:
   version "10.0.0-alpha.14"
   resolved "https://registry.yarnpkg.com/jss-plugin-camel-case/-/jss-plugin-camel-case-10.0.0-alpha.14.tgz#837d5fe6c8d806abc46deafcaeeeb45a2d0dae6a"
@@ -6492,37 +6450,6 @@ jss-plugin-vendor-prefixer@^10.0.0-alpha.12:
     css-vendor "^2.0.0"
     jss "10.0.0-alpha.14"
 
-jss-preset-default@^4.3.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/jss-preset-default/-/jss-preset-default-4.5.0.tgz#d3a457012ccd7a551312014e394c23c4b301cadd"
-  dependencies:
-    jss-camel-case "^6.1.0"
-    jss-compose "^5.0.0"
-    jss-default-unit "^8.0.2"
-    jss-expand "^5.3.0"
-    jss-extend "^6.2.0"
-    jss-global "^3.0.0"
-    jss-nested "^6.0.1"
-    jss-props-sort "^6.0.0"
-    jss-template "^1.0.1"
-    jss-vendor-prefixer "^7.0.0"
-
-jss-props-sort@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/jss-props-sort/-/jss-props-sort-6.0.0.tgz#9105101a3b5071fab61e2d85ea74cc22e9b16323"
-
-jss-template@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/jss-template/-/jss-template-1.0.1.tgz#09aed9d86cc547b07f53ef355d7e1777f7da430a"
-  dependencies:
-    warning "^3.0.0"
-
-jss-vendor-prefixer@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-7.0.0.tgz#0166729650015ef19d9f02437c73667231605c71"
-  dependencies:
-    css-vendor "^0.3.8"
-
 jss@10.0.0-alpha.14, jss@^10.0.0-alpha.12:
   version "10.0.0-alpha.14"
   resolved "https://registry.yarnpkg.com/jss/-/jss-10.0.0-alpha.14.tgz#88ccf9038ffb358ae787173ac678c754d418e67c"
@@ -6530,14 +6457,6 @@ jss@10.0.0-alpha.14, jss@^10.0.0-alpha.12:
     "@babel/runtime" "^7.3.1"
     is-in-browser "^1.1.3"
     tiny-warning "^1.0.2"
-
-jss@^9.7.0:
-  version "9.8.7"
-  resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.7.tgz#ed9763fc0f2f0260fc8260dac657af61e622ce05"
-  dependencies:
-    is-in-browser "^1.1.3"
-    symbol-observable "^1.1.0"
-    warning "^3.0.0"
 
 junk@^1.0.1:
   version "1.0.3"
@@ -6631,9 +6550,9 @@ lazy-universal-dotenv@^2.0.0:
     dotenv "^6.0.0"
     dotenv-expand "^4.2.0"
 
-libphonenumber-js@^1.7.12:
-  version "1.7.12"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.12.tgz#c2c891a040815b252fe6f3dc08075d525def5266"
+libphonenumber-js@^1.7.13:
+  version "1.7.13"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.13.tgz#20aa2c790a6f7f6ea9d171efb7b9e0bd6c0b7c84"
   dependencies:
     minimist "^1.2.0"
     semver-compare "^1.0.0"
@@ -7322,9 +7241,9 @@ next-server@8.0.3:
     send "0.16.1"
     url "0.11.0"
 
-next-server@8.0.4-canary.18:
-  version "8.0.4-canary.18"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4-canary.18.tgz#776469a19811f4f6de94db463ab3a6b157514488"
+next-server@8.0.4-canary.19:
+  version "8.0.4-canary.19"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4-canary.19.tgz#8f600ff28c867ef90d41d25e1a78263559c3b0a0"
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -7399,9 +7318,9 @@ next@^8.0.3:
     webpack-sources "1.3.0"
     worker-farm "1.5.2"
 
-next@^8.0.4-canary.18:
-  version "8.0.4-canary.18"
-  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4-canary.18.tgz#b45f3a3cd4481f737ff6d8f1a28835be7512721f"
+next@^8.0.4-canary.19:
+  version "8.0.4-canary.19"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4-canary.19.tgz#e6a06c1f30bb4c3bff26392f37ae8a953f1b7ee9"
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -7433,7 +7352,7 @@ next@^8.0.4-canary.18:
     magic-string "0.25.2"
     mkdirp "0.5.1"
     nanoid "1.2.1"
-    next-server "8.0.4-canary.18"
+    next-server "8.0.4-canary.19"
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "5.1.4"
@@ -8732,16 +8651,6 @@ react-is@16.6.3:
 react-is@^16.3.2, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
-
-react-jss@^8.6.1:
-  version "8.6.1"
-  resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-8.6.1.tgz#a06e2e1d2c4d91b4d11befda865e6c07fbd75252"
-  dependencies:
-    hoist-non-react-statics "^2.5.0"
-    jss "^9.7.0"
-    jss-preset-default "^4.3.0"
-    prop-types "^15.6.0"
-    theming "^1.3.0"
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -10098,7 +10007,7 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-symbol-observable@^1.0.2, symbol-observable@^1.0.3, symbol-observable@^1.0.4, symbol-observable@^1.1.0:
+symbol-observable@^1.0.2, symbol-observable@^1.0.3, symbol-observable@^1.0.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
@@ -10179,15 +10088,6 @@ terser@^3.16.1:
 text-table@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
-
-theming@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/theming/-/theming-1.3.0.tgz#286d5bae80be890d0adc645e5ca0498723725bdc"
-  dependencies:
-    brcast "^3.0.1"
-    is-function "^1.0.1"
-    is-plain-object "^2.0.1"
-    prop-types "^15.5.8"
 
 through2@^2.0.0:
   version "2.0.5"

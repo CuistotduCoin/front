@@ -106,13 +106,13 @@ export class Business extends React.Component<IBusinessProps, {}> {
               component="h2"
               gutterBottom
             >
-              Vous souhaitez organiser un cocktail
+              Vous souhaitez faire appel à notre service traiteur
             </Typography>
             <Typography variant="body1" align="justify" paragraph>
-              A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Nos Cocktails sont une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
+              A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Notre service traiteur est une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/cocktail" passHref>
+              <Link href="/cater" passHref>
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>

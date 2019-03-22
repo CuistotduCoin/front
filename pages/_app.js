@@ -1,8 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { ThemeProvider } from '@material-ui/styles';
+import { StylesProvider, ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../decorators/getPageContext';
 import ProvidedApp from '../components/App';
 import Raven from 'raven-js'
@@ -51,15 +50,14 @@ class MyApp extends App {
       <Container>
         <ProvidedApp>
           {/* Wrap every page in Jss and Theme providers */}
-          <JssProvider
-            registry={this.pageContext.sheetsRegistry}
+          <StylesProvider
+            sheetsRegistry={this.pageContext.sheetsRegistry}
             generateClassName={this.pageContext.generateClassName}
+            sheetsManager={this.pageContext.sheetsManager}
           >
             {/* ThemeProvider makes the theme available down the React
                 tree thanks to React context. */}
-            <ThemeProvider
-              theme={this.pageContext.theme}
-              sheetsManager={this.pageContext.sheetsManager}
+            <ThemeProvider theme={this.pageContext.theme}
             >
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
               <CssBaseline />
@@ -67,7 +65,7 @@ class MyApp extends App {
                   to render collected styles on server side. */}
               <Component pageContext={this.pageContext} {...pageProps} />
             </ThemeProvider>
-          </JssProvider>
+          </StylesProvider>
         </ProvidedApp>
       </Container>
     );
