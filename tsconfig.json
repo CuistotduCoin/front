@@ -25,6 +25,8 @@
   },
   "exclude": [
     "node_modules",
-    "build"
+    "build",
+    ".serverless",
+    "sls-next-build"
   ]
 }
