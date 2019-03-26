@@ -25,6 +25,7 @@ custom:
                     workshopId: true
 
 provider:
+  versionFunctions: false
   name: aws
   stage: ${env:STAGE}
   runtime: nodejs8.10
