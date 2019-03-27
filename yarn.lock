@@ -1771,9 +1771,9 @@
   version "11.11.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.4.tgz#8808bd5a82bbf6f5d412eff1c228d178e7c24bb3"
 
-"@types/node@^11.11.7":
-  version "11.11.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.7.tgz#f1c35a906b82adae76ede5ab0d2088e58fa37843"
+"@types/node@^11.12.0":
+  version "11.12.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.0.tgz#ec5594728811dc2797e42396cfcdf786f2052c12"
 
 "@types/prop-types@*", "@types/prop-types@^15.7.0":
   version "15.7.0"
@@ -1818,9 +1818,16 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.8.8":
+"@types/react@*":
   version "16.8.8"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.8.tgz#4b60a469fd2469f7aa6eaa0f8cfbc51f6d76e662"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.8.10":
+  version "16.8.10"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.10.tgz#1ccb6fde17f71a62ef055382ec68bdc379d4d8d9"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -2804,9 +2811,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.428.0:
-  version "2.428.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.428.0.tgz#9de2cc986f6fb2b011e0a86a10e415e1e935a2bb"
+aws-sdk@^2.429.0:
+  version "2.429.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.429.0.tgz#27c32734f6473f69a39c29a694d54d15b5beb68a"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -2817,13 +2824,6 @@ aws-sdk@^2.428.0:
     url "0.10.3"
     uuid "3.3.2"
     xml2js "0.4.19"
-
-aws-serverless-express@^3.3.5:
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/aws-serverless-express/-/aws-serverless-express-3.3.5.tgz#0cb9de00dbbf29dfe4c096ac573a518c3bda933a"
-  dependencies:
-    binary-case "^1.0.0"
-    type-is "^1.6.16"
 
 b64@3.x.x:
   version "3.0.3"
@@ -3178,10 +3178,6 @@ big.js@^3.1.3:
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
-
-binary-case@^1.0.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/binary-case/-/binary-case-1.1.4.tgz#d687104d59e38f2b9e658d3a58936963c59ab931"
 
 binary-extensions@^1.0.0:
   version "1.13.0"
@@ -4013,9 +4009,9 @@ create-react-context@^0.2.1, create-react-context@^0.2.2:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
-cross-fetch@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.1.tgz#3f207bbd829a76e9aa2a953348bd1f2a3cf388a7"
+cross-fetch@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.2.tgz#b7136491967031949c7f86b15903aef4fa3f1768"
   dependencies:
     node-fetch "2.3.0"
     whatwg-fetch "3.0.0"
@@ -5368,9 +5364,9 @@ graphql@0.13.0:
   dependencies:
     iterall "1.1.x"
 
-graphql@^14.1.1:
-  version "14.1.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.1.1.tgz#d5d77df4b19ef41538d7215d1e7a28834619fac0"
+graphql@^14.2.0:
+  version "14.2.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.2.0.tgz#ff25813ad6d186f3975977d56bc2d2434871f3b9"
   dependencies:
     iterall "^1.2.2"
 
@@ -6551,9 +6547,9 @@ lazy-universal-dotenv@^2.0.0:
     dotenv "^6.0.0"
     dotenv-expand "^4.2.0"
 
-libphonenumber-js@^1.7.13:
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.13.tgz#20aa2c790a6f7f6ea9d171efb7b9e0bd6c0b7c84"
+libphonenumber-js@^1.7.14:
+  version "1.7.14"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.14.tgz#e1182323a780db1bd704495355a858e3f40e9293"
   dependencies:
     minimist "^1.2.0"
     semver-compare "^1.0.0"
@@ -7236,9 +7232,9 @@ next-server@8.0.3:
     send "0.16.1"
     url "0.11.0"
 
-next-server@8.0.4-canary.23:
-  version "8.0.4-canary.23"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4-canary.23.tgz#1a996c64ca1a28f91925bf758ad2b27eceab9759"
+next-server@8.0.4-canary.25:
+  version "8.0.4-canary.25"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4-canary.25.tgz#a37f97803c2799aa75ce92a987ae739563eeb4ac"
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -7313,9 +7309,9 @@ next@^8.0.3:
     webpack-sources "1.3.0"
     worker-farm "1.5.2"
 
-next@^8.0.4-canary.23:
-  version "8.0.4-canary.23"
-  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4-canary.23.tgz#c83b75bcd028cb5c7d0bb84191d026dd9e391678"
+next@^8.0.4-canary.25:
+  version "8.0.4-canary.25"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4-canary.25.tgz#9709f1a16a95065a8b8f1503f051e4eeec9e9a5f"
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -7342,7 +7338,7 @@ next@^8.0.4-canary.23:
     launch-editor "2.2.1"
     loader-utils "1.1.0"
     mkdirp "0.5.1"
-    next-server "8.0.4-canary.23"
+    next-server "8.0.4-canary.25"
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "5.1.4"
@@ -10427,7 +10423,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-type-is@^1.6.16, type-is@~1.6.16:
+type-is@~1.6.16:
   version "1.6.16"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
   dependencies:
