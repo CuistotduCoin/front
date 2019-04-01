@@ -4,33 +4,20 @@ jobs:
     docker:
       - image: circleci/node:8.10
     environment:
-      GOPATH: /home/circleci/go
       AWS_CONFIG_PATH: /home/circleci/.aws
     steps:
       - checkout
       - restore_cache: &restore_front_cache
           key: dependency-cache-{{ checksum "./yarn.lock" }}
-      - run: &install_assume_role
-          name: Install assume role tool
-          command: |
-            sudo apt-get update
-            sudo apt-get -y upgrade
-            wget https://dl.google.com/go/go1.10.1.linux-amd64.tar.gz
-            sudo tar -xf go1.10.1.linux-amd64.tar.gz
-            sudo mv go /usr/local
-            mkdir $GOPATH
-            echo 'export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-            go get -u github.com/remind101/assume-role
       - run: &build_aws_config
           name: Build AWS config
           command: |
             sudo mkdir $AWS_CONFIG_PATH
-            sudo AWS_CONFIG_PATH=$AWS_CONFIG_PATH AWS_CROSS_ACCOUNT_ID=$AWS_CROSS_ACCOUNT_ID STAGE=$STAGE AWS_MASTER_ACCESS_KEY_ID=$AWS_MASTER_ACCESS_KEY_ID AWS_MASTER_SECRET_ACCESS_KEY=$AWS_MASTER_SECRET_ACCESS_KEY node build_aws_profile
+            sudo AWS_CONFIG_PATH=$AWS_CONFIG_PATH aws_access_key_id_prod=$aws_access_key_id_prod aws_secret_access_key_prod=$aws_secret_access_key_prod node build_aws_profile
       - run: &install_front_dependencies
           name: Install dependencies
           command: |
-            sudo npm i -g serverless
+            yarn global add serverless
             yarn install
       - save_cache: &save_front_cache
           key: dependency-cache-{{ checksum "./yarn.lock" }}
@@ -53,7 +40,6 @@ jobs:
     docker:
       - image: circleci/node:8.10
     environment:
-      GOPATH: /home/circleci/go
       AWS_CONFIG_PATH: /home/circleci/.aws
     steps:
       - checkout

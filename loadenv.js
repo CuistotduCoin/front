@@ -1,5 +1,5 @@
 const fs = require('fs');
-const awsParamEnv = require('aws-param-env'); // eslint-disable-line
+const awsParamEnv = require('aws-param-env');
 
 awsParamEnv.load('/cuistot', { region: 'eu-west-1' });
 
