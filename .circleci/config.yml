@@ -44,14 +44,13 @@ jobs:
     steps:
       - checkout
       - restore_cache: *restore_front_cache
-      - run: *install_assume_role
       - run: *build_aws_config
       - run: *install_front_dependencies
       - save_cache: *save_front_cache
       - run:
           name: Build env
           command: |
-            yarn create-env:stage
+            yarn create-env
       - run:
           name: Build frontend
           command: |
