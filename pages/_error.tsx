@@ -42,11 +42,11 @@ const styles = () => ({
   }
 });
 
-interface INotFoundProps {
+interface IErrorProps {
   classes: any;
 }
 
-export class NotFound extends React.Component<INotFoundProps, {}> {
+export class Error extends React.Component<IErrorProps, {}> {
   public render() {
     const { classes } = this.props;
     return (
@@ -63,4 +63,4 @@ export class NotFound extends React.Component<INotFoundProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(NotFound as any) as any;
+export default withStyles(styles as any)(Error as any) as any;

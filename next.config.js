@@ -8,7 +8,7 @@ const withMDX = require('@zeit/next-mdx')()
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const nextConfig = {
-  assetPrefix: "https://assets.cuistotducoin.com",
+  assetPrefix: 'https://assets.cuistotducoin.com',
   target: 'serverless',
   distDir: 'build',
   generateBuildId: async () => {
