@@ -45,48 +45,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
-        date: "samedi 23 mars, 10h-12h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Initiation au tournage de galettes + Repas",
-        nameCook: "Nadine",
-        price: 30,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/ypvH53"
-      },
-      {
-        availableSeat: 0,
-        date: "vendredi 29 mars, 17h30-20h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisu.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
-        name: "Atelier approfondissement à la cuisine italienne",
-        nameCook: "Luis",
-        price: 50,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/O2QlLL"
-      },
-      {
-        availableSeat: 0,
-        date: "samedi 30 mars, 9h30-13h",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-tarte-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Revisite de la tarte au chocolat",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/xkQuu1"
-      },
-      {
-        availableSeat: 6,
         date: "samedi 6 avril, 9h30-14h",
         duration: 4,
         image:
@@ -155,20 +113,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "samedi 13 avril, 10h-12h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Initiation au tournage de galettes + Repas",
-        nameCook: "Nadine",
-        price: 30,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/cR7RRd"
-      },
-      {
-        availableSeat: 6,
         date: "samedi 13 avril, 10h-13h",
         duration: 3,
         image:
@@ -180,6 +124,20 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Cuisinella, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/QyyRzR"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 19 avril, 15h-16h45",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/anne-chocolat.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
+        name: "Atelier enfant : Gâteau au chocolat & détente",
+        nameCook: "Anne",
+        price: 30,
+        spot: "Comme les grands, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/fCR02c"
       },
       {
         availableSeat: 6,
@@ -222,6 +180,34 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Schmidt, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/BBlIht"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 27 avril, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake-etoile.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Parents / Enfants : Cupcake",
+        nameCook: "Audrey",
+        price: 40,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 25 mai, 10h-13h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/hayet-tadjine.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
+        name: "Tadjine",
+        nameCook: "Hayet",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz"
       },
     ];
 
