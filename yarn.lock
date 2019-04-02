@@ -1827,9 +1827,9 @@
   version "11.11.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.4.tgz#8808bd5a82bbf6f5d412eff1c228d178e7c24bb3"
 
-"@types/node@^11.12.2":
-  version "11.12.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.2.tgz#d7f302e74b10e9801d52852137f652d9ee235da8"
+"@types/node@^11.13.0":
+  version "11.13.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.0.tgz#b0df8d6ef9b5001b2be3a94d909ce3c29a80f9e1"
 
 "@types/prop-types@*", "@types/prop-types@^15.7.0":
   version "15.7.0"
@@ -2874,9 +2874,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.432.0:
-  version "2.432.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.432.0.tgz#8cc677d683355df6d11bbc4ec16784a2267fd710"
+aws-sdk@^2.433.0:
+  version "2.433.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.433.0.tgz#1f8b122e7697defd4e1ca9707c9187157d7bd544"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -7306,9 +7306,9 @@ next-server@8.0.3:
     send "0.16.1"
     url "0.11.0"
 
-next-server@8.0.4-canary.30:
-  version "8.0.4-canary.30"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4-canary.30.tgz#4eba120f89af26f08249afa7ef0f25494163cf39"
+next-server@8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.4.tgz#e8a01949e5827b346924a46ce83a71c6a1910b21"
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -7383,9 +7383,9 @@ next@^8.0.3:
     webpack-sources "1.3.0"
     worker-farm "1.5.2"
 
-next@^8.0.4-canary.30:
-  version "8.0.4-canary.30"
-  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4-canary.30.tgz#594c0eab37a8edc0f92de18dcf8e4007b943e689"
+next@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.4.tgz#da08220ccfce40fb9825820814a770e19e09359a"
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -7413,7 +7413,7 @@ next@^8.0.4-canary.30:
     launch-editor "2.2.1"
     loader-utils "1.1.0"
     mkdirp "0.5.1"
-    next-server "8.0.4-canary.30"
+    next-server "8.0.4"
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "5.1.4"
