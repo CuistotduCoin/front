@@ -50,7 +50,7 @@ export class Error extends React.Component<IErrorProps, {}> {
   public render() {
     const { classes } = this.props;
     return (
-      <Layout>
+      <Layout noHero={true}>
         <div className={classes.container}>
           <div className={classes.background} />
           <div className={classes.text}>

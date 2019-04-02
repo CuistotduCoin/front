@@ -1,7 +1,7 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 import React from "react";
+import Link from "../components/Link";
 import Logo from "../components/Logo";
 import ResetPasswordRequestForm from "../components/ResetPasswordRequestForm";
 
@@ -23,9 +23,7 @@ const ResetPasswordRequest: React.SFC<{ classes: any }> = ({ classes }) => (
     </Typography>
     <ResetPasswordRequestForm />
     <Typography align="center" gutterBottom>
-      <Link href="/login">
-        <a>Non c'est bon, je m'en rappelle en fait</a>
-      </Link>
+      <Link href="/login">Non c'est bon, je m'en rappelle en fait</Link>
     </Typography>
   </div>
 );

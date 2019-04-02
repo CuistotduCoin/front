@@ -2,9 +2,9 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 import React from "react";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -35,13 +35,13 @@ export class Business extends React.Component<IBusinessProps, {}> {
             justify="space-around"
             className={classes.grid}
           >
-              <Button
-                variant="contained"
-                color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
-                target="_blank"
-              >
-                Obtenir un devis
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+              target="_blank"
+            >
+              Obtenir un devis
               </Button>
           </Grid>
         }
@@ -66,7 +66,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
               A la recherche d’une activité fédératrice, propice à la cohésion d’équipe et au partage ? Enfilez le tablier avec vos collaborateurs et rejoignez nos cuistots passionnés aux fourneaux. Nos ateliers laissent place à la collaboration et encouragent l’esprit d’équipe et la créativité. Chaque atelier se termine par la dégustation des préparations autour d’un buffet convivial, voir d’un repas.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/workshop-business" passHref>
+              <Link href="/workshop-business">
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
@@ -110,7 +110,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
               A l’issue d’une réunion d’équipe, lors d’un séminaire, à l’occasion d’une rencontre entre collaborateurs, vous recherchez une formule de repas qui allie originalité, simplicité et convivialité. Notre service traiteur est une invitation au voyage : découvrez des saveurs d’ici et d’ailleurs au travers de recettes authentiques.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/cater" passHref>
+              <Link href="/cater">
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
@@ -136,7 +136,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
               Pour que le travail en équipe et vos réunions riment avec motivation, cohésion et inspiration, confiez-nous l’organisation de vos journées entre collaborateurs. Nous dénichons le lieu adapté pour vos temps de travail, tout en s’assurant d’une ambiance chaleureuse et conviviale. Ces temps productifs seront marqués par la découverte de recettes authentiques au travers de cocktail déjeunatoires pour vous restaurer ou lors d’un atelier si le timing le permet !
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/working-day" passHref>
+              <Link href="/working-day">
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
@@ -179,7 +179,7 @@ export class Business extends React.Component<IBusinessProps, {}> {
                 Nous construisons à vos côtés un programme d’ateliers de cuisine privatisés dans nos lieux partenaires pour vos salariés. Les ateliers proposés sont accessibles à tous, amateurs ou passionnés avertis. Nos formats d’ateliers et la diversité des univers culinaires de nos cuistots permettront de satisfaire le plus grand nombre, tout en garantissant des moments conviviaux.
             </Typography>
               <Grid container alignItems="center" justify="center">
-                <Link href="/work-council" passHref>
+                <Link href="/work-council">
                   <Button variant="contained" color="secondary">En savoir plus</Button>
                 </Link>
               </Grid>

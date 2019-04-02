@@ -13,6 +13,7 @@ import Face from "mdi-material-ui/Face";
 import Place from "mdi-material-ui/MapMarker";
 import HourglassFull from "mdi-material-ui/TimerSandFull";
 import React from "react";
+import Link from "../Link";
 import StarRating from "../StarRating";
 
 const styles = (theme: Theme) => ({
@@ -48,6 +49,9 @@ const styles = (theme: Theme) => ({
   icon: {
     color: green[900],
     height: 15
+  },
+  link: {
+    color: theme.palette.text.primary
   },
   media: {
     height: 194
@@ -115,9 +119,9 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
 
     function container(props, children) {
       return (
-        <a className={classes.link} href={props.typeform} target="_blank">
+        <Link className={classes.link} href={props.typeform} target="_blank">
           {children}
-        </a>
+        </Link>
       );
     }
 

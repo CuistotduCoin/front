@@ -24,7 +24,6 @@
     "apollo-client": "^2.5.1",
     "apollo-link-http": "^1.5.14",
     "aws-appsync": "^1.7.2",
-    "aws-auto-assume-role": "^1.2.0",
     "classnames": "^2.2.6",
     "cross-fetch": "^3.0.2",
     "date-fns": "^1.30.1",

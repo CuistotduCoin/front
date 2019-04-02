@@ -1,21 +1,17 @@
-import React from 'react';
-import App, { Container } from 'next/app';
-import { StylesProvider, ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import getPageContext from '../decorators/getPageContext';
-import ProvidedApp from '../components/App';
-import Raven from 'raven-js'
-import { initGA, logPageView } from '../shared/analytics'
+import { StylesProvider, ThemeProvider } from '@material-ui/styles';
+import App, { Container } from 'next/app';
 import Router from 'next/router'
+import Raven from 'raven-js'
+import React from 'react';
+import ProvidedApp from '../components/App';
+import getPageContext from '../decorators/getPageContext';
+import { initGA, logPageView } from '../shared/analytics'
+import { getMetaInfo, renderSEO } from "../shared/seo";
 
 class MyApp extends App {
-  constructor(props) {
-    super(props);
-    this.pageContext = getPageContext();
-    Raven.config(process.env.SENTRY_PUBLIC_DSN).install()
-  }
 
-  static async getInitialProps({ Component, router, ctx }) {
+  public static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
@@ -25,15 +21,21 @@ class MyApp extends App {
     return { pageProps }
   }
 
-  pageContext = null;
+  public pageContext = null;
 
-  componentDidCatch(error, errorInfo) {
+  constructor(props) {
+    super(props);
+    this.pageContext = getPageContext();
+    Raven.config(process.env.SENTRY_PUBLIC_DSN).install()
+  }
+
+  public componentDidCatch(error, errorInfo) {
     Raven.captureException(error, { extra: errorInfo })
     // This is needed to render errors correctly in development / production
     super.componentDidCatch(error, errorInfo)
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     initGA();
     logPageView();
     Router.router.events.on('routeChangeComplete', logPageView);
@@ -44,8 +46,12 @@ class MyApp extends App {
     }
   }
 
-  render() {
+  public render() {
     const { Component, pageProps } = this.props;
+    const { pathname } = this.props.router;
+    let cleanPath = pathname.substr(1);
+    if (cleanPath === '') cleanPath = 'index'
+
     return (
       <Container>
         <ProvidedApp>
@@ -63,6 +69,7 @@ class MyApp extends App {
               <CssBaseline />
               {/* Pass pageContext to the _document though the renderPage enhancer
                   to render collected styles on server side. */}
+              {renderSEO(getMetaInfo(), cleanPath)}
               <Component pageContext={this.pageContext} {...pageProps} />
             </ThemeProvider>
           </StylesProvider>

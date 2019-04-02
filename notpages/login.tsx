@@ -1,7 +1,7 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
-import React from "react";
+import React from "React";
+import Link from "../components/Link";
 import LoginForm from "../components/LoginForm";
 import Logo from "../components/Logo";
 
@@ -21,14 +21,10 @@ const Login: React.SFC<{ classes: any }> = ({ classes }) => (
     <LoginForm />
     <Typography align="center" gutterBottom>
       Pas encore membre ?{' '}
-      <Link href="/sign-up">
-        <a>Inscrivez vous !</a>
-      </Link>
+      <Link href="/sign-up">Inscrivez vous !</Link>
     </Typography>
     <Typography align="center" gutterBottom>
-      <Link href="/reset-password-request">
-        <a>Vous avez oublié votre mot de passe ?</a>
-      </Link>
+      <Link href="/reset-password-request">Vous avez oublié votre mot de passe ?</Link>
     </Typography>
   </div>
 );

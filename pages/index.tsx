@@ -6,11 +6,11 @@ import get from "lodash.get";
 import HowToReg from "mdi-material-ui/AccountCheck";
 import MathCompass from 'mdi-material-ui/MathCompass'
 import StoreMallDirectory from "mdi-material-ui/Store";
-import Link from "next/link";
 import React from "react";
 import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { compose } from "recompose";
+import Link from "../components/Link";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
 import MailchimpForm from "../components/MailchimpForm";
@@ -169,7 +169,7 @@ export class Home extends React.Component<IHomeProps, {}> {
               Réunissez vos collaborateurs et partagez des moments conviviaux le temps d’un repas ou à l’occasion d’une journée de travail, rythmée par un atelier de cuisine inspirant et privilégiant la cohésion d’équipe. Nous organisons de A à Z vos événements.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/business" passHref>
+              <Link href="/business">
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>
@@ -195,7 +195,7 @@ export class Home extends React.Component<IHomeProps, {}> {
               Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile ou participez à nos ateliers collectifs. Pour organisation un repas ou un cocktail, en toutes occasions, n’hésitez pas à nous contacter.
             </Typography>
             <Grid container alignItems="center" justify="center">
-              <Link href="/individual" passHref>
+              <Link href="/individual">
                 <Button variant="contained" color="secondary">En savoir plus</Button>
               </Link>
             </Grid>

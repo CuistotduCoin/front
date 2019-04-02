@@ -4,9 +4,9 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 import React from "react";
 import AccountDropdown from "../../components/AccountDropdown";
+import Link from "../../components/Link";
 import Logo from "../../components/Logo";
 
 const styles = (theme: Theme) => ({
@@ -83,7 +83,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     } else if (!hideSignUpLogin) {
       if (this.state.up) {
         rightElement = (
-          <Link href="/login" passHref>
+          <Link href="/login">
             <Button
               className={classes.accountButton}
               variant="contained"
@@ -96,7 +96,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         );
       } else {
         rightElement = (
-          <Link href="/sign-up" passHref>
+          <Link href="/sign-up">
             <Button
               className={classes.accountButton}
               variant="contained"
@@ -119,17 +119,15 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         <Toolbar>
           <Grid container justify="flex-start" alignItems="center">
             <Link href="/">
-              <a>
-                <Grid container justify="flex-start" alignItems="center">
-                  <Logo className={classes.logo} />
-                  <Typography className={classes.logoText}
-                    variant="subtitle1"
-                    component="div"
-                  >
-                    Cuistot du Coin
+              <Grid container justify="flex-start" alignItems="center">
+                <Logo className={classes.logo} />
+                <Typography className={classes.logoText}
+                  variant="subtitle1"
+                  component="div"
+                >
+                  Cuistot du Coin
                   </Typography>
-                </Grid>
-              </a>
+              </Grid>
             </Link>
           </Grid>
           {rightElement && (

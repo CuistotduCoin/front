@@ -1,10 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
+import PropTypes from 'prop-types';
+import React from 'react';
 import flush from 'styled-jsx/server';
 
 class MyDocument extends Document {
-  render() {
+  public render() {
+    // @ts-ignore
     const { pageContext } = this.props;
 
     return (
@@ -114,10 +115,6 @@ class MyDocument extends Document {
             font-family: Roboto;
           }
 
-          a {
-            text-decoration: none;
-          }
-
           *[class*="MuiTypography-headline-"] {
             font-family: 'PT Sans', sans-serif !important;
             font-weight: bold !important;
@@ -208,7 +205,9 @@ MyDocument.getInitialProps = ctx => {
 
   // Render app and page and get the context of the page with collected side effects.
   let pageContext;
+  // tslint:disable-next-line:variable-name
   const page = ctx.renderPage(Component => {
+    // tslint:disable-next-line:variable-name
     const WrappedComponent = props => {
       pageContext = props.pageContext;
       return <Component {...props} />;

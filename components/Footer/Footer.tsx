@@ -5,8 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import FacebookIcon from 'mdi-material-ui/Facebook';
 import InstagramIcon from 'mdi-material-ui/Instagram';
 import TwitterIcon from 'mdi-material-ui/Twitter';
-import Link from "next/link";
 import React from "react";
+import Link from "../../components/Link";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -59,27 +59,27 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Cuistot du Coin
               </Typography>
-              <Link href="/team">
-                <a><Typography variant="subtitle1" className={classes.subheading}>L'équipe</Typography></a>
+              <Link href="/team" className={classes.subheading}>
+                L'équipe
               </Link>
-              <Link href="/mission">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Notre mission</Typography></a>
+              <Link href="/mission" className={classes.subheading}>
+                Notre mission
               </Link>
-              <Link href="/join">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Nous rejoindre</Typography></a>
+              <Link href="/join" className={classes.subheading}>
+                Nous rejoindre
               </Link>
-              <Link href="/presskit">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Contact & Presse</Typography></a>
+              <Link href="/presskit" className={classes.subheading}>
+                Contact & Presse
               </Link>
-              <Link href="/terms">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Conditions légales</Typography></a>
+              <Link href="/terms" className={classes.subheading}>
+                Conditions légales
               </Link>
-              <a href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer">
-                <Typography variant="subtitle1" className={classes.subheading}>FAQ</Typography>
-              </a>
-              <a href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer">
-                <Typography variant="subtitle1" className={classes.subheading}>Blog</Typography>
-              </a>
+              <Link href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+                FAQ
+              </Link>
+              <Link href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+                Blog
+              </Link>
             </Grid>
           </Grid>
           <Grid item>
@@ -92,14 +92,14 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Gourmets
               </Typography>
-              <Link href="/testimony-gourmet">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
+              <Link href="/testimony-gourmet" className={classes.subheading}>
+                Temoignages
               </Link>
-              <Link href="/gift">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Carte Cadeau</Typography></a>
+              <Link href="/gift" className={classes.subheading}>
+                Carte Cadeau
               </Link>
-              <Link href="/invite">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Parrainage</Typography></a>
+              <Link href="/invite" className={classes.subheading}>
+                Parrainage
               </Link>
             </Grid>
           </Grid>
@@ -113,11 +113,11 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Cuistots
               </Typography>
-              <Link href="/testimony-cook">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
+              <Link href="/testimony-cook" className={classes.subheading}>
+                Temoignages
               </Link>
-              <Link href="/become-cook">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Devenir Cuistot</Typography></a>
+              <Link href="/become-cook" className={classes.subheading}>
+                Devenir Cuistot
               </Link>
             </Grid>
           </Grid>
@@ -131,14 +131,14 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Entreprises
               </Typography>
-              <Link href="/testimony-business">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
+              <Link href="/testimony-business" className={classes.subheading}>
+                Temoignages
               </Link>
-              <Link href="/invite-business">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Parrainage</Typography></a>
+              <Link href="/invite-business" className={classes.subheading}>
+                Parrainage
               </Link>
-              <Link href="/terms-pro">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Conditions légales</Typography></a>
+              <Link href="/terms-pro" className={classes.subheading}>
+                Conditions légales
               </Link>
             </Grid>
           </Grid>
@@ -152,11 +152,11 @@ export class Footer extends React.Component<IFooterProps, {}> {
               <Typography component="p" variant="h6" className={classes.title} color="primary">
                 Partenaires
               </Typography>
-              <Link href="/testimony-partner">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Temoignages</Typography></a>
+              <Link href="/testimony-partner" className={classes.subheading}>
+                Temoignages
               </Link>
-              <Link href="/become-partner">
-                <a><Typography variant="subtitle1" className={classes.subheading}>Devenir partenaires</Typography></a>
+              <Link href="/become-partner" className={classes.subheading}>
+                Devenir partenaires
               </Link>
             </Grid>
           </Grid>
