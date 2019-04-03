@@ -17,6 +17,7 @@ ALGOLIASEARCH_SEARCH_KEY=${process.env['algolia-search-key']}
 ALGOLIASEARCH_PLACES_APP_ID=${process.env['algolia-places-app-id']}
 ALGOLIASEARCH_PLACES_KEY=${process.env['algolia-places-key']}
 SENTRY_DSN=${process.env['sentry-dsn']}
+STAGE=${process.env['stage']}
 `;
 
 console.log(content);
