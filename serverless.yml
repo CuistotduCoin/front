@@ -14,7 +14,6 @@ custom:
     project: front
   serverless-nextjs:
     nextConfigDir: ./
-    assetsBucketName: assets.cuistotducoin.com
     pageConfig:
       workshop:
         events:
