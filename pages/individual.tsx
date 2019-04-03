@@ -103,7 +103,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         date: "samedi 19 avril, 15h-16h45",
         duration: 2,
         image:
-          "https://static.cuistotducoin.com/img/workshops/anne-chocolat.jpg",
+          "https://static.cuistotducoin.com/img/workshops/anne-chocolat-detente.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
         name: "Atelier enfant : Gâteau au chocolat & détente",
         nameCook: "Anne",
