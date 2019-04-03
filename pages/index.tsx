@@ -10,9 +10,9 @@ import React from "react";
 import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { compose } from "recompose";
-import Link from "../components/Link";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import MailchimpForm from "../components/MailchimpForm";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";

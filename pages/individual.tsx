@@ -71,33 +71,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         typeform: "https://cuistotducoin.typeform.com/to/zrj25z"
       },
       {
-        availableSeat: 8,
-        date: "samedi 6 avril, 10h-13h",
-        duration: 3,
-        image: "https://static.cuistotducoin.com/img/workshops/karim-tiep.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/karim.jpg",
-        name: "Cuisine Africaine - Tiep",
-        nameCook: "Karim",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/Q3Mz5I"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 6 avril, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Initiation au tournage de crêpes",
-        nameCook: "Nadine",
-        price: 25,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/DRfUsS"
-      },
-      {
         availableSeat: 6,
         date: "samedi 6 avril, 14h-16h",
         duration: 2,
