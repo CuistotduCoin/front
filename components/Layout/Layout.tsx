@@ -5,6 +5,7 @@ import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
+import { getMetaInfo } from "../../shared/seo";
 
 const styles = () => ({
   container: {
@@ -26,6 +27,7 @@ interface ILayoutProps {
   className?: string;
   headerProps?: object;
   noHero: boolean;
+  router: any;
 }
 
 export class Layout extends React.Component<ILayoutProps, {}> {
@@ -35,7 +37,30 @@ export class Layout extends React.Component<ILayoutProps, {}> {
   };
 
   public render() {
-    const { classes, component, title, description, children, className, headerProps, noHero } = this.props;
+    const { classes, component, children, className, headerProps, noHero } = this.props;
+    const { pathname } = this.props.router;
+    let cleanPath = pathname.substr(1);
+
+    if (cleanPath === '') cleanPath = 'index';
+
+    const metaInfo = getMetaInfo();
+    let title: string;
+    if (this.props.title) {
+      title = this.props.title
+    } else {
+      if (metaInfo[cleanPath] && metaInfo[cleanPath].title) {
+        title = metaInfo[cleanPath].title;
+      }
+    }
+
+    let description: string;
+    if (this.props.description) {
+      description = this.props.description
+    } else {
+      if (metaInfo[cleanPath] && metaInfo[cleanPath].description) {
+        description = metaInfo[cleanPath].description;
+      }
+    }
 
     return (
       <div className={cx(classes.container, className)}>
