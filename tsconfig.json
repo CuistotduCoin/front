@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "name": "typescript-tslint-plugin",
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",

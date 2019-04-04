@@ -2,33 +2,33 @@
 # yarn lockfile v1
 
 
-"@aws-amplify/auth@^1.2.19":
-  version "1.2.19"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.19.tgz#cc9e9dcc56fee0d23c4759aa06f3b5ab6349b5fd"
+"@aws-amplify/auth@^1.2.20":
+  version "1.2.20"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.20.tgz#d0d63b72f2951a825709ae05369dbc8c940de8ca"
   dependencies:
-    "@aws-amplify/cache" "^1.0.24"
-    "@aws-amplify/core" "^1.0.24"
+    "@aws-amplify/cache" "^1.0.25"
+    "@aws-amplify/core" "^1.0.25"
     amazon-cognito-auth-js "^1.3.2"
     amazon-cognito-identity-js "^3.0.10"
 
-"@aws-amplify/cache@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.24.tgz#07bb97f18a2dfa6d874ad02554c99109a715ab84"
+"@aws-amplify/cache@^1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.25.tgz#c3c92bd117139975372e233330e251c10e4fe8de"
   dependencies:
-    "@aws-amplify/core" "^1.0.24"
+    "@aws-amplify/core" "^1.0.25"
 
-"@aws-amplify/core@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.24.tgz#03020e7cd3617405acb7153fbe739be8f85bc2a1"
+"@aws-amplify/core@^1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.25.tgz#d330fefe7119fc6e0254a7c39e0d1525fa039e4b"
   dependencies:
     aws-sdk "2.329.0"
     url "^0.11.0"
 
-"@aws-amplify/storage@^1.0.27":
-  version "1.0.27"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.27.tgz#ca118c3aee21ee1ef3f5f49487e176f666c93cdb"
+"@aws-amplify/storage@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.28.tgz#4d3ce2f9433444f22faea51eb22799ff3d0304fd"
   dependencies:
-    "@aws-amplify/core" "^1.0.24"
+    "@aws-amplify/core" "^1.0.25"
 
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -1881,9 +1881,9 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@^16.8.10":
-  version "16.8.10"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.10.tgz#1ccb6fde17f71a62ef055382ec68bdc379d4d8d9"
+"@types/react@^16.8.12":
+  version "16.8.12"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.12.tgz#ffbdd7bcd2b7037c3f78e26c708922a2befbb71f"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -2867,9 +2867,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.434.0:
-  version "2.434.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.434.0.tgz#8df8634335a8ba197e2d08448c33bc884fe0d2ab"
+aws-sdk@^2.435.0:
+  version "2.435.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.435.0.tgz#f1f10a9776ad3ac4e658f7d9834aa56fcac93f51"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -6610,9 +6610,9 @@ lazy-universal-dotenv@^2.0.0:
     dotenv "^6.0.0"
     dotenv-expand "^4.2.0"
 
-libphonenumber-js@^1.7.14:
-  version "1.7.14"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.14.tgz#e1182323a780db1bd704495355a858e3f40e9293"
+libphonenumber-js@^1.7.15:
+  version "1.7.15"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.15.tgz#2ad337e94c24cb810813554f6cf4a19f1246d3b9"
   dependencies:
     minimist "^1.2.0"
     semver-compare "^1.0.0"
@@ -7279,9 +7279,9 @@ next-compose-plugins@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.1.1.tgz#7da0a3ce0c8ce267b5cb4164d2fb6e4aaf61bf86"
 
-next-seo@^1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.11.1.tgz#fd17a522b84e3d21c367e5b54e801731c8c1c3ba"
+next-seo@^1.11.2:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.11.2.tgz#e88d00442932e7c9695edcf48d4360d7acd4ac00"
 
 next-server@8.0.3:
   version "8.0.3"

@@ -50,7 +50,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     const { pathname } = this.props.router;
     let cleanPath = pathname.substr(1);
-    if (cleanPath === '') cleanPath = 'index'
+    if (cleanPath === '') { cleanPath = 'index' }
 
     return (
       <Container>
@@ -63,8 +63,7 @@ class MyApp extends App {
           >
             {/* ThemeProvider makes the theme available down the React
                 tree thanks to React context. */}
-            <ThemeProvider theme={this.pageContext.theme}
-            >
+            <ThemeProvider theme={this.pageContext.theme}>
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
               <CssBaseline />
               {/* Pass pageContext to the _document though the renderPage enhancer

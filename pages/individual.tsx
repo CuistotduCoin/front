@@ -100,7 +100,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "samedi 19 avril, 15h-16h45",
+        date: "vendredi 19 avril, 15h-16h45",
         duration: 2,
         image:
           "https://static.cuistotducoin.com/img/workshops/anne-chocolat-detente.jpg",
