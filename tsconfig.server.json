@@ -11,5 +11,11 @@
     },
     "include": [
         "server/**/*.ts"
+    ],
+    "exclude": [
+        ".serverless",
+        "build",
+        "node_modules",
+        "sls-next-build"
     ]
 }

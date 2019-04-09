@@ -126,7 +126,25 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   component="div"
                 >
                   Cuistot du Coin
-                  </Typography>
+                </Typography>
+                <Link href="/individual">
+                  <Button
+                    className={classes.button}
+                    variant="outlined"
+                    color="primary"
+                  >
+                    Particulier
+                  </Button>
+                </Link>
+                <Link href="/business">
+                  <Button
+                    className={classes.button}
+                    variant="outlined"
+                    color="primary"
+                  >
+                    Entreprise
+                  </Button>
+                </Link>
               </Grid>
             </Link>
           </Grid>

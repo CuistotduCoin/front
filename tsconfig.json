@@ -1,7 +1,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "name": "typescript-tslint-plugin",
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+      }
+    ],
+    "noEmit": true,
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
@@ -10,13 +15,13 @@
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
     "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types/"
+      "./node_modules/@types"
     ],
     "lib": [
       "dom",
