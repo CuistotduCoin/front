@@ -129,6 +129,20 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
+        date: "samedi 24 mai, 17h-20h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Initiation au tournage de galettes + Repas",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Terre D'Embruns, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/m29858"
+      },
+      {
+        availableSeat: 6,
         date: "samedi 25 mai, 10h-13h",
         duration: 3,
         image:
@@ -140,6 +154,20 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Cuisinella, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/qjgFFz"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 25 mai, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-fete-des-meres.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier enfant inédit : Spécial fête des Mères",
+        nameCook: "Audrey",
+        price: 30,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE"
       },
     ];
 
