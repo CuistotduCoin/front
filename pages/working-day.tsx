@@ -86,6 +86,14 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
         name: "Lidl",
         rating: 5
+      },
+      {
+        context: "Atelier, repas, location et réunion pour une équipe de 20 collaborateurs",
+        comment: "Une prestation de qualité! Tout était parfait : Le lieu, l'accueil, le déjeuner, l'activité ...Merci!",
+        image:
+          "https://static.cuistotducoin.com/img/testimony/brittany-ferries.jpg",
+        name: "Brittany Ferries",
+        rating: 5
       }
     ];
 
