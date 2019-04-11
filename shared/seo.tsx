@@ -250,7 +250,7 @@ export const getMetaInfo = () => {
       metaTitle: "Journée d'équipe savoureuse : Accueil, goûter et déjeuner savoureux",
     },
     'workshop-business': {
-      description: "Partagez une expérience convivial en équipe au côté de Cuistots passionnés ",
+      description: "Partagez une expérience convivial en équipe aux côtés de Cuistots passionnés ",
       href: "https://www.cuistotducoin.com/team",
       metaDescription: "Réunissez vos équipes autour d'un atelier culinaire fédérateur",
       title: "Une activité de cohésion savoureuse et sur mesure pour vos salariés",
