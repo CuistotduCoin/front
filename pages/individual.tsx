@@ -45,20 +45,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
-        date: "samedi 13 avril, 10h-13h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anuja-initiation-cuisine-mauricienne.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anuja.jpg",
-        name: "Initiation à la cuisine Mauricienne",
-        nameCook: "Anuja",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/QyyRzR"
-      },
-      {
-        availableSeat: 6,
         date: "vendredi 19 avril, 15h-16h45",
         duration: 2,
         image:
@@ -84,20 +70,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Schmidt, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/pBE4rj"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 20 avril, 10h-13h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/paule-charlotte-initiation.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/paule-charlotte.jpg",
-        name: "Atelier initiation à la cuisine Ivoirienne",
-        nameCook: "Paule Charlotte",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/iGOu9g"
       },
       {
         availableSeat: 6,
