@@ -6,7 +6,7 @@ import components from "../content/components";
 // @ts-ignore
 import Content from "../content/terms.mdx";
 
-const styles = () => ({
+const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
