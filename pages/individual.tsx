@@ -129,7 +129,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "samedi 24 mai, 17h-20h",
+        date: "vendredi 24 mai, 17h-20h",
         duration: 3,
         image:
           "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
