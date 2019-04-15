@@ -17,13 +17,16 @@ const styles = (theme: Theme) => ({
   },
   content: {
     alignItems: "center",
-    background: "rgba(0, 0, 0, 0.5)",
+    background: "rgba(0, 0, 0, 0.1)",
     display: "flex"
   },
   home: {
     color: "#fff",
     overflow: "hidden",
     position: "relative"
+  },
+  typography: {
+    textShadow: "1px 1px #585A5A"
   },
   video: {
     bottom: 0,
@@ -73,6 +76,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
                 align="center"
                 component="h1"
                 color="inherit"
+                className={classes.typography}
               >
                 {this.props.valueProposition}
               </Typography>
@@ -82,6 +86,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
                   align="center"
                   component="p"
                   color="inherit"
+                  className={classes.typography}
                 >
                   {this.props.description}
                 </Typography>
