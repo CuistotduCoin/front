@@ -172,6 +172,13 @@ export const getMetaInfo = () => {
       title: "Contact presse",
       metaTitle: "Contact presse - Cuistot du Coin ",
     },
+    'price': {
+      description: "Découvrez les prix de nos prestations aussi bien pour les particuliers que pour les entreprises",
+      href: "https://www.cuistotducoin.com/price",
+      metaDescription: "Découvrez les prix de nos prestations aussi bien pour les particuliers que pour les entreprises",
+      title: "Informations tarifaires - Cuistot du Coin",
+      metaTitle: "Informations tarifaires - Cuistot du Coin",
+    },
     'profile': {
       noindex: true
     },

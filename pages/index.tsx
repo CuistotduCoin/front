@@ -130,7 +130,7 @@ export class Home extends React.Component<IHomeProps, {}> {
           gutterBottom
           className={classes.typography}
         >
-          Nous révelons les saveurs et les talents pour vous garantir une expérience authentique et conviviale !
+          Nous révélons les saveurs et les talents pour vous garantir une expérience authentique et conviviale !
         </Typography>
         <Grid
           container

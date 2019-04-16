@@ -6,13 +6,12 @@ import React from "react";
 const styles = (theme: Theme) => ({
   backgroundImage: {
     bottom: 0,
-    left: "50%",
-    minHeight: "100%",
-    minWidth: "100%",
+    left: 0,
     position: "absolute",
     right: 0,
     top: 0,
-    transform: "translateX(-50%);",
+    backgroundPosition: "50%",
+    backgroundSize: "cover",
     zIndex: -1
   },
   content: {
