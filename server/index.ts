@@ -11,9 +11,10 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const route = pathMatch();
 const matches = [
-  { route: route("/workshops/:id/edit"), page: "/workshop-edit" },
-  { route: route("/workshops/new"), page: "/workshop-new" },
-  { route: route("/workshops/:id"), page: "/workshop" },
+  { route: route("/workshop/:id/edit"), page: "/workshop-edit" },
+  { route: route("/workshop/new"), page: "/workshop-new" },
+  { route: route("/workshop/:id"), page: "/workshop" },
+  { route: route("/cook/:id"), page: "/cook" },
 ];
 
 app.prepare().then(() => {

@@ -55,7 +55,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 30,
         spot: "Comme les grands, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/fCR02c"
+        typeform: "https://cuistotducoin.typeform.com/to/fCR02c",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -69,7 +70,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 50,
         spot: "Schmidt, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/pBE4rj"
+        typeform: "https://cuistotducoin.typeform.com/to/pBE4rj",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -83,7 +85,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 50,
         spot: "Schmidt, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/BBlIht"
+        typeform: "https://cuistotducoin.typeform.com/to/BBlIht",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -97,7 +100,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 40,
         spot: "Cuisinella, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX"
+        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -111,7 +115,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 30,
         spot: "Terre D'Embruns, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/m29858"
+        typeform: "https://cuistotducoin.typeform.com/to/m29858",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -125,7 +130,8 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 35,
         spot: "Cuisinella, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz"
+        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 6,
@@ -139,11 +145,65 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 30,
         spot: "Cuisinella, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE"
+        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE",
+        type: "Atelier collectif"
       },
     ];
 
-    const privateWorkshops = [];
+    const privateWorkshops = [
+      {
+        availableSeat: 6,
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake-etoile.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "Parents / Enfants",
+        price: 40,
+        spot: "Brest et alentour",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX",
+        type: "Atelier privatif"
+      },
+      {
+        availableSeat: 6,
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "Initiation au tournage de galettes + Repas",
+        price: 30,
+        spot: "Brest et alentour",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/m29858",
+        type: "Atelier privatif"
+      },
+      {
+        availableSeat: 6,
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/hayet-tadjine.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "Tadjine",
+        price: 35,
+        spot: "Brest et alentour",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz",
+        type: "Atelier privatif"
+      },
+      {
+        availableSeat: 6,
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-fete-des-meres.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "Atelier enfant inédit : Spécial fête des Mères",
+        price: 30,
+        spot: "Brest et alentour",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE",
+        type: "Atelier privatif"
+      }
+    ];
 
     const ads = [
       {

@@ -100,6 +100,13 @@ export const getMetaInfo = () => {
       metaDescription: "Le traiteur qui vous accompagne pour que vos événements soient uniques",
       metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
     },
+    'charter': {
+      description: "Les engagements des cuistots du réseau cuistotducoin.com",
+      href: "https://www.cuistotducoin.com/become-cook",
+      title: "Charte de qualité de Cuistot du Coin",
+      metaDescription: "Les engagements des cuistots du réseau cuistotducoin.com",
+      metaTitle: "Charte de qualité de Cuistot du Coin",
+    },
     'cook': {
       description: "Partagez votre talent et transmettez votre savoir-faire",
       href: "https://www.cuistotducoin.com/cook",

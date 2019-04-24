@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const isProd = process.env.STAGE === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 const webpack = require('webpack');
 const withPlugins = require('next-compose-plugins')
 const withTypescript = require('@zeit/next-typescript')

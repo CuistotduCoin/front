@@ -34,16 +34,16 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IPriceProps {
+interface IPricingProps {
   classes?: any;
 }
 
-interface IPriceState {
+interface IPricingState {
   tab: number;
 }
 
-export class Price extends React.Component<IPriceProps, IPriceState> {
-  constructor(props: IPriceProps) {
+export class Pricing extends React.Component<IPricingProps, IPricingState> {
+  constructor(props: IPricingProps) {
     super(props);
 
     this.state = {
@@ -343,4 +343,4 @@ export class Price extends React.Component<IPriceProps, IPriceState> {
   }
 }
 
-export default withStyles(styles as any)(Price as any) as any;
+export default withStyles(styles as any)(Pricing as any) as any;

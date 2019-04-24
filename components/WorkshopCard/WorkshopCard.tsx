@@ -142,11 +142,13 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
             <Grid item>
               <Grid container>
                 <Grid item>{avatar}</Grid>
-                <Grid item>
-                  <Typography className={classes.nameCook} variant="body1">
-                    Rencontrez {this.props.nameCook}
-                  </Typography>
-                </Grid>
+                {this.props.nameCook && (
+                  <Grid item>
+                    <Typography className={classes.nameCook} variant="body1">
+                      Rencontrez {this.props.nameCook}
+                    </Typography>
+                  </Grid>
+                )}
               </Grid>
             </Grid>
             {this.props.rating && (
@@ -172,7 +174,7 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
             className={classes.bottomContentCard}
           >
             <Grid item className={classes.bottomContentCardItem}>
-              <Chip label="Atelier collectif" className={classes.chip} />
+              <Chip label={this.props.type} className={classes.chip} />
             </Grid>
             <Grid item >
               <Typography align="center" variant="h6">

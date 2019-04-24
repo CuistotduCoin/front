@@ -28,10 +28,9 @@ custom:
 provider:
   versionFunctions: false
   name: aws
-  stage: ${env:STAGE}
+  stage: ${env:NODE_ENV}
   runtime: nodejs8.10
   region: ${env:AWS_REGION_IRELAND}
-  endpointType: regional
   environment:
     AWS_REGION_IRELAND: ${env:AWS_REGION_IRELAND}
     AWS_USERPOOL_ID: ${env:AWS_USERPOOL_ID}

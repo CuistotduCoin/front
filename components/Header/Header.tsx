@@ -75,12 +75,11 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
       isLoggedIn
     } = this.props;
 
-    const hideSignUpLogin = true;
     let rightElement;
 
     if (isLoggedIn) {
       rightElement = <AccountDropdown />;
-    } else if (!hideSignUpLogin) {
+    } else {
       if (this.state.up) {
         rightElement = (
           <Link href="/login">
@@ -131,12 +130,12 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
             </Link>
             <Link href="/individual">
               <Button className={classes.button} variant="outlined" color="primary">
-                Particulier
+                Pour les particuliers
               </Button>
             </Link>
             <Link href="/business">
               <Button className={classes.button} variant="outlined" color="primary">
-                Entreprise
+                Pour les entreprises
               </Button>
             </Link>
           </Grid>
