@@ -1,6 +1,6 @@
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import React from "React";
+import React from "react";
 import Link from "../components/Link";
 import LoginForm from "../components/LoginForm";
 import Logo from "../components/Logo";

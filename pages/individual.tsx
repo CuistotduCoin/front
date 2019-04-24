@@ -44,37 +44,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
 
     const workshops = [
       {
-        availableSeat: 6,
-        date: "vendredi 19 avril, 15h-16h45",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-chocolat-detente.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier enfant : Gâteau au chocolat & détente",
-        nameCook: "Anne",
-        price: 30,
-        spot: "Comme les grands, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/fCR02c",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 20 avril, 9h30-13h",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-paques.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Pièce en chocolat pour Pâques",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/pBE4rj",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
+        availableSeat: 0,
         date: "samedi 27 avril, 14h-17h30",
         duration: 4,
         image:
@@ -116,6 +86,21 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         spot: "Terre D'Embruns, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/m29858",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 6,
+        date: "vendredi 24 mai, 17h30-20h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/luis-calzone.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
+        name: "Atelier initiation à la cuisine italienne - Calzone",
+        nameCook: "Luis",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/iL1ANy",
         type: "Atelier collectif"
       },
       {
