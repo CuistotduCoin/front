@@ -60,6 +60,7 @@ class MyApp extends App {
             sheetsRegistry={this.pageContext.sheetsRegistry}
             generateClassName={this.pageContext.generateClassName}
             sheetsManager={this.pageContext.sheetsManager}
+            disableGeneration={this.pageContext.noStylesGeneration}
           >
             {/* ThemeProvider makes the theme available down the React
                 tree thanks to React context. */}

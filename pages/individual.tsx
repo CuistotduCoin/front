@@ -75,6 +75,36 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
+        date: "mercredi 11 mai, 9h30-14h30",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier + Repas : Cuisine ayurvédique",
+        nameCook: "Michel",
+        price: 50,
+        spot: "chez Michel, Plougastel",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/R2phZF",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 6,
+        date: "mercredi 18 mai, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier Initiation au tournage de crêpes",
+        nameCook: "Nadine",
+        price: 25,
+        spot: "Schmidt, Brest",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/ovm0IZ",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 6,
         date: "vendredi 24 mai, 17h-20h",
         duration: 3,
         image:
@@ -132,7 +162,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/BBBJqE",
         type: "Atelier collectif"
-      },
+      }
     ];
 
     const privateWorkshops = [

@@ -1,14 +1,14 @@
 import React from "react";
 import { Provider, Subscribe } from "unstated";
-// import UNSTATED from "unstated-debug";
+import UNSTATED from "unstated-debug";
 import { App, AppContainer } from ".";
 import "../../shared/auth";
 
-// if (process.env.NODE_ENV === "development" && typeof window !== 'undefined') {
-//   UNSTATED.logStateChanges = true;
-//   // @ts-ignore
-//   window.LOG_LEVEL = "DEBUG";
-// }
+if (process.env.NODE_ENV === "development" && typeof window !== 'undefined') {
+   UNSTATED.logStateChanges = true;
+  // @ts-ignore
+   window.LOG_LEVEL = "DEBUG";
+ }
 
 export class ProvidedApp extends React.Component {
   public appContainer: any;
