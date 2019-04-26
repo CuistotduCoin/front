@@ -75,7 +75,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "mercredi 11 mai, 9h30-14h30",
+        date: "samedi 11 mai, 9h30-14h30",
         duration: 5,
         image:
           "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
@@ -90,7 +90,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "mercredi 18 mai, 14h-16h",
+        date: "samedi 18 mai, 14h-16h",
         duration: 2,
         image:
           "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
