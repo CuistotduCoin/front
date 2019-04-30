@@ -27,10 +27,6 @@ const styles = (theme: Theme) => ({
     margin: "0px auto",
     maxWidth: 1080,
     padding: theme.spacing(3)
-  },
-  gridContainer: {
-    paddingBottom: theme.spacing(1),
-    paddingTop: theme.spacing(1)
   }
 });
 
@@ -307,7 +303,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
   private renderGrid(classes, pricing) {
     return (
       <Grid className={classes.grid}>
-        <Grid container justify="space-around" className={classes.gridContainer}>
+        <Grid container justify="space-around">
           {pricing.map(pricing => (
             <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
               <Card>

@@ -1,4 +1,8 @@
 import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +17,17 @@ import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
+  card: {
+    padding: 10
+  },
+  cardHeader: {
+    backgroundColor: theme.palette.primary.main
+  },
+  cardPricing: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: theme.spacing(2)
+  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -21,7 +36,7 @@ const styles = (theme: Theme) => ({
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
-    width: "calc(100% - 100px)",
+    width: "calc(100% - 100px)"
   }
 });
 
@@ -84,7 +99,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         rating: 5
       },
       {
-        context: "Atelier pour une équipe de 15 collaborateurss",
+        context: "Atelier pour une équipe de 15 collaborateurs",
         comment: "Lieu magnifique, prestation au top. Tout était parfait : l'atelier, l'animation, l'organisation ainsi que le lieu.",
         image:
           "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
@@ -106,6 +121,39 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           "https://static.cuistotducoin.com/img/testimony/beable.jpg",
         name: "Be Able",
         rating: 5
+      }
+    ];
+
+    const pricing = [
+      {
+        title: "Atelier cocktail",
+        price: '30',
+        description: [`1H d'atelier festif`, 'Ingrédients et matériel fournis', 'Dégustation de vos cocktails', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: "Atelier goûter",
+        price: '40',
+        description: [`2H d'atelier gourmand`, 'Préparation de recettes sucrées originales et dégustation', 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: "Atelier découverte",
+        price: '50',
+        description: [`2H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier (plat, dessert)`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: "Atelier immersion",
+        price: '65',
+        description: [`3H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier (entrée, plat, dessert, boisson)`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: 'Atelier technique',
+        price: '65',
+        description: [`3H d'atelier artisanal`, `Apprentissage de gestes techniques (Boulangerie, Patisserie, etc)`, `Confection de la recette de A à Z par gourmet`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis', 'Création par gourmet à emporter'],
+        buttonText: 'Obtenir un devis'
       }
     ];
 
@@ -159,6 +207,39 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           className={classes.grid}
         >
           <StaticSteper steps={stepsFAQ} />
+        </Grid>
+        <Grid className={classes.grid}>
+          <Grid container justify="space-around">
+            {pricing.map(pricing => (
+              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
+                <Card>
+                  <CardHeader
+                    title={pricing.title}
+                    titleTypographyProps={{ align: 'center' }}
+                    subheaderTypographyProps={{ align: 'center' }}
+                    className={classes.cardHeader}
+                  />
+                  <CardContent>
+                    <div className={classes.cardPricing}>
+                      <Typography component="h2" variant="h3" color="textPrimary">
+                        {pricing.price}€
+                </Typography>
+                    </div>
+                    {pricing.description.map(line => (
+                      <Typography variant="subtitle1" align="center" key={line}>
+                        {line}
+                      </Typography>
+                    ))}
+                  </CardContent>
+                  <CardActions className={classes.cardActions}>
+                    <Button fullWidth color="primary">
+                      {pricing.buttonText}
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
         <Typography
           variant="h5"

@@ -21,7 +21,7 @@ const styles = (theme: Theme) => ({
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
-    width: "calc(100% - 100px)",
+    width: "calc(100% - 100px)"
   },
   stepper: {
     backgroundColor: "#fafafa"

@@ -27,7 +27,7 @@ export class StaticSteper extends React.Component<IStaticSteperProps, {}> {
         {
           steps.map((step, key) => (
             <Step active key={key}>
-              <StepLabel>{step.title}</StepLabel>
+              <StepLabel disabled={false}>{step.title}</StepLabel>
               <StepContent>
                 <Typography>{step.content}</Typography>
               </StepContent>

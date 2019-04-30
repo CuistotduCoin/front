@@ -44,36 +44,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
 
     const workshops = [
       {
-        availableSeat: 0,
-        date: "samedi 27 avril, 14h-17h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Macarons",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/BBlIht",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 27 avril, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake-etoile.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Parents / Enfants : Cupcake",
-        nameCook: "Audrey",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX",
-        type: "Atelier collectif"
-      },
-      {
         availableSeat: 6,
         date: "samedi 11 mai, 9h30-14h30",
         duration: 5,
@@ -166,58 +136,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     ];
 
     const privateWorkshops = [
-      {
-        availableSeat: 6,
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake-etoile.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
-        name: "Parents / Enfants",
-        price: 40,
-        spot: "Brest et alentour",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/dhQMEX",
-        type: "Atelier privatif"
-      },
-      {
-        availableSeat: 6,
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
-        name: "Initiation au tournage de galettes + Repas",
-        price: 30,
-        spot: "Brest et alentour",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/m29858",
-        type: "Atelier privatif"
-      },
-      {
-        availableSeat: 6,
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/hayet-tadjine.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
-        name: "Tadjine",
-        price: 35,
-        spot: "Brest et alentour",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz",
-        type: "Atelier privatif"
-      },
-      {
-        availableSeat: 6,
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-fete-des-meres.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
-        name: "Atelier enfant inédit : Spécial fête des Mères",
-        price: 30,
-        spot: "Brest et alentour",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE",
-        type: "Atelier privatif"
-      }
     ];
 
     const ads = [
