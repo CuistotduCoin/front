@@ -26,6 +26,7 @@ const styles = (theme: Theme) => ({
     marginRight: theme.spacing(1)
   },
   logoText: {
+    color: "black",
     marginRight: theme.spacing(1)
   }
 });
@@ -122,7 +123,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               <Grid container justify="flex-start" alignItems="center">
                 <Logo className={classes.logo} />
                 <Typography className={classes.logoText}
-                  variant="subtitle1"
+                  variant="h6"
                   component="div"
                 >
                   Cuistot du Coin

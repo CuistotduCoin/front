@@ -196,7 +196,7 @@ export class Home extends React.Component<IHomeProps, {}> {
             </Typography>
             <Grid container alignItems="center" justify="center">
               <Link href="/individual">
-                <Button variant="contained" color="secondary">En savoir plus</Button>
+                <Button variant="contained" color="secondary">Découvrir les ateliers</Button>
               </Link>
             </Grid>
           </Grid>

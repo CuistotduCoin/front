@@ -113,7 +113,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         name: "Tadjine",
         nameCook: "Hayet",
         price: 35,
-        spot: "Cuisinella, Brest",
+        spot: "Schmidt, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/qjgFFz",
         type: "Atelier collectif"

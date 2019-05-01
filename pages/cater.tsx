@@ -1,4 +1,8 @@
 import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +17,17 @@ import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
+  card: {
+    padding: 10
+  },
+  cardHeader: {
+    backgroundColor: theme.palette.primary.main
+  },
+  cardPricing: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: theme.spacing(2)
+  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -41,7 +56,6 @@ export class Cater extends React.Component<ICaterProps, {}> {
       { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
       { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
     ];
-
 
     const stepsFAQ = [
       {
@@ -96,6 +110,27 @@ export class Cater extends React.Component<ICaterProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
+    const pricing = [
+      {
+        title: "Cocktail apéritif",
+        price: '15',
+        description: ['Assortiment de X tapas salées et sucrées'],
+        buttonText: 'Demander un devis'
+      },
+      {
+        title: "Cocktail déjeunatoire ou dinatoire",
+        price: '18',
+        description: ['Assortiment de X tapas salées et sucrées'],
+        buttonText: 'Get started'
+      },
+      {
+        title: "Cocktail déjeunatoire ou dinatoire gourmand",
+        price: '23',
+        description: ['Assortiment de X tapas salées et sucrées'],
+        buttonText: 'Contact us'
+      },
+    ];
+
     return (
       <Layout
         component={
@@ -142,6 +177,39 @@ export class Cater extends React.Component<ICaterProps, {}> {
           className={classes.grid}
         >
           <StaticSteper steps={stepsFAQ} />
+        </Grid>
+        <Grid className={classes.grid}>
+          <Grid container justify="space-around">
+            {pricing.map(pricing => (
+              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
+                <Card>
+                  <CardHeader
+                    title={pricing.title}
+                    titleTypographyProps={{ align: 'center' }}
+                    subheaderTypographyProps={{ align: 'center' }}
+                    className={classes.cardHeader}
+                  />
+                  <CardContent>
+                    <div className={classes.cardPricing}>
+                      <Typography component="h2" variant="h3" color="textPrimary">
+                        {pricing.price}€
+                </Typography>
+                    </div>
+                    {pricing.description.map(line => (
+                      <Typography variant="subtitle1" align="center" key={line}>
+                        {line}
+                      </Typography>
+                    ))}
+                  </CardContent>
+                  <CardActions className={classes.cardActions}>
+                    <Button fullWidth color="primary">
+                      {pricing.buttonText}
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
         <Typography
           variant="h5"

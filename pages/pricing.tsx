@@ -206,12 +206,6 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
         description: ['Assortiment de tapas salées et sucrées ou tapase salée', '30 GB of storage', 'Help center access', 'Phone & email support'],
         buttonText: 'Contact us'
       },
-      {
-        title: "Atelier suivi d'un repas à table",
-        price: '65',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
-      }
     ];
 
     return (
@@ -296,6 +290,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
           Nous organisons vos journées d'entreprises :
         </Typography>
         {this.renderGrid(classes, pricingWorkingDay)}
+
       </>
     );
   }
