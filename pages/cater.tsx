@@ -113,20 +113,20 @@ export class Cater extends React.Component<ICaterProps, {}> {
     const pricing = [
       {
         title: "Cocktail apéritif",
-        price: '15',
-        description: ['Assortiment de X tapas salées et sucrées'],
+        price: '12',
+        description: ['Assortiment de 4 tapas salées et sucrées'],
         buttonText: 'Demander un devis'
       },
       {
         title: "Cocktail déjeunatoire ou dinatoire",
         price: '18',
-        description: ['Assortiment de X tapas salées et sucrées'],
+        description: ['Assortiment de 6 tapas salées et sucrées'],
         buttonText: 'Get started'
       },
       {
         title: "Cocktail déjeunatoire ou dinatoire gourmand",
         price: '23',
-        description: ['Assortiment de X tapas salées et sucrées'],
+        description: ['Assortiment de 8 tapas salées et sucrées'],
         buttonText: 'Contact us'
       },
     ];

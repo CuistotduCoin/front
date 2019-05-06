@@ -131,12 +131,12 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         description: [`1H d'atelier festif`, 'Ingrédients et matériel fournis', 'Dégustation de vos cocktails', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
       },
-      {
+      /*
         title: "Atelier goûter",
         price: '40',
         description: [`2H d'atelier gourmand`, 'Préparation de recettes sucrées originales et dégustation', 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
-      },
+      },*/
       {
         title: "Atelier découverte",
         price: '50',
@@ -149,12 +149,12 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         description: [`3H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier (entrée, plat, dessert, boisson)`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
       },
-      {
+      /*{
         title: 'Atelier technique',
         price: '65',
         description: [`3H d'atelier artisanal`, `Apprentissage de gestes techniques (Boulangerie, Patisserie, etc)`, `Confection de la recette de A à Z par gourmet`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis', 'Création par gourmet à emporter'],
         buttonText: 'Obtenir un devis'
-      }
+      }*/
     ];
 
     const photos = [

@@ -60,7 +60,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
       },
       {
         availableSeat: 6,
-        date: "samedi 18 mai, 14h-16h",
+        date: "samedi 18 mai, 14h30-16h30",
         duration: 2,
         image:
           "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
@@ -68,7 +68,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         name: "Atelier Initiation au tournage de crêpes",
         nameCook: "Nadine",
         price: 25,
-        spot: "Schmidt, Brest",
+        spot: "Terre D'Embruns, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/ovm0IZ",
         type: "Atelier collectif"
