@@ -14,7 +14,6 @@ custom:
     project: front
   serverless-nextjs:
     nextConfigDir: ./
-    customHandler: ./handler.js
     assetsBucketName: assets.cuistotducoin.com
     pageConfig:
       workshop:
