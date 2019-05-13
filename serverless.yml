@@ -23,15 +23,6 @@ custom:
         path: browserconfig.xml
       - src: ./static/manifest.json
         path: manifest.json
-    pageConfig:
-      workshop:
-        events:
-          - http:
-              path: workshop
-              request:
-                parameters:
-                  paths:
-                    workshopId: true
 
 provider:
   versionFunctions: false
