@@ -86,12 +86,12 @@ export const getMetaInfo = () => {
       metaDescription: "Partagez votre talent et transmettez votre savoir-faire",
       metaTitle: "Rejoignez la communauté des partenaires de Cuistot du Coin",
     },
-    'business': {
-      description: "Organisation d'ateliers de cuisine, journée d'équipe, traiteur événementiel et comité d'entreprise",
-      href: "https://www.cuistotducoin.com/business",
-      title: "Nos solutions de traiteur et d'activités pour vos équipes",
-      metaDescription: "Découvrez nos prestations en entreprise du service traiteur aux animations d'équipe",
-      metaTitle: "Cuistot du Coin au service de votre entreprise",
+    'breakfast': {
+      description: "Petit déjeuner sur mesure aux saveurs d’ici et d’ailleurs !",
+      href: "https://www.cuistotducoin.com/breakfast",
+      title: "Le traiteur qui fait voyager vos papilles pour un événements qui vous ressemble",
+      metaDescription: "Le traiteur qui vous accompagne pour que vos événements soient uniques",
+      metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
     },
     'cater': {
       description: "Cocktails déjeunatoires ou dinatoires sur mesure aux saveurs d’ici et d’ailleurs !",
@@ -102,10 +102,24 @@ export const getMetaInfo = () => {
     },
     'charter': {
       description: "Les engagements des cuistots du réseau cuistotducoin.com",
-      href: "https://www.cuistotducoin.com/become-cook",
+      href: "https://www.cuistotducoin.com/charter",
       title: "Charte de qualité de Cuistot du Coin",
       metaDescription: "Les engagements des cuistots du réseau cuistotducoin.com",
       metaTitle: "Charte de qualité de Cuistot du Coin",
+    },
+    'cocktail': {
+      description: "Cocktails déjeunatoires ou dinatoires sur mesure aux saveurs d’ici et d’ailleurs !",
+      href: "https://www.cuistotducoin.com/cocktail",
+      title: "Le traiteur qui fait voyager vos papilles pour un événements qui vous ressemble",
+      metaDescription: "Le traiteur qui vous accompagne pour que vos événements soient uniques",
+      metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
+    },
+    'cocktail-business': {
+      description: "Cocktails déjeunatoires ou dinatoires sur mesure aux saveurs d’ici et d’ailleurs !",
+      href: "https://www.cuistotducoin.com/cocktail-business",
+      title: "Le traiteur qui fait voyager vos papilles pour un événements qui vous ressemble",
+      metaDescription: "Le traiteur qui vous accompagne pour que vos événements soient uniques",
+      metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
     },
     'cook': {
       description: "Partagez votre talent et transmettez votre savoir-faire",
@@ -113,6 +127,20 @@ export const getMetaInfo = () => {
       title: "Rejoignez la communauté des cuistots de Cuistot du Coin",
       metaDescription: "Partagez votre talent et transmettez votre savoir-faire",
       metaTitle: "Rejoignez la communauté des cuistots de Cuistot du Coin",
+    },
+    'events': {
+      description: "Donnez une autre saveur à vos événements",
+      href: "https://www.cuistotducoin.com/events",
+      metaDescription: "Faites voyager les papilles le temps d'un événement privé",
+      title: "Organisation sur mesure de vos événements",
+      metaTitle: "Journée d'équipe savoureuse : Accueil, goûter et déjeuner savoureux",
+    },
+    'events-business': {
+      description: "Donnez une autre saveur à vos événements d'entreprise",
+      href: "https://www.cuistotducoin.com/events-business",
+      metaDescription: "Faites voyager les papilles le temps d'un événement",
+      title: "Organisation sur mesure de vos événements d'entreprise",
+      metaTitle: "Journée d'équipe savoureuse : Accueil, goûter et déjeuner savoureux",
     },
     'gift': {
       description: "Obtenez votre carte en un clic et offrez un cadeau original !",
@@ -156,6 +184,13 @@ export const getMetaInfo = () => {
       title: "Rejoignez l'équipe de Cuistot du Coin",
       metaTitle: "Rejoignez l'équipe de Cuistot du Coin",
     },
+    'lunch': {
+      description: "Plateau repas revisité pour vos déjeuners",
+      href: "https://www.cuistotducoin.com/lunch",
+      title: "Nos solutions de traiteur pour vos équipes",
+      metaDescription: "Découvrez nos prestations en entreprise du service traiteur aux animations d'équipe",
+      metaTitle: "Cuistot du Coin au service de votre entreprise",
+    },
     'login': {
       noindex: true
     },
@@ -174,7 +209,7 @@ export const getMetaInfo = () => {
     },
     'presskit': {
       description: "Communiqué de presse et contact de l'équipe des Cuistots du Coin",
-      href: "https://www.cuistotducoin.com/invite-business",
+      href: "https://www.cuistotducoin.com/presskit",
       metaDescription: "Communiqué de presse et contact de l'équipe des Cuistots du Coin",
       title: "Contact presse",
       metaTitle: "Contact presse - Cuistot du Coin ",
@@ -214,6 +249,13 @@ export const getMetaInfo = () => {
       metaDescription: "Créée en 2017 par Anaëlle et Romain Quellec, Cuistot du Coin est une entreprise qui organise des événements culinaire...",
       title: "Qui sommes-nous ?",
       metaTitle: "L'équipe - Cuistot du Coin",
+    },
+    'teambuilding': {
+      description: "Partagez une expérience convivial en équipe aux côtés de Cuistots passionnés ",
+      href: "https://www.cuistotducoin.com/teambuilding",
+      metaDescription: "Réunissez vos équipes autour d'un atelier culinaire fédérateur",
+      title: "Une activité de cohésion savoureuse et sur mesure pour vos salariés",
+      metaTitle: "Atelier de cuisine - Team building en entreprise",
     },
     'terms-pro': {
       noindex: true
@@ -255,20 +297,6 @@ export const getMetaInfo = () => {
       metaDescription: "Offrez à vos salariés une diversité d'activité gourmande et convivial",
       title: "L'activité gourmande qui plaira aux membres de votre CE",
       metaTitle: "Cours de cuisine pour comité d'entreprise",
-    },
-    'working-day': {
-      description: "Donnez une autre saveur à vos événements d'entreprise",
-      href: "https://www.cuistotducoin.com/working-day",
-      metaDescription: "Faites voyager les papilles le temps d'une journée de travail",
-      title: "Organisation sur mesure de vos journées en équipe",
-      metaTitle: "Journée d'équipe savoureuse : Accueil, goûter et déjeuner savoureux",
-    },
-    'workshop-business': {
-      description: "Partagez une expérience convivial en équipe aux côtés de Cuistots passionnés ",
-      href: "https://www.cuistotducoin.com/team",
-      metaDescription: "Réunissez vos équipes autour d'un atelier culinaire fédérateur",
-      title: "Une activité de cohésion savoureuse et sur mesure pour vos salariés",
-      metaTitle: "Atelier de cuisine - Team building en entreprise",
     },
     'workshop-edit': {
       noindex: true

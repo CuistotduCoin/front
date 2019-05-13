@@ -1,9 +1,16 @@
-import Button from "@material-ui/core/Button";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 import Typography from "@material-ui/core/Typography";
 import get from "lodash.get";
 import HowToReg from "mdi-material-ui/AccountCheck";
+import AccountTie from "mdi-material-ui/AccountTie";
+import HomeAccount from "mdi-material-ui/HomeAccount";
 import MathCompass from 'mdi-material-ui/MathCompass'
 import StoreMallDirectory from "mdi-material-ui/Store";
 import React from "react";
@@ -20,6 +27,17 @@ import { withData } from "../decorators";
 import { GetWorkshops } from "../queries";
 
 const styles = (theme: Theme) => ({
+  card: {
+    maxWidth: 310,
+    margin: theme.spacing(2)
+  },
+  cardBig: {
+    maxWidth: 482,
+    margin: theme.spacing(2)
+  },
+  media: {
+    height: 140,
+  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
@@ -36,18 +54,37 @@ const styles = (theme: Theme) => ({
     width: "calc(100% - 100px)",
   },
   typography: {
-    marginTop: 15
+    marginTop: 35
   }
 });
 
-interface IHomeProps {
+interface IIndexProps {
   classes?: any;
   history: any;
 }
 
-export class Home extends React.Component<IHomeProps, {}> {
+interface IIndexState {
+  tab: number;
+}
+
+
+export class Index extends React.Component<IIndexProps, IIndexState> {
+  constructor(props: IIndexProps) {
+    super(props);
+
+    this.state = {
+      tab: 0
+    };
+
+  }
+
+  public handleChange = (event, tab: number) => {
+    this.setState({ tab });
+  };
+
   public render() {
     const { classes } = this.props;
+    const { tab } = this.state;
 
     const steps = [
       { icon: <MathCompass fontSize="large" />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
@@ -121,17 +158,66 @@ export class Home extends React.Component<IHomeProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/gallery/index/atelier-bresilien.jpg', width: 1, height: 1, caption: "Atelier bresilien", alt: "Atelier bresilien" },
     ];
 
+    const productsB2B = [
+      { title: 'Ateliers teambuilding', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/teambuilding' },
+      { title: 'Cocktails et réceptions', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/cocktail' },
+      { title: 'Pauses gourmandes', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/breakfast' },
+      { title: 'Déjeuner', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/box' },
+      { title: 'Evenement sur mesure', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/events' }
+    ]
+
+    const productsB2C = [
+      { title: 'Ateliers privatifs', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/individual' },
+      { title: 'Cocktails et réceptions', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/cocktail' },
+      { title: 'Ateliers collectif', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/individual' },
+      { title: 'Chef à domicile', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/individual' },
+      { title: 'Evenement sur mesure', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/gallery/index/atelier-cacao.jpg', link: '/events' }
+    ]
+
     return (
       <Layout>
         <Typography
           variant="h5"
           align="center"
           component="h2"
-          gutterBottom
           className={classes.typography}
         >
-          Nous révélons les saveurs et les talents pour vous garantir une expérience authentique et conviviale !
+          Que vous soyez une entreprise ou un particulier, nous révélons les saveurs et les talents pour vous garantir une expérience traiteur authentique et conviviale !
         </Typography>
+        <Typography
+          variant="body2"
+          align="center"
+          component="h3"
+          gutterBottom
+        >
+          D'ailleurs, vous êtes une entreprise ou un particulier ?
+        </Typography>
+        <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary"        >
+          <Tab label="Entreprise" icon={<AccountTie />} />
+          <Tab label="Particulier" icon={<HomeAccount />} />
+        </Tabs>
+        {this.state.tab === 0 &&
+          <Grid
+            container
+            justify="space-around"
+            alignItems="center"
+            className={classes.grid}
+            spacing={2}
+          >
+            {this.createCard(productsB2B, classes)}
+          </Grid>
+        }
+        {this.state.tab === 1 &&
+          <Grid
+            container
+            justify="space-around"
+            alignItems="center"
+            className={classes.grid}
+            spacing={2}
+          >
+            {this.createCard(productsB2C, classes)}
+          </Grid>
+        }
         <Grid
           container
           justify="space-around"
@@ -140,76 +226,6 @@ export class Home extends React.Component<IHomeProps, {}> {
         >
           <ThreeSteps steps={steps} />
         </Grid>
-        <Grid
-          container
-          justify="space-around"
-          alignItems="center"
-          className={classes.grid}
-          spacing={2}
-        >
-          <Grid item sm={6} xs={12}>
-            <Grid container justify="center">
-              <img
-                className={classes.image}
-                alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/home/entreprise.jpg"
-              />
-            </Grid>
-          </Grid>
-          <Grid item sm={6} xs={12}>
-            <Typography
-              variant="h6"
-              align="center"
-              component="h2"
-              gutterBottom
-            >
-              Vous êtes une entreprise
-            </Typography>
-            <Typography variant="body1" align="justify" paragraph>
-              Réunissez vos collaborateurs et partagez des moments conviviaux le temps d’un repas ou à l’occasion d’une journée de travail, rythmée par un atelier de cuisine inspirant et privilégiant la cohésion d’équipe. Nous organisons de A à Z vos événements.
-            </Typography>
-            <Grid container alignItems="center" justify="center">
-              <Link href="/business">
-                <Button variant="contained" color="secondary">En savoir plus</Button>
-              </Link>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          justify="space-around"
-          alignItems="center"
-          className={classes.grid}
-          spacing={2}
-        >
-          <Grid item sm={6} xs={12}>
-            <Typography
-              variant="h6"
-              align="center"
-              component="h2"
-              gutterBottom
-            >
-              Vous êtes un particulier
-            </Typography>
-            <Typography variant="body1" align="justify" paragraph>
-              Petits et grands, amateurs ou passionnés avertis, participez à un atelier de cuisine pour percer les secrets de recettes authentiques. Cuisine du monde, bien-être, terroir, boulangerie, pâtisserie : il y en a pour tous les goûts. Organisez avec vos proches un atelier à domicile ou participez à nos ateliers collectifs. Pour organisation un repas ou un cocktail, en toutes occasions, n’hésitez pas à nous contacter.
-            </Typography>
-            <Grid container alignItems="center" justify="center">
-              <Link href="/individual">
-                <Button variant="contained" color="secondary">Découvrir les ateliers</Button>
-              </Link>
-            </Grid>
-          </Grid>
-          <Grid item sm={6} xs={12}>
-            <Grid container justify="center">
-              <img
-                className={classes.image}
-                alt="Atelier Cuistot du Coin"
-                src="https://static.cuistotducoin.com/img/home/particuliers.jpg"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
         <Typography
           variant="h5"
           align="center"
@@ -217,7 +233,7 @@ export class Home extends React.Component<IHomeProps, {}> {
           gutterBottom
           className={classes.typography}
         >
-          Ils nous font confiance :
+          Ils nous font confiance
         </Typography>
         <div className={classes.slider}>
           <TestimonySlider testimonies={testimonies} />
@@ -264,6 +280,35 @@ export class Home extends React.Component<IHomeProps, {}> {
       </Layout >
     );
   }
+
+  private createCard = (products, classes) => {
+    return (
+      <>
+        {
+          products.map((product, key) => (
+            <Link className={classes.link} key={key} href={product.link}>
+              <Card className={(key === 0 || key === 1) ? classes.cardBig : classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={product.image}
+                  />
+                  <CardContent>
+                    <Typography align="center" variant="h5" component="h2" gutterBottom>
+                      {product.title}
+                    </Typography>
+                    <Typography align="justify" variant="body2" color="textSecondary" component="p">
+                      {product.content}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Link>
+          ))
+        }
+      </>
+    );
+  }
 }
 
 const enhance = compose(
@@ -279,4 +324,4 @@ const enhance = compose(
   withStyles(styles as any),
 );
 
-export default enhance(Home);
+export default enhance(Index);

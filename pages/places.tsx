@@ -43,11 +43,11 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface ICaterProps {
+interface IBoxProps {
   classes?: any;
 }
 
-export class Cater extends React.Component<ICaterProps, {}> {
+export class Box extends React.Component<IBoxProps, {}> {
   public render() {
     const { classes } = this.props;
 
@@ -229,4 +229,4 @@ export class Cater extends React.Component<ICaterProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cater as any) as any;
+export default withStyles(styles as any)(Box as any) as any;

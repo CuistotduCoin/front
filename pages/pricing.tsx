@@ -227,7 +227,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
   public renderPricingMeal(classes) {
     const pricingMeal = [
       {
-        title: "Cuistot Box",
+        title: "Lunch Box",
         price: '15',
         description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
         buttonText: 'Sign up for free'
@@ -320,7 +320,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
                     </Typography>
                   ))}
                 </CardContent>
-                <CardActions className={classes.cardActions}>
+                <CardActions>
                   <Button fullWidth color="primary">
                     {pricing.buttonText}
                   </Button>

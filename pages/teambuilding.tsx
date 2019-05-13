@@ -12,6 +12,7 @@ import Mood from "mdi-material-ui/EmoticonOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -33,6 +34,9 @@ const styles = (theme: Theme) => ({
     maxWidth: 1080,
     padding: theme.spacing(3)
   },
+  link: {
+    width: "100%"
+  },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
@@ -49,8 +53,8 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <Mood fontSize="large" />, title: 'Cohésion', content: "Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations." },
-      { icon: <ArrowDecision fontSize="large" />, title: 'Diversité', content: "Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe." },
+      { icon: <Mood fontSize="large" />, title: `Cohésion & esprit d'équipe`, content: "Accessible à tous, la cuisine est une activité fédératrice, propice aux échanges et au partage. Nous privilégions la collaboration lors de la préparation des recettes et un temps convivial en fin d’atelier, autour d’un buffet ou d’un repas pour déguster l’ensemble des préparations." },
+      { icon: <ArrowDecision fontSize="large" />, title: 'Une activité qui plait à tous', content: "Curieux ou amateurs de saveurs plus traditionnelles, nous vous suggérons des univers culinaires qui permettront à vos équipes de voyager. Nos ateliers sont adaptés à de petites équipes ou à de plus grands groupes, ainsi qu’à divers formats selon le temps alloué à cette activité en équipe." },
       { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "L’atelier est organisé de A à Z par nos soins. Vous n’avez à vous souciez de rien. Au sein de votre entreprise ou dans l’un de nos lieux partenaires, nous prévoyons tous les ingrédients et le matériel nécessaire. Enfilez un véritable tablier coloré et passez aux fourneaux avec votre équipe. Conservez un souvenir de l’atelier avec notre sélection de photos prises lors de l’atelier." }
     ];
 
@@ -128,33 +132,21 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       {
         title: "Atelier cocktail",
         price: '30',
-        description: [`1H d'atelier festif`, 'Ingrédients et matériel fournis', 'Dégustation de vos cocktails', 'Tabliers et livrets de recettes fournis'],
+        description: [`1H d'atelier festif`, `Réalisation de cocktails du monde`, `Dégustation de vos cocktails`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
       },
-      /*
-        title: "Atelier goûter",
-        price: '40',
-        description: [`2H d'atelier gourmand`, 'Préparation de recettes sucrées originales et dégustation', 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
-        buttonText: 'Obtenir un devis'
-      },*/
       {
         title: "Atelier découverte",
         price: '50',
-        description: [`2H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier (plat, dessert)`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        description: [`2H d'atelier cuisine du monde ou technique`, `Préparation de tapas salées et sucrées dégustées en fin d'atelier`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
       },
       {
         title: "Atelier immersion",
         price: '65',
-        description: [`3H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier (entrée, plat, dessert, boisson)`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        description: [`3H d'atelier cuisine du monde`, `Préparation d'un repas dégusté en fin d'atelier`, `Boissons incluses`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
         buttonText: 'Obtenir un devis'
       },
-      /*{
-        title: 'Atelier technique',
-        price: '65',
-        description: [`3H d'atelier artisanal`, `Apprentissage de gestes techniques (Boulangerie, Patisserie, etc)`, `Confection de la recette de A à Z par gourmet`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis', 'Création par gourmet à emporter'],
-        buttonText: 'Obtenir un devis'
-      }*/
     ];
 
     const photos = [
@@ -231,10 +223,12 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
                       </Typography>
                     ))}
                   </CardContent>
-                  <CardActions className={classes.cardActions}>
-                    <Button fullWidth color="primary">
-                      {pricing.buttonText}
-                    </Button>
+                  <CardActions>
+                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
+                      <Button fullWidth color="primary">
+                        {pricing.buttonText}
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>

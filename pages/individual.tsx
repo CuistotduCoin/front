@@ -138,6 +138,9 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const privateWorkshops = [
     ];
 
+    const privateChef = [
+    ];
+
     const ads = [
       {
         title: "Offrez une carte cadeau à votre proche",
@@ -159,9 +162,11 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
           <Tabs value={tab} onChange={this.handleChange} centered={true}>
             <Tab label="Atelier collectif" />
             <Tab label="Atelier privatif" />
+            <Tab label="Chef à domicile" />
           </Tabs>
           {tab === 0 && <WorkshopCardList workshops={workshops} ads={ads} />}
           {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
+          {tab === 2 && <WorkshopCardList workshops={privateChef} ads={ads} />}
         </Grid>
       </Layout >
     );

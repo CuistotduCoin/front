@@ -12,6 +12,7 @@ import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -33,6 +34,9 @@ const styles = (theme: Theme) => ({
     maxWidth: 1080,
     padding: theme.spacing(3)
   },
+  link: {
+    width: "100%"
+  },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
@@ -43,11 +47,11 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface ICaterProps {
+interface ICocktailProps {
   classes?: any;
 }
 
-export class Cater extends React.Component<ICaterProps, {}> {
+export class Cocktail extends React.Component<ICocktailProps, {}> {
   public render() {
     const { classes } = this.props;
 
@@ -110,25 +114,13 @@ export class Cater extends React.Component<ICaterProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
-    const pricing = [
+    const pricingCocktail = [
       {
-        title: "Cocktail apéritif",
-        price: '12',
-        description: ['Assortiment de 4 tapas salées et sucrées'],
+        title: "Cocktail",
+        price: '3',
+        description: ['3€ la tapas, salée ou sucrée (1 tapas = 3 bouchées)', 'Composez votre cocktail en fonction de votre budget'],
         buttonText: 'Demander un devis'
-      },
-      {
-        title: "Cocktail déjeunatoire ou dinatoire",
-        price: '18',
-        description: ['Assortiment de 6 tapas salées et sucrées'],
-        buttonText: 'Get started'
-      },
-      {
-        title: "Cocktail déjeunatoire ou dinatoire gourmand",
-        price: '23',
-        description: ['Assortiment de 8 tapas salées et sucrées'],
-        buttonText: 'Contact us'
-      },
+      }
     ];
 
     return (
@@ -178,9 +170,18 @@ export class Cater extends React.Component<ICaterProps, {}> {
         >
           <StaticSteper steps={stepsFAQ} />
         </Grid>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.typography}
+        >
+          Composez votre cocktail
+        </Typography>
         <Grid className={classes.grid}>
           <Grid container justify="space-around">
-            {pricing.map(pricing => (
+            {pricingCocktail.map(pricing => (
               <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
                 <Card>
                   <CardHeader
@@ -202,9 +203,11 @@ export class Cater extends React.Component<ICaterProps, {}> {
                     ))}
                   </CardContent>
                   <CardActions>
-                    <Button fullWidth color="primary">
-                      {pricing.buttonText}
-                    </Button>
+                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
+                      <Button fullWidth color="primary">
+                        {pricing.buttonText}
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
@@ -229,4 +232,4 @@ export class Cater extends React.Component<ICaterProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cater as any) as any;
+export default withStyles(styles as any)(Cocktail as any) as any;

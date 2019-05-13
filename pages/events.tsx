@@ -6,9 +6,9 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
-import AccountMultiple from "mdi-material-ui/AccountMultiple";
-import CompassOutline from "mdi-material-ui/CompassOutline";
-import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
+import HeartMultipleOutline from "mdi-material-ui/HeartMultipleOutline";
+import MapSearch from "mdi-material-ui/MapSearch";
+import SilverwareVariant from "mdi-material-ui/SilverwareVariant";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
@@ -24,8 +24,6 @@ const styles = (theme: Theme) => ({
     backgroundColor: theme.palette.primary.main
   },
   cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
     marginBottom: theme.spacing(2)
   },
   grid: {
@@ -40,21 +38,24 @@ const styles = (theme: Theme) => ({
   },
   stepper: {
     backgroundColor: "#fafafa"
+  },
+  typography: {
+    marginTop: 35
   }
 });
 
-interface ICaterProps {
+interface ICocktailProps {
   classes?: any;
 }
 
-export class Cater extends React.Component<ICaterProps, {}> {
+export class Cocktail extends React.Component<ICocktailProps, {}> {
   public render() {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
-      { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
-      { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
+      { icon: <MapSearch fontSize="large" />, title: 'Salles et emplacements', content: "Nous nous chargeons de trouver l'endroit idéal parmis nos nombreux lieux partenaires pour que votre événement soit une réussite." },
+      { icon: <HeartMultipleOutline fontSize="large" />, title: 'Activités fédératrices', content: "Réunion de famille, Anniversaire, Atelier de cuisine... Faîtes-nous part du nombre d'invités que vous souhaitez réunir et du contexte de ces temps-forts et nous personnalisons nos propositions." },
+      { icon: <SilverwareVariant fontSize="large" />, title: 'Service traiteur', content: "Nos cuistots vont vous régaler et sortir des sentiers battus. Boissons partenaires / Personnel et assistance" }
     ];
 
     const stepsFAQ = [
@@ -112,22 +113,22 @@ export class Cater extends React.Component<ICaterProps, {}> {
 
     const pricing = [
       {
-        title: "Cocktail apéritif",
-        price: '12',
-        description: ['Assortiment de 4 tapas salées et sucrées'],
+        title: "Café d'accueil / Goûter",
+        price: '5',
+        description: ['Un petit dejeuner gourmand pour bien commencer la journée'],
         buttonText: 'Demander un devis'
       },
       {
-        title: "Cocktail déjeunatoire ou dinatoire",
-        price: '18',
-        description: ['Assortiment de 6 tapas salées et sucrées'],
-        buttonText: 'Get started'
+        title: "Repas",
+        price: '15',
+        description: [''],
+        buttonText: 'Demander un devis'
       },
       {
-        title: "Cocktail déjeunatoire ou dinatoire gourmand",
-        price: '23',
-        description: ['Assortiment de 8 tapas salées et sucrées'],
-        buttonText: 'Contact us'
+        title: "Activité atelier de cuisine",
+        price: '30',
+        description: [''],
+        buttonText: 'Demander un devis'
       },
     ];
 
@@ -151,6 +152,22 @@ export class Cater extends React.Component<ICaterProps, {}> {
             </Grid>
           </Grid>
         }>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          className={classes.typography}
+        >
+          Nous organisons, vous faites la fête.
+        </Typography>
+        <Typography
+          variant="body2"
+          align="center"
+          component="h3"
+          gutterBottom
+        >
+          Rassemblez vous et célébrez l'occasion – laissez-nous le reste. De la vision à l'exécution, nos organisateurs événementiels vous aideront à rendre votre prochain événement inoubliable.
+        </Typography>
         <Grid
           container
           justify="space-around"
@@ -190,16 +207,19 @@ export class Cater extends React.Component<ICaterProps, {}> {
                     className={classes.cardHeader}
                   />
                   <CardContent>
-                    <div className={classes.cardPricing}>
-                      <Typography component="h2" variant="h3" color="textPrimary">
+                    <Grid container justify="center" direction="column">
+                      <Typography variant="caption" align="center">
+                        à partir de
+                    </Typography>
+                      <Typography component="h2" variant="h3" color="textPrimary" className={classes.cardPricing} align="center">
                         {pricing.price}€
-                </Typography>
-                    </div>
-                    {pricing.description.map(line => (
-                      <Typography variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
+                    </Typography>
+                      {pricing.description.map(line => (
+                        <Typography variant="subtitle1" align="center" key={line}>
+                          {line}
+                        </Typography>
+                      ))}
+                    </Grid>
                   </CardContent>
                   <CardActions>
                     <Button fullWidth color="primary">
@@ -229,4 +249,4 @@ export class Cater extends React.Component<ICaterProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cater as any) as any;
+export default withStyles(styles as any)(Cocktail as any) as any;

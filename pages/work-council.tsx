@@ -1,4 +1,8 @@
 import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -8,15 +12,30 @@ import Mood from "mdi-material-ui/EmoticonOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
+  card: {
+    padding: 10
+  },
+  cardHeader: {
+    backgroundColor: theme.palette.primary.main
+  },
+  cardPricing: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: theme.spacing(2)
+  },
   grid: {
     margin: "0px auto",
     maxWidth: 1080,
     padding: theme.spacing(3)
+  },
+  link: {
+    width: "100%"
   },
   slider: {
     margin: "0px auto",
@@ -101,6 +120,27 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       }
     ];
 
+    const pricing = [
+      {
+        title: "Atelier découverte",
+        price: '50',
+        description: [`2H d'atelier cuisine du monde`, `Préparation de tapas salées et sucrées dégustées en fin d'atelier`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: "Atelier immersion",
+        price: '65',
+        description: [`3H d'atelier cuisine du monde ou technique`, `Préparation d'un repas dégusté en fin d'atelier`, `Boissons incluses`, 'Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+      {
+        title: "Atelier Parents - enfants",
+        price: '50',
+        description: ['Ingrédients et matériel fournis', 'Tabliers et livrets de recettes fournis'],
+        buttonText: 'Obtenir un devis'
+      },
+    ];
+
     const photos = [
       { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
       { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-patisserie.jpg', width: 1, height: 1, caption: "Atelier patisserie", alt: "Atelier patisserie" },
@@ -164,6 +204,41 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         >
           Ils nous font confiance :
         </Typography>
+        <Grid className={classes.grid}>
+          <Grid container justify="space-around">
+            {pricing.map(pricing => (
+              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
+                <Card>
+                  <CardHeader
+                    title={pricing.title}
+                    titleTypographyProps={{ align: 'center' }}
+                    subheaderTypographyProps={{ align: 'center' }}
+                    className={classes.cardHeader}
+                  />
+                  <CardContent>
+                    <div className={classes.cardPricing}>
+                      <Typography component="h2" variant="h3" color="textPrimary">
+                        {pricing.price}€
+                </Typography>
+                    </div>
+                    {pricing.description.map(line => (
+                      <Typography variant="subtitle1" align="center" key={line}>
+                        {line}
+                      </Typography>
+                    ))}
+                  </CardContent>
+                  <CardActions>
+                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
+                      <Button fullWidth color="primary">
+                        {pricing.buttonText}
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
         <div className={classes.slider}>
           <TestimonySlider testimonies={testimonies} />
         </div>

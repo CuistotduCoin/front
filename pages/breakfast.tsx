@@ -12,6 +12,7 @@ import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -33,6 +34,9 @@ const styles = (theme: Theme) => ({
     maxWidth: 1080,
     padding: theme.spacing(3)
   },
+  link: {
+    width: "100%"
+  },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
@@ -43,16 +47,16 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface ICaterProps {
+interface IBoxProps {
   classes?: any;
 }
 
-export class Cater extends React.Component<ICaterProps, {}> {
+export class Box extends React.Component<IBoxProps, {}> {
   public render() {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
+      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque petit-déjeuner est une invitation au voyage." },
       { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
       { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
     ];
@@ -112,22 +116,10 @@ export class Cater extends React.Component<ICaterProps, {}> {
 
     const pricing = [
       {
-        title: "Cocktail apéritif",
-        price: '12',
-        description: ['Assortiment de 4 tapas salées et sucrées'],
+        title: "Café d'accueil / Goûter",
+        price: '5',
+        description: [''],
         buttonText: 'Demander un devis'
-      },
-      {
-        title: "Cocktail déjeunatoire ou dinatoire",
-        price: '18',
-        description: ['Assortiment de 6 tapas salées et sucrées'],
-        buttonText: 'Get started'
-      },
-      {
-        title: "Cocktail déjeunatoire ou dinatoire gourmand",
-        price: '23',
-        description: ['Assortiment de 8 tapas salées et sucrées'],
-        buttonText: 'Contact us'
       },
     ];
 
@@ -202,9 +194,11 @@ export class Cater extends React.Component<ICaterProps, {}> {
                     ))}
                   </CardContent>
                   <CardActions>
-                    <Button fullWidth color="primary">
-                      {pricing.buttonText}
-                    </Button>
+                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
+                      <Button fullWidth color="primary">
+                        {pricing.buttonText}
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
@@ -229,4 +223,4 @@ export class Cater extends React.Component<ICaterProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cater as any) as any;
+export default withStyles(styles as any)(Box as any) as any;

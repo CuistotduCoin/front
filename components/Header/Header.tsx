@@ -1,9 +1,12 @@
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import Phone from 'mdi-material-ui/Phone';
 import React from "react";
 import AccountDropdown from "../../components/AccountDropdown";
 import Link from "../../components/Link";
@@ -11,7 +14,6 @@ import Logo from "../../components/Logo";
 
 const styles = (theme: Theme) => ({
   appBar: {
-    zIndex: theme.zIndex.appBar,
     background: "linear-gradient(180deg,hsla(0,0%,100%,.9) 0,hsla(0,0%,100%,.8))",
     boxShadow: "none"
   },
@@ -19,7 +21,7 @@ const styles = (theme: Theme) => ({
     margin: theme.spacing(1)
   },
   accountButton: {
-    extend: "button",
+    margin: theme.spacing(1),
     color: "white"
   },
   logo: {
@@ -41,6 +43,8 @@ interface IHeaderProps {
 
 interface IHeaderState {
   up?: boolean;
+  anchorElIndividual: HTMLElement;
+  anchorElBusiness: HTMLElement;
 }
 
 export class Header extends React.Component<IHeaderProps, IHeaderState> {
@@ -48,7 +52,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     super(props);
 
     this.state = {
-      up: true
+      up: true,
+      anchorElIndividual: null,
+      anchorElBusiness: null
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -130,25 +136,55 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                 </Typography>
               </Grid>
             </Link>
-            <Link href="/individual">
-              <Button className={classes.button} variant="outlined" color="primary">
-                Pour les particuliers
-              </Button>
-            </Link>
-            <Link href="/business">
-              <Button className={classes.button} variant="outlined" color="primary">
-                Pour les entreprises
-              </Button>
-            </Link>
+            <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onClick={this.handleClickIndividual} className={classes.button} variant="outlined" color="primary">
+              Pour les particuliers
+            </Button>
+            <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} onClose={this.handleClose}>
+              <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
+              <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
+              <Link href="/individual#privatechef"><MenuItem>Chef à domicile</MenuItem></Link>
+              <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+              <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
+            </Menu>
+            <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onClick={this.handleClickBusiness} className={classes.button} variant="outlined" color="primary">
+              Pour les entreprises
+            </Button>
+            <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} onClose={this.handleClose}>
+              <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
+              <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
+              <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
+              <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+              <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
+              <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
+            </Menu>
           </Grid>
-          {rightElement && (
-            <Grid container justify="flex-end">
-              {rightElement}
-            </Grid>
-          )}
+          <Grid container justify="flex-end">
+            <Link href="tel:06 79 59 88 48">
+              <Button className={classes.button} variant="outlined" color="primary">
+                <Phone titleAccess="phone" />06 79 59 88 48
+              </Button>
+            </Link>
+            {rightElement && (
+              <>
+                {rightElement}
+              </>
+            )}
+          </Grid>
         </Toolbar>
       </AppBar>
     );
+  }
+
+  private handleClickIndividual = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.setState({ anchorElIndividual: event.currentTarget });
+  }
+
+  private handleClickBusiness = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.setState({ anchorElBusiness: event.currentTarget });
+  }
+
+  private handleClose = () => {
+    this.setState({ anchorElIndividual: null, anchorElBusiness: null });
   }
 }
 

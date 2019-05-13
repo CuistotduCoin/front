@@ -2,33 +2,33 @@
 # yarn lockfile v1
 
 
-"@aws-amplify/auth@^1.2.22":
-  version "1.2.22"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.22.tgz#18b137afd85f22ab59bad05ca8d464192b722b67"
+"@aws-amplify/auth@^1.2.23":
+  version "1.2.23"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.23.tgz#e9835c428723ca0f17bb9df09281847bab85298e"
   dependencies:
-    "@aws-amplify/cache" "^1.0.25"
-    "@aws-amplify/core" "^1.0.25"
-    amazon-cognito-identity-js "^3.0.10"
+    "@aws-amplify/cache" "^1.0.26"
+    "@aws-amplify/core" "^1.0.26"
+    amazon-cognito-identity-js "^3.0.12"
     crypto-js "^3.1.9-1"
 
-"@aws-amplify/cache@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.25.tgz#c3c92bd117139975372e233330e251c10e4fe8de"
+"@aws-amplify/cache@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.26.tgz#76ab80782d820394484bf4674e43dba955a3f75e"
   dependencies:
-    "@aws-amplify/core" "^1.0.25"
+    "@aws-amplify/core" "^1.0.26"
 
-"@aws-amplify/core@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.25.tgz#d330fefe7119fc6e0254a7c39e0d1525fa039e4b"
+"@aws-amplify/core@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.26.tgz#63b1d2bce3716fe8caae1ed4f3814f2639a47aba"
   dependencies:
     aws-sdk "2.329.0"
     url "^0.11.0"
 
-"@aws-amplify/storage@^1.0.28":
-  version "1.0.28"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.28.tgz#4d3ce2f9433444f22faea51eb22799ff3d0304fd"
+"@aws-amplify/storage@^1.0.29":
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.29.tgz#3e8472fbd261c28514872364653939e478bd5167"
   dependencies:
-    "@aws-amplify/core" "^1.0.25"
+    "@aws-amplify/core" "^1.0.26"
 
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -1870,9 +1870,9 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@^16.8.16":
-  version "16.8.16"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.16.tgz#2bf980b4fb29cceeb01b2c139b3e185e57d3e08e"
+"@types/react@^16.8.17":
+  version "16.8.17"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.17.tgz#f287b76a5badb93bc9aa3f54521a3eb53d6c2374"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -2354,9 +2354,9 @@ algoliasearch@^3.27.1, algoliasearch@^3.31.0:
     semver "^5.1.0"
     tunnel-agent "^0.6.0"
 
-amazon-cognito-identity-js@^3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/amazon-cognito-identity-js/-/amazon-cognito-identity-js-3.0.10.tgz#819980071fec848ab6842944f330a324bd048f35"
+amazon-cognito-identity-js@^3.0.12:
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/amazon-cognito-identity-js/-/amazon-cognito-identity-js-3.0.12.tgz#fd0086e8902ec32c0d6709ac61c851efbe1d07dc"
   dependencies:
     buffer "4.9.1"
     crypto-js "^3.1.9-1"
@@ -2859,9 +2859,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.449.0:
-  version "2.449.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.449.0.tgz#213432e3492fa5bb3d83b818f1c91506dda8b042"
+aws-sdk@^2.453.0:
+  version "2.453.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.453.0.tgz#7f1ada4efc78d255dfd43adc3decd5f01a21ac2c"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -5421,9 +5421,9 @@ graphql@0.13.0:
   dependencies:
     iterall "1.1.x"
 
-graphql@^14.2.1:
-  version "14.2.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.2.1.tgz#779529bf9a01e7207b977a54c20670b48ca6e95c"
+graphql@^14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.3.0.tgz#34dd36faa489ff642bcd25df6c3b4f988a1a2f3e"
   dependencies:
     iterall "^1.2.2"
 
@@ -9383,9 +9383,9 @@ serve-static@1.13.2:
     parseurl "~1.3.2"
     send "0.16.2"
 
-serverless-nextjs-plugin@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/serverless-nextjs-plugin/-/serverless-nextjs-plugin-1.7.0.tgz#7a8bc86aa65260f78e2ab756a0d6ed30b1f891f6"
+serverless-nextjs-plugin@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/serverless-nextjs-plugin/-/serverless-nextjs-plugin-1.8.0.tgz#f4d8e2c15d098dd7449d0b844aa3ea4c95feda5b"
   dependencies:
     "@mapbox/s3urls" "^1.5.3"
     chalk "^2.4.2"

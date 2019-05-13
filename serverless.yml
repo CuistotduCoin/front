@@ -15,15 +15,20 @@ custom:
   serverless-nextjs:
     nextConfigDir: ./
     assetsBucketName: assets.cuistotducoin.com
-    pageConfig:
-      workshop:
-        events:
-          - http:
-              path: workshop
-              request:
-                parameters:
-                  paths:
-                    workshopId: true
+    staticDir: ./static
+    routes:
+      - src: ./static/robots.txt
+        path: robots.txt
+      - src: ./static/browserconfig.xml
+        path: browserconfig.xml
+      - src: ./static/manifest.json
+        path: manifest.json
+      - src: workshop
+        path: workshop/{workshopId}
+        request:
+          parameters:
+            paths:
+              workshopId: true
 
 provider:
   versionFunctions: false

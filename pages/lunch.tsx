@@ -12,6 +12,7 @@ import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -33,6 +34,9 @@ const styles = (theme: Theme) => ({
     maxWidth: 1080,
     padding: theme.spacing(3)
   },
+  link: {
+    width: "100%"
+  },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
@@ -43,16 +47,16 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface ICaterProps {
+interface IBoxProps {
   classes?: any;
 }
 
-export class Cater extends React.Component<ICaterProps, {}> {
+export class Box extends React.Component<IBoxProps, {}> {
   public render() {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage." },
+      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque repas est une invitation au voyage." },
       { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
       { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
     ];
@@ -60,7 +64,7 @@ export class Cater extends React.Component<ICaterProps, {}> {
     const stepsFAQ = [
       {
         title: `Faîtes-nous part de vos attentes.`,
-        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez-nous le contexte de ce cocktail et le budget alloué à cette prestation. Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
+        content: `Indiquez-nous la date, l’heure et le nombre de collaborateurs que vous souhaitez réunir autour d’un repas convivial. Précisez-nous le contexte de ce repas et le budget alloué à cette prestation. Indiquez-nous les saveurs qui vous inspirent ou laissez-nous vous faire la surprise !`
       },
       {
         title: `Nous vous apportons un accompagnement sur mesure`,
@@ -110,25 +114,25 @@ export class Cater extends React.Component<ICaterProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/gallery/cocktail/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
-    const pricing = [
+    const pricingMeal = [
       {
-        title: "Cocktail apéritif",
-        price: '12',
-        description: ['Assortiment de 4 tapas salées et sucrées'],
+        title: "Plat froid + Dessert",
+        price: '15',
+        description: ['Pour les petites faims'],
         buttonText: 'Demander un devis'
       },
       {
-        title: "Cocktail déjeunatoire ou dinatoire",
+        title: "Entrée + Plat froid + Dessert",
         price: '18',
-        description: ['Assortiment de 6 tapas salées et sucrées'],
-        buttonText: 'Get started'
+        description: ['Pour un repas gourmand'],
+        buttonText: 'Demander un devis'
       },
       {
-        title: "Cocktail déjeunatoire ou dinatoire gourmand",
+        title: "Entrée + Plat chaud + Dessert",
         price: '23',
-        description: ['Assortiment de 8 tapas salées et sucrées'],
-        buttonText: 'Contact us'
-      },
+        description: ['Pour avoir chaud en hiver'],
+        buttonText: 'Demander un devis'
+      }
     ];
 
     return (
@@ -178,9 +182,18 @@ export class Cater extends React.Component<ICaterProps, {}> {
         >
           <StaticSteper steps={stepsFAQ} />
         </Grid>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.typography}
+        >
+          Organisez un repas convivial
+        </Typography>
         <Grid className={classes.grid}>
           <Grid container justify="space-around">
-            {pricing.map(pricing => (
+            {pricingMeal.map(pricing => (
               <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
                 <Card>
                   <CardHeader
@@ -202,15 +215,26 @@ export class Cater extends React.Component<ICaterProps, {}> {
                     ))}
                   </CardContent>
                   <CardActions>
-                    <Button fullWidth color="primary">
-                      {pricing.buttonText}
-                    </Button>
+                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
+                      <Button fullWidth color="primary">
+                        {pricing.buttonText}
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
             ))}
           </Grid>
         </Grid>
+        <Typography
+          variant="caption"
+          align="center"
+          component="p"
+          gutterBottom
+          className={classes.typography}
+        >
+          +1€ si le plat est conditionné par personne
+        </Typography>
         <Typography
           variant="h5"
           align="center"
@@ -229,4 +253,4 @@ export class Cater extends React.Component<ICaterProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Cater as any) as any;
+export default withStyles(styles as any)(Box as any) as any;
