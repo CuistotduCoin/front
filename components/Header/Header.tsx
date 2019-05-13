@@ -154,6 +154,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
               <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
               <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+              <Link href="/cocktail-business"><MenuItem>Journée d'équipe</MenuItem></Link>
               <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
               <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
             </Menu>
