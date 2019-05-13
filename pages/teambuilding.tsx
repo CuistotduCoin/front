@@ -150,10 +150,10 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/ananas-flambe.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-et-repas.jpg', width: 1, height: 1, caption: "Atelier suivi d'une repas convivial", alt: "Atelier et repas" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-fraisier.jpg', width: 1, height: 1, caption: "Atelier patisserie : Fraisier", alt: "Atelier fraisier" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/workshop-business/atelier-pasta.jpg', width: 1, height: 1, caption: "Atelier pasta", alt: "Atelier pasta" },
+      { src: 'https://static.cuistotducoin.com/img/workshop-business/ananas-flambe.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
+      { src: 'https://static.cuistotducoin.com/img/workshop-business/atelier-et-repas.jpg', width: 1, height: 1, caption: "Atelier suivi d'une repas convivial", alt: "Atelier et repas" },
+      { src: 'https://static.cuistotducoin.com/img/workshop-business/atelier-fraisier.jpg', width: 1, height: 1, caption: "Atelier patisserie : Fraisier", alt: "Atelier fraisier" },
+      { src: 'https://static.cuistotducoin.com/img/workshop-business/atelier-pasta.jpg', width: 1, height: 1, caption: "Atelier pasta", alt: "Atelier pasta" },
     ];
 
     return (

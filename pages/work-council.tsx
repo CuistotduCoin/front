@@ -142,10 +142,10 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-patisserie.jpg', width: 1, height: 1, caption: "Atelier patisserie", alt: "Atelier patisserie" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/atelier-sushi-maki.jpg', width: 1, height: 1, caption: "Atelier sushi et maki", alt: "Atelier sushi et maki" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/work-council/degustation-apres-atelier.jpg', width: 1, height: 1, caption: "Dégustation après un atelier créole", alt: "Dégustation après un atelier créole" },
+      { src: 'https://static.cuistotducoin.com/img/work-council/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
+      { src: 'https://static.cuistotducoin.com/img/work-council/atelier-patisserie.jpg', width: 1, height: 1, caption: "Atelier patisserie", alt: "Atelier patisserie" },
+      { src: 'https://static.cuistotducoin.com/img/work-council/atelier-sushi-maki.jpg', width: 1, height: 1, caption: "Atelier sushi et maki", alt: "Atelier sushi et maki" },
+      { src: 'https://static.cuistotducoin.com/img/work-council/degustation-apres-atelier.jpg', width: 1, height: 1, caption: "Dégustation après un atelier créole", alt: "Dégustation après un atelier créole" },
     ];
 
     return (

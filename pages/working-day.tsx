@@ -98,10 +98,10 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/atelier-entreprise.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/atelier-et-travail.jpg', width: 1, height: 1, caption: "Atelier suivi d'une location d'une salle de réunion", alt: "Atelier et travail" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/galerie.jpg', width: 1, height: 1, caption: "Atelier dans une gallerie", alt: "Atelier gallerie" },
-      { src: 'https://static.cuistotducoin.com/img/gallery/working-day/presentation-entreprise.jpg', width: 1, height: 1, caption: "Présentation d'entreprise après un atelier", alt: "Présentation entreprise" },
+      { src: 'https://static.cuistotducoin.com/img/working-day/atelier-entreprise.jpg', width: 1, height: 1, caption: "Atelier en entreprise", alt: "Atelier en entreprise" },
+      { src: 'https://static.cuistotducoin.com/img/working-day/atelier-et-travail.jpg', width: 1, height: 1, caption: "Atelier suivi d'une location d'une salle de réunion", alt: "Atelier et travail" },
+      { src: 'https://static.cuistotducoin.com/img/working-day/galerie.jpg', width: 1, height: 1, caption: "Atelier dans une gallerie", alt: "Atelier gallerie" },
+      { src: 'https://static.cuistotducoin.com/img/working-day/presentation-entreprise.jpg', width: 1, height: 1, caption: "Présentation d'entreprise après un atelier", alt: "Présentation entreprise" },
     ];
 
     return (
