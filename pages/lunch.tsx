@@ -104,14 +104,14 @@ export class Box extends React.Component<IBoxProps, {}> {
     ];
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-asiatique.jpg', width: 1, height: 1, caption: "Cocktail au saveur de l'Asie", alt: "Cocktail asiatique" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-bresilien-1.jpg', width: 1, height: 1, caption: "Pièce cocktail au saveur du Brésil", alt: "Cocktail brésilien" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-bresilien-2.jpg', width: 1, height: 1, caption: "Cocktail au saveur du Brésil", alt: "Cocktail brésilien 2" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-bresilien-3.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre", alt: "Cocktail brésilien 3" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-bresilien-4.jpg', width: 1, height: 1, caption: "Cocktail complet au saveur du Brésil", alt: "Cocktail brésilien 4" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/buffet-crepes.jpg', width: 1, height: 1, caption: "Buffet crêpes au billig", alt: "Buffet crepes" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-reseau-entreprendre.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre (suite)", alt: "Cocktail reseau" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-asiatique.jpg', width: 1, height: 1, caption: "Cocktail au saveur de l'Asie", alt: "Cocktail asiatique" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-1.jpg', width: 1, height: 1, caption: "Pièce cocktail au saveur du Brésil", alt: "Cocktail brésilien" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-2.jpg', width: 1, height: 1, caption: "Cocktail au saveur du Brésil", alt: "Cocktail brésilien 2" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-3.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre", alt: "Cocktail brésilien 3" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-4.jpg', width: 1, height: 1, caption: "Cocktail complet au saveur du Brésil", alt: "Cocktail brésilien 4" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/buffet-crepes.jpg', width: 1, height: 1, caption: "Buffet crêpes au billig", alt: "Buffet crepes" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-reseau-entreprendre.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre (suite)", alt: "Cocktail reseau" },
+      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
     const pricingMeal = [
