@@ -118,7 +118,7 @@ export class Box extends React.Component<IBoxProps, {}> {
       {
         title: "Plat froid + Dessert",
         price: '15',
-        description: ['Pour les petites faims'],
+        description: ['La formule classique'],
         buttonText: 'Demander un devis'
       },
       {

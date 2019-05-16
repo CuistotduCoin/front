@@ -8,8 +8,8 @@ interface ILogoProps {
 
 export class Logo extends React.Component<ILogoProps, {}> {
   public static defaultProps: Partial<ILogoProps> = {
-    height: 40,
-    width: 40
+    height: 45,
+    width: 45
   };
 
   public render() {
