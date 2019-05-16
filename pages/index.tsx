@@ -161,9 +161,9 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     const productsB2B = [
       { title: 'Ateliers teambuilding', content: `Nos ateliers de cuisine sont idéals pour les équipes de 4 à 100 personnes. Tous vos collaborateurs seront réunis autour d’un ou plusieurs de nos Cuistots pour concocter avec eux des plats d’ici et d’ailleurs.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding' },
       { title: 'Cocktails et réceptions', content: `A l’occasion de vos événements, faites confiance à nos Cuistots pour faire voyager les papilles de vos collaborateurs. A partir de 3€ par personne, laissez-vous tenter par l’originalité et surprenez vos invités.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business' },
-      { title: 'Pauses gourmandes', content: ``, image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast' },
-      { title: 'Déjeuner', content: ``, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch' },
-      { title: 'Evenement sur mesure', content: ``, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events-business' }
+      { title: 'Pauses gourmandes', content: `Accueillez vos collaborateurs sur une note sucrée avant de commencer vos séminaires. Ou alors détendez vous lors d’une pause goûter lors de vos journées d’équipe.`, image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast' },
+      { title: 'Déjeuner', content: `Notre solution de plateau repas adapté à votre entreprise. Dites-nous l’univers culinaire que vous souhaitez et nous vous apporterons des petits-plats fait maison directement au bureau.`, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch' },
+      { title: 'Evenement sur mesure', content: `Concoctez avec nous votre événement 100% sur-mesure (inauguration, noël, bilan positif, etc.). On s’occupe de tout : de la location du lieu, à l’animation de votre événement en passant par le service traiteur.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events-business' }
     ]
 
     const productsB2C = [
