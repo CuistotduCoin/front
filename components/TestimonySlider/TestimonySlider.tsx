@@ -24,9 +24,6 @@ const styles = (theme: Theme) => ({
       minHeight: "100%"
     }
   },
-  blockImage: {
-    marginBottom: 10
-  },
   cell: {
     backgroundColor: "white",
     border: "1px solid rgba(0,0,0,0.1)",
@@ -42,11 +39,12 @@ const styles = (theme: Theme) => ({
   slider: {
     margin: "0px auto",
     paddingBottom: 75,
-    width: "calc(100% - 120px)",
+    width: "calc(100% - 120px)"
   },
   sliderImage: {
     height: 100,
-    width: 100
+    width: 100,
+    marginRight: 20
   }
 });
 
@@ -89,16 +87,16 @@ export class TestimonySlider extends React.Component<ITestimonySlider, {}> {
         {testimonies.map((testimony, index) => (
           <Grid container className={classes.container} key={index}>
             <Grid className={classes.cell} container justify="space-between" direction="column">
-              <Grid container justify="space-between" className={classes.blockImage}>
-                <Grid>
-                  <Typography variant="subtitle1" component="p">{testimony.name}</Typography>
-                  <Typography variant="caption" component="p">{testimony.context}</Typography>
-                </Grid>
+              <Grid container>
                 <img
                   src={testimony.image}
                   alt={testimony.name}
                   className={classes.sliderImage}
                 />
+                <Grid>
+                  <Typography variant="subtitle1" component="p">{testimony.name}</Typography>
+                  <Typography variant="caption" component="p">{testimony.context}</Typography>
+                </Grid>
               </Grid>
               <Grid>
                 <Typography align="justify" variant="body1" gutterBottom>{testimony.comment}</Typography>

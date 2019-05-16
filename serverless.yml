@@ -13,7 +13,6 @@ custom:
     organization: cuistotducoin
     project: front
   serverless-nextjs:
-    nextConfigDir: ./
     assetsBucketName: assets.cuistotducoin.com
     staticDir: ./static
     routes:

@@ -1,11 +1,14 @@
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import MenuIcon from "mdi-material-ui/Menu";
 import Phone from 'mdi-material-ui/Phone';
 import React from "react";
 import AccountDropdown from "../../components/AccountDropdown";
@@ -37,7 +40,6 @@ interface IHeaderProps {
   classes: any;
   static?: boolean;
   hideSignUpLogin?: boolean;
-  hideCompanyIndividual?: boolean;
   isLoggedIn: boolean;
 }
 
@@ -45,6 +47,7 @@ interface IHeaderState {
   up?: boolean;
   anchorElIndividual: HTMLElement;
   anchorElBusiness: HTMLElement;
+  anchorElMobile: HTMLElement;
 }
 
 export class Header extends React.Component<IHeaderProps, IHeaderState> {
@@ -54,7 +57,8 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     this.state = {
       up: true,
       anchorElIndividual: null,
-      anchorElBusiness: null
+      anchorElBusiness: null,
+      anchorElMobile: null
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -124,55 +128,83 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         color="inherit"
       >
         <Toolbar>
-          <Grid container justify="flex-start" alignItems="center">
-            <Link href="/">
-              <Grid container justify="flex-start" alignItems="center">
-                <Logo className={classes.logo} />
-                <Typography className={classes.logoText}
-                  variant="h6"
-                  component="div"
-                >
-                  Cuistot du Coin
-                </Typography>
+          <Grid container justify="space-between">
+            <Grid item>
+              <Grid container justify="flex-start">
+                <Hidden lgUp>
+                  <IconButton aria-owns={this.state.anchorElMobile ? 'simple-menu-mobile' : undefined} aria-haspopup="true" onClick={this.handleClickMobile} color="primary" edge="start" aria-label="Menu">
+                    <MenuIcon />
+                  </IconButton>
+                </Hidden>
+                <Menu id="simple-menu-mobile" anchorEl={this.state.anchorElMobile} open={Boolean(this.state.anchorElMobile)} onClose={this.handleClose}>
+                  <MenuItem>Pour les particuliers</MenuItem>
+                  <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
+                  <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
+                  <Link href="/individual#privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
+                  <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+                  <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
+                  <MenuItem>Pour les entreprises</MenuItem>
+                  <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
+                  <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
+                  <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
+                  <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+                  <Link href="/working-day"><MenuItem>Journée d'équipe</MenuItem></Link>
+                  <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
+                  <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
+                </Menu>
+                <Link href="/">
+                  <Grid container justify="flex-start" alignItems="center">
+                    <Logo className={classes.logo} />
+                    <Typography className={classes.logoText} variant="h6" component="div">
+                      Cuistot du Coin
+                  </Typography>
+                  </Grid>
+                </Link>
+                <Hidden mdDown>
+                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onClick={this.handleClickIndividual} className={classes.button} variant="outlined" color="primary">
+                    Pour les particuliers
+                  </Button>
+                </Hidden>
+                <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} onClose={this.handleClose}>
+                  <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
+                  <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
+                  <Link href="/individual#privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
+                  <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+                  <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
+                </Menu>
+                <Hidden mdDown>
+                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onClick={this.handleClickBusiness} className={classes.button} variant="outlined" color="primary">
+                    Pour les entreprises
+                  </Button>
+                </Hidden>
+                <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} onClose={this.handleClose}>
+                  <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
+                  <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
+                  <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
+                  <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
+                  <Link href="/working-day"><MenuItem>Journée d'équipe</MenuItem></Link>
+                  <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
+                  <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
+                </Menu>
               </Grid>
-            </Link>
-            <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onClick={this.handleClickIndividual} className={classes.button} variant="outlined" color="primary">
-              Pour les particuliers
-            </Button>
-            <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} onClose={this.handleClose}>
-              <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
-              <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
-              <Link href="/individual#privatechef"><MenuItem>Chef à domicile</MenuItem></Link>
-              <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
-              <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
-            </Menu>
-            <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onClick={this.handleClickBusiness} className={classes.button} variant="outlined" color="primary">
-              Pour les entreprises
-            </Button>
-            <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} onClose={this.handleClose}>
-              <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
-              <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
-              <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
-              <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
-              <Link href="/working-day"><MenuItem>Journée d'équipe</MenuItem></Link>
-              <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
-              <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
-            </Menu>
-          </Grid>
-          <Grid container justify="flex-end">
-            <Link href="tel:06 79 59 88 48">
-              <Button className={classes.button} variant="outlined" color="primary">
-                <Phone titleAccess="phone" />06 79 59 88 48
-              </Button>
-            </Link>
-            {rightElement && (
-              <>
-                {rightElement}
-              </>
-            )}
+            </Grid>
+            <Grid item>
+              <Grid container justify="flex-start">
+                <Link href="tel:06 79 59 88 48">
+                  <Button className={classes.button} variant="outlined" color="primary">
+                    <Phone titleAccess="phone" />06 79 59 88 48
+                </Button>
+                </Link>
+                {rightElement && (
+                  <>
+                    {rightElement}
+                  </>
+                )}
+              </Grid>
+            </Grid>
           </Grid>
         </Toolbar>
-      </AppBar>
+      </AppBar >
     );
   }
 
@@ -184,8 +216,12 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     this.setState({ anchorElBusiness: event.currentTarget });
   }
 
+  private handleClickMobile = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.setState({ anchorElMobile: event.currentTarget });
+  }
+
   private handleClose = () => {
-    this.setState({ anchorElIndividual: null, anchorElBusiness: null });
+    this.setState({ anchorElIndividual: null, anchorElBusiness: null, anchorElMobile: null });
   }
 }
 

@@ -24,6 +24,9 @@ const styles = (theme: Theme) => ({
     overflow: "hidden",
     position: "relative"
   },
+  textHero: {
+    marginTop: 100
+  },
   typography: {
     textShadow: "1px 1px #585A5A"
   },
@@ -68,7 +71,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
     return (
       <div className={classes.home}>
         <div className={classes.content} style={this.innerHeight}>
-          <Grid container direction="column">
+          <Grid container direction="column" className={classes.textHero}>
             <Grid item>
               <Typography
                 variant="h4"

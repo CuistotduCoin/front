@@ -159,19 +159,19 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     ];
 
     const productsB2B = [
-      { title: 'Ateliers teambuilding', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding' },
-      { title: 'Cocktails et réceptions', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business' },
-      { title: 'Pauses gourmandes', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast' },
-      { title: 'Déjeuner', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch' },
-      { title: 'Evenement sur mesure', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events-business' }
+      { title: 'Ateliers teambuilding', content: `Nos ateliers de cuisine sont idéals pour les équipes de 4 à 100 personnes. Tous vos collaborateurs seront réunis autour d’un ou plusieurs de nos Cuistots pour concocter avec eux des plats d’ici et d’ailleurs.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding' },
+      { title: 'Cocktails et réceptions', content: `A l’occasion de vos événements, faites confiance à nos Cuistots pour faire voyager les papilles de vos collaborateurs. A partir de 3€ par personne, laissez-vous tenter par l’originalité et surprenez vos invités.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business' },
+      { title: 'Pauses gourmandes', content: ``, image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast' },
+      { title: 'Déjeuner', content: ``, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch' },
+      { title: 'Evenement sur mesure', content: ``, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events-business' }
     ]
 
     const productsB2C = [
-      { title: 'Ateliers privatifs', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/individual#private' },
-      { title: 'Cocktails et réceptions', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-3.jpg', link: '/cocktail' },
-      { title: 'Ateliers collectif', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', link: '/individual#collective' },
-      { title: 'Chef à domicile', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/privatechef.jpg', link: '/individual#privatechef' },
-      { title: 'Evenement sur mesure', content: `Nous attachons une attention particulière à ce que nos créations soient de saison et que le goût soit au rendez-vous. Notre réseau de cavistes nous permet d’effectuer des accords mets et vins pour chaque événement à prix très compétitif. Vos invités ne retiendront qu’une chose : c’est délicieux.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events' }
+      { title: 'Ateliers privatifs', content: ``, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/individual#private' },
+      { title: 'Cocktails et réceptions', content: ``, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-3.jpg', link: '/cocktail' },
+      { title: 'Ateliers collectif', content: ``, image: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', link: '/individual#collective' },
+      { title: 'Cuistot à domicile', content: ``, image: 'https://static.cuistotducoin.com/img/home/privatechef.jpg', link: '/individual#privatecook' },
+      { title: 'Evenement sur mesure', content: ``, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events' }
     ]
 
     return (
@@ -287,7 +287,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
         {
           products.map((product, key) => (
             <Link className={classes.link} key={key} href={product.link}>
-              <Card className={(key === 0 || key === 1) ? classes.cardBig : classes.card}>
+              <Card className={classes.card}>
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}

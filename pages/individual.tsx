@@ -45,21 +45,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
-        date: "samedi 11 mai, 9h30-14h30",
-        duration: 5,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Atelier + Repas : Cuisine ayurvédique",
-        nameCook: "Michel",
-        price: 50,
-        spot: "chez Michel, Plougastel",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/R2phZF",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
         date: "samedi 18 mai, 14h30-16h30",
         duration: 2,
         image:
@@ -138,7 +123,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const privateWorkshops = [
     ];
 
-    const privateChef = [
+    const privateCook = [
     ];
 
     const ads = [
@@ -162,11 +147,11 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
           <Tabs value={tab} onChange={this.handleChange} centered={true}>
             <Tab label="Atelier collectif" />
             <Tab label="Atelier privatif" />
-            <Tab label="Chef à domicile" />
+            <Tab label="Cuistot à domicile" />
           </Tabs>
           {tab === 0 && <WorkshopCardList workshops={workshops} ads={ads} />}
           {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
-          {tab === 2 && <WorkshopCardList workshops={privateChef} ads={ads} />}
+          {tab === 2 && <WorkshopCardList workshops={privateCook} ads={ads} />}
         </Grid>
       </Layout >
     );

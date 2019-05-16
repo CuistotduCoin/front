@@ -2,33 +2,33 @@
 # yarn lockfile v1
 
 
-"@aws-amplify/auth@^1.2.23":
-  version "1.2.23"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.23.tgz#e9835c428723ca0f17bb9df09281847bab85298e"
+"@aws-amplify/auth@^1.2.24":
+  version "1.2.24"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.2.24.tgz#66b429e253270328b7491d9c13925c0d56cbcdf5"
   dependencies:
-    "@aws-amplify/cache" "^1.0.26"
-    "@aws-amplify/core" "^1.0.26"
+    "@aws-amplify/cache" "^1.0.27"
+    "@aws-amplify/core" "^1.0.27"
     amazon-cognito-identity-js "^3.0.12"
     crypto-js "^3.1.9-1"
 
-"@aws-amplify/cache@^1.0.26":
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.26.tgz#76ab80782d820394484bf4674e43dba955a3f75e"
+"@aws-amplify/cache@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.27.tgz#f5fdcb492ebee02494e814f2beee4f863b23e79f"
   dependencies:
-    "@aws-amplify/core" "^1.0.26"
+    "@aws-amplify/core" "^1.0.27"
 
-"@aws-amplify/core@^1.0.26":
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.26.tgz#63b1d2bce3716fe8caae1ed4f3814f2639a47aba"
+"@aws-amplify/core@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.27.tgz#fecbf32dbe08da7da8a13fb2ce930bbc7f175c51"
   dependencies:
     aws-sdk "2.329.0"
     url "^0.11.0"
 
-"@aws-amplify/storage@^1.0.29":
-  version "1.0.29"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.29.tgz#3e8472fbd261c28514872364653939e478bd5167"
+"@aws-amplify/storage@^1.0.30":
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.30.tgz#38e7802a2387615312f999a55dc7c5d0b811ad4b"
   dependencies:
-    "@aws-amplify/core" "^1.0.26"
+    "@aws-amplify/core" "^1.0.27"
 
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -1773,10 +1773,6 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/graphql@0.12.6":
-  version "0.12.6"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.6.tgz#3d619198585fcabe5f4e1adfb5cf5f3388c66c13"
-
 "@types/graphql@^14.2.0":
   version "14.2.0"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.2.0.tgz#74e1da5f2a4a744ac6eb3ed57b48242ea9367202"
@@ -2561,13 +2557,12 @@ apollo-link-retry@2.2.5:
     "@types/zen-observable" "0.8.0"
     apollo-link "^1.2.3"
 
-apollo-link@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.2.tgz#54c84199b18ac1af8d63553a68ca389c05217a03"
+apollo-link@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.3.tgz#9bd8d5fe1d88d31dc91dae9ecc22474d451fb70d"
   dependencies:
-    "@types/graphql" "0.12.6"
     apollo-utilities "^1.0.0"
-    zen-observable-ts "^0.8.9"
+    zen-observable-ts "^0.8.10"
 
 apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.11, apollo-link@^1.2.3:
   version "1.2.11"
@@ -2801,14 +2796,14 @@ awesome-typescript-loader@^5.2.1:
     source-map-support "^0.5.3"
     webpack-log "^1.2.0"
 
-aws-appsync@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/aws-appsync/-/aws-appsync-1.7.2.tgz#8043dcf587dcfac6691fe131d0c4ab56f1fd46e8"
+aws-appsync@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/aws-appsync/-/aws-appsync-1.8.0.tgz#3418815d4e713656c8caf3bff12219710cc9bdba"
   dependencies:
     "@redux-offline/redux-offline" "2.2.1"
     apollo-cache-inmemory "1.3.10"
     apollo-client "2.4.6"
-    apollo-link "1.2.2"
+    apollo-link "1.2.3"
     apollo-link-context "1.0.9"
     apollo-link-http "1.3.1"
     apollo-link-retry "2.2.5"
@@ -2859,9 +2854,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.453.0:
-  version "2.453.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.453.0.tgz#7f1ada4efc78d255dfd43adc3decd5f01a21ac2c"
+aws-sdk@^2.456.0:
+  version "2.456.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.456.0.tgz#1d258997bd859de00a931d81b601765edbeae359"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -7255,6 +7250,10 @@ nested-object-assign@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/nested-object-assign/-/nested-object-assign-1.0.3.tgz#5aca69390d9affe5a612152b5f0843ae399ac597"
 
+next-aws-lambda@^2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/next-aws-lambda/-/next-aws-lambda-2.0.0-alpha.0.tgz#728ab1fb4ffe2a9d9029214ab290b30b8cb07a50"
+
 next-compose-plugins@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
@@ -8585,18 +8584,18 @@ react-inspector@^2.3.0, react-inspector@^2.3.1:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
-react-instantsearch-core@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.5.0.tgz#dcf9ef5cb5c5245b0b1655589f557daacd0ae34d"
+react-instantsearch-core@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.6.0.tgz#1d5e9a6c07bc6bbb732953b19f22c4fa584a8405"
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^2.26.0"
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-instantsearch-dom-maps@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom-maps/-/react-instantsearch-dom-maps-5.5.0.tgz#9ae8c5f30b31927302d2939637023c2553e52aeb"
+react-instantsearch-dom-maps@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom-maps/-/react-instantsearch-dom-maps-5.6.0.tgz#5de480e0a64824c3d95ee351ce2d774fae39c962"
   dependencies:
     "@babel/runtime" "^7.1.2"
     lodash "^4.17.4"
@@ -8604,9 +8603,9 @@ react-instantsearch-dom-maps@^5.5.0:
     react-lifecycles-compat "^3.0.4"
     scriptjs "^2.5.8"
 
-react-instantsearch-dom@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.5.0.tgz#b5a9853a4d86e35309aba167a80a067d782ca591"
+react-instantsearch-dom@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.6.0.tgz#217bf68d959430d6680ee0dca63f7c0f345db3df"
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch "^3.27.1"
@@ -8614,13 +8613,13 @@ react-instantsearch-dom@^5.5.0:
     classnames "^2.2.5"
     lodash "^4.17.4"
     prop-types "^15.5.10"
-    react-instantsearch-core "^5.5.0"
+    react-instantsearch-core "^5.6.0"
 
-react-intl@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-2.8.0.tgz#20b0c1f01d1292427768aa8ec9e51ab7e36503ba"
+react-intl@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-2.9.0.tgz#c97c5d17d4718f1575fdbd5a769f96018a3b1843"
   dependencies:
-    hoist-non-react-statics "^2.5.5"
+    hoist-non-react-statics "^3.3.0"
     intl-format-cache "^2.0.5"
     intl-messageformat "^2.1.0"
     intl-relativeformat "^2.1.0"
@@ -9383,9 +9382,9 @@ serve-static@1.13.2:
     parseurl "~1.3.2"
     send "0.16.2"
 
-serverless-nextjs-plugin@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/serverless-nextjs-plugin/-/serverless-nextjs-plugin-1.8.0.tgz#f4d8e2c15d098dd7449d0b844aa3ea4c95feda5b"
+serverless-nextjs-plugin@^2.0.2-alpha.0:
+  version "2.0.2-alpha.0"
+  resolved "https://registry.yarnpkg.com/serverless-nextjs-plugin/-/serverless-nextjs-plugin-2.0.2-alpha.0.tgz#03ca2eb96a32cfe68ee07386713d600eb3e72293"
   dependencies:
     "@mapbox/s3urls" "^1.5.3"
     chalk "^2.4.2"
@@ -9396,10 +9395,11 @@ serverless-nextjs-plugin@^1.8.0:
     lodash.clonedeep "^4.5.0"
     lodash.merge "^4.6.1"
     mime "^2.4.0"
+    next-aws-lambda "^2.0.0-alpha.0"
 
-serverless-offline@^4.10.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-4.10.0.tgz#608ae9e1a85886fc80532610ff06e9e684e99901"
+serverless-offline@^4.10.3:
+  version "4.10.3"
+  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-4.10.3.tgz#dcac3585a6fcb07fa205cadaf12934782d893f50"
   dependencies:
     boom "^7.3.0"
     cryptiles "^4.1.3"
@@ -11025,7 +11025,7 @@ yup@^0.27.0:
     synchronous-promise "^2.0.6"
     toposort "^2.0.2"
 
-zen-observable-ts@^0.8.18, zen-observable-ts@^0.8.9:
+zen-observable-ts@^0.8.10, zen-observable-ts@^0.8.18:
   version "0.8.18"
   resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.18.tgz#ade44b1060cc4a800627856ec10b9c67f5f639c8"
   dependencies:
