@@ -1,47 +1,22 @@
 const sm = require('sitemap')
 const path = require('path')
+const fs = require('fs');
+import { getMetaInfo } from "../../shared/seo";
 
 const sitemap = sm.createSitemap({
     hostname: 'https://www.cuistotducoin.com',
-    cacheTime: 600000 // 600 sec - cache purge period
+    cacheTime: 600000
 })
 
-const setup = ({ server }) => {
-    const Posts = posts()
-    for (let i = 0; i < Posts.length; i += 1) {
-        const post = Posts[i]
+const metaInfo = getMetaInfo();
+metaInfo.forEach(function (metaPage) {
+    if (metaPage.noindex !== true) {
         sitemap.add({
-            url: `/posts/${post.slug}`,
-            changefreq: 'daily',
-            priority: 0.9
-        })
+            changefreq: "daily",
+            priority: 0.9,
+            url: `${metaPage.href}`,
+        });
     }
+});
 
-    sitemap.add({
-        url: '/a',
-        changefreq: 'daily',
-        priority: 1
-    })
-
-    sitemap.add({
-        url: '/b',
-        changefreq: 'daily',
-        priority: 1
-    })
-
-    server.get('/sitemap.xml', (req, res) => {
-        sitemap.toXML((err, xml) => {
-            if (err) {
-                res.status(500).end()
-                return
-            }
-
-            res.header('Content-Type', 'application/xml')
-            res.send(xml)
-        })
-    })
-}
-
-//test
-
-module.exports = setup
+fs.writeFileSync("static/sitemap.xml", sitemap.toString());
