@@ -118,7 +118,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
       {
         title: "Cocktail",
         price: '3',
-        description: ['3€ la tapas, salée ou sucrée (1 tapas = 3 bouchées)', 'Composons votre cocktail en fonction de votre budget'],
+        description: [`3€ la tapas, salée ou sucrée (1 tapas est l'équivalent de 3 pièces cocktail ou 3 bouchées)`, 'Composons votre cocktail en fonction de votre budget'],
         buttonText: 'Demander un devis'
       }
     ];

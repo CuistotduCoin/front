@@ -124,13 +124,13 @@ export class Box extends React.Component<IBoxProps, {}> {
       {
         title: "Entrée + Plat froid + Dessert",
         price: '18',
-        description: ['Pour un repas gourmand'],
+        description: ['Pour un repas en toute simplicité'],
         buttonText: 'Demander un devis'
       },
       {
         title: "Entrée + Plat chaud + Dessert",
         price: '23',
-        description: ['Pour avoir chaud en hiver'],
+        description: ['Pour un repas gourmand'],
         buttonText: 'Demander un devis'
       }
     ];
