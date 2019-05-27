@@ -45,14 +45,14 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
-        date: "samedi 29 juin, 17h-20h",
-        duration: 3,
+        date: "samedi 29 juin, 14h30-16h30",
+        duration: 2,
         image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Initiation au tournage de galettes + Repas",
+        name: "Initiation au tournage de crêpes",
         nameCook: "Nadine",
-        price: 30,
+        price: 25,
         spot: "Terre D'Embruns, Brest",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/bQ53gx",
