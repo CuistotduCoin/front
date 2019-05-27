@@ -45,7 +45,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
-        date: "vendredi 24 mai, 17h-20h",
+        date: "samedi 29 juin, 17h-20h",
         duration: 3,
         image:
           "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
@@ -55,52 +55,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         price: 30,
         spot: "Terre D'Embruns, Brest",
         totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/m29858",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "vendredi 24 mai, 17h30-20h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/luis-calzone.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
-        name: "Atelier initiation à la cuisine italienne - Calzone",
-        nameCook: "Luis",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/iL1ANy",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 25 mai, 10h-13h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/hayet-tadjine.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
-        name: "Tadjine",
-        nameCook: "Hayet",
-        price: 35,
-        spot: "Schmidt, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/qjgFFz",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 25 mai, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-fete-des-meres.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier enfant inédit : Spécial fête des Mères",
-        nameCook: "Audrey",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/BBBJqE",
+        typeform: "https://cuistotducoin.typeform.com/to/bQ53gx",
         type: "Atelier collectif"
       }
     ];
