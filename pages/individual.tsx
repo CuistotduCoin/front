@@ -45,6 +45,21 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const workshops = [
       {
         availableSeat: 6,
+        date: "samedi 22 juin, 9h30-14h30",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier Cuisine Ayurvédique",
+        nameCook: "Michel",
+        price: 50,
+        spot: "chez Michel, Plougastel Daoulas",
+        totalSeat: 6,
+        typeform: "https://cuistotducoin.typeform.com/to/bmhROM",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 6,
         date: "samedi 29 juin, 14h30-16h30",
         duration: 2,
         image:
