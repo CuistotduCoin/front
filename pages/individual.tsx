@@ -53,7 +53,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         name: "Atelier Cuisine Ayurvédique",
         nameCook: "Michel",
         price: 50,
-        spot: "chez Michel, Plougastel Daoulas",
+        spot: "Plougastel Daoulas",
         totalSeat: 6,
         typeform: "https://cuistotducoin.typeform.com/to/bmhROM",
         type: "Atelier collectif"
@@ -76,9 +76,33 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     ];
 
     const privateWorkshops = [
+      {
+        availableSeat: 6,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/atelier-privatif.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "L'atelier sur-mesure",
+        nameCook: "notre cuistot !",
+        spot: "autour de Brest",
+        totalSeat: 6,
+        typeform: "https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html",
+        type: "Atelier privatif"
+      }
     ];
 
     const privateCook = [
+      {
+        availableSeat: 6,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/cuistot-a-domicile.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/generique.jpg",
+        name: "Prestation sur-mesure",
+        nameCook: "notre cuistot !",
+        spot: "autour de Brest",
+        totalSeat: 6,
+        typeform: "https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html",
+        type: "Cuistot à domicile"
+      }
     ];
 
     const ads = [

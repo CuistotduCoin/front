@@ -82,6 +82,7 @@ export interface IWorkshopCardProps {
   spot: string;
   totalSeat: number;
   totalDate?: number;
+  type: string;
   typeform: string;
 }
 
@@ -113,6 +114,8 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
       tag = "complet";
     } else if (this.props.price === 0) {
       tag = "gratuit";
+    } else if (typeof this.props.price === 'undefined') {
+      tag = "";
     } else {
       tag = `${this.props.price} €`;
     }
@@ -127,11 +130,13 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
 
     const cardComp = (
       <Card className={classes.card}>
-        <CardHeader
-          className={classes.cardHeaderUp}
-          avatar={<Chip label={tag} />}
-          classes={{ avatar: classes.chip }}
-        />
+        {tag && (
+          <CardHeader
+            className={classes.cardHeaderUp}
+            avatar={<Chip label={tag} />}
+            classes={{ avatar: classes.chip }}
+          />
+        )}
         <CardMedia
           className={classes.media}
           image={this.props.image}
@@ -195,10 +200,14 @@ export class WorkshopCard extends React.Component<IWorkshopCardProps, {}> {
             </Grid>
             <Grid item xs={6}>
               <Grid container justify="center">
-                <HourglassFull className={classes.icon} />
-                <Typography variant="caption">
-                  {this.props.duration}h
-                  </Typography>
+                {this.props.duration && (
+                  <>
+                    <HourglassFull className={classes.icon} />
+                    <Typography variant="caption">
+                      {this.props.duration}h
+                    </Typography>
+                  </>
+                )}
               </Grid>
             </Grid>
           </Grid>
