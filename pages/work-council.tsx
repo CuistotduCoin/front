@@ -195,15 +195,6 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         >
           <StaticSteper steps={stepsFAQ} />
         </Grid>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.typography}
-        >
-          Ils nous font confiance :
-        </Typography>
         <Grid className={classes.grid}>
           <Grid container justify="space-around">
             {pricing.map(pricing => (
@@ -239,6 +230,15 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
             ))}
           </Grid>
         </Grid>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.typography}
+        >
+          Ils nous font confiance :
+        </Typography>
         <div className={classes.slider}>
           <TestimonySlider testimonies={testimonies} />
         </div>
