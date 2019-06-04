@@ -19,6 +19,7 @@ import ThreeSteps from "../components/ThreeSteps";
 
 const styles = (theme: Theme) => ({
   card: {
+    height: "100%",
     padding: 10
   },
   cardHeader: {
@@ -198,8 +199,8 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
         <Grid className={classes.grid}>
           <Grid container justify="space-around">
             {pricing.map(pricing => (
-              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
-                <Card>
+              <Grid item key={pricing.title} xs={12} md={6} lg={4}>
+                <Card className={classes.card}>
                   <CardHeader
                     title={pricing.title}
                     titleTypographyProps={{ align: 'center' }}

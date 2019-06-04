@@ -1168,33 +1168,33 @@
     minimist "^1.1.0"
     s3signed "^0.1.0"
 
-"@material-ui/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.1.tgz#7fe3bcb1a89b01376b181358a5ded58291da0016"
+"@material-ui/core@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.2.tgz#c7a07c1d1b13b94adf479d7267b51cb682fcb279"
   dependencies:
     "@babel/runtime" "^7.2.0"
-    "@material-ui/styles" "^4.0.1"
-    "@material-ui/system" "^4.0.1"
+    "@material-ui/styles" "^4.0.2"
+    "@material-ui/system" "^4.0.2"
     "@material-ui/types" "^4.0.1"
     "@material-ui/utils" "^4.0.1"
     "@types/react-transition-group" "^2.0.16"
     clsx "^1.0.2"
-    convert-css-length "^1.0.2"
+    convert-css-length "^2.0.0"
     csstype "^2.5.2"
     debounce "^1.1.0"
     deepmerge "^3.0.0"
     hoist-non-react-statics "^3.2.1"
-    is-plain-object "^2.0.4"
-    normalize-scroll-left "^0.1.2"
+    is-plain-object "^3.0.0"
+    normalize-scroll-left "^0.2.0"
     popper.js "^1.14.1"
     prop-types "^15.7.2"
     react-event-listener "^0.6.6"
     react-transition-group "^4.0.0"
     warning "^4.0.1"
 
-"@material-ui/styles@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.1.tgz#67e880d490f010c9f2956c572b07d218bfa255d7"
+"@material-ui/styles@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.2.tgz#05805b26bfcd876f883b098e4be50d813b1c5fde"
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@emotion/hash" "^0.7.1"
@@ -1214,9 +1214,9 @@
     prop-types "^15.7.2"
     warning "^4.0.1"
 
-"@material-ui/system@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/system/-/system-4.0.1.tgz#d78969f3dd9eb6baf82ded0ef183368d8befb00b"
+"@material-ui/system@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@material-ui/system/-/system-4.0.2.tgz#224a75b4168994cb2e903849cc1d608e3cc327f1"
   dependencies:
     "@babel/runtime" "^7.2.0"
     deepmerge "^3.0.0"
@@ -2886,9 +2886,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.466.0:
-  version "2.466.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.466.0.tgz#02d819c5af058e15fd1942296ed3b1def9f4b14d"
+aws-sdk@^2.467.0:
+  version "2.467.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.467.0.tgz#803831646fc3322ce51181c9f586f17770cdf850"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3981,9 +3981,9 @@ content@3.x.x:
   dependencies:
     boom "5.x.x"
 
-convert-css-length@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/convert-css-length/-/convert-css-length-1.0.2.tgz#32f38a8ac55d78372ff43562532564366c871ccc"
+convert-css-length@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/convert-css-length/-/convert-css-length-2.0.0.tgz#0c60ff686e70625ef7f3fd305a2f61f33a96c289"
   dependencies:
     console-polyfill "^0.1.2"
     parse-unit "^1.0.1"
@@ -6286,6 +6286,12 @@ is-plain-object@2.0.4, is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-
   dependencies:
     isobject "^3.0.1"
 
+is-plain-object@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-3.0.0.tgz#47bfc5da1b5d50d64110806c199359482e75a928"
+  dependencies:
+    isobject "^4.0.0"
+
 is-promise@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
@@ -6383,6 +6389,10 @@ isobject@^2.0.0:
 isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+
+isobject@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/isobject/-/isobject-4.0.0.tgz#3f1c9155e73b192022a80819bacd0343711697b0"
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
@@ -7627,9 +7637,9 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
-normalize-scroll-left@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/normalize-scroll-left/-/normalize-scroll-left-0.1.2.tgz#6b79691ba79eb5fb107fa5edfbdc06b55caee2aa"
+normalize-scroll-left@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/normalize-scroll-left/-/normalize-scroll-left-0.2.0.tgz#9445d74275f303cc661e113329aefa492f58114c"
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -8762,18 +8772,18 @@ react-inspector@^2.3.0, react-inspector@^2.3.1:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
-react-instantsearch-core@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.6.0.tgz#1d5e9a6c07bc6bbb732953b19f22c4fa584a8405"
+react-instantsearch-core@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.7.0.tgz#6979ec419d2711033f6c83181de6cae9e1f064c2"
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^2.26.0"
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-instantsearch-dom-maps@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom-maps/-/react-instantsearch-dom-maps-5.6.0.tgz#5de480e0a64824c3d95ee351ce2d774fae39c962"
+react-instantsearch-dom-maps@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom-maps/-/react-instantsearch-dom-maps-5.7.0.tgz#5d5db7be76de7c8db2182c06d0cd1c649e0f019b"
   dependencies:
     "@babel/runtime" "^7.1.2"
     lodash "^4.17.4"
@@ -8781,9 +8791,9 @@ react-instantsearch-dom-maps@^5.6.0:
     react-lifecycles-compat "^3.0.4"
     scriptjs "^2.5.8"
 
-react-instantsearch-dom@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.6.0.tgz#217bf68d959430d6680ee0dca63f7c0f345db3df"
+react-instantsearch-dom@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.7.0.tgz#5a9b0cfb461c08a349a5fdc5d1cff50b8f5fcf56"
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch "^3.27.1"
@@ -8791,7 +8801,7 @@ react-instantsearch-dom@^5.6.0:
     classnames "^2.2.5"
     lodash "^4.17.4"
     prop-types "^15.5.10"
-    react-instantsearch-core "^5.6.0"
+    react-instantsearch-core "^5.7.0"
 
 react-intl@^2.9.0:
   version "2.9.0"
