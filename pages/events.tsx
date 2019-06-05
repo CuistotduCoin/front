@@ -132,7 +132,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+                href="https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html"
                 target="_blank"
               >
                 Obtenir un devis
@@ -184,7 +184,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
           <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Grid className={classes.grid}>
-          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html"} />
         </Grid>
         <Typography
           variant="h5"

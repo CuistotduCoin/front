@@ -1,8 +1,4 @@
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -12,7 +8,7 @@ import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
-import Link from "../components/Link";
+import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -114,7 +110,7 @@ export class Box extends React.Component<IBoxProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
-    const pricingMeal = [
+    const pricing = [
       {
         title: "Plat froid + Dessert",
         price: '15',
@@ -192,39 +188,7 @@ export class Box extends React.Component<IBoxProps, {}> {
           Organisez un repas convivial
         </Typography>
         <Grid className={classes.grid}>
-          <Grid container justify="space-around">
-            {pricingMeal.map(pricing => (
-              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
-                <Card>
-                  <CardHeader
-                    title={pricing.title}
-                    titleTypographyProps={{ align: 'center' }}
-                    subheaderTypographyProps={{ align: 'center' }}
-                    className={classes.cardHeader}
-                  />
-                  <CardContent>
-                    <div className={classes.cardPricing}>
-                      <Typography component="h2" variant="h3" color="textPrimary">
-                        {pricing.price}€
-                </Typography>
-                    </div>
-                    {pricing.description.map(line => (
-                      <Typography variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </CardContent>
-                  <CardActions>
-                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
-                      <Button fullWidth color="primary">
-                        {pricing.buttonText}
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
         </Grid>
         <Typography
           variant="caption"

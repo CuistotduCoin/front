@@ -298,6 +298,13 @@ export const getMetaInfo = () => {
       title: "L'activité gourmande qui plaira aux membres de votre CE",
       metaTitle: "Cours de cuisine pour comité d'entreprise",
     },
+    'working-day': {
+      description: "Donnez une autre saveur à vos séminaires",
+      href: "https://www.cuistotducoin.com/working-day",
+      metaDescription: "Faites voyager les papilles le temps d'une journée d'équipe",
+      title: "Organisation sur mesure de vos journées d'équipes",
+      metaTitle: "Séminaires savoureux : Accueil, goûter et déjeuner savoureux",
+    },
     'workshop-edit': {
       noindex: true
     },

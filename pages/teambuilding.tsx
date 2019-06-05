@@ -1,8 +1,4 @@
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -12,7 +8,7 @@ import Mood from "mdi-material-ui/EmoticonOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
-import Link from "../components/Link";
+import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -201,39 +197,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Grid className={classes.grid}>
-          <Grid container justify="space-around">
-            {pricing.map(pricing => (
-              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
-                <Card>
-                  <CardHeader
-                    title={pricing.title}
-                    titleTypographyProps={{ align: 'center' }}
-                    subheaderTypographyProps={{ align: 'center' }}
-                    className={classes.cardHeader}
-                  />
-                  <CardContent>
-                    <div className={classes.cardPricing}>
-                      <Typography component="h2" variant="h3" color="textPrimary">
-                        {pricing.price}€
-                </Typography>
-                    </div>
-                    {pricing.description.map(line => (
-                      <Typography variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </CardContent>
-                  <CardActions>
-                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
-                      <Button fullWidth color="primary">
-                        {pricing.buttonText}
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
         </Grid>
         <Typography
           variant="h5"

@@ -12,7 +12,7 @@ import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
-import Link from "../components/Link";
+import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -114,7 +114,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
     ];
 
-    const pricingCocktail = [
+    const pricing = [
       {
         title: "Cocktail",
         price: '3',
@@ -135,7 +135,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+                href="https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html"
                 target="_blank"
               >
                 Obtenir un devis
@@ -180,39 +180,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
           Composons ensemble votre cocktail
         </Typography>
         <Grid className={classes.grid}>
-          <Grid container justify="space-around">
-            {pricingCocktail.map(pricing => (
-              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
-                <Card>
-                  <CardHeader
-                    title={pricing.title}
-                    titleTypographyProps={{ align: 'center' }}
-                    subheaderTypographyProps={{ align: 'center' }}
-                    className={classes.cardHeader}
-                  />
-                  <CardContent>
-                    <div className={classes.cardPricing}>
-                      <Typography component="h2" variant="h3" color="textPrimary">
-                        {pricing.price}€
-                </Typography>
-                    </div>
-                    {pricing.description.map(line => (
-                      <Typography variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </CardContent>
-                  <CardActions>
-                    <Link href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html" className={classes.link}>
-                      <Button fullWidth color="primary">
-                        {pricing.buttonText}
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html"} />
         </Grid>
         <Typography
           variant="h5"

@@ -8,6 +8,7 @@ import MathCompass from "mdi-material-ui/MathCompass";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -104,6 +105,27 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
       { src: 'https://static.cuistotducoin.com/img/working-day/presentation-entreprise.jpg', width: 1, height: 1, caption: "Présentation d'entreprise après un atelier", alt: "Présentation entreprise" },
     ];
 
+    const pricing = [
+      {
+        title: "Location d'un lieu original",
+        price: '15',
+        description: ["Un dépaissement assuré"],
+        buttonText: 'Demander un devis'
+      },
+      {
+        title: "Atelier de cuisine",
+        price: '50',
+        description: ["Une activité fédératrice"],
+        buttonText: 'Demander un devis'
+      },
+      {
+        title: "Entrée + Plat chaud + Dessert",
+        price: '23',
+        description: ['Pour un repas gourmand'],
+        buttonText: 'Demander un devis'
+      }
+    ];
+
     return (
       <Layout
         component={
@@ -147,6 +169,18 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           className={classes.grid}
         >
           <StaticSteper steps={stepsFAQ} />
+        </Grid>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.typography}
+        >
+          Organisez une journée conviviale
+        </Typography>
+        <Grid className={classes.grid}>
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
         </Grid>
         <Typography
           variant="h5"

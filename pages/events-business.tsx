@@ -1,8 +1,4 @@
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -12,6 +8,7 @@ import SilverwareVariant from "mdi-material-ui/SilverwareVariant";
 import React from "react";
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
+import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
 import ThreeSteps from "../components/ThreeSteps";
@@ -196,40 +193,7 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
           <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Grid className={classes.grid}>
-          <Grid container justify="space-around">
-            {pricing.map(pricing => (
-              <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
-                <Card>
-                  <CardHeader
-                    title={pricing.title}
-                    titleTypographyProps={{ align: 'center' }}
-                    subheaderTypographyProps={{ align: 'center' }}
-                    className={classes.cardHeader}
-                  />
-                  <CardContent>
-                    <Grid container justify="center" direction="column">
-                      <Typography variant="caption" align="center">
-                        à partir de
-                    </Typography>
-                      <Typography component="h2" variant="h3" color="textPrimary" className={classes.cardPricing} align="center">
-                        {pricing.price}€
-                    </Typography>
-                      {pricing.description.map(line => (
-                        <Typography variant="subtitle1" align="center" key={line}>
-                          {line}
-                        </Typography>
-                      ))}
-                    </Grid>
-                  </CardContent>
-                  <CardActions>
-                    <Button fullWidth color="primary">
-                      {pricing.buttonText}
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
         </Grid>
         <Typography
           variant="h5"
