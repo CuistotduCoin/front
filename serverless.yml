@@ -22,6 +22,12 @@ custom:
         path: browserconfig.xml
       - src: ./static/manifest.json
         path: manifest.json
+      - src: individual
+        path: individual/{tabName}
+        request:
+          parameters:
+            paths:
+              tabName: true
 
 provider:
   versionFunctions: false

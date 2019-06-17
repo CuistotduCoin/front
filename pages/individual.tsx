@@ -2,6 +2,7 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
+import Router from 'next/router'
 import React from "react";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
@@ -10,14 +11,12 @@ const styles = (theme: Theme) => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1300
-  },
-  tabs: {
-
   }
 });
 
 export interface IIndividualProps {
   classes?: any;
+  tab: number;
 }
 
 interface IIndividualState {
@@ -25,17 +24,42 @@ interface IIndividualState {
 }
 
 export class Individual extends React.Component<IIndividualProps, IIndividualState> {
+  public static getInitialProps({ query: { tabName } }) {
+    let tab = 0;
+    switch (tabName) {
+      case "collective":
+        tab = 0
+        break;
+      case "private":
+        tab = 1;
+        break;
+      case "privatecook":
+        tab = 2;
+        break;
+    }
+    return { tab: tab };
+  }
+
   constructor(props: IIndividualProps) {
     super(props);
-
-    this.state = {
-      tab: 0
-    };
-
+    this.state = props;
   }
 
   public handleChange = (event, tab: number) => {
     this.setState({ tab });
+    let nameTab = "/individual";
+    switch (tab) {
+      case 0:
+        nameTab = "/individual/collective"
+        break;
+      case 1:
+        nameTab = "/individual/private"
+        break;
+      case 2:
+        nameTab = "/individual/privatecook"
+        break;
+    }
+    //Router.push(nameTab, nameTab, { shallow: true });
   };
 
   public render() {

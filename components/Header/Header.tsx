@@ -138,9 +138,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                 </Hidden>
                 <Menu id="simple-menu-mobile" anchorEl={this.state.anchorElMobile} open={Boolean(this.state.anchorElMobile)} onClose={this.handleClose}>
                   <MenuItem>Pour les particuliers</MenuItem>
-                  <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
-                  <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
-                  <Link href="/individual#privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
+                  <Link href="/individual/private"><MenuItem>Ateliers privatifs</MenuItem></Link>
+                  <Link href="/individual/collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
+                  <Link href="/individual/privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
                   <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
                   <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
                   <MenuItem>Pour les entreprises</MenuItem>
@@ -166,9 +166,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   </Button>
                 </Hidden>
                 <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} onClose={this.handleClose}>
-                  <Link href="/individual#private"><MenuItem>Ateliers privatifs</MenuItem></Link>
-                  <Link href="/individual#collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
-                  <Link href="/individual#privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
+                  <Link href="/individual/private"><MenuItem>Ateliers privatifs</MenuItem></Link>
+                  <Link href="/individual/collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
+                  <Link href="/individual/privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
                   <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
                   <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
                 </Menu>

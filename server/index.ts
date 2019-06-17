@@ -15,6 +15,7 @@ const matches = [
   { route: route("/workshop/new"), page: "/workshop-new" },
   { route: route("/workshop/:id"), page: "/workshop" },
   { route: route("/cook/:id"), page: "/cook" },
+  { route: route("/individual/:tabName"), page: "/individual" },
 ];
 
 app.prepare().then(() => {
