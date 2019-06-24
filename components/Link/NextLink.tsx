@@ -8,16 +8,17 @@ interface INextLinkProps {
     target?: string,
     className?: string,
     rel?: string,
-    other?: any,
+    passHref?: any,
+    other?: any
 }
 
 export class NextLink extends React.Component<INextLinkProps, {}> {
 
     public render() {
-        const { as, href, prefetch, target, rel, ...other } = this.props;
+        const { as, href, prefetch, target, rel, passHref, ...other } = this.props;
 
         return (
-            <Link href={href} prefetch={prefetch} as={as}>
+            <Link href={href} prefetch={prefetch} as={as} passHref={passHref}>
                 <a {...other} target={target} rel={rel} />
             </Link >
         );

@@ -2,7 +2,6 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import Router from 'next/router'
 import React from "react";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
@@ -59,7 +58,6 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         nameTab = "/individual/privatecook"
         break;
     }
-    //Router.push(nameTab, nameTab, { shallow: true });
   };
 
   public render() {

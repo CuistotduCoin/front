@@ -48,7 +48,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
 
     return (
       <div className={classes.root}>
-        <Grid container justify="space-around" className={classes.grid}>
+        <Grid container justify="space-between" className={classes.grid}>
           <Grid item>
             <Grid
               container

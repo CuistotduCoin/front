@@ -15,7 +15,8 @@ interface ILinkProps {
   target?: string,
   rel?: string,
   other?: any,
-  naked?: boolean
+  naked?: boolean,
+  passHref?: any
 }
 
 export class Link extends React.Component<ILinkProps, {}> {
@@ -24,17 +25,17 @@ export class Link extends React.Component<ILinkProps, {}> {
   };
 
   public render() {
-    const { activeClassName, router, className: classNameProps, target, rel, naked, ...other } = this.props;
+    const { activeClassName, router, className: classNameProps, target, rel, naked, passHref, ...other } = this.props;
 
     const className = cx(classNameProps, {
       [activeClassName]: router.pathname === this.props.href && activeClassName,
     });
 
     if (naked) {
-      return <NextLink className={className} {...other} target={target} rel={rel} />;
+      return <NextLink className={className} {...other} target={target} rel={rel} passHref={passHref} />;
     }
 
-    return <MuiLink component={NextLink} className={className} {...other} target={target} rel={rel} underline="none" />;
+    return <MuiLink component={NextLink} className={className} {...other} target={target} rel={rel} passHref={passHref} underline="none" />;
   }
 }
 
