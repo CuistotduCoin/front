@@ -64,38 +64,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
     const { classes } = this.props;
     const { tab } = this.state;
 
-    const workshops = [
-      {
-        availableSeat: 6,
-        date: "samedi 22 juin, 9h30-14h30",
-        duration: 5,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Atelier Cuisine Ayurvédique",
-        nameCook: "Michel",
-        price: 50,
-        spot: "Plougastel Daoulas",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/bmhROM",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 29 juin, 14h30-16h30",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Initiation au tournage de crêpes",
-        nameCook: "Nadine",
-        price: 25,
-        spot: "Terre D'Embruns, Brest",
-        totalSeat: 6,
-        typeform: "https://cuistotducoin.typeform.com/to/bQ53gx",
-        type: "Atelier collectif"
-      }
-    ];
+    const workshops = [];
 
     const privateWorkshops = [
       {
