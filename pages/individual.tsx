@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import React from "react";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
+import Banner from "../components/Banner"
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -119,7 +120,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
             <Tab label="Atelier privatif" />
             <Tab label="Cuistot à domicile" />
           </Tabs>
-          {tab === 0 && <WorkshopCardList workshops={workshops} ads={ads} />}
+          {tab === 0 && <Banner title="Les ateliers collectifs reviendrons en septembre !" subtitle="Mais pas de panique vous pouvez toujours réaliser un atelier privatif pour toutes vos occasions" imageURL={"https://static.cuistotducoin.com/img/individual/holiday.jpg"} />}
           {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
           {tab === 2 && <WorkshopCardList workshops={privateCook} ads={ads} />}
         </Grid>

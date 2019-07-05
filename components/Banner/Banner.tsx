@@ -5,11 +5,29 @@ import React from "react";
 
 const styles = (theme: Theme) => ({
   banner: {
-    width: "100%",
     background: "#f6f6f6",
-    margin: theme.spacing(1)
+    height: "80px",
+    margin: theme.spacing(2),
+    overflow: "hidden",
+    width: "100%"
+  },
+  overflow: {
+    content: "",
+    overflow: "hidden",
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      borderTop: 0,
+      borderBottom: "80px solid transparent",
+      borderLeft: "60px solid #f6f6f6",
+    }
+  },
+  cover: {
+    height: "100%",
+    width: "400px"
   },
   text: {
+    padding: theme.spacing(2),
     marginLeft: 50
   }
 });
@@ -18,15 +36,19 @@ export interface IBannerProps {
   classes?: any;
   title: string;
   subtitle: string;
+  imageURL?: string;
 }
 
 export class Banner extends React.Component<IBannerProps, {}> {
+  private innerBackground = {
+    backgroundImage: `url(${this.props.imageURL})`
+  };
+
   public render() {
     const { classes, title, subtitle } = this.props;
 
     return <Grid container
       justify="space-between"
-      spacing={2}
       className={classes.banner}
     >
       <Grid item className={classes.text}>
@@ -37,6 +59,11 @@ export class Banner extends React.Component<IBannerProps, {}> {
           {subtitle}
         </Typography>
       </Grid>
+      {this.props.imageURL &&
+        <Grid item className={classes.overflow}>
+          <img className={classes.cover} style={this.innerBackground} />
+        </Grid>
+      }
     </Grid >;
   }
 }
