@@ -11,7 +11,7 @@ import Layout from "../components/Layout";
 import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
-import ThreeSteps from "../components/ThreeSteps";
+import Steps from "../components/Steps";
 
 const styles = (theme: Theme) => ({
   card: {
@@ -164,7 +164,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+                href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"
                 target="_blank"
               >
                 Obtenir un devis
@@ -178,7 +178,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           alignItems="flex-start"
           className={classes.grid}
         >
-          <ThreeSteps steps={steps} />
+          <Steps steps={steps} />
         </Grid>
         <Typography
           variant="h5"
@@ -197,7 +197,7 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
           <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Grid className={classes.grid}>
-          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"} />
         </Grid>
         <Typography
           variant="h5"

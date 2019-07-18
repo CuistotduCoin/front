@@ -12,7 +12,7 @@ import Layout from "../components/Layout";
 import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import TestimonySlider from "../components/TestimonySlider";
-import ThreeSteps from "../components/ThreeSteps";
+import Steps from "../components/Steps";
 
 const styles = (theme: Theme) => ({
   card: {
@@ -132,7 +132,7 @@ export class Box extends React.Component<IBoxProps, {}> {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+                href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"
                 target="_blank"
               >
                 Obtenir un devis
@@ -147,7 +147,7 @@ export class Box extends React.Component<IBoxProps, {}> {
           spacing={2}
           className={classes.grid}
         >
-          <ThreeSteps steps={steps} />
+          <Steps steps={steps} />
         </Grid>
         <Typography
           variant="h5"
@@ -168,7 +168,7 @@ export class Box extends React.Component<IBoxProps, {}> {
           <StaticSteper steps={stepsFAQ} />
         </Grid>
         <Grid className={classes.grid}>
-          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"} />
+          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"} />
         </Grid>
         <Typography
           variant="h5"

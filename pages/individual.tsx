@@ -77,7 +77,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         nameCook: "notre cuistot !",
         spot: "autour de Brest",
         totalSeat: 6,
-        typeform: "https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html",
+        typeform: "https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html",
         type: "Atelier privatif"
       }
     ];
@@ -92,7 +92,7 @@ export class Individual extends React.Component<IIndividualProps, IIndividualSta
         nameCook: "notre cuistot !",
         spot: "autour de Brest",
         totalSeat: 6,
-        typeform: "https://landbot.io/u/H-186508-QEDXCL0AMEI784R0/index.html",
+        typeform: "https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html",
         type: "Cuistot à domicile"
       }
     ];

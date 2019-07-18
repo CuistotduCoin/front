@@ -10,20 +10,26 @@ const styles = (theme: Theme) => ({
   },
 });
 
-interface IThreeStepsProps {
+interface IStepsProps {
   classes?: any;
   steps: any;
+  columns: any;
 }
 
-export class ThreeSteps extends React.Component<IThreeStepsProps, {}> {
+export class Steps extends React.Component<IStepsProps, {}> {
   public render() {
-    const { classes, steps } = this.props;
+    const { classes, steps, columns } = this.props;
+    let sm = 4
+
+    if (columns === 4) {
+      sm = 3;
+    }
 
     return (
       <>
         {
           steps.map((step, key) => (
-            <Grid item xs={12} sm={4} key={key}>
+            <Grid item xs={12} sm={sm} key={key}>
               <Grid
                 container
                 justify="space-between"
@@ -31,19 +37,19 @@ export class ThreeSteps extends React.Component<IThreeStepsProps, {}> {
                 direction="column"
                 className={classes.padding}
               >
-                <Grid container direction="row">
-                  {step.icon}
-                  <Typography
-                    variant="h6"
-                    component="h3"
-                    gutterBottom
-                  >
-                    {step.title}
-                  </Typography>
-                </Grid>
-                <Typography variant="body1" align="justify">
-                  {step.content}
+                {step.icon}
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  gutterBottom
+                >
+                  {step.title}
                 </Typography>
+                {step.content &&
+                  <Typography variant="body1" align="justify">
+                    {step.content}
+                  </Typography>
+                }
               </Grid>
             </Grid>
           ))
@@ -53,4 +59,4 @@ export class ThreeSteps extends React.Component<IThreeStepsProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(ThreeSteps as any) as any;
+export default withStyles(styles as any)(Steps as any) as any;

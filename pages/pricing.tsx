@@ -67,7 +67,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://landbot.io/u/H-117244-32JN5PQL01AGBAXB/index.html"
+                href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"
                 target="_blank"
               >
                 Obtenir un devis

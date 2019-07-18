@@ -1,32 +1,43 @@
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
+import Paper from '@material-ui/core/Paper';
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import Typography from "@material-ui/core/Typography";
 import get from "lodash.get";
-import HowToReg from "mdi-material-ui/AccountCheck";
 import AccountTie from "mdi-material-ui/AccountTie";
 import HomeAccount from "mdi-material-ui/HomeAccount";
-import MathCompass from 'mdi-material-ui/MathCompass'
-import StoreMallDirectory from "mdi-material-ui/Store";
 import React from "react";
 import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { compose } from "recompose";
+import FlipCard from '../components/FlipCard';
 import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
 import Link from "../components/Link";
 import MailchimpForm from "../components/MailchimpForm";
+import Steps from "../components/Steps";
 import TestimonySlider from "../components/TestimonySlider";
-import ThreeSteps from "../components/ThreeSteps";
 import { withData } from "../decorators";
 import { GetWorkshops } from "../queries";
 
 const styles = (theme: Theme) => ({
+  backgroundImageFront: {
+    bottom: 0,
+    left: 0,
+    position: "absolute",
+    right: 0,
+    top: 0,
+    backgroundPosition: "50%",
+    backgroundSize: "cover",
+    zIndex: -1
+  },
+  backgroundImageBack: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#00244a"
+  },
   card: {
     maxWidth: 310,
     margin: theme.spacing(2)
@@ -34,6 +45,10 @@ const styles = (theme: Theme) => ({
   cardBig: {
     maxWidth: 482,
     margin: theme.spacing(2)
+  },
+  flipBoard3DEffect: {
+    transform: "translateZ(90px) scale(.91)",
+    margin: theme.spacing(1)
   },
   media: {
     height: 140,
@@ -43,18 +58,41 @@ const styles = (theme: Theme) => ({
     maxWidth: 1080,
     padding: theme.spacing(3)
   },
+  gridFlipBox: {
+    height: "100%"
+  },
   image: {
     height: "100%",
     maxWidth: 320,
     width: "100%"
   },
+  negativeMargin: {
+    marginTop: -100
+  },
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
-    width: "calc(100% - 100px)",
+    width: "calc(100% - 100px)"
   },
   typography: {
     marginTop: 35
+  },
+  withBackground: {
+    backgroundImage: 'url(https://picsum.photos/1600/200)',
+    color: "white",
+    paddingTop: theme.spacing(7),
+    paddingBottom: theme.spacing(14)
+  },
+  typoFlipBoardTitle: {
+    color: "white",
+    textShadow: "1px 1px #585A5A",
+    textTransform: "uppercase"
+  },
+  typoFlipBoardSubtitle: {
+    color: "white"
+  },
+  link: {
+    padding: theme.spacing(1)
   }
 });
 
@@ -87,9 +125,19 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     const { tab } = this.state;
 
     const steps = [
-      { icon: <MathCompass fontSize="large" />, title: 'Un service sur mesure', content: "De l’organisation d’un atelier, du repas, à la journée au complet, nous concoctons avec vous une expérience culinaire unique et savoureuse." },
-      { icon: <HowToReg fontSize="large" />, title: 'Les meilleurs cuistots', content: "Nous offrons une diversité d’univers culinaires authentiques aux côtés des meilleurs traiteurs indépendants, artisans et commerçants locaux." },
-      { icon: <StoreMallDirectory fontSize="large" />, title: 'Des lieux adaptés', content: "Nous dénichons des lieux atypiques et chaleureux adaptés à vos événements. Itinérants, nous intervenons aussi dans votre entreprise ou à votre domicile." }
+      { icon: <img src="https://picsum.photos/200" />, title: 'ECOUTE', content: "Notre équipe se tient toujours à votre disposition pour concocter avec vos l’événement qui vous ressemble." },
+      { icon: <img src="https://picsum.photos/200" />, title: 'AUTHENTICITÉ', content: "Nous avons sélectionné des Cuistots du monde entier pour vous faire découvrir leurs cultures et leurs recettes familiales." },
+      { icon: <img src="https://picsum.photos/200" />, title: 'ECOLOGIE', content: "Afin de limiter notre impact écologique, nous ne travaillons qu’avec des matériaux recyclables et biodégradables." },
+      { icon: <img src="https://picsum.photos/200" />, title: 'PARTAGE', content: "Que vous réserviez un buffet ou un atelier, nous placerons toujours l'humain et les échanges avant tout !" }
+    ];
+
+    const destinations = [
+      { icon: <img src="https://picsum.photos/200" />, title: 'Moyen Orient' },
+      { icon: <img src="https://picsum.photos/200" />, title: 'Asie' },
+      { icon: <img src="https://picsum.photos/200" />, title: 'Amerique du Nord' },
+      { icon: <img src="https://picsum.photos/200" />, title: 'Afrique' },
+      { icon: <img src="https://picsum.photos/200" />, title: 'Europe' },
+      { icon: <img src="https://picsum.photos/200" />, title: 'Amérique du Sud' }
     ];
 
     const testimonies = [
@@ -159,44 +207,108 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     ];
 
     const productsB2B = [
-      { title: 'Ateliers teambuilding', content: `Nos ateliers de cuisine sont idéals pour les équipes de 4 à 100 personnes. Tous vos collaborateurs seront réunis autour d’un ou plusieurs de nos Cuistots pour concocter avec eux des plats d’ici et d’ailleurs.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding', linkAs: '/teambuilding' },
-      { title: 'Cocktails et réceptions', content: `A l’occasion de vos événements, faites confiance à nos Cuistots pour faire voyager les papilles de vos collaborateurs. A partir de 3€ par personne, laissez-vous tenter par l’originalité et surprenez vos invités.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business', linkAs: '/cocktail-business' },
-      { title: 'Pauses gourmandes', content: `Accueillez vos collaborateurs sur une note sucrée avant de commencer vos séminaires. Ou alors détendez vous lors d’une pause goûter lors de vos journées d’équipe.`, image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast', linkAs: '/breakfast' },
-      { title: 'Déjeuner', content: `Notre solution de plateau repas adapté à votre entreprise. Dites-nous l’univers culinaire que vous souhaitez et nous vous apporterons des petits-plats fait maison directement au bureau.`, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Evenement sur mesure', content: `Concoctez avec nous votre événement 100% sur-mesure (inauguration, noël, bilan positif, etc.). On s’occupe de tout : de la location du lieu, à l’animation de votre événement en passant par le service traiteur.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events-business', linkAs: '/events-business' }
+      { title: 'Accueil gourmand', content: 'Accueil gourmand lors de vos séminaires ou goûter pour une pause réconfortante avec vos équipes, faites appel à Cuistot du Coin.', image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast', linkAs: '/breakfast' },
+      { title: 'Cocktails et réceptions', content: 'Cocktail apéritif, déjeunatoire ou dinatoire concocté par nos cuistots. Surprenez vos invités !', image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business', linkAs: '/cocktail-business' },
+      { title: 'Repas à table', content: 'Entrée plat et dessert pour vos équipes pour vos petits et grands événements.', image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Plateau repas', content: `Pas le temps de vous déplacer au resto ? Nous vous apportons votre repas pour un voyage des papilles à l'intérieur de vos bureaux !`, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Buffet', content: 'Surprenez vos convives avec nos buffets aux saveurs de la cuisine du monde.', image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Ateliers teambuilding', content: `Atelier de cuisine de 4 à 100 personnes en compagnie d’un de nos Cuistots d’ici ou d’ailleurs. Idéal pour la cohésion d'équipe !`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding', linkAs: '/teambuilding' },
     ];
 
     const productsB2C = [
-      { title: 'Ateliers privatifs', content: `Faites appel à nos Cuistots pour réaliser un atelier de cuisine lors de vos événements entres amis ou en famille. Choisissez l’univers culinaire de votre choix et nos Cuistots viendront animer votre groupe.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
-      { title: 'Cocktails et réceptions', content: `A l’occasion de vos événements, faites confiance à nos Cuistots pour faire voyager les papilles de vos proches. A partir de 3€ par personne, laissez-vous tenter par l’originalité et surprenez vos invités.`, image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-3.jpg', link: '/cocktail', linkAs: '/cocktail' },
-      { title: 'Ateliers collectif', content: `Seul ou entre amis venez assistez à nos ateliers collectifs. Vous y participerez avec d’autres Gourmets venus apprendre à réaliser de nouvelles recettes venues d’ici et d’ailleurs.`, image: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
-      { title: 'Cuistot à domicile', content: `Un événement en particulier ou juste l’envie d'impressionner vos amis ? Faites appel à l’un de nos Cuistots qui viendra préparer votre repas à votre domicile pour vous et vos convives !`, image: 'https://static.cuistotducoin.com/img/home/privatechef.jpg', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
-      { title: 'Evenement sur mesure', content: `Concoctez avec nous votre événement 100% sur-mesure (fête d'anniversaire, EVJF, retour de noce, etc.). On s’occupe de tout : de la location du lieu, à l’animation de votre événement en passant par le service traiteur.`, image: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', link: '/events', linkAs: '/events' }
+      { title: 'Ateliers collectif', content: `Proposez une activité originale à vos amis et votre famille et réalisez un atelier de cuisine et partez à l’aventure avec l’un nos cuistots`, image: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
+      { title: 'Ateliers privatifs', content: `Evadez vous et faites le plein de découvertes culinaires aux côtés d’autres passionnés de cuisine`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
+      { title: 'Cuistot à domicile', content: `Mettez les pieds sous la table et laissez vous transporter vers de nouvelles destinations`, image: 'https://static.cuistotducoin.com/img/home/privatechef.jpg', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
     ];
 
     return (
-      <Layout>
+      <Layout component={
+        <Grid
+          container
+          justify="space-around"
+          className={classes.grid}
+        >
+          <Grid item>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"
+              target="_blank"
+            >
+              Obtenir un devis
+            </Button>
+          </Grid>
+        </Grid>
+      }>
+        <Grid
+          container
+          justify="space-around"
+          className={classes.grid}
+        >
+          <Grid item>
+            <img src="https://picsum.photos/300" />
+            <Typography
+              variant="h3"
+              align="center"
+              component="h3"
+              gutterBottom
+            >
+              SAVOUREZ
+            </Typography>
+          </Grid>
+          <Grid item>
+            <img src="https://picsum.photos/300" />
+            <Typography
+              variant="h3"
+              align="center"
+              component="h3"
+              gutterBottom
+            >
+              EXPLOREZ
+            </Typography>
+          </Grid>
+          <Grid item>
+            <img src="https://picsum.photos/300" />
+            <Typography
+              variant="h3"
+              align="center"
+              component="h3"
+              gutterBottom
+            >
+              PARTAGEZ
+            </Typography>
+          </Grid>
+        </Grid>
         <Typography
-          variant="h5"
+          variant="h3"
           align="center"
           component="h2"
           className={classes.typography}
         >
-          Que vous soyez une entreprise ou un particulier, nous révélons les saveurs et les talents pour vous garantir une expérience traiteur authentique et conviviale !
+          Bienvenue à bord du vol CDC en partance pour un voyage des papilles !
         </Typography>
         <Typography
-          variant="body2"
+          variant="h5"
           align="center"
           component="h3"
           gutterBottom
         >
-          D'ailleurs, vous êtes une entreprise ou un particulier ?
+          Lors de votre séjour vous aurez le choix de découvrir 11 destinations culinaires.
         </Typography>
-        <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary"        >
+        <Typography
+          variant="h5"
+          align="center"
+          component="h3"
+          gutterBottom
+        >
+          Au programme de cette aventure nous mettrons à l'honneur :<br /> le voyage des papilles, la découverte de nouvelles saveurs et la convivialité lors de vos événements
+        </Typography>
+        <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary">
           <Tab label="Entreprise" icon={<AccountTie />} />
           <Tab label="Particulier" icon={<HomeAccount />} />
         </Tabs>
-        {this.state.tab === 0 &&
+        {
+          this.state.tab === 0 &&
           <Grid
             container
             justify="space-around"
@@ -207,7 +319,8 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             {this.createCard(productsB2B, classes)}
           </Grid>
         }
-        {this.state.tab === 1 &&
+        {
+          this.state.tab === 1 &&
           <Grid
             container
             justify="space-around"
@@ -218,13 +331,63 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             {this.createCard(productsB2C, classes)}
           </Grid>
         }
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.withBackground}
+        >
+          Nos destinations
+        </Typography>
+        <div className={classes.negativeMargin}>
+          <Grid
+            container
+            justify="space-around"
+            spacing={2}
+            className={classes.grid}
+          >
+            {
+              destinations.map((destination, key) => (
+                <Grid item xs={12} sm={4} key={key}>
+                  <Paper>
+                    <Grid
+                      container
+                      justify="space-around"
+                      alignItems="center"
+                      direction="column"
+                    >
+                      {destination.icon}
+                      <Typography
+                        variant="h6"
+                        component="h3"
+                        gutterBottom
+                      >
+                        {destination.title}
+                      </Typography>
+                    </Grid>
+                  </Paper>
+                </Grid>
+              ))
+            }
+          </Grid>
+        </div>
+        <Typography
+          variant="h5"
+          align="center"
+          component="h2"
+          gutterBottom
+          className={classes.typography}
+        >
+          Nos valeurs
+        </Typography>
         <Grid
           container
           justify="space-around"
           spacing={2}
           className={classes.grid}
         >
-          <ThreeSteps steps={steps} />
+          <Steps steps={steps} columns={4} />
         </Grid>
         <Typography
           variant="h5"
@@ -283,30 +446,51 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
 
   private createCard = (products, classes) => {
     return (
-      <>
+      <Grid
+        container
+        justify="space-around"
+        alignItems="center"
+        className={classes.grid}
+        spacing={2}
+      >
         {
           products.map((product, key) => (
             <Link className={classes.link} key={key} href={product.link} as={product.linkAs}>
-              <Card className={classes.card}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={product.image}
-                  />
-                  <CardContent>
-                    <Typography align="center" variant="h5" component="h2" gutterBottom>
-                      {product.title}
-                    </Typography>
-                    <Typography align="justify" variant="body2" color="textSecondary" component="p">
-                      {product.content}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+              <FlipCard
+                front={
+                  <div className={classes.backgroundImageFront} style={{ backgroundImage: `url(${product.image})` }}>
+                    <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
+                      <Grid item className={classes.flipBoard3DEffect}>
+                        <Typography variant="h5" align="center" className={classes.typoFlipBoardTitle}>
+                          {product.title}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </div>
+                }
+                back={
+                  <div className={classes.backgroundImageBack}>
+                    <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
+                      <Grid item className={classes.flipBoard3DEffect}>
+                        <Typography variant="h5" align="center" className={classes.typoFlipBoardTitle}>
+                          {product.title}
+                        </Typography>
+                        <Typography variant="body1" align="center" className={classes.typoFlipBoardSubtitle} gutterBottom>
+                          {product.content}
+                        </Typography>
+                        <Grid container justify="space-around">
+                          <Button variant="contained" color="secondary">
+                            Obtenir plus d'infos
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </div>
+                } />
             </Link>
           ))
         }
-      </>
+      </Grid>
     );
   }
 }
