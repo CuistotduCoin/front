@@ -231,11 +231,11 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   </Grid>
                 </Link>
                 <Hidden mdDown>
-                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onClick={this.handleClickIndividual} className={classes.button} variant="outlined" color="primary">
+                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenIndividual} className={classes.button} variant="outlined" color="primary">
                     Pour les particuliers
                   </Button>
                 </Hidden>
-                <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} onClose={this.handleClose}>
+                <Menu anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} transformOrigin={{ vertical: 'top', horizontal: 'left' }} id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
                   <Link href="/individual?tabName=private" as="/individual/private"><MenuItem>Ateliers privatifs</MenuItem></Link>
                   <Link href="/individual?tabName=collective" as="/individual/collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
                   <Link href="/individual?tabName=privatecook" as="/individual/privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
@@ -243,11 +243,11 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
                 </Menu>
                 <Hidden mdDown>
-                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onClick={this.handleClickBusiness} className={classes.button} variant="outlined" color="primary">
+                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenBusiness} className={classes.button} variant="outlined" color="primary">
                     Pour les entreprises
                   </Button>
                 </Hidden>
-                <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} onClose={this.handleClose}>
+                <Menu anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} transformOrigin={{ vertical: 'top', horizontal: 'left' }} id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
                   <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
                   <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
                   <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
@@ -278,20 +278,16 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     );
   }
 
-  private handleClickIndividual = (event: React.MouseEvent<HTMLButtonElement>) => {
+  private handlePopoverOpenIndividual = (event: React.MouseEvent<HTMLButtonElement>) => {
     this.setState({ anchorElIndividual: event.currentTarget });
   }
 
-  private handleClickBusiness = (event: React.MouseEvent<HTMLButtonElement>) => {
+  private handlePopoverOpenBusiness = (event: React.MouseEvent<HTMLButtonElement>) => {
     this.setState({ anchorElBusiness: event.currentTarget });
   }
 
-  private handleClickMobile = (event: React.MouseEvent<HTMLButtonElement>) => {
-    this.setState({ anchorElMobile: event.currentTarget });
-  }
-
   private handleClose = () => {
-    this.setState({ anchorElIndividual: null, anchorElBusiness: null, anchorElMobile: null });
+    this.setState({ anchorElIndividual: null, anchorElBusiness: null });
   }
 }
 

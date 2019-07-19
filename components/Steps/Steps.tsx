@@ -25,6 +25,10 @@ export class Steps extends React.Component<IStepsProps, {}> {
       sm = 3;
     }
 
+    if (columns === 6) {
+      sm = 2;
+    }
+
     return (
       <>
         {
