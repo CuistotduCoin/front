@@ -55,7 +55,7 @@ interface IHeroProps {
 
 export class Hero extends React.Component<IHeroProps, {}> {
   public static defaultProps: Partial<IHeroProps> = {
-    height: 400,
+    height: 500,
   };
 
   private innerBackground = {
@@ -74,7 +74,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
           <Grid container direction="column" className={classes.textHero}>
             <Grid item>
               <Typography
-                variant="h4"
+                variant="h2"
                 align="center"
                 component="h1"
                 color="inherit"

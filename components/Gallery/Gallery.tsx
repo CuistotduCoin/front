@@ -48,7 +48,7 @@ export class Gallery extends React.Component<IGalleryProps, IGalleryState> {
     const { photos } = this.props;
 
     return (
-      <div>
+      <>
         <RGallery photos={photos} onClick={this.openLightbox} />
         <Lightbox images={photos}
           backdropClosesModal={true}
@@ -59,7 +59,7 @@ export class Gallery extends React.Component<IGalleryProps, IGalleryState> {
           currentImage={this.state.currentImage}
           isOpen={this.state.lightboxIsOpen}
         />
-      </div>
+      </>
     );
   }
 }

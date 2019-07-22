@@ -9,11 +9,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from "@material-ui/core/ListSubheader";
 import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import { Theme, withStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import MenuIcon from "mdi-material-ui/Menu";
 import Phone from 'mdi-material-ui/Phone';
 import React from "react";
@@ -48,7 +46,7 @@ const styles = (theme: Theme) => ({
 
 interface IHeaderProps {
   classes: any;
-  static?: boolean;
+  position?: any;
   hideSignUpLogin?: boolean;
   isLoggedIn: boolean;
 }
@@ -104,21 +102,21 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
       isLoggedIn
     } = this.props;
 
+    const productsB2C = [
+      { title: 'Ateliers privatifs', link: '/individual?tabName=private', linkAs: '/individual/private' },
+      { title: 'Ateliers collectif', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
+      { title: 'Cuistot à domicile', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
+      { title: 'Carte cadeau', link: '/gift', linkAs: '/gift' }
+    ]
+
     const productsB2B = [
       { title: 'Ateliers teambuilding', link: '/teambuilding', linkAs: '/teambuilding' },
       { title: 'Cocktails et réceptions', link: '/cocktail-business', linkAs: '/cocktail-business' },
-      { title: 'Pauses gourmandes', link: '/breakfast', linkAs: '/breakfast' },
-      { title: 'Déjeuner', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Evenement sur mesure', link: '/events-business', linkAs: '/events-business' }
+      { title: 'Pauses gourmandes & Petit déjeunez', link: '/breakfast', linkAs: '/breakfast' },
+      { title: 'Repas à table', link: '/sit-down-meal', linkAs: '/sit-down-meal' },
+      { title: 'Lunch Box', link: '/lunchbox', linkAs: '/lunchbox' },
+      { title: 'Buffet', link: '/buffet', linkAs: '/buffet' }
     ];
-
-    const productsB2C = [
-      { title: 'Ateliers privatifs', link: '/individual?tabName=private', linkAs: '/individual/private' },
-      { title: 'Cocktails et réceptions', link: '/cocktail', linkAs: '/cocktail' },
-      { title: 'Ateliers collectif', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
-      { title: 'Cuistot à domicile', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
-      { title: 'Evenement sur mesure', link: '/events', linkAs: '/events' }
-    ]
 
     const sideList = () => (
       <div
@@ -200,7 +198,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
 
     return (
       <AppBar
-        position={this.props.static ? "static" : "sticky"}
+        position={this.props.position}
         className={classes.appBar}
         color="inherit"
       >
@@ -223,11 +221,6 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                 <Link href="/">
                   <Grid container justify="flex-start" alignItems="center">
                     <Logo className={classes.logo} />
-                    <Hidden xsDown>
-                      <Typography className={classes.logoText} variant="h6" component="div">
-                        Cuistot du Coin
-                      </Typography>
-                    </Hidden>
                   </Grid>
                 </Link>
                 <Hidden mdDown>
@@ -235,26 +228,28 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     Pour les particuliers
                   </Button>
                 </Hidden>
-                <Menu anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} transformOrigin={{ vertical: 'top', horizontal: 'left' }} id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
-                  <Link href="/individual?tabName=private" as="/individual/private"><MenuItem>Ateliers privatifs</MenuItem></Link>
-                  <Link href="/individual?tabName=collective" as="/individual/collective"><MenuItem>Ateliers collectifs</MenuItem></Link>
-                  <Link href="/individual?tabName=privatecook" as="/individual/privatecook"><MenuItem>Cuistot à domicile</MenuItem></Link>
-                  <Link href="/cocktail"><MenuItem>Cocktails & réceptions</MenuItem></Link>
-                  <Link href="/events"><MenuItem>Evenement sur mesure</MenuItem></Link>
+                <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                  {productsB2C.map((product, index) => (
+                    <Link key={index} href={product.link} as={product.linkAs} passHref>
+                      <ListItem button key={product.title}>
+                        <ListItemText primary={product.title} />
+                      </ListItem>
+                    </Link>
+                  ))}
                 </Menu>
                 <Hidden mdDown>
                   <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenBusiness} className={classes.button} variant="outlined" color="primary">
                     Pour les entreprises
                   </Button>
                 </Hidden>
-                <Menu anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} transformOrigin={{ vertical: 'top', horizontal: 'left' }} id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
-                  <Link href="/teambuilding"><MenuItem>Ateliers teambuilding</MenuItem></Link>
-                  <Link href="/breakfast"><MenuItem>Petit déjeuner / Pauses gourmandes</MenuItem></Link>
-                  <Link href="/lunch"><MenuItem>Déjeuner / Lunch Box</MenuItem></Link>
-                  <Link href="/cocktail-business"><MenuItem>Cocktails & réceptions</MenuItem></Link>
-                  <Link href="/working-day"><MenuItem>Journée d'équipe</MenuItem></Link>
-                  <Link href="/events-business"><MenuItem>Evenement sur mesure</MenuItem></Link>
-                  <Link href="/work-council"><MenuItem>Comité d'Entreprise</MenuItem></Link>
+                <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                  {productsB2B.map((product, index) => (
+                    <Link key={index} href={product.link} as={product.linkAs} passHref>
+                      <ListItem button key={product.title}>
+                        <ListItemText primary={product.title} />
+                      </ListItem>
+                    </Link>
+                  ))}
                 </Menu>
               </Grid>
             </Grid>

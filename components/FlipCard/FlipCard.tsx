@@ -5,8 +5,8 @@ import React from "react";
 const styles = (theme: Theme) => ({
   container: {
     backgroundColor: "transparent",
-    width: 300,
-    height: 200,
+    width: 360,
+    height: 280,
     perspective: '1000px'
   },
   flipper: {

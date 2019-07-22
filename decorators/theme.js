@@ -6,19 +6,19 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      dark: green[700],
-      light: green[300],
-      main: green[500]
+      dark: green[900],
+      light: green[500],
+      main: green[700]
     },
     secondary: {
-      dark: red[700],
+      dark: "#BF263C",
       light: red[300],
-      main: red[500]
+      main: "#D8334A"
     }
   },
   typography: {
-    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
-    fontSize: 14,
+    fontFamily: "Advent Pro",
+    fontSize: 16,
     color: "rgba(0, 0, 0, 0.87)"
   }
 });

@@ -3533,9 +3533,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.495.0:
-  version "2.495.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.495.0.tgz#0b0ad8fcf581cb7bb858864fab88d461f0e67677"
+aws-sdk@^2.496.0:
+  version "2.496.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.496.0.tgz#073bf36ed868891a656a895bf2c548b2d0bc3588"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -9223,9 +9223,9 @@ react-draggable@^3.1.1:
     classnames "^2.2.5"
     prop-types "^15.6.0"
 
-react-dropzone@^10.1.5:
-  version "10.1.5"
-  resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-10.1.5.tgz#5f2817ab924b270010c7034fe01f49b6240b9c91"
+react-dropzone@^10.1.6:
+  version "10.1.6"
+  resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-10.1.6.tgz#724cd9018d045689680579ab6874d54e05f5affa"
   dependencies:
     attr-accept "^1.1.3"
     file-selector "^0.1.11"
@@ -9370,9 +9370,9 @@ react-mailchimp-subscribe@^2.1.0:
     prop-types "^15.5.10"
     to-querystring "^1.0.4"
 
-react-photo-gallery@^6.3.4:
-  version "6.3.4"
-  resolved "https://registry.yarnpkg.com/react-photo-gallery/-/react-photo-gallery-6.3.4.tgz#0bda4d9060fe08bc350066a84c7854e636dabcf6"
+react-photo-gallery@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/react-photo-gallery/-/react-photo-gallery-8.0.0.tgz#04ff9f902a2342660e63e6817b4f010488db02b8"
   dependencies:
     prop-types "~15.7.2"
     resize-observer-polyfill "^1.5.0"

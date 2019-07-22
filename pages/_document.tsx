@@ -106,24 +106,24 @@ class MyDocument extends Document {
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            href="https://fonts.googleapis.com/css?family=Advent+Pro:300,400,500,700&display=swap"
           />
           <style>{`
           body {
             margin: 0;
             padding: 0;
-            font-family: Roboto;
+            font-family: 'Advent Pro', sans-serif;
           }
 
           *[class*="MuiTypography-headline-"] {
-            font-family: 'PT Sans', sans-serif !important;
+            font-family: 'Advent Pro', sans-serif !important;
             font-weight: bold !important;
           }
 
           *[class*="MuiTypography-title-"],
           *[class*="MuiTypography-subheading-"],
           *[class*="MuiTypography-body2-"] {
-            font-family: 'PT Sans', sans-serif !important;
+            font-family: 'Advent Pro', sans-serif !important;
           }
 
           /* Input Range */

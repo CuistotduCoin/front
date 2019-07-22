@@ -150,10 +150,10 @@ export const getMetaInfo = () => {
       metaTitle: "Carte cadeau pour un atelier de cuisine",
     },
     'index': {
-      description: "Embarquez pour une expérience culinaire savoureuse",
+      description: "Vos papilles voyagent aux côtés de nos cuistots",
       href: "https://www.cuistotducoin.com",
       metaDescription: "Pour particuliers et entreprises découvrez nos saveurs authentiques en toutes occasions (avec simplicité et convivialité)",
-      title: "Les saveurs du monde se cachent au coin de chez vous",
+      title: "CUISTOT DU COIN",
       metaTitle: "Cuistot du Coin : Organisateur d'événements culinaires",
     },
     'individual': {

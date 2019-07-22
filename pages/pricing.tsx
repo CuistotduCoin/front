@@ -80,7 +80,7 @@ export class Pricing extends React.Component<IPricingProps, IPricingState> {
           <Tab label="Atelier collectif" />
           <Tab label="Atelier privatif" />
           <Tab label="Cocktail" />
-          <Tab label="Box Repas" />
+          <Tab label="Lunch box" />
           <Tab label="Journée complete" />
         </Tabs>
         {tab === 0 && this.renderPricingCollectiveWorkshop(classes)}

@@ -2,9 +2,11 @@ import grey from "@material-ui/core/colors/grey";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import FacebookIcon from 'mdi-material-ui/Facebook';
-import InstagramIcon from 'mdi-material-ui/Instagram';
-import TwitterIcon from 'mdi-material-ui/Twitter';
+import Facebook from 'mdi-material-ui/Facebook';
+import GiftOutline from 'mdi-material-ui/GiftOutline';
+import Instagram from 'mdi-material-ui/Instagram';
+import Linkedin from 'mdi-material-ui/Linkedin';
+import Twitter from 'mdi-material-ui/Twitter';
 import React from "react";
 import Link from "../../components/Link";
 
@@ -48,7 +50,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
 
     return (
       <div className={classes.root}>
-        <Grid container justify="space-between" className={classes.grid}>
+        <Grid container justify="space-around" className={classes.grid}>
           <Grid item>
             <Grid
               container
@@ -57,13 +59,37 @@ export class Footer extends React.Component<IFooterProps, {}> {
               direction="column"
             >
               <Typography component="p" variant="h6" className={classes.title} color="primary">
-                Cuistot du Coin
+                Traiteur
               </Typography>
-              <Link href="/team" className={classes.subheading}>
-                L'équipe
+              <Link href="/testimony" className={classes.subheading}>
+                Témoignages
               </Link>
-              <Link href="/mission" className={classes.subheading}>
-                Notre mission
+              <Link href="/become-cook" className={classes.subheading}>
+                Devenir Partenaires
+              </Link>
+              <Link href="/invite" className={classes.subheading}>
+                Parrainage
+              </Link>
+              <Link href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+                Questions Fréquentes
+              </Link>
+              <Link href="/gift" className={classes.subheading}>
+                <GiftOutline fontSize="small" titleAccess="carte cadeau" />Carte Cadeau
+              </Link>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Grid
+              container
+              justify="space-between"
+              alignItems="flex-start"
+              direction="column"
+            >
+              <Typography component="p" variant="h6" className={classes.title} color="primary">
+                + sur Cuistot du Coin
+              </Typography>
+              <Link href="/team-and-mission" className={classes.subheading}>
+                Équipe & Mission
               </Link>
               <Link href="/join" className={classes.subheading}>
                 Nous rejoindre
@@ -72,99 +98,19 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 Contact & Presse
               </Link>
               <Link href="/terms" className={classes.subheading}>
-                Conditions légales
-              </Link>
-              <Link href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
-                FAQ
+                Conditions générales & Mentions légales
               </Link>
               <Link href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
                 Blog
               </Link>
             </Grid>
           </Grid>
-          <Grid item>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography component="p" variant="h6" className={classes.title} color="primary">
-                Gourmets
-              </Typography>
-              <Link href="/testimony-gourmet" className={classes.subheading}>
-                Temoignages
-              </Link>
-              <Link href="/gift" className={classes.subheading}>
-                Carte Cadeau
-              </Link>
-              <Link href="/invite" className={classes.subheading}>
-                Parrainage
-              </Link>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography component="p" variant="h6" className={classes.title} color="primary">
-                Cuistots
-              </Typography>
-              <Link href="/testimony-cook" className={classes.subheading}>
-                Temoignages
-              </Link>
-              <Link href="/become-cook" className={classes.subheading}>
-                Devenir Cuistot
-              </Link>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography component="p" variant="h6" className={classes.title} color="primary">
-                Entreprises
-              </Typography>
-              <Link href="/testimony-business" className={classes.subheading}>
-                Temoignages
-              </Link>
-              <Link href="/invite-business" className={classes.subheading}>
-                Parrainage
-              </Link>
-              <Link href="/terms-pro" className={classes.subheading}>
-                Conditions légales
-              </Link>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="flex-start"
-              direction="column"
-            >
-              <Typography component="p" variant="h6" className={classes.title} color="primary">
-                Partenaires
-              </Typography>
-              <Link href="/testimony-partner" className={classes.subheading}>
-                Temoignages
-              </Link>
-              <Link href="/become-partner" className={classes.subheading}>
-                Devenir partenaires
-              </Link>
-            </Grid>
-          </Grid>
         </Grid>
         <div className={classes.icons}>
-          <a href="https://www.facebook.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><FacebookIcon titleAccess="facebook" /></a>
-          <a href="https://twitter.com/cuistotducoin?lang=fr" target="_blank" rel="noopener noreferrer"><TwitterIcon titleAccess="twitter" /></a>
-          <a href="https://www.instagram.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><InstagramIcon titleAccess="instagram" /></a>
+          <a href="https://www.facebook.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><Facebook titleAccess="facebook" /></a>
+          <a href="https://twitter.com/cuistotducoin?lang=fr" target="_blank" rel="noopener noreferrer"><Twitter titleAccess="twitter" /></a>
+          <a href="https://www.instagram.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><Instagram titleAccess="instagram" /></a>
+          <a href="https://www.linkedin.com/company/cuistot-du-coin" target="_blank" rel="noopener noreferrer"><Linkedin titleAccess="linkedin" /></a>
         </div>
       </div>
     );

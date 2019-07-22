@@ -4,6 +4,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import components from "../content/components";
 // @ts-ignore
+import Content2 from "../content/terms-pro.mdx";
+// @ts-ignore
 import Content from "../content/terms.mdx";
 
 const styles = (theme: Theme) => ({
@@ -32,6 +34,7 @@ export class Terms extends React.Component<ITermsProps, {}> {
           className={classes.grid}
         >
           <Content components={components} />
+          <Content2 components={components} />
         </Grid>
       </Layout>
     );

@@ -1,4 +1,5 @@
 import Button from '@material-ui/core/Button';
+import teal from "@material-ui/core/colors/teal";
 import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
 import { Theme, withStyles } from "@material-ui/core/styles";
@@ -18,7 +19,6 @@ import Layout from "../components/Layout";
 import Link from "../components/Link";
 import MailchimpForm from "../components/MailchimpForm";
 import Steps from "../components/Steps";
-import TestimonySlider from "../components/TestimonySlider";
 import { withData } from "../decorators";
 import { GetWorkshops } from "../queries";
 
@@ -34,9 +34,9 @@ const styles = (theme: Theme) => ({
     zIndex: -1
   },
   backgroundImageBack: {
-    width: "100%",
+    backgroundColor: teal[800],
     height: "100%",
-    backgroundColor: "#00244a"
+    width: "100%"
   },
   card: {
     maxWidth: 310,
@@ -55,7 +55,7 @@ const styles = (theme: Theme) => ({
   },
   grid: {
     margin: "0px auto",
-    maxWidth: 1080,
+    maxWidth: 1220,
     padding: theme.spacing(3)
   },
   gridFlipBox: {
@@ -75,7 +75,7 @@ const styles = (theme: Theme) => ({
     width: "calc(100% - 100px)"
   },
   typography: {
-    marginTop: 35
+    marginTop: 15
   },
   withBackground: {
     backgroundImage: 'url(https://picsum.photos/1600/200)',
@@ -196,14 +196,14 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
       "https://cuistotducoin.us12.list-manage.com/subscribe/post?u=892dbf9576b5acc9068d06a13&id=5e528d7fa8";
 
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', width: 1, height: 1, caption: "Atelier cacao", alt: "Atelier cacao" },
-      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-3.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
-      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
-      { src: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', width: 1, height: 1, caption: "Atelier japonais", alt: "Atelier japonais" },
-      { src: 'https://static.cuistotducoin.com/img/home/atelier-monde.jpg', width: 1, height: 1, caption: "Atelier monde", alt: "Atelier monde" },
-      { src: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', width: 1, height: 1, caption: "Atelier cocktail", alt: "Atelier cocktail" },
-      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-2.jpg', width: 1, height: 1, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
-      { src: 'https://static.cuistotducoin.com/img/home/atelier-bresilien.jpg', width: 1, height: 1, caption: "Atelier bresilien", alt: "Atelier bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', width: 800, height: 600, caption: "Atelier cacao", alt: "Atelier cacao" },
+      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-3.jpg', width: 800, height: 600, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', width: 600, height: 600, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', width: 600, height: 600, caption: "Atelier japonais", alt: "Atelier japonais" },
+      { src: 'https://static.cuistotducoin.com/img/home/atelier-monde.jpg', width: 762, height: 600, caption: "Atelier monde", alt: "Atelier monde" },
+      { src: 'https://static.cuistotducoin.com/img/home/atelier-cocktail.jpg', width: 800, height: 600, caption: "Atelier cocktail", alt: "Atelier cocktail" },
+      { src: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-2.jpg', width: 600, height: 600, caption: "Buffet-bresilien", alt: "Buffet bresilien" },
+      { src: 'https://static.cuistotducoin.com/img/home/atelier-bresilien.jpg', width: 800, height: 800, caption: "Atelier bresilien", alt: "Atelier bresilien" },
     ];
 
     const productsB2B = [
@@ -222,86 +222,46 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     ];
 
     return (
-      <Layout component={
-        <Grid
-          container
-          justify="space-around"
-          className={classes.grid}
-        >
+      <Layout position="absolute" color="secondary" component={
+        <Grid container justify="space-around" className={classes.grid}>
           <Grid item>
-            <Button
-              variant="contained"
-              color="secondary"
-              href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"
-              target="_blank"
-            >
+            <Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
               Obtenir un devis
             </Button>
           </Grid>
         </Grid>
       }>
-        <Grid
-          container
-          justify="space-around"
-          className={classes.grid}
-        >
+        <Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
+          Bienvenue à bord du vol CDC en partance pour un voyage des papilles !
+        </Typography>
+        <Grid container justify="space-around" className={classes.grid}>
           <Grid item>
             <img src="https://picsum.photos/300" />
-            <Typography
-              variant="h3"
-              align="center"
-              component="h3"
-              gutterBottom
-            >
+            <Typography variant="h3" align="center" component="h3" color="secondary">
               SAVOUREZ
             </Typography>
           </Grid>
           <Grid item>
             <img src="https://picsum.photos/300" />
-            <Typography
-              variant="h3"
-              align="center"
-              component="h3"
-              gutterBottom
-            >
+            <Typography variant="h3" align="center" component="h3" color="secondary">
               EXPLOREZ
             </Typography>
           </Grid>
           <Grid item>
             <img src="https://picsum.photos/300" />
-            <Typography
-              variant="h3"
-              align="center"
-              component="h3"
-              gutterBottom
-            >
+            <Typography variant="h3" align="center" component="h3" color="secondary">
               PARTAGEZ
             </Typography>
           </Grid>
         </Grid>
-        <Typography
-          variant="h3"
-          align="center"
-          component="h2"
-          className={classes.typography}
-        >
-          Bienvenue à bord du vol CDC en partance pour un voyage des papilles !
+        <Typography variant="h5" align="center" component="h3" gutterBottom>
+          Lors de votre séjour vous aurez le choix de découvrir <b>11 destinations culinaires</b>.
         </Typography>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h3"
-          gutterBottom
-        >
-          Lors de votre séjour vous aurez le choix de découvrir 11 destinations culinaires.
+        <Typography variant="h5" align="center" component="h3" gutterBottom>
+          Au programme de cette aventure nous mettrons à l'honneur :<br /><b>le voyage des papilles, la découverte de nouvelles saveurs et la convivialité lors de vos événements</b>
         </Typography>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h3"
-          gutterBottom
-        >
-          Au programme de cette aventure nous mettrons à l'honneur :<br /> le voyage des papilles, la découverte de nouvelles saveurs et la convivialité lors de vos événements
+        <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.typography} style={{ "margin-top": "20px" }}>
+          AU MENU
         </Typography>
         <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary">
           <Tab label="Entreprise" icon={<AccountTie />} />
@@ -309,13 +269,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
         </Tabs>
         {
           this.state.tab === 0 &&
-          <Grid
-            container
-            justify="space-around"
-            alignItems="center"
-            className={classes.grid}
-            spacing={2}
-          >
+          <Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
             {this.createCard(productsB2B, classes)}
           </Grid>
         }
@@ -331,32 +285,16 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             {this.createCard(productsB2C, classes)}
           </Grid>
         }
-        <Typography
-          variant="h5"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.withBackground}
-        >
+        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.withBackground}>
           Nos destinations
         </Typography>
         <div className={classes.negativeMargin}>
-          <Grid
-            container
-            justify="space-around"
-            spacing={2}
-            className={classes.grid}
-          >
+          <Grid container justify="space-around" spacing={2} className={classes.grid}>
             {
               destinations.map((destination, key) => (
                 <Grid item xs={12} sm={4} key={key}>
                   <Paper>
-                    <Grid
-                      container
-                      justify="space-around"
-                      alignItems="center"
-                      direction="column"
-                    >
+                    <Grid container justify="space-around" alignItems="center" direction="column">
                       {destination.icon}
                       <Typography
                         variant="h6"
@@ -372,60 +310,25 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             }
           </Grid>
         </div>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.typography}
-        >
+        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
           Nos valeurs
         </Typography>
-        <Grid
-          container
-          justify="space-around"
-          spacing={2}
-          className={classes.grid}
-        >
+        <Grid container justify="space-around" spacing={2} className={classes.grid}>
           <Steps steps={steps} columns={4} />
         </Grid>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.typography}
-        >
+        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
           Ils nous font confiance
         </Typography>
-        <div className={classes.slider}>
-          <TestimonySlider testimonies={testimonies} />
-        </div>
-        <Typography
-          variant="h5"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.typography}
-        >
+        <Grid container justify="space-around" spacing={2} className={classes.grid}>
+          toto
+        </Grid>
+        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
           Suivez notre aventure !
         </Typography>
-        <Typography
-          variant="body1"
-          align="center"
-          component="h2"
-          gutterBottom
-          className={classes.typography}
-        >
+        <Typography variant="body1" align="center" component="h2" gutterBottom className={classes.typography}>
           Recevez notre actu et ne manquez pas nos prochains événements
         </Typography>
-        <Grid
-          container
-          justify="space-around"
-          alignItems="center"
-          className={classes.grid}
-          spacing={2}
-        >
+        <Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
           <Grid item sm={6} xs={12}>
             <MailchimpSubscribe
               url={urlMailChimp}
@@ -446,13 +349,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
 
   private createCard = (products, classes) => {
     return (
-      <Grid
-        container
-        justify="space-around"
-        alignItems="center"
-        className={classes.grid}
-        spacing={2}
-      >
+      <Grid container justify="space-around" alignItems="center" className={classes.grid}>
         {
           products.map((product, key) => (
             <Link className={classes.link} key={key} href={product.link} as={product.linkAs}>
