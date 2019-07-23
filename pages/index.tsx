@@ -39,20 +39,9 @@ const styles = (theme: Theme) => ({
     height: "100%",
     width: "100%"
   },
-  card: {
-    maxWidth: 310,
-    margin: theme.spacing(2)
-  },
-  cardBig: {
-    maxWidth: 482,
-    margin: theme.spacing(2)
-  },
   flipBoard3DEffect: {
     transform: "translateZ(90px) scale(.91)",
     margin: theme.spacing(1)
-  },
-  media: {
-    height: 140,
   },
   grid: {
     padding: theme.spacing(3)
@@ -60,25 +49,17 @@ const styles = (theme: Theme) => ({
   gridFlipBox: {
     height: "100%"
   },
-  image: {
-    height: "100%",
-    maxWidth: 320,
-    width: "100%"
-  },
   negativeMargin: {
     marginTop: -100
   },
-  slider: {
-    margin: "0px auto",
-    paddingBottom: 30,
-    width: "calc(100% - 100px)"
+  title: {
+    marginTop: theme.spacing(7)
   },
   typography: {
     marginTop: 15
   },
   withBackground: {
     backgroundImage: 'url(https://static.cuistotducoin.com/img/home/nos-destinations.jpg)',
-    color: "white",
     paddingTop: theme.spacing(7),
     paddingBottom: theme.spacing(14)
   },
@@ -90,7 +71,7 @@ const styles = (theme: Theme) => ({
   typoFlipBoardSubtitle: {
     color: "white"
   },
-  link: {
+  padding: {
     padding: theme.spacing(1)
   }
 });
@@ -123,7 +104,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     const { classes } = this.props;
     const { tab } = this.state;
 
-    const steps = [
+    const values = [
       { icon: <img src="https://static.cuistotducoin.com/img/home/ecoute.jpg" />, title: 'ECOUTE', content: "Notre équipe se tient toujours à votre disposition pour concocter avec vos l’événement qui vous ressemble." },
       { icon: <img src="https://static.cuistotducoin.com/img/home/authenticite.jpg" />, title: 'AUTHENTICITÉ', content: "Nous avons sélectionné des Cuistots du monde entier pour vous faire découvrir leurs cultures et leurs recettes familiales." },
       { icon: <img src="https://static.cuistotducoin.com/img/home/ecologie.jpg" />, title: 'ECOLOGIE', content: "Afin de limiter notre impact écologique, nous ne travaillons qu’avec des matériaux recyclables et biodégradables." },
@@ -229,7 +210,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
           <Typography variant="h5" align="center" component="h3" gutterBottom>
             Au programme de cette aventure nous mettrons à l'honneur :<br /><b>le voyage des papilles, la découverte de nouvelles saveurs et la convivialité lors de vos événements</b>
           </Typography>
-          <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.typography} style={{ "margin-top": "20px" }}>
+          <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.title}>
             AU MENU
         </Typography>
           <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary">
@@ -255,8 +236,8 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             </Grid>
           }
         </Container>
-        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.withBackground}>
-          Nos destinations
+        <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.withBackground}>
+          NOS DESTINATIONS
         </Typography>
         <Container maxWidth="lg">
           <div className={classes.negativeMargin}>
@@ -281,14 +262,14 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
               }
             </Grid>
           </div>
-          <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
-            Nos valeurs
+          <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.typography}>
+            NOS VALEURS
         </Typography>
           <Grid container justify="space-around" spacing={2} className={classes.grid}>
-            <Steps steps={steps} columns={4} />
+            <Steps steps={values} columns={4} />
           </Grid>
-          <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
-            Ils nous font confiance
+          <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.title}>
+            ILS NOUS FONT CONFIANCE
         </Typography>
           <Grid container justify="space-around" spacing={2} className={classes.grid}>
             {
@@ -297,25 +278,23 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
               ))
             }
           </Grid>
-          <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
-            Suivez notre aventure !
+          <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.title}>
+            SUIVEZ NOTRE AVENTURE
         </Typography>
           <Typography variant="body1" align="center" component="h2" gutterBottom className={classes.typography}>
             Recevez notre actu et ne manquez pas nos prochains événements
         </Typography>
-          <Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
-            <Grid item sm={6} xs={12}>
-              <MailchimpSubscribe
-                url={urlMailChimp}
-                render={({ subscribe, status, message }) => (
-                  <MailchimpForm
-                    status={status}
-                    message={message}
-                    onValidated={formData => subscribe(formData)}
-                  />
-                )}
-              />
-            </Grid>
+          <Grid container justify="space-around" alignItems="center" className={classes.grid} >
+            <MailchimpSubscribe
+              url={urlMailChimp}
+              render={({ subscribe, status, message }) => (
+                <MailchimpForm
+                  status={status}
+                  message={message}
+                  onValidated={formData => subscribe(formData)}
+                />
+              )}
+            />
           </Grid>
         </Container>
         <Gallery photos={photos} />
@@ -325,42 +304,43 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
 
   private createCard = (products, classes) => {
     return (
-      <Grid container justify="space-around" alignItems="center" className={classes.grid}>
+      <Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
         {
           products.map((product, key) => (
-            <Link className={classes.link} key={key} href={product.link} as={product.linkAs}>
-              <FlipCard
-                front={
-                  <div className={classes.backgroundImageFront} style={{ backgroundImage: `url(${product.image})` }}>
-                    <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
-                      <Grid item className={classes.flipBoard3DEffect}>
-                        <Typography variant="h5" align="center" className={classes.typoFlipBoardTitle}>
-                          {product.title}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                  </div>
-                }
-                back={
-                  <div className={classes.backgroundImageBack}>
-                    <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
-                      <Grid item className={classes.flipBoard3DEffect}>
-                        <Typography variant="h5" align="center" className={classes.typoFlipBoardTitle}>
-                          {product.title}
-                        </Typography>
-                        <Typography variant="body1" align="center" className={classes.typoFlipBoardSubtitle} gutterBottom>
-                          {product.content}
-                        </Typography>
-                        <Grid container justify="space-around">
-                          <Button variant="contained" color="secondary">
-                            Obtenir plus d'infos
-                          </Button>
+            <Grid item sm={4} xs={12} key={key}>
+              <Link href={product.link} as={product.linkAs}>
+                <FlipCard
+                  front={
+                    <div className={classes.backgroundImageFront} style={{ backgroundImage: `url(${product.image})` }}>
+                      <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
+                        <Grid item className={classes.flipBoard3DEffect}>
+                          <Typography variant="h3" align="center" className={classes.typoFlipBoardTitle}>
+                            {product.title}
+                          </Typography>
                         </Grid>
                       </Grid>
-                    </Grid>
-                  </div>
-                } />
-            </Link>
+                    </div>
+                  }
+                  back={
+                    <div className={classes.backgroundImageBack}>
+                      <Grid container alignContent="center" justify="center" className={classes.gridFlipBox}>
+                        <Grid item className={classes.flipBoard3DEffect}>
+                          <Typography variant="h5" align="center" className={classes.typoFlipBoardTitle}>
+                            {product.title}
+                          </Typography>
+                          <Typography variant="body1" align="center" className={classes.typoFlipBoardSubtitle} gutterBottom>
+                            {product.content}
+                          </Typography>
+                          <Grid container justify="space-around">
+                            <Button variant="contained" color="secondary">
+                              Obtenir plus d'infos
+                          </Button>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </div>
+                  } />
+              </Link></Grid>
           ))
         }
       </Grid>
