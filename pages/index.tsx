@@ -77,7 +77,7 @@ const styles = (theme: Theme) => ({
     marginTop: 15
   },
   withBackground: {
-    backgroundImage: 'url(https://picsum.photos/1600/200)',
+    backgroundImage: 'url(https://static.cuistotducoin.com/img/home/nos-destinations.jpg)',
     color: "white",
     paddingTop: theme.spacing(7),
     paddingBottom: theme.spacing(14)
@@ -124,70 +124,39 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     const { tab } = this.state;
 
     const steps = [
-      { icon: <img src="https://picsum.photos/200" />, title: 'ECOUTE', content: "Notre équipe se tient toujours à votre disposition pour concocter avec vos l’événement qui vous ressemble." },
-      { icon: <img src="https://picsum.photos/200" />, title: 'AUTHENTICITÉ', content: "Nous avons sélectionné des Cuistots du monde entier pour vous faire découvrir leurs cultures et leurs recettes familiales." },
-      { icon: <img src="https://picsum.photos/200" />, title: 'ECOLOGIE', content: "Afin de limiter notre impact écologique, nous ne travaillons qu’avec des matériaux recyclables et biodégradables." },
-      { icon: <img src="https://picsum.photos/200" />, title: 'PARTAGE', content: "Que vous réserviez un buffet ou un atelier, nous placerons toujours l'humain et les échanges avant tout !" }
+      { icon: <img src="https://static.cuistotducoin.com/img/home/ecoute.jpg" />, title: 'ECOUTE', content: "Notre équipe se tient toujours à votre disposition pour concocter avec vos l’événement qui vous ressemble." },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/authenticite.jpg" />, title: 'AUTHENTICITÉ', content: "Nous avons sélectionné des Cuistots du monde entier pour vous faire découvrir leurs cultures et leurs recettes familiales." },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/ecologie.jpg" />, title: 'ECOLOGIE', content: "Afin de limiter notre impact écologique, nous ne travaillons qu’avec des matériaux recyclables et biodégradables." },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/partage.jpg" />, title: 'PARTAGE', content: "Que vous réserviez un buffet ou un atelier, nous placerons toujours l'humain et les échanges avant tout !" }
     ];
 
     const destinations = [
-      { icon: <img src="https://picsum.photos/200" />, title: 'Moyen Orient' },
-      { icon: <img src="https://picsum.photos/200" />, title: 'Asie' },
-      { icon: <img src="https://picsum.photos/200" />, title: 'Amerique du Nord' },
-      { icon: <img src="https://picsum.photos/200" />, title: 'Afrique' },
-      { icon: <img src="https://picsum.photos/200" />, title: 'Europe' },
-      { icon: <img src="https://picsum.photos/200" />, title: 'Amérique du Sud' }
+      { icon: <img src="https://static.cuistotducoin.com/img/home/moyen-orient.jpg" />, title: 'Moyen Orient' },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/asie.jpg" />, title: 'Asie' },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/moyen-orient.jpg" />, title: 'Amerique du Nord' },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/afrique.jpg" />, title: 'Afrique' },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/europe.jpg" />, title: 'Europe' },
+      { icon: <img src="https://static.cuistotducoin.com/img/home/amerique-du-sud.jpg" />, title: 'Amérique du Sud' }
     ];
 
     const testimonies = [
       {
-        context: "Buffet aux couleurs de la cuisine brésilienne pour 15 collaborateurs",
-        comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où on se sent vite très bien. Merci pour cette respiration",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
-        name: "Arkea",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
       },
       {
-        context: "Atelier, repas, location et réunion pour une équipe de 15 collaborateurs",
-        comment: "Lieu magnifique, prestation au top. Tout était parfait : l'atelier, l'animation, l'organisation ainsi que le lieu.",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
-        name: "Lidl",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/lidl.jpg",
       },
       {
-        context: "Atelier pour une équipe de 25 collaborateurs",
-        comment: "Grand merci pour votre prestation. Les retours sont top et correspondent vraiment aux attentes de mon associé et moi même, bravo.",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/bourhis.jpg",
-        name: "Cabinet Bourhis",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/bourhis.jpg",
       },
       {
-        context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
-        comment: "Très bonnes saveurs. Cuisine de qualité.",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/seimi.jpg",
-        name: "Seimi",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/seimi.jpg",
       },
       {
-        context: "Atelier pour une équipe de 70 collaborateurs",
-        comment: "Génial ! Merci pour cette prestation.",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/apside.jpg",
-        name: "Apside",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/apside.jpg",
       },
       {
-        context: "Atelier pour une équipe de 70 collaborateurs",
-        comment: `Que des retours positifs concernant le cuistot et la soirée. Très bonne prestation.
-        L’Atelier a été apprécié par tout le monde, que ce soit l’activité où la bonne humeur du cuistot. Les plats dégustés lors du repas en fin d’atelier étaient très bons.`,
-        image:
-          "https://static.cuistotducoin.com/img/testimony/ixblue.jpg",
-        name: "CE Ixblue",
-        rating: 5
+        image: "https://static.cuistotducoin.com/img/testimony/ixblue.jpg",
       },
     ];
 
@@ -207,17 +176,17 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
 
     const productsB2B = [
       { title: 'Accueil gourmand', content: 'Accueil gourmand lors de vos séminaires ou goûter pour une pause réconfortante avec vos équipes, faites appel à Cuistot du Coin.', image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg', link: '/breakfast', linkAs: '/breakfast' },
-      { title: 'Cocktails et réceptions', content: 'Cocktail apéritif, déjeunatoire ou dinatoire concocté par nos cuistots. Surprenez vos invités !', image: 'https://static.cuistotducoin.com/img/home/buffet-bresilien-1.jpg', link: '/cocktail-business', linkAs: '/cocktail-business' },
-      { title: 'Repas à table', content: 'Entrée plat et dessert pour vos équipes pour vos petits et grands événements.', image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Plateau repas', content: `Pas le temps de vous déplacer au resto ? Nous vous apportons votre repas pour un voyage des papilles à l'intérieur de vos bureaux !`, image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Buffet', content: 'Surprenez vos convives avec nos buffets aux saveurs de la cuisine du monde.', image: 'https://static.cuistotducoin.com/img/home/lunch.jpg', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Ateliers teambuilding', content: `Atelier de cuisine de 4 à 100 personnes en compagnie d’un de nos Cuistots d’ici ou d’ailleurs. Idéal pour la cohésion d'équipe !`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/teambuilding', linkAs: '/teambuilding' },
+      { title: 'Cocktails et réceptions', content: 'Cocktail apéritif, déjeunatoire ou dinatoire concocté par nos cuistots. Surprenez vos invités !', image: 'https://static.cuistotducoin.com/img/home/cocktail.jpg', link: '/cocktail-business', linkAs: '/cocktail-business' },
+      { title: 'Repas à table', content: 'Entrée plat et dessert pour vos équipes pour vos petits et grands événements.', image: 'https://static.cuistotducoin.com/img/home/repas-a-table.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Plateau repas', content: `Pas le temps de vous déplacer au resto ? Nous vous apportons votre repas pour un voyage des papilles à l'intérieur de vos bureaux !`, image: 'https://static.cuistotducoin.com/img/home/plateau-repas.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Buffet', content: 'Surprenez vos convives avec nos buffets aux saveurs de la cuisine du monde.', image: 'https://static.cuistotducoin.com/img/home/buffet.jpg', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Ateliers teambuilding', content: `Atelier de cuisine de 4 à 100 personnes en compagnie d’un de nos Cuistots d’ici ou d’ailleurs. Idéal pour la cohésion d'équipe !`, image: 'https://static.cuistotducoin.com/img/home/atelier-teambuilding.jpg', link: '/teambuilding', linkAs: '/teambuilding' },
     ];
 
     const productsB2C = [
-      { title: 'Ateliers collectif', content: `Proposez une activité originale à vos amis et votre famille et réalisez un atelier de cuisine et partez à l’aventure avec l’un nos cuistots`, image: 'https://static.cuistotducoin.com/img/home/atelier-japonais.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
-      { title: 'Ateliers privatifs', content: `Evadez vous et faites le plein de découvertes culinaires aux côtés d’autres passionnés de cuisine`, image: 'https://static.cuistotducoin.com/img/home/atelier-cacao.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
-      { title: 'Cuistot à domicile', content: `Mettez les pieds sous la table et laissez vous transporter vers de nouvelles destinations`, image: 'https://static.cuistotducoin.com/img/home/privatechef.jpg', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
+      { title: 'Ateliers collectif', content: `Proposez une activité originale à vos amis et votre famille et réalisez un atelier de cuisine et partez à l’aventure avec l’un nos cuistots`, image: 'https://static.cuistotducoin.com/img/home/atelier-collectif.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
+      { title: 'Ateliers privatifs', content: `Evadez vous et faites le plein de découvertes culinaires aux côtés d’autres passionnés de cuisine`, image: 'https://static.cuistotducoin.com/img/home/atelier-privatif.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
+      { title: 'Cuistot à domicile', content: `Mettez les pieds sous la table et laissez vous transporter vers de nouvelles destinations`, image: 'https://static.cuistotducoin.com/img/home/cuistot-a-domicile.jpg', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
     ];
 
     return (
@@ -236,19 +205,19 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
         </Typography>
           <Grid container justify="space-around" className={classes.grid}>
             <Grid item>
-              <img src="https://picsum.photos/300" />
+              <img src="https://static.cuistotducoin.com/img/home/savourez.jpg" />
               <Typography variant="h3" align="center" component="h3" color="secondary">
                 SAVOUREZ
             </Typography>
             </Grid>
             <Grid item>
-              <img src="https://picsum.photos/300" />
+              <img src="https://static.cuistotducoin.com/img/home/explorez.jpg" />
               <Typography variant="h3" align="center" component="h3" color="secondary">
                 EXPLOREZ
             </Typography>
             </Grid>
             <Grid item>
-              <img src="https://picsum.photos/300" />
+              <img src="https://static.cuistotducoin.com/img/home/partagez.jpg" />
               <Typography variant="h3" align="center" component="h3" color="secondary">
                 PARTAGEZ
             </Typography>
@@ -285,9 +254,11 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
               {this.createCard(productsB2C, classes)}
             </Grid>
           }
-          <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.withBackground}>
-            Nos destinations
+        </Container>
+        <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.withBackground}>
+          Nos destinations
         </Typography>
+        <Container maxWidth="lg">
           <div className={classes.negativeMargin}>
             <Grid container justify="space-around" spacing={2} className={classes.grid}>
               {
@@ -320,7 +291,11 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
             Ils nous font confiance
         </Typography>
           <Grid container justify="space-around" spacing={2} className={classes.grid}>
-            tte
+            {
+              testimonies.map((testimonie, key) => (
+                <img key={key} src={testimonie.image} />
+              ))
+            }
           </Grid>
           <Typography variant="h5" align="center" component="h2" gutterBottom className={classes.typography}>
             Suivez notre aventure !
