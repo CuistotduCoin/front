@@ -1,7 +1,7 @@
+import { ServerStyleSheets } from '@material-ui/styles';
 import Document, { Head, Main, NextScript } from 'next/document';
-import PropTypes from 'prop-types';
 import React from 'react';
-import flush from 'styled-jsx/server';
+import theme from '../decorators/theme'
 
 class MyDocument extends Document {
   public render() {
@@ -16,7 +16,7 @@ class MyDocument extends Document {
             name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
           {/* PWA primary color */}
-          <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+          <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="shortcut icon"
             href="https://static.cuistotducoin.com/favicon/favicon.ico"
@@ -108,42 +108,6 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Advent+Pro:300,400,500,700&display=swap"
           />
-          <style>{`
-          body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Advent Pro', sans-serif;
-          }
-
-          *[class*="MuiTypography-headline-"] {
-            font-family: 'Advent Pro', sans-serif !important;
-            font-weight: bold !important;
-          }
-
-          *[class*="MuiTypography-title-"],
-          *[class*="MuiTypography-subheading-"],
-          *[class*="MuiTypography-body2-"] {
-            font-family: 'Advent Pro', sans-serif !important;
-          }
-
-          /* Input Range */
-
-          *[class*="input-range__slider"] {
-            background: #388e3c;
-            border: 1px solid #388e3c;
-          }
-
-          *[class*="input-range__track--active"] {
-            background: #388e3c;
-          }
-
-          /* --- */
-
-          .slick-prev:before,
-          .slick-next:before {
-            color: black;
-          }
-          `}</style>
           <script src="https://gl.hostcg.com/js/genlead.js" defer />
           <script
             dangerouslySetInnerHTML={{
@@ -180,7 +144,7 @@ class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = ctx => {
+MyDocument.getInitialProps = async ctx => {
   // Resolution order
   //
   // On the server:
@@ -204,42 +168,26 @@ MyDocument.getInitialProps = ctx => {
   // 4. page.render
 
   // Render app and page and get the context of the page with collected side effects.
-  let pageContext;
-  // tslint:disable-next-line:variable-name
-  const page = ctx.renderPage(Component => {
-    // tslint:disable-next-line:variable-name
-    const WrappedComponent = props => {
-      pageContext = props.pageContext;
-      return <Component {...props} />;
-    };
+  const sheets = new ServerStyleSheets();
+  const originalRenderPage = ctx.renderPage;
 
-    WrappedComponent.propTypes = {
-      pageContext: PropTypes.object.isRequired,
-    };
+  ctx.renderPage = () =>
+    originalRenderPage({
+      // tslint:disable-next-line: variable-name
+      enhanceApp: App => props => sheets.collect(<App {...props} />),
+    });
 
-    return WrappedComponent;
-  });
-
-  let css;
-  // It might be undefined, e.g. after an error.
-  if (pageContext) {
-    css = pageContext.sheetsRegistry.toString();
-  }
+  const initialProps = await Document.getInitialProps(ctx);
 
   return {
-    ...page,
-    pageContext,
+    ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: (
-      <React.Fragment>
-        <style
-          id="jss-server-side"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: css }}
-        />
-        {flush() || null}
-      </React.Fragment>
-    ),
+    styles: [
+      <React.Fragment key="styles">
+        {initialProps.styles}
+        {sheets.getStyleElement()}
+      </React.Fragment>,
+    ],
   };
 };
 

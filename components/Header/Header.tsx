@@ -1,5 +1,6 @@
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
 import Divider from '@material-ui/core/Divider';
 import Grid from "@material-ui/core/Grid";
 import Hidden from '@material-ui/core/Hidden';
@@ -30,10 +31,6 @@ const styles = (theme: Theme) => ({
   accountButton: {
     margin: theme.spacing(1),
     color: "white"
-  },
-  grid: {
-    margin: "0px auto",
-    maxWidth: 1080,
   },
   logo: {
     marginRight: theme.spacing(1)
@@ -203,71 +200,73 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         color="inherit"
       >
         <Toolbar>
-          <Grid container justify="space-between" className={classes.grid}>
-            <Grid item>
-              <Grid container justify="flex-start">
-                <Hidden lgUp>
-                  <IconButton aria-owns={this.state.swipeDrawerOpen ? 'simple-menu-mobile' : undefined} aria-haspopup="true" onClick={this.toggleDrawer(true)} color="primary" edge="start" aria-label="Menu">
-                    <MenuIcon />
-                  </IconButton>
-                </Hidden>
-                <SwipeableDrawer
-                  open={this.state.swipeDrawerOpen}
-                  onClose={this.toggleDrawer(false)}
-                  onOpen={this.toggleDrawer(true)}
-                >
-                  {sideList()}
-                </SwipeableDrawer>
-                <Link href="/">
-                  <Grid container justify="flex-start" alignItems="center">
-                    <Logo className={classes.logo} />
-                  </Grid>
-                </Link>
-                <Hidden mdDown>
-                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenIndividual} className={classes.button} variant="outlined" color="primary">
-                    Pour les particuliers
+          <Container maxWidth="lg">
+            <Grid container justify="space-between">
+              <Grid item>
+                <Grid container justify="flex-start">
+                  <Hidden lgUp>
+                    <IconButton aria-owns={this.state.swipeDrawerOpen ? 'simple-menu-mobile' : undefined} aria-haspopup="true" onClick={this.toggleDrawer(true)} color="primary" edge="start" aria-label="Menu">
+                      <MenuIcon />
+                    </IconButton>
+                  </Hidden>
+                  <SwipeableDrawer
+                    open={this.state.swipeDrawerOpen}
+                    onClose={this.toggleDrawer(false)}
+                    onOpen={this.toggleDrawer(true)}
+                  >
+                    {sideList()}
+                  </SwipeableDrawer>
+                  <Link href="/">
+                    <Grid container justify="flex-start" alignItems="center">
+                      <Logo className={classes.logo} />
+                    </Grid>
+                  </Link>
+                  <Hidden mdDown>
+                    <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenIndividual} className={classes.button} variant="outlined" color="primary">
+                      Pour les particuliers
                   </Button>
-                </Hidden>
-                <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
-                  {productsB2C.map((product, index) => (
-                    <Link key={index} href={product.link} as={product.linkAs} passHref>
-                      <ListItem button key={product.title}>
-                        <ListItemText primary={product.title} />
-                      </ListItem>
-                    </Link>
-                  ))}
-                </Menu>
-                <Hidden mdDown>
-                  <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenBusiness} className={classes.button} variant="outlined" color="primary">
-                    Pour les entreprises
+                  </Hidden>
+                  <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                    {productsB2C.map((product, index) => (
+                      <Link key={index} href={product.link} as={product.linkAs} passHref>
+                        <ListItem button key={product.title}>
+                          <ListItemText primary={product.title} />
+                        </ListItem>
+                      </Link>
+                    ))}
+                  </Menu>
+                  <Hidden mdDown>
+                    <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenBusiness} className={classes.button} variant="outlined" color="primary">
+                      Pour les entreprises
                   </Button>
-                </Hidden>
-                <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
-                  {productsB2B.map((product, index) => (
-                    <Link key={index} href={product.link} as={product.linkAs} passHref>
-                      <ListItem button key={product.title}>
-                        <ListItemText primary={product.title} />
-                      </ListItem>
-                    </Link>
-                  ))}
-                </Menu>
+                  </Hidden>
+                  <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                    {productsB2B.map((product, index) => (
+                      <Link key={index} href={product.link} as={product.linkAs} passHref>
+                        <ListItem button key={product.title}>
+                          <ListItemText primary={product.title} />
+                        </ListItem>
+                      </Link>
+                    ))}
+                  </Menu>
+                </Grid>
               </Grid>
-            </Grid>
-            <Grid item>
-              <Grid container justify="flex-start">
-                <Link href="tel:06 79 59 88 48">
-                  <Button className={classes.button} variant="outlined" color="primary">
-                    <Phone titleAccess="phone" />06 79 59 88 48
+              <Grid item>
+                <Grid container justify="flex-start">
+                  <Link href="tel:06 79 59 88 48">
+                    <Button className={classes.button} variant="outlined" color="primary">
+                      <Phone titleAccess="phone" />06 79 59 88 48
                 </Button>
-                </Link>
-                {rightElement && (
-                  <>
-                    {rightElement}
-                  </>
-                )}
+                  </Link>
+                  {rightElement && (
+                    <>
+                      {rightElement}
+                    </>
+                  )}
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Container>
         </Toolbar>
       </AppBar >
     );

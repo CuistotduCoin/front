@@ -14,7 +14,7 @@ const theme = createMuiTheme({
       dark: "#BF263C",
       light: red[300],
       main: "#D8334A"
-    }
+    },
   },
   typography: {
     fontFamily: "Advent Pro",
