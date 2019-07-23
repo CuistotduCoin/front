@@ -110,9 +110,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
       { title: 'Ateliers teambuilding', link: '/teambuilding', linkAs: '/teambuilding' },
       { title: 'Cocktails et réceptions', link: '/cocktail-business', linkAs: '/cocktail-business' },
       { title: 'Pauses gourmandes & Petit déjeunez', link: '/breakfast', linkAs: '/breakfast' },
-      { title: 'Repas à table', link: '/sit-down-meal', linkAs: '/sit-down-meal' },
-      { title: 'Lunch Box', link: '/lunchbox', linkAs: '/lunchbox' },
-      { title: 'Buffet', link: '/buffet', linkAs: '/buffet' }
+      { title: 'Repas à table', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Lunch Box', link: '/lunch', linkAs: '/lunch' },
+      { title: 'Buffet', link: '/lunch', linkAs: '/lunch' }
     ];
 
     const sideList = () => (
