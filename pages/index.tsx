@@ -52,6 +52,9 @@ const styles = (theme: Theme) => ({
   negativeMargin: {
     marginTop: -100
   },
+  tabsColor: {
+    backgroundColor: "#fafafa"
+  },
   title: {
     marginTop: theme.spacing(7)
   },
@@ -165,8 +168,8 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
     ];
 
     const productsB2C = [
-      { title: 'Ateliers collectif', content: `Proposez une activité originale à vos amis et votre famille et réalisez un atelier de cuisine et partez à l’aventure avec l’un nos cuistots`, image: 'https://static.cuistotducoin.com/img/home/atelier-collectif.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
-      { title: 'Ateliers privatifs', content: `Evadez vous et faites le plein de découvertes culinaires aux côtés d’autres passionnés de cuisine`, image: 'https://static.cuistotducoin.com/img/home/atelier-privatif.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
+      { title: 'Ateliers collectif', content: `Evadez vous et faites le plein de découvertes culinaires aux côtés d’autres passionnés de cuisine`, image: 'https://static.cuistotducoin.com/img/home/atelier-collectif.jpg', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
+      { title: 'Ateliers privatifs', content: `Proposez une activité originale à vos amis et votre famille et réalisez un atelier de cuisine et partez à l’aventure avec l’un nos cuistots`, image: 'https://static.cuistotducoin.com/img/home/atelier-privatif.jpg', link: '/individual?tabName=private', linkAs: '/individual/private' },
       { title: 'Cuistot à domicile', content: `Mettez les pieds sous la table et laissez vous transporter vers de nouvelles destinations`, image: 'https://static.cuistotducoin.com/img/home/cuistot-a-domicile.jpg', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
     ];
 
@@ -182,7 +185,7 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
       }>
         <Container maxWidth="lg">
           <Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
-            Bienvenue à bord du vol CDC en partance pour un voyage des papilles !
+            Bienvenue à bord du vol Cuistot du Coin en partance pour un voyage des papilles !
         </Typography>
           <Grid container justify="space-around" className={classes.grid}>
             <Grid item>
@@ -213,10 +216,14 @@ export class Index extends React.Component<IIndexProps, IIndexState> {
           <Typography variant="h2" align="center" component="h2" gutterBottom className={classes.title}>
             AU MENU
         </Typography>
-          <Tabs value={tab} onChange={this.handleChange} centered={true} indicatorColor="primary" textColor="primary">
-            <Tab label="Entreprise" icon={<AccountTie />} />
-            <Tab label="Particulier" icon={<HomeAccount />} />
-          </Tabs>
+          <Grid container justify="space-around" className={classes.grid}>
+            <Paper className={classes.tabsColor}>
+              <Tabs value={tab} onChange={this.handleChange} indicatorColor="primary">
+                <Tab label="Entreprise" icon={<AccountTie />} />
+                <Tab label="Particulier" icon={<HomeAccount />} />
+              </Tabs>
+            </Paper>
+          </Grid>
           {
             this.state.tab === 0 &&
             <Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>

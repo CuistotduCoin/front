@@ -10,8 +10,8 @@ import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
 import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
-import TestimonySlider from "../components/TestimonySlider";
 import Steps from "../components/Steps";
+import TestimonySlider from "../components/TestimonySlider";
 
 const styles = (theme: Theme) => ({
   card: {
