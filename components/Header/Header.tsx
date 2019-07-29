@@ -1,20 +1,20 @@
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
-import Divider from '@material-ui/core/Divider';
+import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
-import Menu from '@material-ui/core/Menu';
+import Menu from "@material-ui/core/Menu";
 import { Theme, withStyles } from "@material-ui/core/styles";
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuIcon from "mdi-material-ui/Menu";
-import Phone from 'mdi-material-ui/Phone';
+import Phone from "mdi-material-ui/Phone";
 import React from "react";
 import AccountDropdown from "../../components/AccountDropdown";
 import Link from "../../components/Link";
@@ -22,7 +22,8 @@ import Logo from "../../components/Logo";
 
 const styles = (theme: Theme) => ({
   appBar: {
-    background: "linear-gradient(180deg,hsla(0,0%,100%,.9) 0,hsla(0,0%,100%,.8))",
+    background:
+      "linear-gradient(180deg,hsla(0,0%,100%,.9) 0,hsla(0,0%,100%,.8))",
     boxShadow: "none"
   },
   button: {
@@ -38,7 +39,7 @@ const styles = (theme: Theme) => ({
   logoText: {
     color: "black",
     marginRight: theme.spacing(1)
-  },
+  }
 });
 
 interface IHeaderProps {
@@ -85,8 +86,12 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-  public toggleDrawer = (open) => event => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  public toggleDrawer = open => event => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
@@ -94,25 +99,46 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
   };
 
   public render() {
-    const {
-      classes,
-      isLoggedIn
-    } = this.props;
+    const { classes, isLoggedIn } = this.props;
 
     const productsB2C = [
-      { title: 'Ateliers privatifs', link: '/individual?tabName=private', linkAs: '/individual/private' },
-      { title: 'Ateliers collectif', link: '/individual?tabName=collective', linkAs: '/individual/collective' },
-      { title: 'Cuistot à domicile', link: '/individual?tabName=privatecook', linkAs: '/individual/privatecook' },
-      { title: 'Carte cadeau', link: '/gift', linkAs: '/gift' }
-    ]
+      {
+        title: "Ateliers privatifs",
+        link: "/individual?tabName=private",
+        linkAs: "/individual/private"
+      },
+      {
+        title: "Ateliers collectif",
+        link: "/individual?tabName=collective",
+        linkAs: "/individual/collective"
+      },
+      {
+        title: "Cuistot à domicile",
+        link: "/individual?tabName=privatecook",
+        linkAs: "/individual/privatecook"
+      },
+      { title: "Carte cadeau", link: "/gift", linkAs: "/gift" }
+    ];
 
     const productsB2B = [
-      { title: 'Ateliers teambuilding', link: '/teambuilding', linkAs: '/teambuilding' },
-      { title: 'Cocktails et réceptions', link: '/cocktail-business', linkAs: '/cocktail-business' },
-      { title: 'Pauses gourmandes & Petit déjeunez', link: '/breakfast', linkAs: '/breakfast' },
-      { title: 'Repas à table', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Lunch Box', link: '/lunch', linkAs: '/lunch' },
-      { title: 'Buffet', link: '/lunch', linkAs: '/lunch' }
+      {
+        title: "Ateliers teambuilding",
+        link: "/teambuilding",
+        linkAs: "/teambuilding"
+      },
+      {
+        title: "Cocktails et réceptions",
+        link: "/cocktail-business",
+        linkAs: "/cocktail-business"
+      },
+      {
+        title: "Pauses gourmandes & Petit déjeunez",
+        link: "/breakfast",
+        linkAs: "/breakfast"
+      },
+      { title: "Repas à table", link: "/lunch", linkAs: "/lunch" },
+      { title: "Lunch Box", link: "/lunch", linkAs: "/lunch" },
+      { title: "Buffet", link: "/lunch", linkAs: "/lunch" }
     ];
 
     const sideList = () => (
@@ -127,7 +153,8 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
             <ListSubheader component="div" id="nested-list-subheader">
               Pour les particuliers
             </ListSubheader>
-          }>
+          }
+        >
           {productsB2C.map((product, index) => (
             <React.Fragment key={index}>
               <Link href={product.link} as={product.linkAs}>
@@ -144,7 +171,8 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
             <ListSubheader component="div" id="nested-list-subheader">
               Pour les entreprises
             </ListSubheader>
-          }>
+          }
+        >
           {productsB2B.map((product, index) => (
             <React.Fragment key={index}>
               <Link href={product.link} as={product.linkAs}>
@@ -205,7 +233,18 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               <Grid item>
                 <Grid container justify="flex-start">
                   <Hidden lgUp>
-                    <IconButton aria-owns={this.state.swipeDrawerOpen ? 'simple-menu-mobile' : undefined} aria-haspopup="true" onClick={this.toggleDrawer(true)} color="primary" edge="start" aria-label="Menu">
+                    <IconButton
+                      aria-owns={
+                        this.state.swipeDrawerOpen
+                          ? "simple-menu-mobile"
+                          : undefined
+                      }
+                      aria-haspopup="true"
+                      onClick={this.toggleDrawer(true)}
+                      color="primary"
+                      edge="start"
+                      aria-label="Menu"
+                    >
                       <MenuIcon />
                     </IconButton>
                   </Hidden>
@@ -222,11 +261,29 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     </Grid>
                   </Link>
                   <Hidden mdDown>
-                    <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-individual' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenIndividual} className={classes.button} variant="outlined" color="primary">
+                    <Button
+                      aria-owns={
+                        this.state.anchorElBusiness
+                          ? "simple-menu-individual"
+                          : undefined
+                      }
+                      aria-haspopup="true"
+                      onMouseOver={this.handlePopoverOpenIndividual}
+                      className={classes.button}
+                      variant="outlined"
+                      color="primary"
+                    >
                       Pour les particuliers
-                  </Button>
+                    </Button>
                   </Hidden>
-                  <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                  <Menu
+                    id="simple-menu-individual"
+                    anchorEl={this.state.anchorElIndividual}
+                    open={Boolean(this.state.anchorElIndividual)}
+                    MenuListProps={{ onMouseLeave: this.handleClose }}
+                    onClose={this.handleClose}
+                    getContentAnchorEl={null}
+                  >
                     {productsB2C.map((product, index) => (
                       <Link key={index} href={product.link} as={product.linkAs}>
                         <ListItem button key={product.title}>
@@ -236,11 +293,29 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     ))}
                   </Menu>
                   <Hidden mdDown>
-                    <Button aria-owns={this.state.anchorElBusiness ? 'simple-menu-business' : undefined} aria-haspopup="true" onMouseOver={this.handlePopoverOpenBusiness} className={classes.button} variant="outlined" color="primary">
+                    <Button
+                      aria-owns={
+                        this.state.anchorElBusiness
+                          ? "simple-menu-business"
+                          : undefined
+                      }
+                      aria-haspopup="true"
+                      onMouseOver={this.handlePopoverOpenBusiness}
+                      className={classes.button}
+                      variant="outlined"
+                      color="primary"
+                    >
                       Pour les entreprises
-                  </Button>
+                    </Button>
                   </Hidden>
-                  <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
+                  <Menu
+                    id="simple-menu-business"
+                    anchorEl={this.state.anchorElBusiness}
+                    open={Boolean(this.state.anchorElBusiness)}
+                    MenuListProps={{ onMouseLeave: this.handleClose }}
+                    onClose={this.handleClose}
+                    getContentAnchorEl={null}
+                  >
                     {productsB2B.map((product, index) => (
                       <Link key={index} href={product.link} as={product.linkAs}>
                         <ListItem button key={product.title}>
@@ -254,35 +329,40 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               <Grid item>
                 <Grid container justify="flex-start">
                   <Link href="tel:06 79 59 88 48">
-                    <Button className={classes.button} variant="outlined" color="primary">
-                      <Phone titleAccess="phone" />06 79 59 88 48
-                </Button>
+                    <Button
+                      className={classes.button}
+                      variant="outlined"
+                      color="primary"
+                    >
+                      <Phone titleAccess="phone" />
+                      06 79 59 88 48
+                    </Button>
                   </Link>
-                  {rightElement && (
-                    <>
-                      {rightElement}
-                    </>
-                  )}
+                  {rightElement && <>{rightElement}</>}
                 </Grid>
               </Grid>
             </Grid>
           </Container>
         </Toolbar>
-      </AppBar >
+      </AppBar>
     );
   }
 
-  private handlePopoverOpenIndividual = (event: React.MouseEvent<HTMLButtonElement>) => {
+  private handlePopoverOpenIndividual = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     this.setState({ anchorElIndividual: event.currentTarget });
-  }
+  };
 
-  private handlePopoverOpenBusiness = (event: React.MouseEvent<HTMLButtonElement>) => {
+  private handlePopoverOpenBusiness = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     this.setState({ anchorElBusiness: event.currentTarget });
-  }
+  };
 
   private handleClose = () => {
     this.setState({ anchorElIndividual: null, anchorElBusiness: null });
-  }
+  };
 }
 
 export default withStyles(styles as any)(Header as any) as any;

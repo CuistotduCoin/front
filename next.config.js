@@ -3,7 +3,6 @@ require('dotenv').config();
 const isProd = process.env.NODE_ENV === 'production'
 const webpack = require('webpack');
 const withPlugins = require('next-compose-plugins')
-const withTypescript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
 const withMDX = require('@zeit/next-mdx')()
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
@@ -52,4 +51,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withPlugins([withTypescript, withMDX, withCSS], nextConfig)
+module.exports = withPlugins([withMDX, withCSS], nextConfig)

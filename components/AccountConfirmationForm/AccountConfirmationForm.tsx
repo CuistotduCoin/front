@@ -23,7 +23,7 @@ const styles = (theme: Theme) => ({
     width: "100%"
   },
   submitButton: {
-    marginTop: 16,
+    marginTop: 16
   }
 });
 
@@ -89,7 +89,12 @@ export class AccountConfirmationForm extends React.Component<
             />
           </Grid>
           <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="secondary" className={classes.submitButton}>
+            <Button
+              type="submit"
+              variant="contained"
+              color="secondary"
+              className={classes.submitButton}
+            >
               Confirmer mon compte
             </Button>
           </Grid>
@@ -121,7 +126,7 @@ export class AccountConfirmationForm extends React.Component<
       Auth.confirmSignUp(values.username, values.code, {
         forceAliasCreation: false
       })
-        .then(data => {
+        .then(() => {
           setStatus({ success: true });
           resetForm(this.initialValues());
           openSnackbar(
