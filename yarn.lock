@@ -1769,16 +1769,16 @@
     minimist "^1.1.0"
     s3signed "^0.1.0"
 
-"@material-ui/core@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.2.1.tgz#18255c01d039ff856bfdb2f955fec6c9ae64a464"
+"@material-ui/core@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.3.0.tgz#ce44f7fad736f44b70f6d44d390ba8b848fcfca0"
   dependencies:
-    "@babel/runtime" "^7.2.0"
+    "@babel/runtime" "^7.4.4"
     "@material-ui/styles" "^4.2.0"
     "@material-ui/system" "^4.3.0"
     "@material-ui/types" "^4.1.1"
     "@material-ui/utils" "^4.1.0"
-    "@types/react-transition-group" "^2.0.16"
+    "@types/react-transition-group" "^4.2.0"
     clsx "^1.0.2"
     convert-css-length "^2.0.1"
     deepmerge "^4.0.0"
@@ -2443,9 +2443,9 @@
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
 
-"@types/react-dom@^16.8.4":
-  version "16.8.4"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.4.tgz#7fb7ba368857c7aa0f4e4511c4710ca2c5a12a88"
+"@types/react-dom@^16.8.5":
+  version "16.8.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.5.tgz#3e3f4d99199391a7fb40aa3a155c8dd99b899cbd"
   dependencies:
     "@types/react" "*"
 
@@ -2468,9 +2468,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-transition-group@^2.0.16":
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.16.tgz#2dcb9e396ab385ee19c4af1c9caa469a14cd042f"
+"@types/react-transition-group@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.2.0.tgz#86ddb509ce3de27341c7cb7797abb99b1c4676bf"
   dependencies:
     "@types/react" "*"
 
@@ -2949,9 +2949,9 @@ algolia-aerial@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/algolia-aerial/-/algolia-aerial-1.5.3.tgz#c8b8ca6bc484164ffc7b36717689a424ea6bfe6c"
 
-algolia-places-react@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/algolia-places-react/-/algolia-places-react-1.4.1.tgz#902e583d879025118bb417913db45097501c618b"
+algolia-places-react@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/algolia-places-react/-/algolia-places-react-1.5.0.tgz#a3d3d111b2db58c9442b75c63de71db2c11c13b8"
   dependencies:
     places.js "1.16.4"
     prop-types "^15.6.0"
@@ -3533,9 +3533,9 @@ aws-sdk@^2.0.4:
     uuid "3.3.2"
     xml2js "0.4.19"
 
-aws-sdk@^2.497.0:
-  version "2.497.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.497.0.tgz#42fdde2fbc5d880e1532181cb42e644a07fb37b6"
+aws-sdk@^2.501.0:
+  version "2.501.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.501.0.tgz#611d900fae284bfe8175fe9ee3d101e01a877f06"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -8124,9 +8124,9 @@ node-releases@^1.1.13, node-releases@^1.1.21:
   dependencies:
     semver "^5.3.0"
 
-node@^12.6.0:
-  version "12.6.0"
-  resolved "https://registry.yarnpkg.com/node/-/node-12.6.0.tgz#19cff21c4753c771055392a06e36076df97ee78a"
+node@^12.7.0:
+  version "12.7.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-12.7.0.tgz#bf6ecdc7ba033adce620fed1712dd6d45464221e"
   dependencies:
     node-bin-setup "^1.0.0"
 

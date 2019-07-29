@@ -130,7 +130,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
           }>
           {productsB2C.map((product, index) => (
             <React.Fragment key={index}>
-              <Link href={product.link} as={product.linkAs} passHref>
+              <Link href={product.link} as={product.linkAs}>
                 <ListItem button key={product.title}>
                   <ListItemText primary={product.title} />
                 </ListItem>
@@ -147,7 +147,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
           }>
           {productsB2B.map((product, index) => (
             <React.Fragment key={index}>
-              <Link href={product.link} as={product.linkAs} passHref>
+              <Link href={product.link} as={product.linkAs}>
                 <ListItem button key={product.title}>
                   <ListItemText primary={product.title} />
                 </ListItem>
@@ -228,7 +228,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   </Hidden>
                   <Menu id="simple-menu-individual" anchorEl={this.state.anchorElIndividual} open={Boolean(this.state.anchorElIndividual)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
                     {productsB2C.map((product, index) => (
-                      <Link key={index} href={product.link} as={product.linkAs} passHref>
+                      <Link key={index} href={product.link} as={product.linkAs}>
                         <ListItem button key={product.title}>
                           <ListItemText primary={product.title} />
                         </ListItem>
@@ -242,7 +242,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                   </Hidden>
                   <Menu id="simple-menu-business" anchorEl={this.state.anchorElBusiness} open={Boolean(this.state.anchorElBusiness)} MenuListProps={{ onMouseLeave: this.handleClose, }} onClose={this.handleClose} getContentAnchorEl={null}>
                     {productsB2B.map((product, index) => (
-                      <Link key={index} href={product.link} as={product.linkAs} passHref>
+                      <Link key={index} href={product.link} as={product.linkAs}>
                         <ListItem button key={product.title}>
                           <ListItemText primary={product.title} />
                         </ListItem>

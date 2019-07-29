@@ -11,7 +11,6 @@ import Layout from "../components/Layout";
 import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
 import Steps from "../components/Steps";
-import TestimonySlider from "../components/TestimonySlider";
 
 const styles = (theme: Theme) => ({
   card: {
@@ -187,9 +186,6 @@ export class Cocktail extends React.Component<ICocktailProps, {}> {
         >
           Ils nous font confiance :
         </Typography>
-        <div className={classes.slider}>
-          <TestimonySlider testimonies={testimonies} />
-        </div>
         <Gallery photos={photos} />
       </Layout >
     );

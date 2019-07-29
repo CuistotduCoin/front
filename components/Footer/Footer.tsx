@@ -85,7 +85,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 alignItems="flex-start"
                 direction="column"
               >
-                <Typography component="p" variant="h6" className={classes.title} color="primary">
+              <Typography component="p" variant="h6" className={classes.title} color="primary">
                   + sur Cuistot du Coin
               </Typography>
                 <Link href="/team-and-mission" className={classes.subheading}>
@@ -100,7 +100,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 <Link href="/terms" className={classes.subheading}>
                   Conditions générales & Mentions légales
               </Link>
-                <Link href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+              <Link href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
                   Blog
               </Link>
               </Grid>

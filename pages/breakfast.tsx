@@ -11,7 +11,6 @@ import Gallery from "../components/Gallery";
 import Layout from "../components/Layout";
 import PricingCardList from "../components/PricingCardList";
 import StaticSteper from "../components/StaticSteper";
-import TestimonySlider from "../components/TestimonySlider";
 import Steps from "../components/Steps";
 
 const styles = (theme: Theme) => ({
@@ -179,9 +178,6 @@ export class Box extends React.Component<IBoxProps, {}> {
         >
           Ils nous font confiance :
         </Typography>
-        <div className={classes.slider}>
-          <TestimonySlider testimonies={testimonies} />
-        </div>
         <Gallery photos={photos} />
       </Layout >
     );
