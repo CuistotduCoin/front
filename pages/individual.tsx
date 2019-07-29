@@ -14,7 +14,7 @@ const styles = (theme: Theme) => ({
   }
 });
 
-export interface IIndividualProps {
+interface IIndividualProps {
   classes?: any;
   tab: number;
 }
@@ -23,7 +23,7 @@ interface IIndividualState {
   tab: number;
 }
 
-export class Individual extends React.Component<IIndividualProps, IIndividualState> {
+class Individual extends React.Component<IIndividualProps, IIndividualState> {
   public static getInitialProps({ query: { tabName } }) {
     let tab = 0;
     switch (tabName) {

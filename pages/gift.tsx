@@ -22,7 +22,11 @@ interface IGiftProps {
   classes?: any;
 }
 
-export class Gift extends React.Component<IGiftProps, {}> {
+class Gift extends React.Component<IGiftProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

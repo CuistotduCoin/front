@@ -89,7 +89,11 @@ interface IIndexState {
 }
 
 
-export class Index extends React.Component<IIndexProps, IIndexState> {
+class Index extends React.Component<IIndexProps, IIndexState> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   constructor(props: IIndexProps) {
     super(props);
 

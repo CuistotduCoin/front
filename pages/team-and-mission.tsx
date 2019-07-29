@@ -18,7 +18,11 @@ interface ITeamProps {
   classes?: any;
 }
 
-export class Team extends React.Component<ITeamProps, {}> {
+class Team extends React.Component<ITeamProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

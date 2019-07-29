@@ -39,11 +39,15 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IBuffetProps {
+interface ITeamBuildingProps {
   classes?: any;
 }
 
-export class Buffet extends React.Component<IBuffetProps, {}> {
+class TeamBuilding extends React.Component<ITeamBuildingProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 
@@ -212,4 +216,4 @@ export class Buffet extends React.Component<IBuffetProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Buffet as any) as any;
+export default withStyles(styles as any)(TeamBuilding as any) as any;

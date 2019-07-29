@@ -32,7 +32,11 @@ interface IInviteProps {
   classes?: any;
 }
 
-export class Invite extends React.Component<IInviteProps, {}> {
+class Invite extends React.Component<IInviteProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

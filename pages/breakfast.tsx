@@ -1,5 +1,4 @@
 import Button from "@material-ui/core/Button";
-
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -43,11 +42,15 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IBoxProps {
+interface IBreakfastProps {
   classes?: any;
 }
 
-export class Box extends React.Component<IBoxProps, {}> {
+class Breakfast extends React.Component<IBreakfastProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 
@@ -184,4 +187,4 @@ export class Box extends React.Component<IBoxProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Box as any) as any;
+export default withStyles(styles as any)(Breakfast as any) as any;

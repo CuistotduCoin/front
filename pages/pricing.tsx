@@ -38,7 +38,11 @@ interface IPricingState {
   tab: number;
 }
 
-export class Pricing extends React.Component<IPricingProps, IPricingState> {
+class Pricing extends React.Component<IPricingProps, IPricingState> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   constructor(props: IPricingProps) {
     super(props);
 

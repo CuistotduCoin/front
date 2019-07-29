@@ -18,7 +18,11 @@ interface IPresskitProps {
   classes?: any;
 }
 
-export class Presskit extends React.Component<IPresskitProps, {}> {
+class Presskit extends React.Component<IPresskitProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

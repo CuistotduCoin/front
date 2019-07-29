@@ -20,7 +20,11 @@ interface ITermsProps {
   classes?: any;
 }
 
-export class Terms extends React.Component<ITermsProps, {}> {
+class Terms extends React.Component<ITermsProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

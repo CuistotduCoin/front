@@ -46,7 +46,11 @@ interface ICocktailProps {
   classes?: any;
 }
 
-export class Cocktail extends React.Component<ICocktailProps, {}> {
+class Cocktail extends React.Component<ICocktailProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 

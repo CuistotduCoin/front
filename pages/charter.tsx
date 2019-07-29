@@ -19,6 +19,10 @@ interface ICharterProps {
 }
 
 export class Charter extends React.Component<ICharterProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+  
   public render() {
     const { classes } = this.props;
 

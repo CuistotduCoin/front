@@ -42,11 +42,15 @@ const styles = (theme: Theme) => ({
   }
 });
 
-interface IBoxProps {
+interface ILunchProps {
   classes?: any;
 }
 
-export class Box extends React.Component<IBoxProps, {}> {
+class Lunch extends React.Component<ILunchProps, {}> {
+  public static getInitialProps = async () => ({
+    static: 'not-static'
+  });
+
   public render() {
     const { classes } = this.props;
 
@@ -213,4 +217,4 @@ export class Box extends React.Component<IBoxProps, {}> {
   }
 }
 
-export default withStyles(styles as any)(Box as any) as any;
+export default withStyles(styles as any)(Lunch as any) as any;
