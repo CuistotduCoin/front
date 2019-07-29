@@ -14,12 +14,12 @@ const styles = (theme: Theme) => ({
   overflow: {
     content: "",
     overflow: "hidden",
-    '&:before': {
+    "&:before": {
       content: '""',
-      position: 'absolute',
+      position: "absolute",
       borderTop: 0,
       borderBottom: "80px solid transparent",
-      borderLeft: "60px solid #f6f6f6",
+      borderLeft: "60px solid #f6f6f6"
     }
   },
   cover: {
@@ -47,24 +47,23 @@ export class Banner extends React.Component<IBannerProps, {}> {
   public render() {
     const { classes, title, subtitle } = this.props;
 
-    return <Grid container
-      justify="space-between"
-      className={classes.banner}
-    >
-      <Grid item className={classes.text}>
-        <Typography variant="h6" align="justify">
-          {title}
-        </Typography>
-        <Typography variant="body1" align="justify">
-          {subtitle}
-        </Typography>
-      </Grid>
-      {this.props.imageURL &&
-        <Grid item className={classes.overflow}>
-          <img className={classes.cover} style={this.innerBackground} />
+    return (
+      <Grid container justify="space-between" className={classes.banner}>
+        <Grid item className={classes.text}>
+          <Typography variant="h6" align="justify">
+            {title}
+          </Typography>
+          <Typography variant="body1" align="justify">
+            {subtitle}
+          </Typography>
         </Grid>
-      }
-    </Grid >;
+        {this.props.imageURL && (
+          <Grid item className={classes.overflow}>
+            <img className={classes.cover} style={this.innerBackground} />
+          </Grid>
+        )}
+      </Grid>
+    );
   }
 }
 

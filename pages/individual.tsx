@@ -1,13 +1,13 @@
 import Grid from "@material-ui/core/Grid";
-import { Theme, withStyles } from "@material-ui/core/styles";
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+import { withStyles } from "@material-ui/core/styles";
+import Tab from "@material-ui/core/Tab";
+import Tabs from "@material-ui/core/Tabs";
 import React from "react";
+import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
-import Banner from "../components/Banner"
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
   grid: {
     margin: "0px auto",
     maxWidth: 1300
@@ -28,7 +28,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     let tab = 0;
     switch (tabName) {
       case "collective":
-        tab = 0
+        tab = 0;
         break;
       case "private":
         tab = 1;
@@ -45,18 +45,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     this.state = props;
   }
 
+  // @ts-ignore
   public handleChange = (event, tab: number) => {
     this.setState({ tab });
+    // @ts-ignore
     let nameTab = "/individual";
     switch (tab) {
       case 0:
-        nameTab = "/individual/collective"
+        nameTab = "/individual/collective";
         break;
       case 1:
-        nameTab = "/individual/private"
+        nameTab = "/individual/private";
         break;
       case 2:
-        nameTab = "/individual/privatecook"
+        nameTab = "/individual/privatecook";
         break;
     }
   };
@@ -65,6 +67,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const { classes } = this.props;
     const { tab } = this.state;
 
+    // @ts-ignore
     const workshops = [];
 
     const privateWorkshops = [
@@ -100,11 +103,13 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const ads = [
       {
         title: "Offrez une carte cadeau à votre proche",
-        subtitle: "Il disposera d’une année pour participer à l’atelier de son choix !"
+        subtitle:
+          "Il disposera d’une année pour participer à l’atelier de son choix !"
       },
       {
         title: "Offre étudiante à Brest",
-        subtitle: "Sous présentation de ta carte étudiante, paye ton premier atelier de cuisine collectif à 5€ !"
+        subtitle:
+          "Sous présentation de ta carte étudiante, paye ton premier atelier de cuisine collectif à 5€ !"
       },
       {
         title: "Carte CEZAM",
@@ -120,11 +125,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
             <Tab label="Atelier privatif" />
             <Tab label="Cuistot à domicile" />
           </Tabs>
-          {tab === 0 && <Banner title="Les ateliers collectifs reviendront en septembre !" subtitle="Mais pas de panique vous pouvez toujours réaliser un atelier privatif pour toutes vos occasions" imageURL={"https://static.cuistotducoin.com/img/individual/holiday.jpg"} />}
-          {tab === 1 && <WorkshopCardList workshops={privateWorkshops} ads={ads} />}
+          {tab === 0 && (
+            <Banner
+              title="Les ateliers collectifs reviendront en septembre !"
+              subtitle="Mais pas de panique vous pouvez toujours réaliser un atelier privatif pour toutes vos occasions"
+              imageURL={
+                "https://static.cuistotducoin.com/img/individual/holiday.jpg"
+              }
+            />
+          )}
+          {tab === 1 && (
+            <WorkshopCardList workshops={privateWorkshops} ads={ads} />
+          )}
           {tab === 2 && <WorkshopCardList workshops={privateCook} ads={ads} />}
         </Grid>
-      </Layout >
+      </Layout>
     );
   }
 }

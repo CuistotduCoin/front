@@ -28,12 +28,19 @@ class WithAuthDecorator extends Component<IWithAuthDecoratorProps> {
             redirectToLogin();
           } // else delegate to App
         })
-        .catch(err => redirectToLogin());
+        .catch(() => redirectToLogin());
     }
   }
 
   public render() {
-    const { component, isLoggedIn, currentGourmet, setReferer, router, ...props } = this.props;
+    const {
+      component,
+      isLoggedIn,
+      currentGourmet,
+      setReferer,
+      router,
+      ...props
+    } = this.props;
 
     if (isLoggedIn) {
       if (!currentGourmet) {

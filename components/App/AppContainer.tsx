@@ -1,7 +1,7 @@
 import { Container } from "unstated";
-import initApollo from '../../decorators/initApollo';
+import initApollo from "../../decorators/initApollo";
 import { GetCurrentGourmetImage } from "../../queries";
-import { apolloConfig } from '../../shared/config';
+import { apolloConfig } from "../../shared/config";
 
 interface IAppState {
   referer?: string;
@@ -51,19 +51,21 @@ class AppContainer extends Container<IAppState> {
 
   public updateCurrentGourmetImage = () => {
     const client = initApollo({}, apolloConfig);
-    client.query({ query: GetCurrentGourmetImage, fetchPolicy: "no-cache" }).then(result => {
-      if (result.data.getCurrentGourmet.message === "success") {
-        const gourmet = result.data.getCurrentGourmet.gourmet;
-        this.setState(prevState =>
-          Object.assign({}, prevState, {
-            currentGourmet: {
-              ...prevState.currentGourmet,
-              image: gourmet.image
-            }
-          })
-        );
-      }
-    });
+    client
+      .query({ query: GetCurrentGourmetImage, fetchPolicy: "no-cache" })
+      .then(result => {
+        if (result.data.getCurrentGourmet.message === "success") {
+          const gourmet = result.data.getCurrentGourmet.gourmet;
+          this.setState(prevState =>
+            Object.assign({}, prevState, {
+              currentGourmet: {
+                ...prevState.currentGourmet,
+                image: gourmet.image
+              }
+            })
+          );
+        }
+      });
   };
 }
 

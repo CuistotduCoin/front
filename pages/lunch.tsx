@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
-import Typography from '@material-ui/core/Typography';
+import Typography from "@material-ui/core/Typography";
 import AccountMultiple from "mdi-material-ui/AccountMultiple";
 import CompassOutline from "mdi-material-ui/CompassOutline";
 import EmoticonCool from "mdi-material-ui/EmoticonCoolOutline";
@@ -20,8 +20,8 @@ const styles = (theme: Theme) => ({
     backgroundColor: theme.palette.primary.main
   },
   cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
     marginBottom: theme.spacing(2)
   },
   grid: {
@@ -35,7 +35,7 @@ const styles = (theme: Theme) => ({
   slider: {
     margin: "0px auto",
     paddingBottom: 30,
-    width: "calc(100% - 100px)",
+    width: "calc(100% - 100px)"
   },
   stepper: {
     backgroundColor: "#fafafa"
@@ -48,16 +48,31 @@ interface ILunchProps {
 
 class Lunch extends React.Component<ILunchProps, {}> {
   public static getInitialProps = async () => ({
-    static: 'not-static'
+    static: "not-static"
   });
 
   public render() {
     const { classes } = this.props;
 
     const steps = [
-      { icon: <CompassOutline fontSize="large" />, title: 'Originalité', content: "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque repas est une invitation au voyage." },
-      { icon: <AccountMultiple fontSize="large" />, title: 'Convivialité', content: "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux." },
-      { icon: <EmoticonCool fontSize="large" />, title: 'Sérénité', content: "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous." }
+      {
+        icon: <CompassOutline fontSize="large" />,
+        title: "Originalité",
+        content:
+          "Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque repas est une invitation au voyage."
+      },
+      {
+        icon: <AccountMultiple fontSize="large" />,
+        title: "Convivialité",
+        content:
+          "Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux."
+      },
+      {
+        icon: <EmoticonCool fontSize="large" />,
+        title: "Sérénité",
+        content:
+          "Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous."
+      }
     ];
 
     const stepsFAQ = [
@@ -75,73 +90,98 @@ class Lunch extends React.Component<ILunchProps, {}> {
       }
     ];
 
-    const testimonies = [
-      {
-        context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
-        comment: "Très bien !",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/cedre.jpg",
-        name: "Cedre",
-        rating: 5
-      },
-      {
-        context: "Buffet aux couleurs de la cuisine antillaise pour 50 collaborateurs",
-        comment: "Très bonnes saveurs. Cuisine de qualité.",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/seimi.jpg",
-        name: "Seimi",
-        rating: 5
-      },
-      {
-        context: "Buffet aux couleurs de la cuisine brésilienne pour 15 collaborateurs",
-        comment: "L'équipe a apprécié toutes les prestations de Cuistot du coin. Le buffet : original et très bon et l'atelier : ambiance détendue où chacun a trouvé sa place. Le lieu où on se sent vite très bien. Merci pour cette respiration",
-        image:
-          "https://static.cuistotducoin.com/img/testimony/arkea.jpg",
-        name: "Arkea",
-        rating: 5
-      }
-    ];
-
     const photos = [
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-asiatique.jpg', width: 1, height: 1, caption: "Cocktail au saveur de l'Asie", alt: "Cocktail asiatique" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-1.jpg', width: 1, height: 1, caption: "Pièce cocktail au saveur du Brésil", alt: "Cocktail brésilien" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-2.jpg', width: 1, height: 1, caption: "Cocktail au saveur du Brésil", alt: "Cocktail brésilien 2" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-3.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre", alt: "Cocktail brésilien 3" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-4.jpg', width: 1, height: 1, caption: "Cocktail complet au saveur du Brésil", alt: "Cocktail brésilien 4" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/buffet-crepes.jpg', width: 1, height: 1, caption: "Buffet crêpes au billig", alt: "Buffet crepes" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-reseau-entreprendre.jpg', width: 1, height: 1, caption: "Cocktail pour le réseau entreprendre (suite)", alt: "Cocktail reseau" },
-      { src: 'https://static.cuistotducoin.com/img/cocktail-business/cocktail-vegetal.jpg', width: 1, height: 1, caption: "Cocktail végétal à la suite d'un atelier", alt: "Cocktail atelier" },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-asiatique.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail au saveur de l'Asie",
+        alt: "Cocktail asiatique"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-1.jpg",
+        width: 1,
+        height: 1,
+        caption: "Pièce cocktail au saveur du Brésil",
+        alt: "Cocktail brésilien"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-2.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail au saveur du Brésil",
+        alt: "Cocktail brésilien 2"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-3.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail pour le réseau entreprendre",
+        alt: "Cocktail brésilien 3"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-bresilien-4.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail complet au saveur du Brésil",
+        alt: "Cocktail brésilien 4"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/buffet-crepes.jpg",
+        width: 1,
+        height: 1,
+        caption: "Buffet crêpes au billig",
+        alt: "Buffet crepes"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-reseau-entreprendre.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail pour le réseau entreprendre (suite)",
+        alt: "Cocktail reseau"
+      },
+      {
+        src:
+          "https://static.cuistotducoin.com/img/cocktail-business/cocktail-vegetal.jpg",
+        width: 1,
+        height: 1,
+        caption: "Cocktail végétal à la suite d'un atelier",
+        alt: "Cocktail atelier"
+      }
     ];
 
     const pricing = [
       {
         title: "Plat froid + Dessert",
-        price: '15',
-        description: ['La formule classique'],
-        buttonText: 'Demander un devis'
+        price: "15",
+        description: ["La formule classique"],
+        buttonText: "Demander un devis"
       },
       {
         title: "Entrée + Plat froid + Dessert",
-        price: '18',
-        description: ['Pour un repas en toute simplicité'],
-        buttonText: 'Demander un devis'
+        price: "18",
+        description: ["Pour un repas en toute simplicité"],
+        buttonText: "Demander un devis"
       },
       {
         title: "Entrée + Plat chaud + Dessert",
-        price: '23',
-        description: ['Pour un repas gourmand'],
-        buttonText: 'Demander un devis'
+        price: "23",
+        description: ["Pour un repas gourmand"],
+        buttonText: "Demander un devis"
       }
     ];
 
     return (
       <Layout
         component={
-          <Grid
-            container
-            justify="space-around"
-            className={classes.grid}
-          >
+          <Grid container justify="space-around" className={classes.grid}>
             <Grid item>
               <Button
                 variant="contained"
@@ -150,10 +190,11 @@ class Lunch extends React.Component<ILunchProps, {}> {
                 target="_blank"
               >
                 Obtenir un devis
-            </Button>
+              </Button>
             </Grid>
           </Grid>
-        }>
+        }
+      >
         <Grid
           container
           justify="space-around"
@@ -191,7 +232,10 @@ class Lunch extends React.Component<ILunchProps, {}> {
           Organisez un repas convivial
         </Typography>
         <Grid className={classes.grid}>
-          <PricingCardList pricing={pricing} href={"https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"} />
+          <PricingCardList
+            pricing={pricing}
+            href={"https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html"}
+          />
         </Grid>
         <Typography
           variant="caption"
@@ -212,7 +256,7 @@ class Lunch extends React.Component<ILunchProps, {}> {
           Ils nous font confiance :
         </Typography>
         <Gallery photos={photos} />
-      </Layout >
+      </Layout>
     );
   }
 }

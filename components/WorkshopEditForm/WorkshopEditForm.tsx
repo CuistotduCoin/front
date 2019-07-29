@@ -1,22 +1,22 @@
+import Storage from "@aws-amplify/storage";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Grid from "@material-ui/core/Grid";
+import GridList from "@material-ui/core/GridList";
+import GridListTile from "@material-ui/core/GridListTile";
+import GridListTileBar from "@material-ui/core/GridListTileBar";
+import IconButton from "@material-ui/core/IconButton";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { Form, Formik } from "formik";
+import WarningIcon from "mdi-material-ui/Alert";
+import DeleteIcon from "mdi-material-ui/Delete";
+import AddPhotoIcon from "mdi-material-ui/ImagePlus";
 import Router from "next/router";
 import React from "react";
 import { graphql, Query } from "react-apollo";
-import { compose } from "recompose";;
-import Storage from "@aws-amplify/storage";
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import WarningIcon from "mdi-material-ui/Alert";
-import DeleteIcon from 'mdi-material-ui/Delete';
-import AddPhotoIcon from "mdi-material-ui/ImagePlus";
+import { compose } from "recompose";
 import * as Yup from "yup";
 import Link from "../../components/Link";
 import Loading from "../../components/Loading";
@@ -44,7 +44,7 @@ const styles = (theme: Theme) => ({
     marginBottom: 50
   },
   showButton: {
-    margin: '30px 0 20px'
+    margin: "30px 0 20px"
   },
   container: {
     display: "flex",
@@ -55,31 +55,31 @@ const styles = (theme: Theme) => ({
     marginTop: 30
   },
   warningIcon: {
-    color: 'white',
+    color: "white",
     marginRight: theme.spacing(1)
   },
   gridList: {
-    flexWrap: 'nowrap',
+    flexWrap: "nowrap",
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)',
+    transform: "translateZ(0)"
   },
   title: {
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.light
   },
   titleBar: {
     background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)"
   },
   deleteIcon: {
-    color: 'white',
-    '&:hover': {
+    color: "white",
+    "&:hover": {
       background: theme.palette.secondary.main
     }
   },
   imagesCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   addPhotoIcon: {
     marginTop: 20
@@ -88,9 +88,15 @@ const styles = (theme: Theme) => ({
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Vous devez entrer un nom pour cet atelier"),
-  price: Yup.number().required("Veuillez entrer un prix").positive(),
-  duration: Yup.number().required("Veuillez entrer la durée estimée de votre atelier en minutes").positive(),
-  date: Yup.string().required("Veuillez entrer la date à laquelle aura lieu votre atelier")
+  price: Yup.number()
+    .required("Veuillez entrer un prix")
+    .positive(),
+  duration: Yup.number()
+    .required("Veuillez entrer la durée estimée de votre atelier en minutes")
+    .positive(),
+  date: Yup.string().required(
+    "Veuillez entrer la date à laquelle aura lieu votre atelier"
+  )
 });
 
 interface IGourmetRange {
@@ -105,7 +111,7 @@ interface IWorkshopEditFormValues {
   duration: string;
   date: string;
   gourmetRange: IGourmetRange;
-};
+}
 
 interface IWorkshopEditFormProps {
   classes: any;
@@ -126,30 +132,47 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
   }
 
   public handleImageChange(workshopId, identityId, refetch) {
-    return (event) => {
+    return event => {
       const file = event.target.files[0];
 
       if (file && identityId) {
-        Storage.put(`workshops/${workshopId}/${sanitizeFilename(file.name)}`, file, { identityId })
+        Storage.put(
+          `workshops/${workshopId}/${sanitizeFilename(file.name)}`,
+          file,
+          { identityId }
+        )
           .then(() => {
-            this.props.openSnackbar("Votre image a bien été importée. Elle devrait apparaître d'ici quelques secondes...", "success");
+            this.props.openSnackbar(
+              "Votre image a bien été importée. Elle devrait apparaître d'ici quelques secondes...",
+              "success"
+            );
             setTimeout(refetch, 10000);
           })
-          .catch((err) => {
+          .catch(err => {
             console.error(err);
           });
       }
-    }
+    };
   }
 
   public render() {
-    const { classes, workshopId, redirectToNotFound, currentGourmet } = this.props;
+    const {
+      classes,
+      workshopId,
+      redirectToNotFound,
+      currentGourmet
+    } = this.props;
 
     const updateWorkshopComponent = () => (
       <Form autoComplete="off">
         <WorkshopForm />
         <Grid item xs={12}>
-          <Button type="submit" variant="contained" color="secondary" className={classes.submitButton}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="secondary"
+            className={classes.submitButton}
+          >
             Mettre à jour l'atelier
           </Button>
         </Grid>
@@ -178,7 +201,7 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
             date,
             min_gourmet,
             max_gourmet,
-            cook,
+            cook
           } = workshop;
 
           const identityId = cook.gourmet.identity_id;
@@ -196,10 +219,12 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
               </Link>
               <Card className={classes.card}>
                 <CardContent className={classes.imagesCard}>
-                  {workshop.images.length === 0 &&
-                    <Typography variant="body1">Pas encore de photos pour cet atelier</Typography>
-                  }
-                  {workshop.images.length > 0 &&
+                  {workshop.images.length === 0 && (
+                    <Typography variant="body1">
+                      Pas encore de photos pour cet atelier
+                    </Typography>
+                  )}
+                  {workshop.images.length > 0 && (
                     <GridList className={classes.gridList} cols={2.5}>
                       {workshop.images.map((image, i) => (
                         <GridListTile key={image.key}>
@@ -213,13 +238,16 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
                           <GridListTileBar
                             classes={{
                               root: classes.titleBar,
-                              title: classes.title,
+                              title: classes.title
                             }}
                             actionIcon={
                               <IconButton className={classes.deleteIcon}>
                                 <DeleteIcon
                                   onClick={() => {
-                                    Storage.remove(`workshops/${workshop.id}/${image.key}`, { identityId })
+                                    Storage.remove(
+                                      `workshops/${workshop.id}/${image.key}`,
+                                      { identityId }
+                                    )
                                       .then(refetch)
                                       .catch(err => console.error(err));
                                   }}
@@ -230,10 +258,9 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
                         </GridListTile>
                       ))}
                     </GridList>
-                  }
+                  )}
                   <Button
-                    variant="fab"
-                    mini
+                    variant="contained"
                     color="secondary"
                     aria-label="Add"
                     className={classes.addPhotoIcon}
@@ -243,10 +270,14 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
                     <input
                       type="file"
                       // @ts-ignore
-                      ref={node => this.fileUpload = node}
+                      ref={node => (this.fileUpload = node)}
                       accept="image/jpeg,image/png,image/jpg"
-                      style={{ display: 'none' }}
-                      onChange={this.handleImageChange(workshop.id, identityId, refetch)}
+                      style={{ display: "none" }}
+                      onChange={this.handleImageChange(
+                        workshop.id,
+                        identityId,
+                        refetch
+                      )}
                     />
                     <AddPhotoIcon />
                   </Button>
@@ -261,7 +292,7 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
                       price,
                       duration,
                       date: format(date, "YYYY-MM-DD"),
-                      gourmetRange: { min: min_gourmet, max: max_gourmet },
+                      gourmetRange: { min: min_gourmet, max: max_gourmet }
                     }}
                     component={updateWorkshopComponent}
                     onSubmit={this.onSubmit}
@@ -287,17 +318,13 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
     );
   }
 
-  public onSubmit(values: IWorkshopEditFormValues, { setSubmitting, setErrors, setStatus }) {
+  public onSubmit(
+    values: IWorkshopEditFormValues,
+    { setSubmitting, setErrors, setStatus }
+  ) {
     const { workshopId, openSnackbar, updateWorkshop } = this.props;
 
-    const {
-      name,
-      description,
-      price,
-      duration,
-      date,
-      gourmetRange,
-    } = values;
+    const { name, description, price, duration, date, gourmetRange } = values;
 
     const workshop = {
       id: workshopId,
@@ -307,10 +334,10 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
       duration,
       min_gourmet: gourmetRange.min,
       max_gourmet: gourmetRange.max,
-      date,
+      date
     };
 
-    const updateWorkshopError = (result) => {
+    const updateWorkshopError = result => {
       openSnackbar("Échec de la mise à jour de l'atelier", "error");
       setStatus({ success: false });
       setSubmitting(false);
@@ -338,8 +365,11 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
   public deleteWorkshop() {
     const { workshopId, openSnackbar, deleteWorkshop } = this.props;
 
-    const deleteWorkshopError = (result) => {
-      openSnackbar("Erreur lors de la suppression de l'atelier. Veuillez réessayer.", "error");
+    const deleteWorkshopError = result => {
+      openSnackbar(
+        "Erreur lors de la suppression de l'atelier. Veuillez réessayer.",
+        "error"
+      );
       console.error(result);
       if (result.errors && result.errors.length) {
         const error = result.errors[0].message;
@@ -362,16 +392,8 @@ class WorkshopEditForm extends React.Component<IWorkshopEditFormProps> {
 }
 
 const enhance = compose(
-  graphql(UpdateWorkshop, {
-    props: (props: any) => ({
-      updateWorkshop: (workshop) => props.mutate({ variables: { workshop } }),
-    }),
-  }),
-  graphql(DeleteWorkshop, {
-    props: (props: any) => ({
-      deleteWorkshop: (workshopId) => props.mutate({ variables: { workshop_id: workshopId } }),
-    }),
-  }),
+  graphql(UpdateWorkshop),
+  graphql(DeleteWorkshop),
   withRedirect,
   withStyles(styles as any)
 );

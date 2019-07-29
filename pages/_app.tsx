@@ -1,20 +1,19 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/styles';
-import App, { Container } from 'next/app';
-import Router from 'next/router'
-import React from 'react';
-import ProvidedApp from '../components/App';
-import theme from '../decorators/theme'
-import { initGA, logPageView } from '../shared/analytics'
-import { getMetaInfo, renderSEO } from "../shared/seo";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/styles";
+import App, { Container } from "next/app";
+import Router from "next/router";
+import React from "react";
+import ProvidedApp from "../components/App";
+import theme from "../decorators/theme";
+import { initGA, logPageView } from "../shared/analytics";
 
 class MyApp extends App {
   public componentDidMount() {
     initGA();
     logPageView();
-    Router.router.events.on('routeChangeComplete', logPageView);
+    Router.router.events.on("routeChangeComplete", logPageView);
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
+    const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentNode!.removeChild(jssStyles);
     }
@@ -25,11 +24,12 @@ class MyApp extends App {
 
     const { pathname } = this.props.router;
     let cleanPath = pathname.substr(1);
-    if (cleanPath === '') { cleanPath = 'index' }
+    if (cleanPath === "") {
+      cleanPath = "index";
+    }
 
     return (
       <Container>
-        {renderSEO(getMetaInfo(), cleanPath)}
         <ProvidedApp>
           {/* Wrap every page in Jss and Theme providers */}
           <ThemeProvider theme={theme}>

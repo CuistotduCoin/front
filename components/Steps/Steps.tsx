@@ -33,6 +33,7 @@ export class Steps extends React.Component<IStepsProps, {}> {
       <>
         {
           steps.map((step, key) => (
+            // @ts-ignore
             <Grid item xs={12} sm={sm} key={key}>
               <Grid
                 container

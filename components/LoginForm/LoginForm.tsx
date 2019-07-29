@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import { Field, Form, Formik } from "formik";
 import { TextField } from "formik-material-ui";
-import Router from 'next/router';
+import Router from "next/router";
 import React from "react";
 import { Subscribe } from "unstated";
 import * as Yup from "yup";
@@ -94,7 +94,12 @@ export class LoginForm extends React.Component<ILoginFormProps, {}> {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button type="submit" variant="contained" color="secondary" className={classes.submitButton}>
+              <Button
+                type="submit"
+                variant="contained"
+                color="secondary"
+                className={classes.submitButton}
+              >
                 Se connecter
               </Button>
             </Grid>
@@ -125,7 +130,7 @@ export class LoginForm extends React.Component<ILoginFormProps, {}> {
       { setSubmitting, setErrors, setStatus }
     ) => {
       Auth.signIn(values.username, values.password)
-        .then(user => {
+        .then(() => {
           setStatus({ success: true });
           logIn();
         })

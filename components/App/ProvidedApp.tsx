@@ -4,11 +4,11 @@ import UNSTATED from "unstated-debug";
 import { App, AppContainer } from ".";
 import "../../shared/auth";
 
-if (process.env.NODE_ENV === "development" && typeof window !== 'undefined') {
-   UNSTATED.logStateChanges = true;
+if (process.env.NODE_ENV === "development" && typeof window !== "undefined") {
+  UNSTATED.logStateChanges = true;
   // @ts-ignore
-   window.LOG_LEVEL = "DEBUG";
- }
+  window.LOG_LEVEL = "DEBUG";
+}
 
 export class ProvidedApp extends React.Component {
   public appContainer: any;
@@ -24,6 +24,7 @@ export class ProvidedApp extends React.Component {
       <Provider inject={[this.appContainer]}>
         <Subscribe to={[AppContainer]}>
           {(app: any) => (
+            // @ts-ignore
             <App
               isLoggedIn={app.state.isLoggedIn}
               referer={app.state.referer}

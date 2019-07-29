@@ -28,15 +28,11 @@ interface IBookForm {
   availableSeat: number;
 }
 
-interface IBookFormValues {
-  nbSeat: number;
-}
-
 export class BookForm extends React.Component<IBookForm, {}> {
   public render() {
     const { classes } = this.props;
 
-    const onSubmit = async (values: IBookFormValues) => {
+    const onSubmit = async () => {
       try {
         // await Auth.signIn(values.email, values.password);
         alert("Logged in");
@@ -69,6 +65,7 @@ export class BookForm extends React.Component<IBookForm, {}> {
                 name: "Nombre d'invités"
               }}
             >
+              // @ts-ignore
               {[...Array(this.props.availableSeat)].map((e, i) => {
                 return (
                   <MenuItem key={i + 1} value={i + 1}>

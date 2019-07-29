@@ -1,6 +1,5 @@
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -21,7 +20,6 @@ interface IAccountDropdownState {
 }
 
 class AccountDropdown extends React.Component<{}, IAccountDropdownState> {
-
   constructor(props) {
     super(props);
     this.state = { anchorEl: null, open: false };
@@ -67,7 +65,7 @@ class AccountDropdown extends React.Component<{}, IAccountDropdownState> {
               disablePortal
               placement="bottom-end"
             >
-              {({ TransitionProps }) => (
+              {() => (
                 <Paper>
                   <ClickAwayListener onClickAway={this.handleClose}>
                     <MenuList>

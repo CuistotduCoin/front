@@ -8,7 +8,6 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import Link from "../Link";
 
 const styles = (theme: Theme) => ({
   card: {

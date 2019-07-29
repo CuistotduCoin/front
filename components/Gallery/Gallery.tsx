@@ -1,5 +1,5 @@
 import React from "react";
-import Lightbox from 'react-images';
+import Lightbox from "react-images";
 import RGallery from "react-photo-gallery";
 
 export interface IGalleryProps {
@@ -21,6 +21,7 @@ export class Gallery extends React.Component<IGalleryProps, IGalleryState> {
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
   }
+  // @ts-ignore
   public openLightbox(event, obj) {
     this.setState({
       currentImage: obj.index,
@@ -50,7 +51,8 @@ export class Gallery extends React.Component<IGalleryProps, IGalleryState> {
     return (
       <>
         <RGallery photos={photos} onClick={this.openLightbox} />
-        <Lightbox images={photos}
+        <Lightbox
+          images={photos}
           backdropClosesModal={true}
           imageCountSeparator="/"
           onClose={this.closeLightbox}

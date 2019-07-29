@@ -30,7 +30,8 @@
     ".serverless",
     ".next",
     "sls-next-build",
-    "**/*.stories.tsx"
+    "**/*.stories.tsx",
+    "notpages"
   ],
   "include": [
     "next-env.d.ts",

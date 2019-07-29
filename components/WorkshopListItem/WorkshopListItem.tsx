@@ -3,7 +3,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Chip from "@material-ui/core/Chip";
-import { Theme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import cx from "classnames";
 import get from "lodash.get";
@@ -15,7 +15,7 @@ import { compose } from "recompose";
 import S3Image from "../../components/S3Image";
 import { format } from "../../shared/date-utils";
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
   card: {
     display: 'flex',
     justifyContent: 'space-between',

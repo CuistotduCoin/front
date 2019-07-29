@@ -41,7 +41,7 @@ export class ProfileImageUploader extends React.Component<IProfileImageUploaderP
     this.onDrop = this.onDrop.bind(this);
   }
 
-  public onDrop(acceptedFiles, rejectedFiles) {
+  public onDrop(acceptedFiles) {
     const {
       identityId,
       updateCurrentGourmetImage,
@@ -70,11 +70,13 @@ export class ProfileImageUploader extends React.Component<IProfileImageUploaderP
   public render() {
     const { classes, identityId, imageKey } = this.props;
     return (
+      // @ts-ignore
       <Dropzone
         accept="image/jpeg,image/png"
         onDrop={this.onDrop}
         className={classes.container}
       >
+        // @ts-ignore
         <div className={classes.content}>
           <ProfileImage
             imageKey={imageKey}

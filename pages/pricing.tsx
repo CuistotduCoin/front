@@ -5,8 +5,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+import Tab from "@material-ui/core/Tab";
+import Tabs from "@material-ui/core/Tabs";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import Layout from "../components/Layout";
@@ -19,8 +19,8 @@ const styles = (theme: Theme) => ({
     backgroundColor: theme.palette.primary.main
   },
   cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
     marginBottom: theme.spacing(2)
   },
   grid: {
@@ -40,7 +40,7 @@ interface IPricingState {
 
 class Pricing extends React.Component<IPricingProps, IPricingState> {
   public static getInitialProps = async () => ({
-    static: 'not-static'
+    static: "not-static"
   });
 
   constructor(props: IPricingProps) {
@@ -51,6 +51,7 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     };
   }
 
+  // @ts-ignore
   public handleChange = (event, tab: number) => {
     this.setState({ tab });
   };
@@ -62,11 +63,7 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     return (
       <Layout
         component={
-          <Grid
-            container
-            justify="space-around"
-            className={classes.grid}
-          >
+          <Grid container justify="space-around" className={classes.grid}>
             <Grid item>
               <Button
                 variant="contained"
@@ -75,11 +72,11 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
                 target="_blank"
               >
                 Obtenir un devis
-            </Button>
+              </Button>
             </Grid>
           </Grid>
-        }>
-
+        }
+      >
         <Tabs value={tab} onChange={this.handleChange} centered={true}>
           <Tab label="Atelier collectif" />
           <Tab label="Atelier privatif" />
@@ -92,7 +89,7 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
         {tab === 2 && this.renderPricingCocktail(classes)}
         {tab === 3 && this.renderPricingMeal(classes)}
         {tab === 4 && this.renderPricingWorkingDay(classes)}
-      </Layout >
+      </Layout>
     );
   }
 
@@ -100,27 +97,47 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     const pricingCollectiveWorkshop = [
       {
         title: "Atelier de cuisine de 2H",
-        price: '35',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
+        price: "35",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
       },
       {
         title: "Atelier cuisine de 3H",
-        price: '50',
-        description: ['20 users included', '10 GB of storage', 'Help center access', 'Priority email support'],
-        buttonText: 'Get started'
+        price: "50",
+        description: [
+          "20 users included",
+          "10 GB of storage",
+          "Help center access",
+          "Priority email support"
+        ],
+        buttonText: "Get started"
       },
       {
-        title: 'Atelier parents - enfants',
-        price: '40',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        title: "Atelier parents - enfants",
+        price: "40",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       },
       {
-        title: 'Atelier technique',
-        price: '50',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        title: "Atelier technique",
+        price: "50",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       }
     ];
 
@@ -144,33 +161,58 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     const pricingPrivateWorkshop = [
       {
         title: "Atelier cocktail d'1H",
-        price: '30',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
+        price: "30",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
       },
       {
         title: "Atelier de cuisine de 2H",
-        price: '50',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
+        price: "50",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
       },
       {
         title: "Atelier cuisine de 3H",
-        price: '65',
-        description: ['20 users included', '10 GB of storage', 'Help center access', 'Priority email support'],
-        buttonText: 'Get started'
+        price: "65",
+        description: [
+          "20 users included",
+          "10 GB of storage",
+          "Help center access",
+          "Priority email support"
+        ],
+        buttonText: "Get started"
       },
       {
-        title: 'Atelier parents - enfants',
-        price: '50',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        title: "Atelier parents - enfants",
+        price: "50",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       },
       {
-        title: 'Atelier technique',
-        price: '65',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        title: "Atelier technique",
+        price: "65",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       }
     ];
 
@@ -183,7 +225,8 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
           gutterBottom
           className={classes.typography}
         >
-          Nous organisons des ateliers privatifs chez vous, dans votre entreprise ou dans nos lieux partenaires, sur demande :
+          Nous organisons des ateliers privatifs chez vous, dans votre
+          entreprise ou dans nos lieux partenaires, sur demande :
         </Typography>
         {this.renderGrid(classes, pricingPrivateWorkshop)}
       </>
@@ -194,22 +237,37 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     const pricingCocktail = [
       {
         title: "Cocktail apéritif",
-        price: '15',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
+        price: "15",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
       },
       {
         title: "Cocktail déjeunatoire ou dinatoire",
-        price: '18',
-        description: ['Assortiment de tapas salées et sucrées', '10 GB of storage', 'Help center access', 'Priority email support'],
-        buttonText: 'Get started'
+        price: "18",
+        description: [
+          "Assortiment de tapas salées et sucrées",
+          "10 GB of storage",
+          "Help center access",
+          "Priority email support"
+        ],
+        buttonText: "Get started"
       },
       {
         title: "Cocktail déjeunatoire ou dinatoire gourmand",
-        price: '23',
-        description: ['Assortiment de tapas salées et sucrées ou tapase salée', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
-      },
+        price: "23",
+        description: [
+          "Assortiment de tapas salées et sucrées ou tapase salée",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
+      }
     ];
 
     return (
@@ -232,10 +290,15 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     const pricingMeal = [
       {
         title: "Lunch Box",
-        price: '15',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
-      },
+        price: "15",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
+      }
     ];
 
     return (
@@ -258,27 +321,47 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
     const pricingWorkingDay = [
       {
         title: "Café d'accueil ou goûter",
-        price: '5',
-        description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-        buttonText: 'Sign up for free'
+        price: "5",
+        description: [
+          "10 users included",
+          "2 GB of storage",
+          "Help center access",
+          "Email support"
+        ],
+        buttonText: "Sign up for free"
       },
       {
         title: "Repas",
-        price: '15',
-        description: ['20 users included', '10 GB of storage', 'Help center access', 'Priority email support'],
-        buttonText: 'Get started'
+        price: "15",
+        description: [
+          "20 users included",
+          "10 GB of storage",
+          "Help center access",
+          "Priority email support"
+        ],
+        buttonText: "Get started"
       },
       {
         title: "Activité atelier de cuisine",
-        price: '30',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        price: "30",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       },
       {
         title: "Location",
-        price: '65',
-        description: ['50 users included', '30 GB of storage', 'Help center access', 'Phone & email support'],
-        buttonText: 'Contact us'
+        price: "65",
+        description: [
+          "50 users included",
+          "30 GB of storage",
+          "Help center access",
+          "Phone & email support"
+        ],
+        buttonText: "Contact us"
       }
     ];
 
@@ -294,7 +377,6 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
           Nous organisons vos journées d'entreprises :
         </Typography>
         {this.renderGrid(classes, pricingWorkingDay)}
-
       </>
     );
   }
@@ -304,19 +386,26 @@ class Pricing extends React.Component<IPricingProps, IPricingState> {
       <Grid className={classes.grid}>
         <Grid container justify="space-around">
           {pricing.map(pricing => (
-            <Grid item key={pricing.title} xs={12} md={6} lg={4} className={classes.card}>
+            <Grid
+              item
+              key={pricing.title}
+              xs={12}
+              md={6}
+              lg={4}
+              className={classes.card}
+            >
               <Card>
                 <CardHeader
                   title={pricing.title}
-                  titleTypographyProps={{ align: 'center' }}
-                  subheaderTypographyProps={{ align: 'center' }}
+                  titleTypographyProps={{ align: "center" }}
+                  subheaderTypographyProps={{ align: "center" }}
                   className={classes.cardHeader}
                 />
                 <CardContent>
                   <div className={classes.cardPricing}>
                     <Typography component="h2" variant="h3" color="textPrimary">
                       {pricing.price}€
-                </Typography>
+                    </Typography>
                   </div>
                   {pricing.description.map(line => (
                     <Typography variant="subtitle1" align="center" key={line}>

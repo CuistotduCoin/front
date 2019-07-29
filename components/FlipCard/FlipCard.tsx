@@ -1,13 +1,13 @@
-import { Theme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 
 // https://codepen.io/ArashRasteh/pen/QmgeLL
-const styles = (theme: Theme) => ({
+const styles = () => ({
   container: {
     backgroundColor: "transparent",
     width: 360,
     height: 280,
-    perspective: '1000px'
+    perspective: "1000px"
   },
   flipper: {
     width: "100%",
@@ -20,18 +20,18 @@ const styles = (theme: Theme) => ({
   },
   front: {
     transformStyle: "preserve-3d",
-    backfaceVisibility: 'hidden',
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
+    backfaceVisibility: "hidden",
+    position: "absolute",
+    width: "100%",
+    height: "100%"
   },
   back: {
     transformStyle: "preserve-3d",
-    backfaceVisibility: 'hidden',
-    position: 'absolute',
+    backfaceVisibility: "hidden",
+    position: "absolute",
     transform: "rotateY(-180deg)",
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%"
   }
 });
 
@@ -48,12 +48,8 @@ export class FlipCard extends React.Component<IFlipCardProps, {}> {
     return (
       <div className={classes.container}>
         <div className={classes.flipper}>
-          <div className={classes.front}>
-            {front}
-          </div>
-          <div className={classes.back}>
-            {back}
-          </div>
+          <div className={classes.front}>{front}</div>
+          <div className={classes.back}>{back}</div>
         </div>
       </div>
     );

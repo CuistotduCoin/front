@@ -12,7 +12,7 @@ import { fromString } from "../../shared/util";
 
 const styles = (theme: Theme) => ({
   form: {
-    paddingBottom: 24
+    paddingBottom: theme.spacing(2)
   }
 });
 
@@ -69,7 +69,7 @@ export class PaymentCardForm extends React.Component<
 
   public onSubmit = () => async (values: IPaymentCardFormValues) => {
     try {
-      alert("Pay");
+      alert(values);
     } catch (e) {
       alert(e.message);
     }
@@ -169,6 +169,7 @@ export class PaymentCardForm extends React.Component<
       );
 
     return (
+      // @ts-ignore
       <Formik
         initialValues={initialValues}
         component={paymentCardFormComponent}

@@ -7,11 +7,12 @@ import AccountForm from "./AccountForm";
 const AccountFormContainer: React.SFC<{}> = (props) => (
   <Subscribe to={[AppContainer]}>
     {(app: any) => (
+      // @ts-ignore
       <AccountForm
-        {...props}
         currentGourmet={app.state.currentGourmet}
         openSnackbar={app.openSnackbar}
         setCurrentGourmet={app.setCurrentGourmet}
+        {...props}
       />
     )}
   </Subscribe>

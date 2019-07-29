@@ -1,17 +1,17 @@
 import Grid from "@material-ui/core/Grid";
-import { Theme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
   backgroundImage: {
+    backgroundPosition: "50%",
+    backgroundSize: "cover",
     bottom: 0,
     left: 0,
     position: "absolute",
     right: 0,
     top: 0,
-    backgroundPosition: "50%",
-    backgroundSize: "cover",
     zIndex: -1
   },
   content: {
@@ -55,7 +55,7 @@ interface IHeroProps {
 
 export class Hero extends React.Component<IHeroProps, {}> {
   public static defaultProps: Partial<IHeroProps> = {
-    height: 500,
+    height: 500
   };
 
   private innerBackground = {
@@ -93,9 +93,7 @@ export class Hero extends React.Component<IHeroProps, {}> {
                   {this.props.description}
                 </Typography>
               )}
-              <>
-                {this.props.children}
-              </>
+              <>{this.props.children}</>
             </Grid>
           </Grid>
         </div>

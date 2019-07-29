@@ -5,9 +5,9 @@ import { compose } from "recompose";
 import { Subscribe } from "unstated";
 import { AppContainer } from ".";
 import Snackbar from "../../components/Snackbar";
-import initApollo from '../../decorators/initApollo';
+import initApollo from "../../decorators/initApollo";
 import { GetCurrentGourmet, UpdateGourmet } from "../../queries";
-import { apolloConfig } from '../../shared/config';
+import { apolloConfig } from "../../shared/config";
 
 interface IAppProps {
   referer?: string;
@@ -42,7 +42,7 @@ export class App extends React.Component<IAppProps, {}> {
         .catch(() => {
           console.log("Not authenticated... Authentication as guest...");
           Auth.signIn(process.env.GUEST_USERNAME, process.env.GUEST_PASSWORD)
-            .then(user => console.log("Authenticated as guest"))
+            .then(() => console.log("Authenticated as guest"))
             .catch(err => {
               console.log(`Authentication as guest has failed : ${err}`);
             });
@@ -83,6 +83,7 @@ export class App extends React.Component<IAppProps, {}> {
                 const jwtToken = currentSession.getIdToken().getJwtToken();
                 const loginKey = `cognito-idp.${process.env.AWS_REGION_IRELAND}.amazonaws.com/${process.env.AWS_USERPOOL_ID}`;
 
+                // @ts-ignore
                 AWS.config.credentials = new AWS.CognitoIdentityCredentials(
                   {
                     IdentityPoolId: process.env.AWS_IDENTITY_POOL_ID,
@@ -92,21 +93,24 @@ export class App extends React.Component<IAppProps, {}> {
                 );
 
                 // Save the gourmet identity id in our base
-                client.mutate({
-                  mutation: UpdateGourmet,
-                  variables: {
-                    gourmet: {
-                      id: currentSession.getIdToken().payload.sub,
-                      identity_id: AWS.config.credentials.identityId
+                client
+                  .mutate({
+                    mutation: UpdateGourmet,
+                    variables: {
+                      gourmet: {
+                        id: currentSession.getIdToken().payload.sub,
+                        // @ts-ignore
+                        identity_id: AWS.config.credentials.identityId
+                      }
                     }
-                  }
-                }).then(updateResult => {
-                  if (updateResult.data.updateGourmet.message === "success") {
-                    console.log("identity id has been populated");
-                  } else {
-                    console.error("failure while populating identity id");
-                  }
-                });
+                  })
+                  .then(updateResult => {
+                    if (updateResult.data.updateGourmet.message === "success") {
+                      console.log("identity id has been populated");
+                    } else {
+                      console.error("failure while populating identity id");
+                    }
+                  });
               });
             }
           }
@@ -115,7 +119,7 @@ export class App extends React.Component<IAppProps, {}> {
     } else if (isLoggingOut) {
       console.log("Logging out...");
       Auth.signOut()
-        .then(data => {
+        .then(() => {
           setCurrentGourmet(undefined);
           openSnackbar("Vous êtes maintenant déconnecté", "success");
           Router.replace("/");
@@ -147,8 +151,6 @@ export class App extends React.Component<IAppProps, {}> {
   }
 }
 
-const enhance = compose(
-  withRouter
-);
+const enhance = compose(withRouter);
 
 export default enhance(App);

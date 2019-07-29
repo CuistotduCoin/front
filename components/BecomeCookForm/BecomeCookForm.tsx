@@ -8,7 +8,10 @@ import { AppContainer } from "../../components/App";
 import CookForm from "../../components/CookForm";
 
 import { CreateCook } from "../../queries";
-import { phoneNumberValidation, sirenValidation } from "../../shared/validations";
+import {
+  phoneNumberValidation,
+  sirenValidation
+} from "../../shared/validations";
 
 const initialValues = {
   is_pro: true,
@@ -46,7 +49,7 @@ const validationSchema = Yup.object().shape({
     .nullable(true)
     .email("Veuillez saisir une adresse email valide"),
   siren: sirenValidation(),
-  pro_phone_number: phoneNumberValidation(true),
+  pro_phone_number: phoneNumberValidation(true)
 });
 
 export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
@@ -56,19 +59,22 @@ export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
   }
 
   public render() {
-    const { classes, currentGourmet } = this.props;
+    const { currentGourmet } = this.props;
 
     return (
+      // @ts-ignore
       <Subscribe to={[AppContainer]}>
-        {(app: any) => (
+        {() => (
           <Formik
             initialValues={Object.assign({}, initialValues, {
               pro_email: currentGourmet.email,
-              pro_phone_number: currentGourmet.phone_number || '',
+              pro_phone_number: currentGourmet.phone_number || "",
               legal_first_name: currentGourmet.first_name,
-              legal_last_name: currentGourmet.last_name,
+              legal_last_name: currentGourmet.last_name
             })}
-            component={({ values }) => <CookForm action="create" values={values} />}
+            component={({ values }) => (
+              <CookForm action="create" values={values} />
+            )}
             onSubmit={this.onSubmit}
             validationSchema={validationSchema}
             validateOnBlur={false}
@@ -94,12 +100,12 @@ export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
       pro_phone_number,
       legal_first_name,
       legal_last_name,
-      legal_birthdate,
+      legal_birthdate
     } = values;
 
     const cook = {
       gourmet: {
-        id: currentGourmet.id,
+        id: currentGourmet.id
       },
       is_pro,
       description,
@@ -113,12 +119,15 @@ export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
         pro_email,
         legal_first_name,
         legal_last_name,
-        legal_birthdate: legal_birthdate || null,
+        legal_birthdate: legal_birthdate || null
       });
     }
 
-    const createCookError = (result) => {
-      openSnackbar("Échec lors de la création de votre compte cuistot", "error");
+    const createCookError = result => {
+      openSnackbar(
+        "Échec lors de la création de votre compte cuistot",
+        "error"
+      );
       setStatus({ success: false });
       setSubmitting(false);
       console.error(result);
@@ -133,7 +142,10 @@ export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
       .then(res => {
         const result = res.data.createCook;
         if (result.message === "success") {
-          openSnackbar("Merci ! Nous vous contactons au plus vite pour convenir d'un rendez-vous", "success");
+          openSnackbar(
+            "Merci ! Nous vous contactons au plus vite pour convenir d'un rendez-vous",
+            "success"
+          );
           setStatus({ success: true });
           setSubmitting(false);
           resetForm(initialValues);
@@ -145,12 +157,6 @@ export class BecomeCookForm extends React.Component<IBecomeCookFormProps, {}> {
   }
 }
 
-const enhance = compose(
-  graphql(CreateCook, {
-    props: (props: any) => ({
-      createCook: (cook) => props.mutate({ variables: { cook } }),
-    }),
-  }),
-);
+const enhance = compose(graphql(CreateCook));
 
 export default enhance(BecomeCookForm);

@@ -114,6 +114,7 @@ class WizardForm extends React.Component<IWizardFormProps, IWizardFormState> {
           if (progressBarProps) {
             progressBar = React.createElement(ProgressBar, {
               ...progressBarProps,
+              // @ts-ignore
               page,
               onIconClick: (newPage: number) => {
                 if (newPage < page) {

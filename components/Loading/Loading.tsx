@@ -1,8 +1,8 @@
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { Theme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
   loading: {
     display: "flex",
     flexDirection: "column",

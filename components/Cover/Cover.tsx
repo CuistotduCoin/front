@@ -1,7 +1,7 @@
-import { Theme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
   cover: {
     backgroundPosition: "50% 50%",
     backgroundRepeat: "no-repeat",

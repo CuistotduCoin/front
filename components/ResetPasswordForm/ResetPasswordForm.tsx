@@ -55,6 +55,7 @@ export class ResetPasswordForm extends React.Component<
 
   public initialValues() {
     return {
+      // @ts-ignore
       username: this.props.router.query.username || "",
       code: "",
       newPassword: "",
@@ -152,7 +153,7 @@ export class ResetPasswordForm extends React.Component<
     ) => {
       const { username, code, newPassword } = values;
       Auth.forgotPasswordSubmit(username, code, newPassword)
-        .then(data => {
+        .then(() => {
           setStatus({ success: true });
           resetForm(this.initialValues());
           openSnackbar("Mot de passe mis à jour", "success");

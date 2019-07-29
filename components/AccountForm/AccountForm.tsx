@@ -10,7 +10,7 @@ import { Select, TextField } from "formik-material-ui";
 import get from "lodash.get";
 import React from "react";
 import { graphql, Query } from "react-apollo";
-import { compose } from "recompose";;
+import { compose } from "recompose";
 import * as Yup from "yup";
 import CookForm from "../../components/CookForm";
 import Loading from "../../components/Loading";
@@ -23,7 +23,7 @@ import {
   passwordValidation,
   phoneNumberValidation,
   sirenValidation,
-  zipCodeValidation,
+  zipCodeValidation
 } from "../../shared/validations";
 
 const styles = (theme: Theme) => ({
@@ -60,7 +60,7 @@ const infoValidationSchema = Yup.object().shape({
   first_name: Yup.string().required("Un prénom est obligatoire"),
   last_name: Yup.string().required("Un nom est obligatoire"),
   zip_code: zipCodeValidation(),
-  phone_number: phoneNumberValidation(),
+  phone_number: phoneNumberValidation()
 });
 
 const cookInfoValidationSchema = Yup.object().shape({
@@ -68,7 +68,7 @@ const cookInfoValidationSchema = Yup.object().shape({
     .nullable(true)
     .email("Veuillez saisir une adresse email valide"),
   siren: sirenValidation(),
-  pro_phone_number: phoneNumberValidation(true),
+  pro_phone_number: phoneNumberValidation(true)
 });
 
 const passwordValidationSchema = Yup.object().shape({
@@ -358,7 +358,10 @@ class AccountForm extends React.Component<IAccountFormProps> {
           if (error) return `Error: ${error}`;
 
           let cookCard;
-          if (get(data, 'getCook.message') === "success" && get(data, 'getCook.cook.confirmed')) {
+          if (
+            get(data, "getCook.message") === "success" &&
+            get(data, "getCook.cook.confirmed")
+          ) {
             const {
               is_pro,
               description: cookDescription,
@@ -368,7 +371,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
               pro_phone_number,
               legal_first_name,
               legal_last_name,
-              legal_birthdate,
+              legal_birthdate
             } = data.getCook.cook;
 
             cookCard = (
@@ -384,9 +387,11 @@ class AccountForm extends React.Component<IAccountFormProps> {
                       pro_phone_number,
                       legal_first_name,
                       legal_last_name,
-                      legal_birthdate: format(legal_birthdate, "YYYY-MM-DD"),
+                      legal_birthdate: format(legal_birthdate, "YYYY-MM-DD")
                     }}
-                    component={({ values }) => <CookForm action="update" values={values} />}
+                    component={({ values }) => (
+                      <CookForm action="update" values={values} />
+                    )}
                     onSubmit={this.onNewCookInfoSubmit}
                     validationSchema={cookInfoValidationSchema}
                     validateOnChange={false}
@@ -401,7 +406,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
               <Card className={classes.card}>
                 <CardContent>
                   <ProfileImageUploader
-                    imageKey={get(currentGourmet, 'image.key')}
+                    imageKey={get(currentGourmet, "image.key")}
                     identityId={currentGourmet.identity_id}
                   />
                   <Formik
@@ -450,7 +455,12 @@ class AccountForm extends React.Component<IAccountFormProps> {
     values: IUpdateInfoFormValues,
     { setSubmitting, setErrors, setStatus }
   ) {
-    const { currentGourmet, setCurrentGourmet, openSnackbar, updateGourmet } = this.props;
+    const {
+      currentGourmet,
+      setCurrentGourmet,
+      openSnackbar,
+      updateGourmet
+    } = this.props;
 
     const {
       description,
@@ -477,7 +487,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
       zip_code
     };
 
-    const updateGourmetError = (result) => {
+    const updateGourmetError = result => {
       openSnackbar("Échec de la mise à jour de vos informations", "error");
       setStatus({ success: false });
       setSubmitting(false);
@@ -517,7 +527,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
       pro_phone_number,
       legal_first_name,
       legal_last_name,
-      legal_birthdate,
+      legal_birthdate
     } = values;
 
     const cook = {
@@ -530,10 +540,10 @@ class AccountForm extends React.Component<IAccountFormProps> {
       pro_phone_number,
       legal_first_name,
       legal_last_name,
-      legal_birthdate: legal_birthdate || null,
+      legal_birthdate: legal_birthdate || null
     };
 
-    const updateCookError = (result) => {
+    const updateCookError = result => {
       openSnackbar("Échec de la mise à jour de vos informations", "error");
       setStatus({ success: false });
       setSubmitting(false);
@@ -566,7 +576,7 @@ class AccountForm extends React.Component<IAccountFormProps> {
     const { oldPassword, newPassword } = values;
     Auth.currentAuthenticatedUser()
       .then(user => Auth.changePassword(user, oldPassword, newPassword))
-      .then(data => {
+      .then(() => {
         openSnackbar("Votre mot de passe a bien été mis à jour", "success");
         setStatus({ success: true });
         setSubmitting(false);
@@ -582,16 +592,8 @@ class AccountForm extends React.Component<IAccountFormProps> {
 }
 
 const enhance = compose(
-  graphql(UpdateCook, {
-    props: (props: any) => ({
-      updateCook: (cook) => props.mutate({ variables: { cook } }),
-    }),
-  }),
-  graphql(UpdateGourmet, {
-    props: (props: any) => ({
-      updateGourmet: (gourmet) => props.mutate({ variables: { gourmet } }),
-    }),
-  }),
+  graphql(UpdateCook),
+  graphql(UpdateGourmet),
   withStyles(styles as any)
 );
 
