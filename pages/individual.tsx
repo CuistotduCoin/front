@@ -68,7 +68,38 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const { tab } = this.state;
 
     // @ts-ignore
-    const workshops = [];
+    const workshops = [
+      {
+        availableSeat: 8,
+        date: "samedi 28 Septembre, 10h-12h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/anne-granola.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
+        name: "Atelier Enfant : P'tit Dej",
+        nameCook: "Anne",
+        price: 30,
+        spot: "Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/lborJZ",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "samedi 14 Septembre, 9h-14h",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/kevin-brassage.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/kevin.jpg",
+        name: "Atelier Brassage de Bière",
+        nameCook: "Kevin",
+        price: 65,
+        spot: "The Corner, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/yueZfu",
+        type: "Atelier collectif"
+      }
+    ];
 
     const privateWorkshops = [
       {
