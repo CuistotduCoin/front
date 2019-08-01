@@ -3,7 +3,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import React from "react";
-import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import WorkshopCardList from "../components/WorkshopCardList";
 
@@ -156,15 +155,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
             <Tab label="Atelier privatif" />
             <Tab label="Cuistot à domicile" />
           </Tabs>
-          {tab === 0 && (
-            <Banner
-              title="Les ateliers collectifs reviendront en septembre !"
-              subtitle="Mais pas de panique vous pouvez toujours réaliser un atelier privatif pour toutes vos occasions"
-              imageURL={
-                "https://static.cuistotducoin.com/img/individual/holiday.jpg"
-              }
-            />
-          )}
+          {tab === 0 && <WorkshopCardList workshops={workshops} ads={ads} />}
           {tab === 1 && (
             <WorkshopCardList workshops={privateWorkshops} ads={ads} />
           )}
