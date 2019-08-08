@@ -85,6 +85,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 14 Septembre, 10h-13h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/takako-sushis.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Atelier Sushis & Cie",
+        nameCook: "Takako",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/jTmev1",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 28 Septembre, 10h-12h",
         duration: 2,
         image:
