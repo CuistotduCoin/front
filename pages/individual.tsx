@@ -116,6 +116,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         type: "Atelier collectif"
       },
       {
+        availableSeat: 6,
+        date: "samedi 28 Septembre, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Cupcakes : Parents/enfants",
+        nameCook: "Audrey",
+        price: 40,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/upuPXF",
+        type: "Atelier collectif"
+      },
+      {
         availableSeat: 5,
         date: "Samedi 5 Octobre, 14h-16h",
         duration: 2,
@@ -158,21 +173,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/Z0lqdB",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 28 Septembre, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Cupcakes : Parents/enfants",
-        nameCook: "Audrey",
-        price: 40,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/upuPXF",
         type: "Atelier collectif"
       }
     ];
