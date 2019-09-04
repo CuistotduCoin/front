@@ -39,6 +39,8 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     return { tab: tab };
   }
 
+  // Use something like that :
+  // https://fr.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
   constructor(props: IIndividualProps) {
     super(props);
     this.state = props;
@@ -111,6 +113,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/lborJZ",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 6,
+        date: "samedi 28 Septembre, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Cupcakes : Parents/enfants",
+        nameCook: "Audrey",
+        price: 40,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/upuPXF",
         type: "Atelier collectif"
       },
       {
