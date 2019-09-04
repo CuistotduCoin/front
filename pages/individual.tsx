@@ -92,7 +92,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
         name: "Atelier Sushis & Cie",
         nameCook: "Takako",
-        price: 50,
+        price: "Complet",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/jTmev1",
@@ -156,6 +156,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/Z0lqdB",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Mercredi 30 Octobre, 14h-16h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-halloween.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Enfant - Spécial Halloween",
+        nameCook: "Audrey",
+        price: 30,
+        spot: "Schmidt",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/M7rqKl",
         type: "Atelier collectif"
       }
     ];
