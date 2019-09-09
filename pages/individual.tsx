@@ -102,6 +102,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 21 Septembre, 9h30-14h30",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-rentree.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier Ayurvédique",
+        nameCook: "Michel",
+        price: "50",
+        spot: "Plougastel",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/TXLMeq",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 28 Septembre, 10h-12h",
         duration: 2,
         image:
