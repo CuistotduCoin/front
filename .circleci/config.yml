@@ -17,7 +17,7 @@ jobs:
       - run: &install_front_dependencies
           name: Install dependencies
           command: |
-            yarn global add serverless
+            yarn global add serverless@1.51.0
             yarn install
       - save_cache: &save_front_cache
           key: dependency-cache-{{ checksum "./yarn.lock" }}
