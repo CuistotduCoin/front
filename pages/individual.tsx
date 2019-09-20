@@ -207,6 +207,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Vendredi 25 Octobre, 17h30-20h30",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/luis-agnolotti.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
+        name: "Atelier Italien : Agnolotti &Cie",
+        nameCook: "Luis",
+        price: 50,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/TzKnPz",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 26 Octobre, 10h-12h",
         duration: 4,
         image:
@@ -297,6 +312,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Vendredi 22 Novembre, 17h30-20h30",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisus.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
+        name: "Atelier Italien : Pizza &Cie",
+        nameCook: "Luis",
+        price: 50,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/JZXof1",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 23 Novembre, 9h-13h",
         duration: 4,
         image:
@@ -308,6 +338,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/D9T8mc",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 30 Novembre, 10h-12h",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
+        name: "Atelier Libanais : Mezzé",
+        nameCook: "Farah",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/d2b9TN",
         type: "Atelier collectif"
       },
       {
