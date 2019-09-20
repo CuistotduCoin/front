@@ -194,8 +194,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         availableSeat: 8,
         date: "Samedi 19 Octobre, 10h-13h",
         duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/karim-tiep.jpg",
+        image: "https://static.cuistotducoin.com/img/workshops/karim-tiep.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/karim.jpg",
         name: "Atelier Tiep",
         nameCook: "Karim",
@@ -314,8 +313,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         availableSeat: 8,
         date: "Vendredi 22 Novembre, 17h30-20h30",
         duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisus.jpg",
+        image: "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisus.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
         name: "Atelier Italien : Pizza &Cie",
         nameCook: "Luis",
@@ -344,8 +342,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         availableSeat: 8,
         date: "Samedi 30 Novembre, 10h-12h",
         duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
+        image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
         name: "Atelier Libanais : Mezzé",
         nameCook: "Farah",
@@ -359,8 +356,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         availableSeat: 8,
         date: "Samedi 30 Novembre, 9h-13h",
         duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-cake.jpg",
+        image: "https://static.cuistotducoin.com/img/workshops/ronan-cake.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
         name: "Atelier Pâtisserie : Cakes",
         nameCook: "Ronan",
