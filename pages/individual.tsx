@@ -72,21 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Samedi 21 Septembre, 9h30-14h30",
-        duration: 5,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/michel-rentree.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Atelier Ayurvédique",
-        nameCook: "Michel",
-        price: "50",
-        spot: "Plougastel",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/TXLMeq",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 28 Septembre, 10h-12h",
         duration: 2,
         image:
@@ -117,7 +102,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 5 Octobre, 9h-13h",
+        date: "Samedi 5 Octobre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-eclair.jpg",
@@ -147,7 +132,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 12 Octobre, 9h-13h",
+        date: "Samedi 12 Octobre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-tarte-citron-meringuee.jpg",
@@ -177,7 +162,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 19 Octobre, 9h-13h",
+        date: "Samedi 19 Octobre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-royal-chocolat.jpg",
@@ -282,7 +267,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 16 Novembre, 9h-13h",
+        date: "Samedi 16 Novembre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
@@ -327,7 +312,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 23 Novembre, 9h-13h",
+        date: "Samedi 23 Novembre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-bonbon-chocolat.jpg",
@@ -357,7 +342,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 30 Novembre, 9h-13h",
+        date: "Samedi 30 Novembre, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-cake.jpg",
