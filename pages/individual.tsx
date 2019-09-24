@@ -162,6 +162,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Vendredi 18 Octobre, 17h-20h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier et repas galettes",
+        nameCook: "Nadine",
+        price: 35,
+        spot: "Terre d'Embruns, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/KTvBNX",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 19 Octobre, 9h30-13h30",
         duration: 4,
         image:
@@ -217,6 +232,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/WoBoNv",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 26 Octobre, 14h30-16h30",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier et goûter crêpes",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Terre d'Embruns, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/Nr0odU",
         type: "Atelier collectif"
       },
       {
@@ -325,6 +355,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 23 Novembre, 14h30-16h30",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier et goûter crêpes",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Terre d'Embruns, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/kUjdUz",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 30 Novembre, 10h-12h",
         duration: 2,
         image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
@@ -349,6 +394,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/JwqP1i",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Vendredi 6 Décembre, 17h-20h",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier et repas galettes",
+        nameCook: "Nadine",
+        price: 35,
+        spot: "Terre d'Embruns, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/si0jAA",
         type: "Atelier collectif"
       }
     ];
