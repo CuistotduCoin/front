@@ -72,36 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Samedi 28 Septembre, 10h-12h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-granola.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Enfant : P'tit Dej",
-        nameCook: "Anne",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/lborJZ",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 6,
-        date: "samedi 28 Septembre, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-cupcake.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Parents/enfants: Cupcakes",
-        nameCook: "Audrey",
-        price: 40,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/upuPXF",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 5 Octobre, 9h30-13h30",
         duration: 4,
         image:
@@ -376,7 +346,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
         name: "Atelier Libanais : Mezzé",
         nameCook: "Farah",
-        price: 35,
+        price: "Complet",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/d2b9TN",
