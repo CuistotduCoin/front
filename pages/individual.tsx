@@ -273,7 +273,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
         name: "Atelier Pâtisserie : Macarons",
         nameCook: "Ronan",
-        price: 50,
+        price: "Complet",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/tyNGwM",
