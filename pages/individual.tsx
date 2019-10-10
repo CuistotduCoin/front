@@ -235,6 +235,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         type: "Atelier collectif"
       },
       {
+        availableSeat: 100,
+        date: "Jeudi 14 Novembre, 19h",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.JPG",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.JPG",
+        name: "Etudiant Brestois - Challenge Culinaire",
+        nameCook: "Cuistot du Coin",
+        price: 0,
+        spot: "RU de Kergoat, Brest",
+        totalSeat: 100,
+        typeform: "https://cuistotducoin.typeform.com/to/GcKZD1",
+        type: "Evénement Etudiant"
+      },
+      {
         availableSeat: 8,
         date: "Samedi 16 Novembre, 9h30-13h30",
         duration: 4,
