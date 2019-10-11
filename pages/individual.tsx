@@ -239,8 +239,8 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         date: "Jeudi 14 Novembre, 19h",
         duration: 4,
         image:
-          "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.JPG",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.JPG",
+          "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
         name: "Etudiant Brestois - Challenge Culinaire",
         nameCook: "Cuistot du Coin",
         price: 0,
