@@ -72,36 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Vendredi 18 Octobre, 17h-20h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier et repas galettes",
-        nameCook: "Nadine",
-        price: 35,
-        spot: "Terre d'Embruns, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/KTvBNX",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 19 Octobre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-royal-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Royal Chocolat",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/q9e8vL",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Vendredi 25 Octobre, 17h30-20h30",
         duration: 3,
         image:
@@ -109,7 +79,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
         name: "Atelier Italien : Agnolotti &Cie",
         nameCook: "Luis",
-        price: 50,
+        price: "Complet",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/TzKnPz",
