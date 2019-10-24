@@ -72,80 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Samedi 12 Octobre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-tarte-citron-meringuee.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Tarte au citron Meringuée",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/DBdhNI",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 12 Octobre, 10h-12h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-rouleau.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Déjeuner Express",
-        nameCook: "Anne",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/COWpv2",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Vendredi 18 Octobre, 17h-20h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier et repas galettes",
-        nameCook: "Nadine",
-        price: 35,
-        spot: "Terre d'Embruns, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/KTvBNX",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 19 Octobre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-royal-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Royal Chocolat",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/q9e8vL",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 19 Octobre, 10h-13h",
-        duration: 3,
-        image: "https://static.cuistotducoin.com/img/workshops/karim-tiep.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/karim.jpg",
-        name: "Atelier Tiep",
-        nameCook: "Karim",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/Z0lqdB",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Vendredi 25 Octobre, 17h30-20h30",
         duration: 3,
         image:
@@ -153,7 +79,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
         name: "Atelier Italien : Agnolotti &Cie",
         nameCook: "Luis",
-        price: 50,
+        price: "Complet",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/TzKnPz",
@@ -217,6 +143,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/Kmt9KS",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Vendredi 8 Novembre, 18h-20h",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/hayet-tapas.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
+        name: "Voyage au Maghreb - Tapas Algérienne",
+        nameCook: "Hayet",
+        price: "35",
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/Op8Dho",
         type: "Atelier collectif"
       },
       {
@@ -291,21 +231,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/JZXof1",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 23 Novembre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-bonbon-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Bonbons Chocolat",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/D9T8mc",
         type: "Atelier collectif"
       },
       {
