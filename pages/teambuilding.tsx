@@ -93,12 +93,12 @@ class TeamBuilding extends React.Component<ITeamBuildingProps, {}> {
 
     const pricing = [
       {
-        title: "Atelier cocktail",
+        title: "Atelier initiation",
         price: "30",
         description: [
           `1H d'atelier festif`,
-          `Réalisation de cocktails du monde`,
-          `Dégustation de vos cocktails`,
+          `Réalisation de recettes simples et rapides`,
+          `Défis culinaires en équipe`,
           "Ingrédients et matériel fournis",
           "Tabliers et livrets de recettes fournis"
         ],
