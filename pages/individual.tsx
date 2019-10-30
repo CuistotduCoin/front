@@ -72,51 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Vendredi 25 Octobre, 17h30-20h30",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/luis-agnolotti.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
-        name: "Atelier Italien : Agnolotti &Cie",
-        nameCook: "Luis",
-        price: "Complet",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/TzKnPz",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 26 Octobre, 10h-12h",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-burger-revisite.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Enfant : Burger Revisité",
-        nameCook: "Anne",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/WoBoNv",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 26 Octobre, 14h30-16h30",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier et goûter crêpes",
-        nameCook: "Nadine",
-        price: 30,
-        spot: "Terre d'Embruns, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/Nr0odU",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Mercredi 30 Octobre, 14h-16h",
         duration: 2,
         image:
@@ -124,7 +79,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
         name: "Atelier Enfant - Spécial Halloween",
         nameCook: "Audrey",
-        price: 30,
+        price: "Complet",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/M7rqKl",
