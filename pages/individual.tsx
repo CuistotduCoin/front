@@ -72,36 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Mercredi 30 Octobre, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-halloween.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Enfant - Spécial Halloween",
-        nameCook: "Audrey",
-        price: "Complet",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/M7rqKl",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Jeudi 31 Octobre, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-halloween.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Parents/Enfants - Spécial Halloween",
-        nameCook: "Anne",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/Kmt9KS",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Vendredi 8 Novembre, 18h-20h",
         duration: 2,
         image: "https://static.cuistotducoin.com/img/workshops/hayet-tapas.jpg",
