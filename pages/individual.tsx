@@ -131,6 +131,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 16 Novembre, 9h30-14h30",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier Ayurvédique - Novembre",
+        nameCook: "Michel",
+        price: 50,
+        spot: "Plougastel",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/BkhtFO",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 16 Novembre, 14h-16h",
         duration: 2,
         image:
@@ -214,6 +229,141 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Terre d'Embruns, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/si0jAA",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 7 Décembre, 9h30-13h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-buche-mogador.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Noël - Bûche Mogador Chocolat Passion",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/PPyTQl",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 7 Décembre, 10h00-12h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-biscuit-noel.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Enfants - Biscuits de Noël",
+        nameCook: "Audrey",
+        price: 30,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/qQ0f4n",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 7 Décembre, 14h00-16h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/anne-chocolat-detente.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
+        name: "Enfants - Gâteau du potager",
+        nameCook: "Anne",
+        price: 30,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/b1Uz62",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Décembre, 9h30-13h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-buche-royal-choco.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Noël - Bûche Royal Chocolat et Caramel",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/w972JA",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Décembre, 10h00-12h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/anne-bien-etre.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
+        name: "Atelier Apéro Coloré",
+        nameCook: "Anne",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/PLH71Y",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Décembre, 14h00-16h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/anne-mousse-au-chocolat.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
+        name: "Parents/Enfants - Mousse au Chocolat",
+        nameCook: "Anne",
+        price: 40,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/hmbnCr",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Mercredi 18 Décembre, 14h00-16h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-maison-pain-epices.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Enfants - Maison en Pain d'Epices",
+        nameCook: "Audrey",
+        price: 40,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/yHLa5G",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 21 Décembre, 9h30-13h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-buche-vanille.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Noël - Bûche Vanille Framboise",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/xJRkPz",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 21 Décembre, 14h00-16h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-maison-pain-epices.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Enfants - Maison en Pain d'Epices",
+        nameCook: "Audrey",
+        price: 40,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/oVj49e",
         type: "Atelier collectif"
       }
     ];
