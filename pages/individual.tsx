@@ -175,6 +175,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 23 Novembre, 14h-18h",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/fabien-viennoiseries.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Viennoiseries",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/cesGux",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 23 Novembre, 14h30-16h30",
         duration: 2,
         image:
@@ -278,6 +293,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 7 Décembre, 16h00-18h30",
+        duration: 3,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/takako-sushis.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Atelier Sushis & Cie",
+        nameCook: "Takako",
+        price: 50,
+        spot: "Schimdt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/Y9hIN9",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 14 Décembre, 9h30-13h30",
         duration: 4,
         image:
@@ -319,6 +349,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/hmbnCr",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Décembre, 14h00-18h00",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/fabien-noel.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Pain d'Epices et Spritz",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/EFbY9d",
         type: "Atelier collectif"
       },
       {
