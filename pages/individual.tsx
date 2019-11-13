@@ -71,35 +71,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     // @ts-ignore
     const workshops = [
       {
-        availableSeat: 8,
-        date: "Vendredi 8 Novembre, 18h-20h",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/hayet-tapas.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
-        name: "Voyage au Maghreb - Tapas Algérienne",
-        nameCook: "Hayet",
-        price: "35",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/Op8Dho",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 9 Novembre, 10h-12h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-apero-healthy.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Apéro Healthy",
-        nameCook: "Anne",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/GTXVdE",
-        type: "Atelier collectif"
-      },
-      {
         availableSeat: 100,
         date: "Jeudi 14 Novembre, 19h",
         duration: 4,
