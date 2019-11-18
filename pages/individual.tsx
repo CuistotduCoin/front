@@ -71,66 +71,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     // @ts-ignore
     const workshops = [
       {
-        availableSeat: 100,
-        date: "Jeudi 14 Novembre, 19h",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
-        name: "Etudiant Brestois - Challenge Culinaire",
-        nameCook: "Cuistot du Coin",
-        price: 0,
-        spot: "RU de Kergoat, Brest",
-        totalSeat: 100,
-        typeform: "https://cuistotducoin.typeform.com/to/GcKZD1",
-        type: "Evénement Etudiant"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 16 Novembre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Macarons",
-        nameCook: "Ronan",
-        price: "Complet",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/tyNGwM",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 16 Novembre, 9h30-14h30",
-        duration: 5,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Atelier Ayurvédique - Novembre",
-        nameCook: "Michel",
-        price: 50,
-        spot: "Plougastel",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/BkhtFO",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 16 Novembre, 14h-16h",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-briochettes.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Enfant : Briochettes",
-        nameCook: "Audrey",
-        price: 30,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/JHW9Td",
-        type: "Atelier collectif"
-      },
-      {
         availableSeat: 8,
         date: "Vendredi 22 Novembre, 17h30-20h30",
         duration: 3,
