@@ -72,50 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Vendredi 22 Novembre, 17h30-20h30",
-        duration: 3,
-        image: "https://static.cuistotducoin.com/img/workshops/luis-pizza-tiramisu.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
-        name: "Atelier Italien : Pizza &Cie",
-        nameCook: "Luis",
-        price: 50,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/JZXof1",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 23 Novembre, 14h-18h",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/fabien-viennoiseries.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
-        name: "Atelier Boulangerie - Viennoiseries",
-        nameCook: "Fabien",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/cesGux",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 23 Novembre, 14h30-16h30",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier et goûter crêpes",
-        nameCook: "Nadine",
-        price: 30,
-        spot: "Terre d'Embruns, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/kUjdUz",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 30 Novembre, 10h-12h",
         duration: 2,
         image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
@@ -170,6 +126,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/PPyTQl",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 7 Décembre, 9h30-14h30",
+        duration: 5,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier de Cuisine Ayuvédique",
+        nameCook: "Michel",
+        price: 50,
+        spot: "Plougastel-Daoulas",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/ansMD8",
         type: "Atelier collectif"
       },
       {
