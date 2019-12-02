@@ -72,49 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Samedi 30 Novembre, 10h-12h",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
-        name: "Atelier Libanais : Mezzé",
-        nameCook: "Farah",
-        price: "Complet",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/d2b9TN",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 30 Novembre, 9h30-13h30",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/ronan-cake.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Atelier Pâtisserie : Cakes",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/JwqP1i",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Vendredi 6 Décembre, 17h-20h",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier et repas galettes",
-        nameCook: "Nadine",
-        price: 35,
-        spot: "Terre d'Embruns, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/si0jAA",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 7 Décembre, 9h30-13h30",
         duration: 4,
         image:
