@@ -2,7 +2,7 @@ version: 2
 jobs:
   deploy-front-prod:
     docker:
-      - image: circleci/node:8.10
+      - image: circleci/node:latest
     environment:
       AWS_CONFIG_PATH: /home/circleci/.aws
     steps:
@@ -38,7 +38,7 @@ jobs:
 
   deploy-front-stage:
     docker:
-      - image: circleci/node:8.10
+      - image: circleci/node:latest
     environment:
       AWS_CONFIG_PATH: /home/circleci/.aws
     steps:
