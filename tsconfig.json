@@ -31,7 +31,8 @@
     ".next",
     "sls-next-build",
     "**/*.stories.tsx",
-    "notpages"
+    "notpages",
+    "notcomponents"
   ],
   "include": [
     "next-env.d.ts",

@@ -14,8 +14,8 @@ function create(initialState, appsyncConfig) {
     ...appsyncConfig,
     disableOffline: true
   }, {
-      ssrMode: true
-    });
+    ssrMode: true
+  });
 
   if (initialState) {
     client.cache.restore(initialState);

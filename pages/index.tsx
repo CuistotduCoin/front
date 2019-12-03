@@ -7,11 +7,11 @@ import { Theme, withStyles } from "@material-ui/core/styles";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Typography from "@material-ui/core/Typography";
-import get from "lodash.get";
+//import get from "lodash.get";
 import AccountTie from "mdi-material-ui/AccountTie";
 import HomeAccount from "mdi-material-ui/HomeAccount";
 import React from "react";
-import { graphql } from "react-apollo";
+//import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { compose } from "recompose";
 import FlipCard from "../components/FlipCard";
@@ -20,8 +20,8 @@ import Layout from "../components/Layout";
 import Link from "../components/Link";
 import MailchimpForm from "../components/MailchimpForm";
 import Steps from "../components/Steps";
-import { withData } from "../decorators";
-import { GetWorkshops } from "../queries";
+//import { withData } from "../decorators";
+//import { GetWorkshops } from "../queries";
 
 const styles = (theme: Theme) => ({
   backgroundImageFront: {
@@ -560,6 +560,7 @@ class Index extends React.Component<IIndexProps, IIndexState> {
           >
             <MailchimpSubscribe
               url={urlMailChimp}
+              // tslint:disable-next-line: jsx-no-lambda
               render={({ subscribe, status, message }) => (
                 <MailchimpForm
                   status={status}
@@ -654,7 +655,7 @@ class Index extends React.Component<IIndexProps, IIndexState> {
 }
 
 const enhance = compose(
-  withData,
+  /*withData,
   graphql(GetWorkshops, {
     options: {
       fetchPolicy: "cache-and-network"
@@ -662,7 +663,7 @@ const enhance = compose(
     props: props => ({
       workshops: get(props, "data.getWorkshops.workshops") || []
     })
-  }),
+  }),*/
   withStyles(styles as any)
 );
 

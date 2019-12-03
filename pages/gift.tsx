@@ -23,10 +23,6 @@ interface IGiftProps {
 }
 
 class Gift extends React.Component<IGiftProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-
   public render() {
     const { classes } = this.props;
 

@@ -19,10 +19,6 @@ interface IJoinProps {
 }
 
 class Join extends React.Component<IJoinProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-
   public render() {
     const { classes } = this.props;
 

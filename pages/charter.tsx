@@ -2,9 +2,9 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
 import Layout from "../components/Layout";
-import components from "../content/components";
 // @ts-ignore
 import Content from "../content/charter.mdx";
+import components from "../content/components";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -19,10 +19,6 @@ interface ICharterProps {
 }
 
 export class Charter extends React.Component<ICharterProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-  
   public render() {
     const { classes } = this.props;
 

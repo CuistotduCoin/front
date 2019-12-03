@@ -19,10 +19,6 @@ interface ITestimonyProps {
 }
 
 class Testimony extends React.Component<ITestimonyProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-
   public render() {
     const { classes } = this.props;
 

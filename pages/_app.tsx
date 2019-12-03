@@ -1,6 +1,6 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
-import App, { Container } from "next/app";
+import App from "next/app";
 import Router from "next/router";
 import React from "react";
 import ProvidedApp from "../components/App";
@@ -11,11 +11,12 @@ class MyApp extends App {
   public componentDidMount() {
     initGA();
     logPageView();
+    // @ts-ignore
     Router.router.events.on("routeChangeComplete", logPageView);
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
-      jssStyles.parentNode!.removeChild(jssStyles);
+      jssStyles.parentElement!.removeChild(jssStyles);
     }
   }
 
@@ -29,15 +30,13 @@ class MyApp extends App {
     }
 
     return (
-      <Container>
-        <ProvidedApp>
-          {/* Wrap every page in Jss and Theme providers */}
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </ProvidedApp>
-      </Container>
+      <ProvidedApp>
+        {/* Wrap every page in Jss and Theme providers */}
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ProvidedApp>
     );
   }
 }

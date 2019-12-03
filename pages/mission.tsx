@@ -19,10 +19,6 @@ interface IMissionProps {
 }
 
 class Mission extends React.Component<IMissionProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-
   public render() {
     const { classes } = this.props;
 

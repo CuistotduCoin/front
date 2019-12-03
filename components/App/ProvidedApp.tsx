@@ -26,6 +26,7 @@ export class ProvidedApp extends React.Component {
           {(app: any) => (
             // @ts-ignore
             <App
+              // @ts-ignore
               isLoggedIn={app.state.isLoggedIn}
               referer={app.state.referer}
               currentGourmet={app.state.currentGourmet}

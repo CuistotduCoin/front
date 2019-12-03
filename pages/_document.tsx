@@ -1,19 +1,17 @@
-import { ServerStyleSheets } from '@material-ui/styles';
-import Document, { Head, Main, NextScript } from 'next/document';
-import React from 'react';
-import theme from '../decorators/theme'
+import { ServerStyleSheets } from "@material-ui/styles";
+import Document, { Head, Main, NextScript } from "next/document";
+import React from "react";
+import theme from "../decorators/theme";
 
 class MyDocument extends Document {
   public render() {
-    // @ts-ignore
-    const { pageContext } = this.props;
-
     return (
       <html lang="fr" dir="ltr">
         <Head>
           <meta charSet="utf-8" />
           <meta
-            name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
@@ -22,7 +20,11 @@ class MyDocument extends Document {
             href="https://static.cuistotducoin.com/favicon/favicon.ico"
             type="image/x-icon"
           />
-          <link rel="icon" href="https://static.cuistotducoin.com/favicon/favicon.png" type="image/png" />
+          <link
+            rel="icon"
+            href="https://static.cuistotducoin.com/favicon/favicon.png"
+            type="image/png"
+          />
           <link
             rel="icon"
             sizes="32x32"
@@ -173,8 +175,7 @@ MyDocument.getInitialProps = async ctx => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      // tslint:disable-next-line: variable-name
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
+      enhanceApp: App => props => sheets.collect(<App {...props} />)
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -183,11 +184,9 @@ MyDocument.getInitialProps = async ctx => {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [
-      <React.Fragment key="styles">
-        {initialProps.styles}
-        {sheets.getStyleElement()}
-      </React.Fragment>,
-    ],
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement()
+    ]
   };
 };
 

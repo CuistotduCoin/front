@@ -19,10 +19,6 @@ interface ITeamProps {
 }
 
 class Team extends React.Component<ITeamProps, {}> {
-  public static getInitialProps = async () => ({
-    static: 'not-static'
-  });
-
   public render() {
     const { classes } = this.props;
 

@@ -47,10 +47,6 @@ interface IBreakfastProps {
 }
 
 class Breakfast extends React.Component<IBreakfastProps, {}> {
-  public static getInitialProps = async () => ({
-    static: "not-static"
-  });
-
   public render() {
     const { classes } = this.props;
 

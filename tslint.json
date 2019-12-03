@@ -13,6 +13,12 @@
     "no-console": false,
     "jsx-boolean-value": false,
     "object-literal-sort-keys": false,
-    "prettier": true
+    "prettier": true,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ]
   }
 }
