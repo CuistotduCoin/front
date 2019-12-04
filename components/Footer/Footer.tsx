@@ -1,13 +1,14 @@
+import { Link as LinkMui } from "@material-ui/core";
 import grey from "@material-ui/core/colors/grey";
-import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Facebook from 'mdi-material-ui/Facebook';
-import GiftOutline from 'mdi-material-ui/GiftOutline';
-import Instagram from 'mdi-material-ui/Instagram';
-import Linkedin from 'mdi-material-ui/Linkedin';
-import Twitter from 'mdi-material-ui/Twitter';
+import Facebook from "mdi-material-ui/Facebook";
+import GiftOutline from "mdi-material-ui/GiftOutline";
+import Instagram from "mdi-material-ui/Instagram";
+import Linkedin from "mdi-material-ui/Linkedin";
+import Twitter from "mdi-material-ui/Twitter";
 import React from "react";
 import Link from "../../components/Link";
 
@@ -19,22 +20,22 @@ const styles = (theme: Theme) => ({
     backgroundColor: grey[900]
   },
   title: {
-    marginBottom: '1.5rem',
-    opacity: '0.85'
+    marginBottom: "1.5rem",
+    opacity: "0.85"
   },
   subheading: {
-    marginBottom: '0.3rem',
-    color: 'white',
-    fontSize: '0.8rem'
+    marginBottom: "0.3rem",
+    color: "white",
+    fontSize: "0.8rem"
   },
   icons: {
-    color: 'white',
-    display: 'flex',
-    justifyContent: 'center',
-    paddingBottom: '20px',
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    paddingBottom: "20px",
     "& a": {
-      color: 'white',
-      marginRight: '10px'
+      color: "white",
+      marginRight: "10px"
     }
   }
 });
@@ -58,24 +59,35 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 alignItems="flex-start"
                 direction="column"
               >
-                <Typography component="p" variant="h6" className={classes.title} color="primary">
+                <Typography
+                  component="p"
+                  variant="h6"
+                  className={classes.title}
+                  color="primary"
+                >
                   Traiteur
-              </Typography>
+                </Typography>
                 <Link href="/testimony" className={classes.subheading}>
                   Témoignages
-              </Link>
+                </Link>
                 <Link href="/become-cook" className={classes.subheading}>
                   Devenir Partenaires
-              </Link>
+                </Link>
                 <Link href="/invite" className={classes.subheading}>
                   Parrainage
-              </Link>
-                <Link href="https://faq.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+                </Link>
+                <LinkMui
+                  href="https://faq.cuistotducoin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.subheading}
+                >
                   Questions Fréquentes
-              </Link>
+                </LinkMui>
                 <Link href="/gift" className={classes.subheading}>
-                  <GiftOutline fontSize="small" titleAccess="carte cadeau" />Carte Cadeau
-              </Link>
+                  <GiftOutline fontSize="small" titleAccess="carte cadeau" />
+                  Carte Cadeau
+                </Link>
               </Grid>
             </Grid>
             <Grid item>
@@ -85,34 +97,69 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 alignItems="flex-start"
                 direction="column"
               >
-              <Typography component="p" variant="h6" className={classes.title} color="primary">
+                <Typography
+                  component="p"
+                  variant="h6"
+                  className={classes.title}
+                  color="primary"
+                >
                   + sur Cuistot du Coin
-              </Typography>
+                </Typography>
                 <Link href="/team-and-mission" className={classes.subheading}>
                   Équipe & Mission
-              </Link>
+                </Link>
                 <Link href="/join" className={classes.subheading}>
                   Nous rejoindre
-              </Link>
+                </Link>
                 <Link href="/presskit" className={classes.subheading}>
                   Contact & Presse
-              </Link>
+                </Link>
                 <Link href="/terms" className={classes.subheading}>
                   Conditions générales & Mentions légales
-              </Link>
-              <Link href="http://www.blog.cuistotducoin.com" target="_blank" rel="noopener noreferrer" className={classes.subheading}>
+                </Link>
+                <LinkMui
+                  href="http://www.blog.cuistotducoin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.subheading}
+                >
                   Blog
-              </Link>
+                </LinkMui>
               </Grid>
             </Grid>
           </Grid>
           <div className={classes.icons}>
-            <a href="https://www.facebook.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><Facebook titleAccess="facebook" /></a>
-            <a href="https://twitter.com/cuistotducoin?lang=fr" target="_blank" rel="noopener noreferrer"><Twitter titleAccess="twitter" /></a>
-            <a href="https://www.instagram.com/cuistotducoin/" target="_blank" rel="noopener noreferrer"><Instagram titleAccess="instagram" /></a>
-            <a href="https://www.linkedin.com/company/cuistot-du-coin" target="_blank" rel="noopener noreferrer"><Linkedin titleAccess="linkedin" /></a>
+            <a
+              href="https://www.facebook.com/cuistotducoin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook titleAccess="facebook" />
+            </a>
+            <a
+              href="https://twitter.com/cuistotducoin?lang=fr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter titleAccess="twitter" />
+            </a>
+            <a
+              href="https://www.instagram.com/cuistotducoin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram titleAccess="instagram" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/cuistot-du-coin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin titleAccess="linkedin" />
+            </a>
           </div>
-        </Container></div >
+        </Container>
+      </div>
     );
   }
 }

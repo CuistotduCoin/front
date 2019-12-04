@@ -1,3 +1,4 @@
+import { Link as LinkMui } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -19,6 +20,7 @@ import React from "react";
 import AccountDropdown from "../../components/AccountDropdown";
 import Link from "../../components/Link";
 import Logo from "../../components/Logo";
+
 
 const styles = (theme: Theme) => ({
   appBar: {
@@ -328,7 +330,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
               </Grid>
               <Grid item>
                 <Grid container justify="flex-start">
-                  <Link href="tel:06 79 59 88 48">
+                  <LinkMui href="tel:06 79 59 88 48">
                     <Button
                       className={classes.button}
                       variant="outlined"
@@ -337,7 +339,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                       <Phone titleAccess="phone" />
                       06 79 59 88 48
                     </Button>
-                  </Link>
+                  </LinkMui>
                   {rightElement && <>{rightElement}</>}
                 </Grid>
               </Grid>

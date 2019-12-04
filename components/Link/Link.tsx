@@ -1,69 +1,79 @@
-import MuiLink from "@material-ui/core/Link";
-import cx from "classnames";
-import { withRouter } from "next/router";
-import React from "react";
-import NextLink from "./NextLink";
+import MuiLink, { LinkProps as MuiLinkProps } from "@material-ui/core/Link";
+import clsx from "clsx";
+import NextLink, { LinkProps as NextLinkProps } from "next/link";
+import { useRouter } from "next/router";
+import * as React from "react";
 
-interface ILinkProps {
-  activeClassName?: string;
-  as?: string;
-  className?: string;
-  href?: string;
-  onClick?: any;
-  prefetch?: boolean;
-  router: any;
-  target?: string;
-  rel?: string;
-  other?: any;
-  naked?: boolean;
-  passHref?: any;
-}
+type NextComposedProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & NextLinkProps;
 
-export class Link extends React.Component<ILinkProps, {}> {
-  public static defaultProps: Partial<ILinkProps> = {
-    activeClassName: "active"
-  };
-
-  public render() {
+const NextComposed = React.forwardRef<HTMLAnchorElement, NextComposedProps>(
+  (props, ref) => {
     const {
-      activeClassName,
-      router,
-      className: classNameProps,
-      target,
-      rel,
-      naked,
+      as,
+      href,
+      replace,
+      scroll,
       passHref,
+      shallow,
+      prefetch,
       ...other
-    } = this.props;
-
-    const className = cx(classNameProps, {
-      [activeClassName]: router.pathname === this.props.href && activeClassName
-    });
-
-    if (naked) {
-      return (
-        <NextLink
-          className={className}
-          {...other}
-          target={target}
-          rel={rel}
-          passHref={passHref}
-        />
-      );
-    }
+    } = props;
 
     return (
-      <MuiLink
-        component={NextLink}
-        className={className}
-        {...other}
-        target={target}
-        rel={rel}
+      <NextLink
+        href={href}
+        prefetch={prefetch}
+        as={as}
+        replace={replace}
+        scroll={scroll}
+        shallow={shallow}
         passHref={passHref}
-        underline="none"
-      />
+      >
+        <a ref={ref} {...other} />
+      </NextLink>
     );
   }
+);
+
+interface ILinkPropsBase {
+  activeClassName?: string;
+  innerRef?: React.Ref<HTMLAnchorElement>;
+  naked?: boolean;
 }
 
-export default withRouter(Link);
+type LinkProps = ILinkPropsBase & NextComposedProps & Omit<MuiLinkProps, "ref">;
+
+// A styled version of the Next.js Link component:
+// https://nextjs.org/docs/#with-link
+// tslint:disable-next-line: function-name
+function Link(props: LinkProps) {
+  const {
+    activeClassName = "active",
+    className: classNameProps,
+    innerRef,
+    naked,
+    ...other
+  } = props;
+  const router = useRouter();
+
+  const className = clsx(classNameProps, {
+    [activeClassName]: router.pathname === props.href && activeClassName
+  });
+
+  if (naked) {
+    return <NextComposed className={className} ref={innerRef} {...other} />;
+  }
+
+  return (
+    <MuiLink
+      component={NextComposed}
+      className={className}
+      ref={innerRef}
+      {...other}
+    />
+  );
+}
+
+export default React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
+  <Link {...props} innerRef={ref} />
+));
