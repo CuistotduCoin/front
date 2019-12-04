@@ -47,10 +47,6 @@ interface ILunchProps {
 }
 
 class Lunch extends React.Component<ILunchProps, {}> {
-  public static getInitialProps = async () => ({
-    static: "not-static"
-  });
-
   public render() {
     const { classes } = this.props;
 
