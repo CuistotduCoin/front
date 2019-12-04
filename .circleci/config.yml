@@ -29,10 +29,6 @@ jobs:
       - run:
           name: Deploy frontend
           command: |
-            yarn build
-      - run:
-          name: Deploy frontend
-          command: |
             yarn deploy
 
   deploy-front-stage:
@@ -50,10 +46,6 @@ jobs:
           name: Build env
           command: |
             yarn create-env
-      - run:
-          name: Build frontend
-          command: |
-            yarn build
       - run:
           name: Deploy frontend
           command: |
