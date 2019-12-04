@@ -10,7 +10,6 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const nextConfig = {
   assetPrefix: isProd ? 'https://assets.cuistotducoin.com' : '',
   target: 'serverless',
-  distDir: '.serverless_nextjs',
   webpack: (config) => {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
