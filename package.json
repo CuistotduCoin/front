@@ -10,7 +10,6 @@
     "create-env": "node loadenv",
     "dev": "next dev",
     "sitemap": "express",
-    "build": "env-cmd next build",
     "deploy": "env-cmd serverless",
     "storybook": "start-storybook -p 9001"
   },
