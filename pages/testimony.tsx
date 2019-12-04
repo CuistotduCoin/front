@@ -2,9 +2,6 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import React from "react";
 import Layout from "../components/Layout";
-import components from "../content/components";
-// @ts-ignore
-import Content from "../content/testimony.mdx";
 
 const styles = (theme: Theme) => ({
   grid: {
@@ -31,7 +28,7 @@ class Testimony extends React.Component<ITestimonyProps, {}> {
           spacing={2}
           className={classes.grid}
         >
-          <Content components={components} />
+          sdf
         </Grid>
       </Layout>
     );
