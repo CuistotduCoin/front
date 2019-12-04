@@ -1,0 +1,17 @@
+{
+  "name": "rc8ti2m-2ls59pk",
+  "hash": "4RWnJIstHtymHegAf8moOOqdD2jbnYdduc3XFLBeoWU=",
+  "description": "Default Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "C:\\Users\\Romain\\Documents\\GitHub\\front\\.serverless_nextjs\\default-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs10.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::899832958734:role/rc8ti2m-sxdgfeh"
+  },
+  "arn": "arn:aws:lambda:us-east-1:899832958734:function:rc8ti2m-2ls59pk",
+  "region": "us-east-1"
+}

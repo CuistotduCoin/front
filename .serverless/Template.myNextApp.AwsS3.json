@@ -1,0 +1,6 @@
+{
+  "name": "cuistotducoin-front",
+  "region": "us-east-1",
+  "accelerated": true,
+  "url": "https://cuistotducoin-front.s3.amazonaws.com"
+}

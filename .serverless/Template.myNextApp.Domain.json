@@ -1,0 +1,13 @@
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "cuistotducoin.com",
+  "subdomains": [
+    {
+      "domain": "www.cuistotducoin.com",
+      "distributionId": "EL6H1YPAQF3DD",
+      "url": "https://d2hwjlw3auyhnf.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ build
 
 .DS_Store
 
+.next
 .serverless_nextjs
 .env
 .env.local

@@ -59,6 +59,7 @@
     "react-slick": "^0.25.2",
     "react-waypoint": "^9.0.2",
     "recompose": "^0.30.0",
+    "serverless": "^1.58.0",
     "slick-carousel": "^1.8.1",
     "unstated": "^2.1.1",
     "yup": "^0.27.0"
