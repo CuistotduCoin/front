@@ -2,4 +2,5 @@
 myNextApp:
   component: "serverless-next.js"
   inputs:
+    bucketName: cuistotducoin-front
     domain: "cuistotducoin.com"
