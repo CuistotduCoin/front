@@ -1,7 +1,7 @@
 {
   "region": "us-east-1",
   "privateZone": false,
-  "domain": "cuistotducoin.com",
+  "domain": "www.cuistotducoin.com",
   "subdomains": [
     {
       "domain": "www.cuistotducoin.com",
