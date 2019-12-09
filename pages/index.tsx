@@ -1,17 +1,17 @@
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import teal from "@material-ui/core/colors/teal";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import NoSsr from "@material-ui/core/NoSsr";
 import Paper from "@material-ui/core/Paper";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Typography from "@material-ui/core/Typography";
-//import get from "lodash.get";
 import AccountTie from "mdi-material-ui/AccountTie";
 import HomeAccount from "mdi-material-ui/HomeAccount";
 import React from "react";
-//import { graphql } from "react-apollo";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { compose } from "recompose";
 import FlipCard from "../components/FlipCard";
@@ -20,6 +20,9 @@ import Layout from "../components/Layout";
 import Link from "../components/Link";
 import MailchimpForm from "../components/MailchimpForm";
 import Steps from "../components/Steps";
+
+//import get from "lodash.get";
+//import { graphql } from "react-apollo";
 //import { withData } from "../decorators";
 //import { GetWorkshops } from "../queries";
 
@@ -33,6 +36,10 @@ const styles = (theme: Theme) => ({
     backgroundPosition: "50%",
     backgroundSize: "cover",
     zIndex: -1
+  },
+  box: {
+    lineHeight: 0,
+    margin: theme.spacing(1)
   },
   backgroundImageBack: {
     backgroundColor: teal[800],
@@ -185,8 +192,46 @@ class Index extends React.Component<IIndexProps, IIndexState> {
 
     const testimonies = [
       {
+        name: "Pierre Guilcher",
+        content: `Un très bon moment partagé par le  groupe dans un nouveau lieu d'exception.`,
+        image: "https://static.cuistotducoin.com/img/testimony/apm.jpg"
+      },
+      {
+        name: "André Abiven",
+        content: `Organisation sans défaut. Nous étions attendus et tout était fin prêt. Et l'atelier était mené par une cuisinière attentive et souriante. Très belle soirée pour l'ensemble des personnes.`,
         image: "https://static.cuistotducoin.com/img/testimony/arkea.jpg"
       },
+      {
+        name: "Isabelle Février",
+        content: `Des produits de qualité, des saveurs exquises, une présentation respectueuse du développement durable, un personnel très sympathique et disponible.`,
+        image:
+          "https://static.cuistotducoin.com/img/testimony/musee-beaux-arts-brest.jpg"
+      },
+      {
+        name: "Julie Courmarcel",
+        content: `Prestation parfaite sur tous les points, depuis le début de nos échanges, jusqu'au jour J, et même après :). tant sur le point relationnel qu'organisationnel. Merci pour tout, vous avez grandement participé à la réussite de notre événement !"`,
+        image: "https://static.cuistotducoin.com/img/testimony/ildys.jpg"
+      },
+      {
+        name: "Christine Walid",
+        content: `Créatifs, originaux, éthiques et durables.`,
+        image:
+          "https://static.cuistotducoin.com/img/testimony/brest-metropole.jpg"
+      },
+      {
+        name: "Claire Etuebbe",
+        content: `Une prestation de qualité ! Tout était parfait : Le lieu, l'accueil, le déjeuner, l'activité ... Merci !`,
+        image:
+          "https://static.cuistotducoin.com/img/testimony/brittany-ferries.jpg"
+      },
+      {
+        name: "Florence Mirgon",
+        content: `Original, gourmand, frais, healthy food.`,
+        image: "https://static.cuistotducoin.com/img/testimony/triskalia.jpg"
+      }
+    ];
+
+    const generalTestimonies = [
       {
         image: "https://static.cuistotducoin.com/img/testimony/lidl.jpg"
       },
@@ -524,14 +569,51 @@ class Index extends React.Component<IIndexProps, IIndexState> {
           >
             ILS NOUS FONT CONFIANCE
           </Typography>
+          <NoSsr>
+            <Container maxWidth="md" className={classes.container}>
+              {testimonies.map((testimonie, key) => (
+                <>
+                  <Grid container direction="column" className={classes.grid}>
+                    <Grid
+                      container
+                      direction={key % 2 === 0 ? "row" : "row-reverse"}
+                      alignItems="flex-end"
+                    >
+                      <Box boxShadow={1} className={classes.box}>
+                        <img key={key} src={testimonie.image} />
+                      </Box>
+                      <Typography
+                        variant="subtitle1"
+                        component="p"
+                        color="secondary"
+                      >
+                        {testimonie.name}
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography
+                        variant="body1"
+                        align={key % 2 === 0 ? "left" : "right"}
+                      >
+                        {testimonie.content}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </>
+              ))}
+            </Container>
+            <Typography align="center">Et d'autres encore...</Typography>
+          </NoSsr>
           <Grid
             container
             justify="space-around"
             spacing={2}
             className={classes.grid}
           >
-            {testimonies.map((testimonie, key) => (
-              <img key={key} src={testimonie.image} />
+            {generalTestimonies.map((testimonie, key) => (
+              <Box boxShadow={1} key={key} className={classes.box}>
+                <img src={testimonie.image} />
+              </Box>
             ))}
           </Grid>
           <Typography
