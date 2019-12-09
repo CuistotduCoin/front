@@ -524,22 +524,6 @@ class Index extends React.Component<IIndexProps, IIndexState> {
           >
             ILS NOUS FONT CONFIANCE
           </Typography>
-          <Container maxWidth="md" className={classes.container}>
-            <Typography variant="h4" align="center" gutterBottom>
-              ...
-          </Typography>
-            <Typography variant="body1" align="center" gutterBottom>
-              fdgfdg
-          </Typography>
-            <Grid container justify="center" className={classes.grid}>
-              ffds
-          </Grid>
-            <Typography variant="body1" align="center" gutterBottom>
-              dfg
-          </Typography>
-          </Container>
-          <Typography>Et d'autres encore...</Typography>
-
           <Grid
             container
             justify="space-around"
