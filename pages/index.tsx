@@ -166,7 +166,7 @@ class Index extends React.Component<IIndexProps, IIndexState> {
       },
       {
         icon: (
-          <img src="https://static.cuistotducoin.com/img/home/moyen-orient.jpg" />
+          <img src="https://static.cuistotducoin.com/img/home/amerique-du-nord.jpg" />
         ),
         title: "Amerique du Nord"
       },
