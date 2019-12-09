@@ -235,10 +235,10 @@ export default () => {
     terms: {
       noindex: true
     },
-    "testimony-business": {
+    testimony: {
       description:
-        "Découvrez les témoignages sur nos prestations pour les entreprises",
-      href: "https://www.cuistotducoin.com/testimony-business",
+        "Découvrez les témoignages sur nos prestations en entreprises",
+      href: "https://www.cuistotducoin.com/testimony",
       metaDescription:
         "Retrouvez ici les avis de nos clients sur leurs événements d'entreprise réalisés par Cuistot du Coin",
       title: "Les avis de nos clients",
