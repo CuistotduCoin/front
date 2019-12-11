@@ -211,7 +211,7 @@ export default () => {
       title: "Abonnement : Atelier de cuisine pour enfant",
       metaTitle: "Abonnement : Atelier de cuisine pour enfant"
     },
-    team: {
+    "team-and-mission": {
       description: "Découvrez l'équipe de Cuistot du Coin",
       href: "https://www.cuistotducoin.com/team",
       metaDescription:
@@ -230,15 +230,17 @@ export default () => {
       metaTitle: "Atelier de cuisine - Team building en entreprise"
     },
     "terms-pro": {
-      noindex: true
+      noindex: true,
+      title: "Conditions générales de vente"
     },
     terms: {
-      noindex: true
+      noindex: true,
+      title: "Conditions générales de vente"
     },
-    "testimony-business": {
+    testimony: {
       description:
-        "Découvrez les témoignages sur nos prestations pour les entreprises",
-      href: "https://www.cuistotducoin.com/testimony-business",
+        "Découvrez les témoignages sur nos prestations en entreprises",
+      href: "https://www.cuistotducoin.com/testimony",
       metaDescription:
         "Retrouvez ici les avis de nos clients sur leurs événements d'entreprise réalisés par Cuistot du Coin",
       title: "Les avis de nos clients",
