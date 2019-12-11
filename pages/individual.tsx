@@ -87,50 +87,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 14 Décembre, 10h00-12h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-bien-etre.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Apéro Coloré",
-        nameCook: "Anne",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/PLH71Y",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 14 Décembre, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-mousse-au-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Parents/Enfants - Mousse au Chocolat",
-        nameCook: "Anne",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/hmbnCr",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 14 Décembre, 14h00-18h00",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/fabien-noel.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
-        name: "Atelier Boulangerie - Pain d'Epices et Spritz",
-        nameCook: "Fabien",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/EFbY9d",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Mercredi 18 Décembre, 14h00-16h00",
         duration: 2,
         image:
@@ -153,7 +109,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
         name: "Noël - Bûche Vanille Framboise",
         nameCook: "Ronan",
-        price: 50,
+        price: "Complet",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/xJRkPz",
