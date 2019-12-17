@@ -279,6 +279,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 22 Février, 14h00-18h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/fabien-pain-maison.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Pains Santé",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/ziKHbl",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Mercredi 26 Février, 14h00-16h00",
         duration: 2,
         image:
@@ -290,6 +304,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/ZOkOq5",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 7 Mars, 14h00-18h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/fabien-petits-gateaux.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Petits Gâteaux",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/TiLPJU",
         type: "Atelier collectif"
       },
       {
@@ -309,6 +337,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 4 Avril, 9h30-13h30",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/fabien-pates.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Les pâtes du quotidien",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/OWajez",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Vendredi 10 Avril, 17h30-20h30",
         duration: 3,
         image:
@@ -320,6 +362,34 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/ARhx5N",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 25 Avril, 14h00-18h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/fabien-flans.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Flans en folie",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/XdaZBy",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 16 Mai, 14h00-18h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/fabien-viennoiseries.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
+        name: "Atelier Boulangerie - Viennoiseries",
+        nameCook: "Fabien",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/SGFeU1",
         type: "Atelier collectif"
       }
     ];
