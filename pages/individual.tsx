@@ -72,21 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [
       {
         availableSeat: 8,
-        date: "Samedi 14 Décembre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-buche-royal-choco.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Noël - Bûche Royal Chocolat et Caramel",
-        nameCook: "Ronan",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/w972JA",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Mercredi 18 Décembre, 14h00-16h00",
         duration: 2,
         image:
