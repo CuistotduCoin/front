@@ -176,6 +176,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 18 Janvier",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Pâtisserie - Macarons",
+        nameCook: "Ronan",
+        price: "50",
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/g8zO1L",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 18 Janvier, 10h00-12h00",
         duration: 2,
         image:
@@ -202,6 +217,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/xpxQQM",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 18 Janvier, 9h30-13h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-bonbon-chocolat.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Pâtisserie - Bonbons au chocolat",
+        nameCook: "Ronan",
+        price: "50",
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/pQgqMG",
         type: "Atelier collectif"
       },
       {
@@ -246,6 +276,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/EW38IZ",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 8 Février, 9h30-13h30",
+        duration: 4,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/ronan-guimauves.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Pâtisserie - Guimauves et pâte de fruits",
+        nameCook: "Ronan",
+        price: "50",
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/hE8IGn",
         type: "Atelier collectif"
       },
       {
