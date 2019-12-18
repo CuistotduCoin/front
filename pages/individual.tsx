@@ -355,7 +355,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         date: "Vendredi 27 Mars, 17h30-20h30",
         duration: 3,
         image:
-          "https://static.cuistotducoin.com/img/workshops/luis-cannelloni.png",
+          "https://static.cuistotducoin.com/img/workshops/luis-cannelloni.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
         name: "Atelier Italien - Cannelloni",
         nameCook: "Luis",
