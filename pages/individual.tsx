@@ -221,7 +221,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 18 Janvier, 9h30-13h30",
+        date: "Samedi 25 Janvier, 9h30-13h30",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-bonbon-chocolat.jpg",
