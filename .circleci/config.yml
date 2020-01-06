@@ -22,15 +22,15 @@ jobs:
           key: dependency-cache-{{ checksum "./yarn.lock" }}
           paths:
             - ./node_modules
-      - run:
+      - run: &build_env
           name: Build env
           command: |
             yarn create-env
-      - run:
+      - run: &create_sitemap
           name: Create sitemap
           command: |
-            yarn sitemap
-      - run:
+            node generate-sitemap.js
+      - run: &deploy
           name: Deploy frontend
           command: |
             yarn deploy
@@ -46,14 +46,9 @@ jobs:
       - run: *build_aws_config
       - run: *install_front_dependencies
       - save_cache: *save_front_cache
-      - run:
-          name: Build env
-          command: |
-            yarn create-env
-      - run:
-          name: Deploy frontend
-          command: |
-            yarn deploy
+      - run: *build_env
+      - run: *create_sitemap
+      - run: *deploy
 
 workflows:
   version: 2

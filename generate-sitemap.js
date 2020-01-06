@@ -13,4 +13,8 @@ for (var metaPage in meta) {
     }
 };
 
-fs.writeFileSync("public/sitemap.xml", sitemap.toXML());
+console.log(__dirname);
+console.log("/public/sitemap.xml");
+console.log(__dirname + "/public/sitemap.xml")
+
+fs.writeFileSync(__dirname + "/public/sitemap.xml", sitemap.toXML());
