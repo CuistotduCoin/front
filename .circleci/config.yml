@@ -27,6 +27,10 @@ jobs:
           command: |
             yarn create-env
       - run:
+          name: Create sitemap
+          command: |
+            yarn sitemap
+      - run:
           name: Deploy frontend
           command: |
             yarn deploy

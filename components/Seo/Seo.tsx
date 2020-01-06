@@ -54,10 +54,9 @@ export class Seo extends React.Component<ISeoProps, {}> {
       }
     };
 
-    if (meta[cleanPath] && meta[cleanPath].noindex) {
+    if (meta[cleanPath]?.noindex) {
       const noIndex = { noindex: true };
-      // @ts-ignore
-      return <NextSeo config={noIndex} />;
+      return <NextSeo {...noIndex} />;
     }
 
     if (meta[cleanPath] && meta[cleanPath].metaDescription) {
