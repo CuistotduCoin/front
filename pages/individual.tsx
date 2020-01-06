@@ -69,81 +69,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const { tab } = this.state;
 
     // @ts-ignore
-    const workshops = [
-      {
-        availableSeat: 8,
-        date: "Mercredi 18 Décembre, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-maison-pain-epices.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Enfants - Maison en Pain d'Epices",
-        nameCook: "Audrey",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/yHLa5G",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 21 Décembre, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-buche-vanille.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Noël - Bûche Vanille Framboise",
-        nameCook: "Ronan",
-        price: "Complet",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/xJRkPz",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 21 Décembre, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-maison-pain-epices.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Enfants - Maison en Pain d'Epices",
-        nameCook: "Audrey",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/oVj49e",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Vendredi 3 Janvier, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-chocolat-detente.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Parents/Enfants - Gâteau sans gluten",
-        nameCook: "Anne",
-        price: 40,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/D9vG9Y",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 4 Janvier, 14h00-16h00",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/anne-barre.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Enfants - Barres Chocolatées",
-        nameCook: "Anne",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/j8lh6d",
-        type: "Atelier collectif"
-      },
+    const workshops = [       
       {
         availableSeat: 8,
         date: "Samedi 11 Janvier, 14h00-16h00",
@@ -176,7 +102,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 18 Janvier",
+        date: "Samedi 18 Janvier, 9h30-13h00",
         duration: 4,
         image:
           "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
@@ -242,7 +168,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
         name: "Atelier Libanais - Mezzé",
         nameCook: "Farah",
-        price: 35,
+        price: "COMPLET",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/dXZxzX",
@@ -301,7 +227,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
         name: "Atelier Libanais - Mezzé",
         nameCook: "Farah",
-        price: 35,
+        price: "COMPLET",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/f9xSFd",
