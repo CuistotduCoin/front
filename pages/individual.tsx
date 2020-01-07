@@ -147,6 +147,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 18 Janvier, 16h00-18h30",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/takako-sushis.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Atelier Japonais - Sushis & Cie",
+        nameCook: "Takako",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/jMWdgG",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 25 Janvier, 9h30-13h30",
         duration: 4,
         image:
@@ -264,6 +279,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 29 Février, 10h00-12h30",
+        duration: 3,
+        image: "https://static.cuistotducoin.com/img/workshops/hayet-couscous.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
+        name: "Atelier Algérien - Couscous Végétarien",
+        nameCook: "Hayet",
+        price: 35,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/MXiy2V",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 7 Mars, 14h00-18h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/fabien-petits-gateaux.jpg",
@@ -274,6 +303,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/TiLPJU",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Mars, 10h00-12h00",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
+        name: "Atelier Libanais - Mezzé",
+        nameCook: "Farah",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/PQlxaz",
         type: "Atelier collectif"
       },
       {
@@ -318,6 +361,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/ARhx5N",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Vendredi 17 Avril, 18h00-20h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/hayet-chorba.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
+        name: "Atelier Algérien - Chorba & Cie",
+        nameCook: "Hayet",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/qu5PQE",
         type: "Atelier collectif"
       },
       {
