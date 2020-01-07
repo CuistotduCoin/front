@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Seo from "../../components/Seo";
-import getMetaInfo from "../../shared/seo";
+import metaInfo from "../../shared/seo";
 
 const styles = () => ({
   container: {
@@ -51,7 +51,6 @@ export class Layout extends React.Component<ILayoutProps, {}> {
 
     if (cleanPath === "") cleanPath = "index";
 
-    const metaInfo = getMetaInfo();
     let title: string;
     if (this.props.title) {
       title = this.props.title;
