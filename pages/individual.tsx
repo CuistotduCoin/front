@@ -139,7 +139,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
         name: "Atelier Japonais - Sushis & Cie",
         nameCook: "Takako",
-        price: 50,
+        price: "COMPLET",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/jMWdgG",
