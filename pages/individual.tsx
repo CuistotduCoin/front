@@ -72,36 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Vendredi 17 Janvier, 17h30-20h30",
-        duration: 3,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/luis-gnocchi.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/luis.jpg",
-        name: "Atelier Italien - Gnocchis",
-        nameCook: "Luis",
-        price: 50,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/ARhx5N",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 18 Janvier, 9h30-13h00",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Pâtisserie - Macarons",
-        nameCook: "Ronan",
-        price: "50",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/g8zO1L",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 18 Janvier, 10h00-12h00",
         duration: 2,
         image:
@@ -113,21 +83,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/ldY9Fp",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 18 Janvier, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-mousse-au-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Atelier Healthy - 100% Desserts",
-        nameCook: "Anne",
-        price: 35,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/xpxQQM",
         type: "Atelier collectif"
       },
       {
@@ -235,6 +190,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 22 Février, 10h00-13h00",
+        duration: 3,
+        image: "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier Galettes et repas",
+        nameCook: "Nadine",
+        price: 35,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/qYuFL3",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 22 Février, 14h00-18h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/fabien-pain-maison.jpg",
@@ -274,6 +243,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/MXiy2V",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 29 Février, 14h00-16h00",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
+        name: "Atelier Crêpes et tartinades",
+        nameCook: "Nadine",
+        price: 30,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/xRqk8B",
         type: "Atelier collectif"
       },
       {
