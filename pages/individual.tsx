@@ -176,6 +176,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 8 Février, 14h00-16h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-donuts.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Enfants - Donuts",
+        nameCook: "Audrey",
+        price: "30",
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/kD0vxW",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 22 Février, 10h00-12h00",
         duration: 2,
         image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
@@ -329,6 +344,21 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/hzYZw5",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 11 Avril, 10h00-12h00",
+        duration: 2,
+        image:
+          "https://static.cuistotducoin.com/img/workshops/audrey-cupcakes-paques.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Parent/Enfant - Spécial Pâques",
+        nameCook: "Audrey",
+        price: "40",
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/rT1Kne",
         type: "Atelier collectif"
       },
       {
