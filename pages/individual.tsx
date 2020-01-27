@@ -72,50 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Samedi 25 Janvier, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-bonbon-chocolat.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Pâtisserie - Bonbons au chocolat",
-        nameCook: "Ronan",
-        price: "50",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/pQgqMG",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 25 Janvier, 9h30-14h00",
-        duration: 5,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Cuisine Ayurvédique et repas",
-        nameCook: "Michel",
-        price: "50",
-        spot: "Plougastel",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/zLdVY2",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 25 Janvier, 10h00-12h00",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
-        name: "Atelier Libanais - Mezzé",
-        nameCook: "Farah",
-        price: "COMPLET",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/dXZxzX",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 1er Février, 10h00-12h00",
         duration: 2,
         image:
