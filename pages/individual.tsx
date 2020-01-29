@@ -137,7 +137,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         image:
           "https://static.cuistotducoin.com/img/workshops/takako-repas.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
-        name: "Atelier Repas Japonais",
+        name: "Atelier Repas Asiatique",
         nameCook: "Takako",
         price: "50",
         spot: "Schmidt, Brest",
@@ -152,7 +152,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         image:
           "https://static.cuistotducoin.com/img/workshops/takako-apero.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
-        name: "Atelier Apéritif Japonais",
+        name: "Atelier Apéro Dînatoire Japonais",
         nameCook: "Takako",
         price: "50",
         spot: "Schmidt, Brest",
