@@ -135,7 +135,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         date: "Samedi 15 Février, 10h-12h30",
         duration: 3,
         image:
-          "https://static.cuistotducoin.com/img/workshops/Takako-ramen.jpg",
+          "https://static.cuistotducoin.com/img/workshops/takako-ramen.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
         name: "Atelier Repas Asiatique",
         nameCook: "Takako",
