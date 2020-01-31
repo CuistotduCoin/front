@@ -138,7 +138,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
         name: "Atelier Libanais - Mezzé",
         nameCook: "Farah",
-        price: "1 PLACE DISPO",
+        price: "COMPLET",
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/f9xSFd",
