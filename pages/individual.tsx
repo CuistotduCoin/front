@@ -72,21 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Samedi 8 Février, 9h30-13h30",
-        duration: 4,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/ronan-guimauves.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
-        name: "Pâtisserie - Guimauves et pâte de fruits",
-        nameCook: "Ronan",
-        price: "50",
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/hE8IGn",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 8 Février, 14h00-16h00",
         duration: 2,
         image:
@@ -217,6 +202,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 7 Mars, 9h30-13h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/ronan-tarte-citron-meringuee.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Atelier Pâtisserie - Tarte Citron Meringuée",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/qNmaRw",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 7 Mars, 14h00-18h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/fabien-petits-gateaux.jpg",
@@ -245,6 +244,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 21 Mars, 9h30-13h30",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Atelier Pâtisserie - Macarons",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/HcBGBo",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
         date: "Vendredi 27 Mars, 17h30-20h30",
         duration: 3,
         image:
@@ -256,6 +269,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/LlpZc0",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 28 Mars, 9h30-13h30",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/ronan-rose.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Atelier Pâtisserie - Gâteau chocolat/agrumes",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/YFVoAg",
         type: "Atelier collectif"
       },
       {
@@ -285,6 +312,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/hzYZw5",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 11 Avril, 9h30-13h30",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/ronan-tarte-framboise.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/ronan.jpg",
+        name: "Atelier Pâtisserie - Charlotte aux Framboises",
+        nameCook: "Ronan",
+        price: 50,
+        spot: "Schmidt, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/ZgF4Sy",
         type: "Atelier collectif"
       },
       {
