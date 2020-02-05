@@ -105,9 +105,9 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         date: "Samedi 15 Février, 16h-18h30",
         duration: 3,
         image:
-          "https://static.cuistotducoin.com/img/workshops/takako-apero.jpg",
+          "https://static.cuistotducoin.com/img/workshops/takako-repas.jpg",
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
-        name: "Atelier Apéro Dînatoire Japonais",
+        name: "Atelier Repas Asiatique 2",
         nameCook: "Takako",
         price: "50",
         spot: "Schmidt, Brest",
