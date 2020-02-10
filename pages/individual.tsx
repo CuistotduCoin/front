@@ -72,21 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Samedi 8 Février, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/audrey-donuts.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Enfants - Donuts",
-        nameCook: "Audrey",
-        price: "30",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/kD0vxW",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 15 Février, 10h-12h30",
         duration: 3,
         image:
@@ -94,7 +79,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
         name: "Atelier Repas Asiatique",
         nameCook: "Takako",
-        price: "50",
+        price: "COMPLET",
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/BkLC4Y",
@@ -127,6 +112,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/f9xSFd",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 22 Février, 9h30-14h30",
+        duration: 5,
+        image: "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
+        name: "Atelier Ayurvédique",
+        nameCook: "Michel",
+        price: 50,
+        spot: "Plougastel",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/zipVvC",
         type: "Atelier collectif"
       },
       {
@@ -297,6 +296,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Schmidt, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/YFVoAg",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 28 Mars, 10h00-12h00",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/shyam-indien-generique.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/shyam.jpg",
+        name: "Atelier Indien - Poulet Korma",
+        nameCook: "Shyam",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/UeYIHp",
         type: "Atelier collectif"
       },
       {
