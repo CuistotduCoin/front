@@ -213,6 +213,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Jeudi 12 Mars, 18h00-22h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
+        name: "Etudiant - Challenge Cuisine du Monde",
+        nameCook: "Cuistot du Coin",
+        price: "Gratuit",
+        spot: "RU de Segalen, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/N44I0E",
+        type: "Challenge Etudiant"
+      },
+      {
+        availableSeat: 8,
         date: "Samedi 21 Mars, 9h30-13h30",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/ronan-macarons.jpg",
