@@ -114,20 +114,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 22 Février, 14h00-18h00",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/fabien-pain-maison.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
-        name: "Atelier Boulangerie - Pains Santé",
-        nameCook: "Fabien",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/ziKHbl",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Mercredi 26 Février, 14h00-16h00",
         duration: 2,
         image:
