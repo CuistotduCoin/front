@@ -72,63 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Samedi 22 Février, 10h00-12h00",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/farah.jpg",
-        name: "Atelier Libanais - Mezzé",
-        nameCook: "Farah",
-        price: "COMPLET",
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/f9xSFd",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 22 Février, 9h30-14h30",
-        duration: 5,
-        image: "https://static.cuistotducoin.com/img/workshops/michel-decouverte-ayurvedique.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/michel.jpg",
-        name: "Atelier Ayurvédique",
-        nameCook: "Michel",
-        price: 50,
-        spot: "Plougastel",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/zipVvC",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 22 Février, 10h00-13h00",
-        duration: 3,
-        image: "https://static.cuistotducoin.com/img/workshops/nadine-crepes-ble-noir.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier Galettes et repas",
-        nameCook: "Nadine",
-        price: 35,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/qYuFL3",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Mercredi 26 Février, 14h00-16h00",
-        duration: 2,
-        image:
-          "https://static.cuistotducoin.com/img/workshops/anne-bien-etre.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/anne.jpg",
-        name: "Enfants - Apéro en Couleur",
-        nameCook: "Anne",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/ZOkOq5",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 29 Février, 10h00-12h30",
         duration: 3,
         image: "https://static.cuistotducoin.com/img/workshops/hayet-couscous.jpg",
