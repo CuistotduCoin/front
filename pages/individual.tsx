@@ -72,34 +72,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
     const workshops = [       
       {
         availableSeat: 8,
-        date: "Samedi 29 Février, 10h00-12h30",
-        duration: 3,
-        image: "https://static.cuistotducoin.com/img/workshops/hayet-couscous.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
-        name: "Atelier Algérien - Couscous Végétarien",
-        nameCook: "Hayet",
-        price: 35,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/MXiy2V",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Samedi 29 Février, 14h00-16h00",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/nadine-crepes-froment.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/nadine.jpg",
-        name: "Atelier Crêpes et tartinades",
-        nameCook: "Nadine",
-        price: 30,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/xRqk8B",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 7 Mars, 9h30-13h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/ronan-tarte-citron-meringuee.jpg",
