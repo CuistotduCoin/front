@@ -300,6 +300,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
+        date: "Samedi 16 Mai, 10h00-12h00",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/audrey-choux.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
+        name: "Atelier Enfants - Choux dans tous ses états",
+        nameCook: "Audrey",
+        price: 30,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/eRK9cZ",
+        type: "Atelier collectif"
+      }
+      {
+        availableSeat: 8,
         date: "Samedi 16 Mai, 14h00-18h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/fabien-viennoiseries.jpg",
