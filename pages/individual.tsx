@@ -86,20 +86,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 7 Mars, 14h00-16h00",
-        duration: 2,
-        image: "https://static.cuistotducoin.com/img/workshops/audrey-cookies.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/audrey.jpg",
-        name: "Atelier Enfants - Cookies",
-        nameCook: "Audrey",
-        price: 30,
-        spot: "Cuisinella, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/achsz6",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 7 Mars, 14h00-18h00",
         duration: 4,
         image: "https://static.cuistotducoin.com/img/workshops/fabien-petits-gateaux.jpg",
@@ -111,6 +97,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/TiLPJU",
         type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Jeudi 12 Mars, 18h00-22h00",
+        duration: 4,
+        image: "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
+        name: "Etudiant - Challenge Cuisine du Monde",
+        nameCook: "Cuistot du Coin",
+        price: "Gratuit",
+        spot: "RU de Segalen, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/N44I0E",
+        type: "Challenge Etudiant"
       },
       {
         availableSeat: 8,
@@ -128,17 +128,31 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Jeudi 12 Mars, 18h00-22h00",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
-        name: "Etudiant - Challenge Cuisine du Monde",
-        nameCook: "Cuistot du Coin",
-        price: "Gratuit",
-        spot: "RU de Segalen, Brest",
+        date: "Samedi 14 Mars, 10h00-12h30",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/takako-sushis.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Atelier Japonais - Sushis&Cie",
+        nameCook: "Takako",
+        price: 50,
+        spot: "Schmidt, Brest",
         totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/N44I0E",
-        type: "Challenge Etudiant"
+        typeform: "https://cuistotducoin.typeform.com/to/rU5z3h",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 14 Mars, 16h00-18h30",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/takako-repas.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/takako.jpg",
+        name: "Atelier Japonais - Gyozas",
+        nameCook: "Takako",
+        price: 50,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/mLjDu7",
+        type: "Atelier collectif"
       },
       {
         availableSeat: 8,
