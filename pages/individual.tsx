@@ -86,34 +86,6 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
       },
       {
         availableSeat: 8,
-        date: "Samedi 7 Mars, 14h00-18h00",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/fabien-petits-gateaux.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/fabien.jpg",
-        name: "Atelier Boulangerie - Petits Gâteaux",
-        nameCook: "Fabien",
-        price: 50,
-        spot: "Schmidt, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/TiLPJU",
-        type: "Atelier collectif"
-      },
-      {
-        availableSeat: 8,
-        date: "Jeudi 12 Mars, 18h00-22h00",
-        duration: 4,
-        image: "https://static.cuistotducoin.com/img/workshops/cuistot-du-coin-challenge.jpg",
-        imageCook: "https://static.cuistotducoin.com/img/cooks/cuistot-du-coin.jpg",
-        name: "Etudiant - Challenge Cuisine du Monde",
-        nameCook: "Cuistot du Coin",
-        price: "Gratuit",
-        spot: "RU de Segalen, Brest",
-        totalSeat: 8,
-        typeform: "https://cuistotducoin.typeform.com/to/N44I0E",
-        type: "Challenge Etudiant"
-      },
-      {
-        availableSeat: 8,
         date: "Samedi 14 Mars, 10h00-12h00",
         duration: 2,
         image: "https://static.cuistotducoin.com/img/workshops/farah-mezze.jpg",
@@ -209,6 +181,20 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         spot: "Cuisinella, Brest",
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/UeYIHp",
+        type: "Atelier collectif"
+      },
+      {
+        availableSeat: 8,
+        date: "Samedi 28 Mars, 16h00-18h00",
+        duration: 2,
+        image: "https://static.cuistotducoin.com/img/workshops/hayet-couscous.jpg",
+        imageCook: "https://static.cuistotducoin.com/img/cooks/hayet.jpg",
+        name: "Atelier Algérien - Couscous Végétarien",
+        nameCook: "Hayet",
+        price: 35,
+        spot: "Cuisinella, Brest",
+        totalSeat: 8,
+        typeform: "https://cuistotducoin.typeform.com/to/MXiy2V",
         type: "Atelier collectif"
       },
       {
@@ -311,7 +297,7 @@ class Individual extends React.Component<IIndividualProps, IIndividualState> {
         totalSeat: 8,
         typeform: "https://cuistotducoin.typeform.com/to/eRK9cZ",
         type: "Atelier collectif"
-      }
+      },
       {
         availableSeat: 8,
         date: "Samedi 16 Mai, 14h00-18h00",
