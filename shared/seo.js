@@ -5,25 +5,22 @@ const meta = {
   account: {
     noindex: true
   },
-  "our-cook": {
+  "our-cooks": {
     description: "Partagez votre talent et transmettez votre savoir-faire",
     href: "https://www.cuistotducoin.com/become-cook",
     title: "Rejoignez la communauté des cuistots de Cuistot du Coin",
-    metaDescription:
-      "Partagez votre talent et transmettez votre savoir-faire",
+    metaDescription: "Partagez votre talent et transmettez votre savoir-faire",
     metaTitle: "Rejoignez la communauté des cuistots de Cuistot du Coin"
   },
   "our-places": {
     description: "Partagez votre talent et transmettez votre savoir-faire",
     href: "https://www.cuistotducoin.com/become-partner",
     title: "Rejoignez la communauté des partenaires de Cuistot du Coin",
-    metaDescription:
-      "Partagez votre talent et transmettez votre savoir-faire",
+    metaDescription: "Partagez votre talent et transmettez votre savoir-faire",
     metaTitle: "Rejoignez la communauté des partenaires de Cuistot du Coin"
   },
   breakfast: {
-    description:
-      "Petit déjeuner sur mesure aux saveurs d’ici et d’ailleurs !",
+    description: "Petit déjeuner sur mesure aux saveurs d’ici et d’ailleurs !",
     href: "https://www.cuistotducoin.com/breakfast",
     title:
       "Le traiteur qui fait voyager vos papilles pour un événements qui vous ressemble",
@@ -33,18 +30,19 @@ const meta = {
   },
   cater: {
     href: "https://www.cuistotducoin.com/cater",
-    title: "Le traiteur qui fait voyager vos papilles pour un événement d'entreprise qui vous ressemble",
-    description: "Cuistot du coin intervient pour toutes vos réceptions professionnelles ",
+    title:
+      "Le traiteur qui fait voyager vos papilles pour un événement d'entreprise qui vous ressemble",
+    description:
+      "Cuistot du coin intervient pour toutes vos réceptions professionnelles ",
     metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
-    metaDescription: "Le traiteur qui vous accompagne pour que vos événements soient uniques"
-
+    metaDescription:
+      "Le traiteur qui vous accompagne pour que vos événements soient uniques"
   },
   charter: {
     description: "Les engagements des cuistots du réseau cuistotducoin.com",
     href: "https://www.cuistotducoin.com/charter",
     title: "Charte de qualité de Cuistot du Coin",
-    metaDescription:
-      "Les engagements des cuistots du réseau cuistotducoin.com",
+    metaDescription: "Les engagements des cuistots du réseau cuistotducoin.com",
     metaTitle: "Charte de qualité de Cuistot du Coin"
   },
   cocktail: {
@@ -62,10 +60,12 @@ const meta = {
     title: "Organisation de vos événements d'entreprise",
     metaTitle: "",
     description: "Donnez une autre saveur à vos événements",
-    metaDescription: "Faites voyager les papilles le temps d'un grand événement d'entreprise",
+    metaDescription:
+      "Faites voyager les papilles le temps d'un grand événement d'entreprise"
   },
   faq: {
-    description: "Voici les questions les plus fréquemment posées par nos utilisateurs.",
+    description:
+      "Voici les questions les plus fréquemment posées par nos utilisateurs.",
     href: "https://www.cuistotducoin.com/faq",
     metaDescription:
       "Nos réponses détaillées à propos des services de Cuistot du coin",
@@ -73,12 +73,21 @@ const meta = {
     metaTitle: "Foire à Questions de Cuistot du coin "
   },
   index: {
-    description: "Traiteur et restauration d'entreprise / Événementiel / Activité teambuilding",
+    description:
+      "Traiteur et restauration d'entreprise / Événementiel / Activité teambuilding",
     href: "https://www.cuistotducoin.com",
     metaDescription:
       "Réunissez votre équipe autour d'un événement Cuistot du Coin pour améliorer la collaboration de votre entreprise",
     title: "Nourrissez votre ",
-    titleLoop: ["équipe", "culture d'entreprise", "réputation", "collaboration", "créativité", "bonheur au travail", "diversité"],
+    titleLoop: [
+      "équipe",
+      "culture d'entreprise",
+      "réputation",
+      "collaboration",
+      "créativité",
+      "bonheur au travail",
+      "diversité"
+    ],
     metaTitle: `Cuistot du Coin : Organisateur d'événements culinaires`
   },
   individual: {
@@ -133,7 +142,8 @@ const meta = {
     metaDescription:
       "Découvrez les prix de nos prestations aussi bien pour les particuliers que pour les entreprises",
     title: "Réunissez votre équipe pour un repas qu'ils adoreront.",
-    metaTitle: "Réunissez votre équipe pour un repas qu'ils adoreront. - Cuistot du coin"
+    metaTitle:
+      "Réunissez votre équipe pour un repas qu'ils adoreront. - Cuistot du coin"
   },
   "reset-password-request": {
     noindex: true
@@ -156,18 +166,20 @@ const meta = {
   },
   teambuilding: {
     href: "https://www.cuistotducoin.com/teambuilding",
-    title: "Une activité teambuilding savoureuse et sur mesure pour vos salariés",
-    description: "Partagez une expérience conviviale en équipe aux côtés de Cuistots passionnés ",
+    title:
+      "Une activité teambuilding savoureuse et sur mesure pour vos salariés",
+    description:
+      "Partagez une expérience conviviale en équipe aux côtés de Cuistots passionnés ",
     metaTitle: "Réalisez une activité de cohésion avec vos équipes !",
-    metaDescription: "Réunissez vos équipes autour d'un atelier culinaire fédérateur"
+    metaDescription:
+      "Réunissez vos équipes autour d'un atelier culinaire fédérateur"
   },
   terms: {
     noindex: true,
     title: "Conditions générales de vente"
   },
   testimony: {
-    description:
-      "Découvrez les témoignages sur nos prestations en entreprises",
+    description: "Découvrez les témoignages sur nos prestations en entreprises",
     href: "https://www.cuistotducoin.com/testimony",
     metaDescription:
       "Retrouvez ici les avis de nos clients sur leurs événements d'entreprise réalisés par Cuistot du Coin",

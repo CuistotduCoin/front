@@ -120,7 +120,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     const partners = [
       {
         title: "Nos chefs Cuistots",
-        link: "/our-cook"
+        link: "/our-cooks"
       },
       {
         title: "Nos lieux partenaires",
@@ -294,7 +294,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     <Link href={"/services"} passHref>
                       <Button
                         aria-owns={
-                          this.state.anchorElMenuServices ? "simple-menu-services" : undefined
+                          this.state.anchorElMenuServices
+                            ? "simple-menu-services"
+                            : undefined
                         }
                         aria-haspopup="true"
                         onMouseOver={this.handlePopoverOpenMenuServices}
@@ -323,7 +325,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     </Menu>
                     <Button
                       aria-owns={
-                        this.state.anchorElMenuPartners ? "simple-menu-partners" : undefined
+                        this.state.anchorElMenuPartners
+                          ? "simple-menu-partners"
+                          : undefined
                       }
                       aria-haspopup="true"
                       onMouseOver={this.handlePopoverOpenMenuPartners}

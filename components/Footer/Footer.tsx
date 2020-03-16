@@ -104,7 +104,7 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 >
                   + sur Cuistot du Coin
                 </Typography>
-                <Link href="/our-cook" className={classes.subheading}>
+                <Link href="/our-cooks" className={classes.subheading}>
                   Devenir Cuistot
                 </Link>
                 <Link href="/our-places" className={classes.subheading}>
