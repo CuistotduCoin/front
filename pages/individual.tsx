@@ -10,8 +10,7 @@ export default function individual() {
           Cuistot du coin & Covid-19
         </Typography>
         <Typography variant="h5" align="center" component="h3" gutterBottom>
-          Pour cause de covid-19, notre activité d'atelier de cuisine est
-          suspendue jusqu'a nouvel ordre
+          Pour cause de covid-19, notre activité d'atelier de cuisine est suspendue jusqu'a nouvel ordre
         </Typography>
       </Container>
     </Layout>

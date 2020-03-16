@@ -276,8 +276,7 @@ export default function index() {
           entreprise
         </Typography>
         <Typography variant="h5" align="center" component="h3" gutterBottom>
-          Que ce soit pour un événement ponctuel ou des prestations récurrentes,
-          nos Cuistot du coin sont la pour vous.
+          Que ce soit pour un événement ponctuel ou des prestations récurrentes, nos Cuistot du coin sont la pour vous.
         </Typography>
         <Grid
           container
