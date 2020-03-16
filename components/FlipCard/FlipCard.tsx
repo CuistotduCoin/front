@@ -2,6 +2,8 @@ import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 
 // https://codepen.io/ArashRasteh/pen/QmgeLL
+// https://codepen.io/nicolamihaita/pen/zKXAOW
+// TODO : La carte "tremble" lorsqu'on bouge le curseur sur le contenu de la carte.
 const styles = () => ({
   container: {
     backgroundColor: "transparent",

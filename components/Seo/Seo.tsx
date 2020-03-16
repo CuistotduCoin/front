@@ -42,7 +42,8 @@ export class Seo extends React.Component<ISeoProps, {}> {
         ],
         locale: "fr_FR",
         site_name: "Cuistot du Coin",
-        title: "Atelier de cuisine pour particuliers et entreprises",
+        title:
+          "Activité teambuilding - traiteur et restauration d'entreprise - Événementiel",
         type: "website",
         url: "https://www.cuistotducoin.com"
       },

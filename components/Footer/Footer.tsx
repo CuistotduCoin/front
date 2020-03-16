@@ -5,7 +5,6 @@ import Grid from "@material-ui/core/Grid";
 import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Facebook from "mdi-material-ui/Facebook";
-import GiftOutline from "mdi-material-ui/GiftOutline";
 import Instagram from "mdi-material-ui/Instagram";
 import Linkedin from "mdi-material-ui/Linkedin";
 import Twitter from "mdi-material-ui/Twitter";
@@ -65,28 +64,28 @@ export class Footer extends React.Component<IFooterProps, {}> {
                   className={classes.title}
                   color="primary"
                 >
-                  Traiteur
+                  Nos services
                 </Typography>
-                <Link href="/testimony" className={classes.subheading}>
-                  Témoignages
+                <Link href="/team-and-mission" className={classes.subheading}>
+                  Équipe & Mission
                 </Link>
-                <Link href="/become-cook" className={classes.subheading}>
-                  Devenir Partenaires
+                <Link href="/recurring-cohesion" className={classes.subheading}>
+                  Cohésion toute l'année
+                </Link>
+                <Link href="/cater" className={classes.subheading}>
+                  Traiteur
+                </Link>
+                <Link href="/event" className={classes.subheading}>
+                  Evenementiel
+                </Link>
+                <Link href="/teambuilding" className={classes.subheading}>
+                  Atelier Teambuilding
                 </Link>
                 <Link href="/invite" className={classes.subheading}>
                   Parrainage
                 </Link>
-                <LinkMui
-                  href="https://faq.cuistotducoin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.subheading}
-                >
+                <Link href="/faq" className={classes.subheading}>
                   Questions Fréquentes
-                </LinkMui>
-                <Link href="/gift" className={classes.subheading}>
-                  <GiftOutline fontSize="small" titleAccess="carte cadeau" />
-                  Carte Cadeau
                 </Link>
               </Grid>
             </Grid>
@@ -105,11 +104,14 @@ export class Footer extends React.Component<IFooterProps, {}> {
                 >
                   + sur Cuistot du Coin
                 </Typography>
-                <Link href="/team-and-mission" className={classes.subheading}>
-                  Équipe & Mission
+                <Link href="/our-cook" className={classes.subheading}>
+                  Devenir Cuistot
+                </Link>
+                <Link href="/our-places" className={classes.subheading}>
+                  Devenir Lieu partenaire
                 </Link>
                 <Link href="/join" className={classes.subheading}>
-                  Nous rejoindre
+                  Rejoindre l'équipe de Cuistot du coin
                 </Link>
                 <Link href="/presskit" className={classes.subheading}>
                   Contact & Presse

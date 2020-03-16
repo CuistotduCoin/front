@@ -21,7 +21,6 @@ import AccountDropdown from "../../components/AccountDropdown";
 import Link from "../../components/Link";
 import Logo from "../../components/Logo";
 
-
 const styles = (theme: Theme) => ({
   appBar: {
     background:
@@ -53,8 +52,8 @@ interface IHeaderProps {
 
 interface IHeaderState {
   up?: boolean;
-  anchorElIndividual: HTMLElement;
-  anchorElBusiness: HTMLElement;
+  anchorElMenuServices: HTMLElement;
+  anchorElMenuPartners: HTMLElement;
   swipeDrawerOpen: boolean;
 }
 
@@ -64,8 +63,8 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
 
     this.state = {
       up: true,
-      anchorElIndividual: null,
-      anchorElBusiness: null,
+      anchorElMenuServices: null,
+      anchorElMenuPartners: null,
       swipeDrawerOpen: false
     };
 
@@ -103,44 +102,30 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
   public render() {
     const { classes, isLoggedIn } = this.props;
 
-    const productsB2C = [
+    const services = [
       {
-        title: "Ateliers privatifs",
-        link: "/individual?tabName=private",
-        linkAs: "/individual/private"
+        title: "Traiteur",
+        link: "/cater"
       },
       {
-        title: "Ateliers collectif",
-        link: "/individual?tabName=collective",
-        linkAs: "/individual/collective"
+        title: "Evenementiel",
+        link: "/event"
       },
       {
-        title: "Cuistot à domicile",
-        link: "/individual?tabName=privatecook",
-        linkAs: "/individual/privatecook"
-      },
-      { title: "Carte cadeau", link: "/gift", linkAs: "/gift" }
+        title: "Atelier Teambuilding",
+        link: "/teambuilding"
+      }
     ];
 
-    const productsB2B = [
+    const partners = [
       {
-        title: "Ateliers teambuilding",
-        link: "/teambuilding",
-        linkAs: "/teambuilding"
+        title: "Nos chefs Cuistots",
+        link: "/our-cook"
       },
       {
-        title: "Cocktails et réceptions",
-        link: "/cocktail-business",
-        linkAs: "/cocktail-business"
-      },
-      {
-        title: "Pauses gourmandes & Petit déjeunez",
-        link: "/breakfast",
-        linkAs: "/breakfast"
-      },
-      { title: "Repas à table", link: "/lunch", linkAs: "/lunch" },
-      { title: "Lunch Box", link: "/lunch", linkAs: "/lunch" },
-      { title: "Buffet", link: "/lunch", linkAs: "/lunch" }
+        title: "Nos lieux partenaires",
+        link: "/our-places"
+      }
     ];
 
     const sideList = () => (
@@ -153,15 +138,34 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         <List
           subheader={
             <ListSubheader component="div" id="nested-list-subheader">
-              Pour les particuliers
+              Nos services
             </ListSubheader>
           }
         >
-          {productsB2C.map((product, index) => (
+          <Link href={"/current-offer"}>
+            <ListItem button>
+              <ListItemText primary="Offre du moment" />
+            </ListItem>
+          </Link>
+          <Link href={"/recurring-cohesion"}>
+            <ListItem button>
+              <ListItemText primary="Cohésion toute l'année" />
+            </ListItem>
+          </Link>
+        </List>
+        <Divider />
+        <List
+          subheader={
+            <ListSubheader component="div" id="nested-list-subheader">
+              Nos services
+            </ListSubheader>
+          }
+        >
+          {services.map((service, index) => (
             <React.Fragment key={index}>
-              <Link href={product.link} as={product.linkAs}>
-                <ListItem button key={product.title}>
-                  <ListItemText primary={product.title} />
+              <Link href={service.link}>
+                <ListItem button key={service.title}>
+                  <ListItemText primary={service.title} />
                 </ListItem>
               </Link>
             </React.Fragment>
@@ -171,13 +175,13 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
         <List
           subheader={
             <ListSubheader component="div" id="nested-list-subheader">
-              Pour les entreprises
+              Nos partenaires
             </ListSubheader>
           }
         >
-          {productsB2B.map((product, index) => (
+          {partners.map((product, index) => (
             <React.Fragment key={index}>
-              <Link href={product.link} as={product.linkAs}>
+              <Link href={product.link}>
                 <ListItem button key={product.title}>
                   <ListItemText primary={product.title} />
                 </ListItem>
@@ -185,6 +189,12 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
             </React.Fragment>
           ))}
         </List>
+        <Divider />
+        <Link href={"/"}>
+          <ListItem button>
+            <ListItemText primary="Pour les particuliers" />
+          </ListItem>
+        </Link>
       </div>
     );
 
@@ -263,73 +273,98 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                     </Grid>
                   </Link>
                   <Hidden mdDown>
+                    <Link color="secondary" href={"/current-offer"} passHref>
+                      <Button
+                        className={classes.button}
+                        variant="outlined"
+                        color="secondary"
+                      >
+                        Offre du moment
+                      </Button>
+                    </Link>
+                    <Link href={"recurring-cohesion"} passHref>
+                      <Button
+                        className={classes.button}
+                        variant="outlined"
+                        color="primary"
+                      >
+                        Cohésion toute l'année
+                      </Button>
+                    </Link>
+                    <Link href={"/services"} passHref>
+                      <Button
+                        aria-owns={
+                          this.state.anchorElMenuServices ? "simple-menu-services" : undefined
+                        }
+                        aria-haspopup="true"
+                        onMouseOver={this.handlePopoverOpenMenuServices}
+                        className={classes.button}
+                        variant="outlined"
+                        color="primary"
+                      >
+                        Nos prestations
+                      </Button>
+                    </Link>
+                    <Menu
+                      id="simple-menu-services"
+                      anchorEl={this.state.anchorElMenuServices}
+                      open={Boolean(this.state.anchorElMenuServices)}
+                      MenuListProps={{ onMouseLeave: this.handleCloseServices }}
+                      onClose={this.handleCloseServices}
+                      getContentAnchorEl={null}
+                    >
+                      {services.map((service, index) => (
+                        <Link key={index} href={service.link}>
+                          <ListItem button key={service.title}>
+                            <ListItemText primary={service.title} />
+                          </ListItem>
+                        </Link>
+                      ))}
+                    </Menu>
                     <Button
                       aria-owns={
-                        this.state.anchorElBusiness
-                          ? "simple-menu-individual"
-                          : undefined
+                        this.state.anchorElMenuPartners ? "simple-menu-partners" : undefined
                       }
                       aria-haspopup="true"
-                      onMouseOver={this.handlePopoverOpenIndividual}
+                      onMouseOver={this.handlePopoverOpenMenuPartners}
                       className={classes.button}
                       variant="outlined"
                       color="primary"
                     >
-                      Pour les particuliers
+                      Nos partenaires
                     </Button>
-                  </Hidden>
-                  <Menu
-                    id="simple-menu-individual"
-                    anchorEl={this.state.anchorElIndividual}
-                    open={Boolean(this.state.anchorElIndividual)}
-                    MenuListProps={{ onMouseLeave: this.handleClose }}
-                    onClose={this.handleClose}
-                    getContentAnchorEl={null}
-                  >
-                    {productsB2C.map((product, index) => (
-                      <Link key={index} href={product.link} as={product.linkAs}>
-                        <ListItem button key={product.title}>
-                          <ListItemText primary={product.title} />
-                        </ListItem>
-                      </Link>
-                    ))}
-                  </Menu>
-                  <Hidden mdDown>
-                    <Button
-                      aria-owns={
-                        this.state.anchorElBusiness
-                          ? "simple-menu-business"
-                          : undefined
-                      }
-                      aria-haspopup="true"
-                      onMouseOver={this.handlePopoverOpenBusiness}
-                      className={classes.button}
-                      variant="outlined"
-                      color="primary"
+                    <Menu
+                      id="simple-menu-partners"
+                      anchorEl={this.state.anchorElMenuPartners}
+                      open={Boolean(this.state.anchorElMenuPartners)}
+                      MenuListProps={{ onMouseLeave: this.handleClosePartners }}
+                      onClose={this.handleClosePartners}
+                      getContentAnchorEl={null}
                     >
-                      Pour les entreprises
-                    </Button>
+                      {partners.map((product, index) => (
+                        <Link key={index} href={product.link}>
+                          <ListItem button key={product.title}>
+                            <ListItemText primary={product.title} />
+                          </ListItem>
+                        </Link>
+                      ))}
+                    </Menu>
                   </Hidden>
-                  <Menu
-                    id="simple-menu-business"
-                    anchorEl={this.state.anchorElBusiness}
-                    open={Boolean(this.state.anchorElBusiness)}
-                    MenuListProps={{ onMouseLeave: this.handleClose }}
-                    onClose={this.handleClose}
-                    getContentAnchorEl={null}
-                  >
-                    {productsB2B.map((product, index) => (
-                      <Link key={index} href={product.link} as={product.linkAs}>
-                        <ListItem button key={product.title}>
-                          <ListItemText primary={product.title} />
-                        </ListItem>
-                      </Link>
-                    ))}
-                  </Menu>
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container justify="flex-start">
+                  <Hidden mdDown>
+                    <Link href={"/individual"} color="textPrimary" passHref>
+                      <Button
+                        className={classes.button}
+                        variant="outlined"
+                        color="default"
+                      >
+                        Pour les particuliers
+                      </Button>
+                    </Link>
+                  </Hidden>
                   <LinkMui href="tel:06 79 59 88 48">
                     <Button
                       className={classes.button}
@@ -350,20 +385,24 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     );
   }
 
-  private handlePopoverOpenIndividual = (
+  private handlePopoverOpenMenuPartners = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    this.setState({ anchorElIndividual: event.currentTarget });
+    this.setState({ anchorElMenuPartners: event.currentTarget });
   };
 
-  private handlePopoverOpenBusiness = (
+  private handleClosePartners = () => {
+    this.setState({ anchorElMenuPartners: null });
+  };
+
+  private handlePopoverOpenMenuServices = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    this.setState({ anchorElBusiness: event.currentTarget });
+    this.setState({ anchorElMenuServices: event.currentTarget });
   };
 
-  private handleClose = () => {
-    this.setState({ anchorElIndividual: null, anchorElBusiness: null });
+  private handleCloseServices = () => {
+    this.setState({ anchorElMenuServices: null });
   };
 }
 

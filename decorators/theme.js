@@ -17,9 +17,9 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    color: "rgba(0, 0, 0, 0.87)",
     fontFamily: "Advent Pro",
-    fontSize: 16,
-    color: "rgba(0, 0, 0, 0.87)"
+    fontSize: 15
   }
 });
 

@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Seo from "../../components/Seo";
 import metaInfo from "../../shared/seo";
+import TextLoop from "react-text-loop";
 
 const styles = () => ({
   container: {
@@ -23,6 +24,7 @@ interface ILayoutProps {
   classes: any;
   component: any;
   title?: string;
+  titleLoop?: [string];
   description?: string;
   children: any;
   className?: string;
@@ -60,6 +62,28 @@ export class Layout extends React.Component<ILayoutProps, {}> {
       }
     }
 
+    let titleLoop;
+    if (this.props.titleLoop) {
+      titleLoop = this.props.titleLoop;
+    } else {
+      if (metaInfo[cleanPath] && metaInfo[cleanPath].titleLoop) {
+        titleLoop = metaInfo[cleanPath].titleLoop;
+      }
+    }
+
+    const valueProposition = (
+      <>
+        {title}
+        {titleLoop && (
+          <TextLoop>
+            {titleLoop.map((loop, index) => (
+              <span key={index}>{loop}</span>
+            ))}
+          </TextLoop>
+        )}
+      </>
+    );
+
     let description: string;
     if (this.props.description) {
       description = this.props.description;
@@ -78,7 +102,7 @@ export class Layout extends React.Component<ILayoutProps, {}> {
             {!noHero && (
               <Hero
                 imageURL="https://static.cuistotducoin.com/img/home/landing.jpg"
-                valueProposition={title}
+                valueProposition={valueProposition}
                 description={description}
               >
                 {component}

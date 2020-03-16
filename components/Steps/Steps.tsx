@@ -3,11 +3,10 @@ import { Theme, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 
-
 const styles = (theme: Theme) => ({
   padding: {
     padding: theme.spacing(2)
-  },
+  }
 });
 
 interface IStepsProps {
@@ -19,7 +18,7 @@ interface IStepsProps {
 export class Steps extends React.Component<IStepsProps, {}> {
   public render() {
     const { classes, steps, columns } = this.props;
-    let sm = 4
+    let sm = 4;
 
     if (columns === 4) {
       sm = 3;
@@ -31,34 +30,34 @@ export class Steps extends React.Component<IStepsProps, {}> {
 
     return (
       <>
-        {
-          steps.map((step, key) => (
-            // @ts-ignore
-            <Grid item xs={12} sm={sm} key={key}>
+        {steps.map((step, key) => (
+          // @ts-ignore
+          <Grid item xs={12} sm={sm} key={key}>
+            <Grid
+              container
+              justify="space-between"
+              alignItems="flex-start"
+              className={classes.padding}
+            >
               <Grid
                 container
-                justify="space-between"
-                alignItems="flex-start"
+                justify="space-around"
+                alignItems="center"
                 direction="column"
-                className={classes.padding}
               >
                 {step.icon}
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                >
+                <Typography variant="h6" component="h3" gutterBottom>
                   {step.title}
                 </Typography>
-                {step.content &&
-                  <Typography variant="body1" align="justify">
+                {step.content && (
+                  <Typography align="justify" variant="body1">
                     {step.content}
                   </Typography>
-                }
+                )}
               </Grid>
             </Grid>
-          ))
-        }
+          </Grid>
+        ))}
       </>
     );
   }
