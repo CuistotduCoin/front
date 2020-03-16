@@ -107,7 +107,7 @@
 		"react-docgen-typescript-webpack-plugin": "^1.1.0",
 		"serverless": "^1.66.0",
 		"serverless-next.js": "^1.9.4",
-		"sitemap": "^6.1.0",
+		"sitemap": "^5.1.0",
 		"sw-precache-webpack-plugin": "^0.11.5",
 		"ts-node": "^8.6.2",
 		"typescript": "^3.8.3",
