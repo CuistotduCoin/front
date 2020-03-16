@@ -142,6 +142,13 @@ const meta = {
 	'sign-up': {
 		noindex: true,
 	},
+	'taylored-event': {
+		href: 'https://www.cuistotducoin.com/taylored-event',
+		title: 'Evenement sur mesure',
+		description: `Evenement sur mesure`,
+		metaTitle: `Evenement sur mesure`,
+		metaDescription: 'Evenement sur mesure',
+	},
 	'team-and-mission': {
 		href: 'https://www.cuistotducoin.com/team-and-mission',
 		title: "Découvrez l'équipe et la mission de Cuistot du Coin",

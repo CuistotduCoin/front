@@ -92,8 +92,8 @@ export default function events() {
 					événementielle Cuistot du coin se chargera de vous trouver le lieu idéal, du service traiteur et même des animations !
 				</Typography>
 				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
-					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
-						Demander un devis !
+					<Button variant="contained" color="secondary" href="/taylored-event">
+						En savoir plus
 					</Button>
 				</Grid>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
