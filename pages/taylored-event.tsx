@@ -59,6 +59,7 @@ export default function events() {
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					...
+				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Les autres services Cuistot du Coin
 				</Typography>
