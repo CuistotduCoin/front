@@ -84,7 +84,7 @@ class Testimony extends React.Component<ITestimonyProps, {}> {
 
 		return (
 			<Layout position="absolute" color="secondary">
-				<Container maxWidth="lg">
+				<Container>
 					<Typography variant="h2" align="center" component="h2" gutterBottom className={classes.title}>
 						ILS NOUS FONT CONFIANCE
 					</Typography>
@@ -111,7 +111,7 @@ class Testimony extends React.Component<ITestimonyProps, {}> {
 						))}
 					</Container>
 					<Typography align="center">Et d'autres encore...</Typography>
-					<Grid container justify="space-around" spacing={2} className={classes.grid}>
+					<Grid container justify="space-around" className={classes.grid}>
 						{generalTestimonies.map((testimonie, key) => (
 							<Box boxShadow={1} key={key} className={classes.box}>
 								<img src={testimonie.image} />

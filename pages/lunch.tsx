@@ -63,18 +63,19 @@ export default function lunch() {
 	const steps = [
 		{
 			icon: <CompassOutline fontSize="large" />,
-			title: 'Originalité',
-			content: 'Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque cocktail est une invitation au voyage.',
+			title: 'Des recettes de saison et originales',
+			content:
+				'Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Tout est préparé par nos Chefs Cuistots avec des produits frais et de saison.',
 		},
 		{
 			icon: <AccountMultiple fontSize="large" />,
-			title: 'Convivialité',
-			content: 'Dégustez les préparations de nos cuistots en toute simplicité. Privilégiez ainsi les échanges lors de repas décontractés et chaleureux.',
+			title: 'Stop au gaspillage',
+			content: `Vous avez jusqu'à 3 jours à l'avance pour changer le nombre de participants et obtenir le nombre juste de repas. Pour le format "family style", nous utilisons de la véritable vaisselle. Pour le format individuel, le contenant est recyclable. `,
 		},
 		{
 			icon: <EmoticonCool fontSize="large" />,
 			title: 'Sérénité',
-			content: 'Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous.',
+			content: 'Nous nous occupons de l’organisation de A à Z. Faîtes-nous part de vos attentes et régalez-vous.  ',
 		},
 	];
 
@@ -90,12 +91,22 @@ export default function lunch() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Vous préférez vous réunir à table et déguster des recettes chaudes ou froides ?
+					Réunissez vous en toute convivialité
+				</Typography>
+				<Typography variant="h4" align="center" component="h3" gutterBottom>
+					Favoriser la diversité
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Vous préférez vous réunir à table et déguster des recettes chaudes ou froides ?
+					Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Chaque repas est une invitation au voyage.
+				</Typography>
+				<Typography variant="h4" align="center" component="h3" gutterBottom>
+					Favoriser la cohésion
+				</Typography>
+				<Typography variant="h5" align="justify" component="p" gutterBottom>
+					Manger ensemble donne à votre équipe un sentiment de communauté et d'appartenance. C'est pourquoi la restauration de bureau Cuistot du coin se concentre sur des
+					repas de style familial qui encouragent le dialogue.
 				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos 3 formules de repas à table
@@ -110,8 +121,7 @@ export default function lunch() {
 					Format "Family Style"
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Il s'agit du format le plus convivial, nous servons les préparations dans de grands plats et chacun se sert ce qu'il veut ! - Format individuel : Nous vous
-					livrons votre menu dans des contenants individuels recyclables.
+					Il s'agit du format le plus convivial : nous servons les préparations dans de grands plats et chacun se sert à sa convenance !
 				</Typography>
 				<Typography variant="h4" align="center" component="h3" gutterBottom>
 					Format individuel
@@ -122,7 +132,7 @@ export default function lunch() {
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos engagements qualité
 				</Typography>
-				<Grid container justify="space-around" alignItems="flex-start" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="flex-start" className={classes.grid}>
 					<Steps steps={steps} />
 				</Grid>
 			</Container>

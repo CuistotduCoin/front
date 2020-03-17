@@ -15,7 +15,7 @@ export default function ourCook() {
 
 	return (
 		<Layout>
-			<Container maxWidth="lg" className={classes.container}>
+			<Container className={classes.container}>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					La nourriture est au coeur de notre entreprise, le choix de nos Chefs Cuistots est primordial pour nous. C'est pourquoi nous avons sélectionner des
 				</Typography>

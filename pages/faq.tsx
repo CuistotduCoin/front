@@ -18,7 +18,7 @@ export default function faq() {
 
 	return (
 		<Layout>
-			<Container maxWidth="lg" className={classes.container}>
+			<Container className={classes.container}>
 				<FAQ faqList={faqList} />
 			</Container>
 		</Layout>

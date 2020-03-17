@@ -50,19 +50,11 @@ export default function popUpStation() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Vous souhaitez trouver une animation originale pour vos soirées d'entreprises ? Alors voici nos animations d'entreprises pour vos événements d'entreprise.
+					Vous souhaitez trouver une animation originale pour vos soirées d'entreprises ? Découvrez nos animations d'entreprises pour vos événements d'entreprise.
 				</Typography>
-				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Nos Challenges Culinaires
-				</Typography>
-				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Un concours culinaire comme dans les cuisines de Top Chef, c’est maintenant possible en entreprise ! Vos collaborateurs auront 1h top chrono' pour relever le
-					défi : cuisiner les meilleurs plats et les plus beaux dressages ! A partir de 20 collaborateurs, organisez une animation inédite et accessible à tous ! Nous
-					pouvons également nous charger de trouver un lieu pour votre groupe.
-				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>
@@ -71,10 +63,11 @@ export default function popUpStation() {
 					Nos Bars à ...
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Envie d'une animation originale et gourmande ? Nous dressons des bars à ... Jus, cocktail, crêpes, sushis etc. Nous assurons le service à réalisons la
-					personnalisation que chaque convives désirent !
+					Envie d'une animation originale et gourmande ? Nous dressons des bars à ... Jus, cocktail, crêpes, sushis etc. Nous assurons le service et réalisons la
+					personnalisation que chaque convive désire ! Les convives échangent avec nos cuistots passionnés et se régalent de bons conseils et de délicieux mets avec leurs
+					collaborateurs. L'occasion de se plonger dans des univers culinaires colorés et qui invitent au voyage !
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>

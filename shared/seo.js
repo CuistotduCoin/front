@@ -20,9 +20,9 @@ const meta = {
 		metaTitle: 'Rejoignez la communauté des partenaires de Cuistot du Coin',
 	},
 	breakfast: {
-		description: 'Petit déjeuner sur mesure aux saveurs d’ici et d’ailleurs !',
+		description: 'Nos pauses gourmandes sont idéales pour les petits-déjeuners, les pauses cafés ou encore les goûters.',
 		href: 'https://www.cuistotducoin.com/breakfast',
-		title: 'Le traiteur qui fait voyager vos papilles pour un événements qui vous ressemble',
+		title: 'Petit déjeuner sur mesure aux saveurs d’ici et d’ailleurs !',
 		metaDescription: 'Le traiteur qui vous accompagne pour que vos événements soient uniques',
 		metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
 	},

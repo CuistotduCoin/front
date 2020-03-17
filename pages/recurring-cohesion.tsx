@@ -112,7 +112,7 @@ export default function recurringCohesion() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
 					Pourquoi de la cohésion toute l'année ?
 				</Typography>
@@ -122,19 +122,19 @@ export default function recurringCohesion() {
 				<Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
 					Des avantages en plus
 				</Typography>
-				<Grid container justify="space-around" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" className={classes.grid}>
 					<Steps steps={avantages} columns={3} />
 				</Grid>
 				<Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
 					Une offre complète, customisable et variée
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<StaticSteper steps={stepsFAQ} />
 				</Grid>
 				<Typography variant="h3" align="center" component="h2" className={classes.typography} gutterBottom>
 					La proposition type de Cuistot du coin
 				</Typography>
-				<Grid container justify="space-around" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" className={classes.grid}>
 					<Steps steps={products} columns={6} />
 				</Grid>
 			</Container>

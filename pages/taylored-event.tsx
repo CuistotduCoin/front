@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme: Theme) =>
 			maxWidth: 1080,
 			padding: theme.spacing(3),
 		},
+		button: {
+			marginTop: theme.spacing(5),
+			marginBottom: theme.spacing(2),
+		},
 	}),
 );
 
@@ -23,14 +27,25 @@ export default function events() {
 
 	return (
 		<Layout>
-			<Container maxWidth="lg" className={classes.container}>
+			<Container className={classes.container}>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Vous souhaitez organiser un événement pour votre entreprise mais vous n'avez pas le temps de vous occupez de tous les détails... Et si Cuistot du Coin
+					Vous souhaitez organiser un événement pour votre entreprise et être accompagné pour vous garantir de la réussite de votre temps-fort. Et si Cuistot du Coin
 					s'occupait de tout ?
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
+					</Button>
+				</Grid>
+				<Typography variant="h3" align="center" component="h2" gutterBottom>
+					Nos Prestations événementielles
+				</Typography>
+				<Typography variant="h5" align="center" component="p" gutterBottom>
+					Une agence événementielle 2.0 à Brest, où la nourriture et le partage sont au centre de vos événements.
+				</Typography>
+				<Grid container justify="space-around" alignItems="center">
+					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank" className={classes.button}>
+						Obtenir un devis
 					</Button>
 				</Grid>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
@@ -38,43 +53,39 @@ export default function events() {
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					Le traiteur est au cœur de notre entreprise et de vos événements ! Nous vous préparerons des assortiments de tapas salées et sucrées selon vos envies grâce à
-					nos Chefs Cuistot originaires des 4 coins du monde. Vous pourrez également découvrir des boissons artisanales, des vins de nos partenaires ou encore du thé et
-					café issus de l'agriculture biologique.
+					nos Chefs Cuistots originaires des 4 coins du monde. Leurs préparations sous divers formats se prêteront au rythme que vous envisagez pour votre événement. Vous
+					pourrez également découvrir des boissons artisanales, des vins de nos partenaires ou encore du thé et café issus de l'agriculture biologique.
 				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Les animations
+					Des animations pour privilégier le partage
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Vous souhaitez trouver une animation originale pour vos soirées d'entreprises ? Choisissons ensemble votre prochaine animation pour votre événement.
+					Vous souhaitez trouver une animation originale pour vos soirées d'entreprises ? Vous recherchez une activité qui plaise à tous et qui fédère vos équipes. Nous
+					pouvons vous proposer 2 animations : - Nos bars à ... crêpes, cocktail, jus, tapas, etc. - Nos challenges culinaires (comme dans le cuisine de Top Chef)
 				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					La location de lieu, vaisselles
+					Un accueil dans nos lieux chaleureux
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Nous avons une liste de lieux partenaires qui peuvent s'adapter à toutes les tailles de groupe. Si vous n'avez pas de vaisselle et de verres à disposition, nous
-					pouvons nous occuper de tout apporter sur le lieu de votre événement puis de la reprise.
+					Nos lieux partenaires peuvent s'adapter à toutes les tailles de groupes et à diverses occasions : lofts privatisés, salles lumineuses et spacieuses, lieux
+					d'exception, ... Nous assurons également la location et la reprise de matériel nécessaires pour votre événement.
 				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Décoration & Scénographie
+					Implication de nos équipes
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					...
+					Faîtes-nous part de l'ambiance souhaitée pour votre événement et nous assurerons une cohérence entre la sélection du lieu, notre service traiteur et la
+					décoration apportée pour rendre votre événement unique et mémorable ! Nous mobilisons nos équipes sur place si nécessaire pour assurer le service et vous
+					apportez toute la pérennité voulue.
 				</Typography>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Les autres services Cuistot du Coin
+					Une démarche éco-responsable
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Nous livrons et reprenons tout sur place, effectuons également la mise en place du buffet ainsi que le nappage et décoration. Si vous le souhaitez nous pouvons
-					également effectuer le service.
+					Nous avons à cœur de réduire l'impact écologique de nos prestations. Pour cela, nos travaillons exclusivement avec des partenaires locaux. Toutes nos recettes
+					sont de saison et nous utilisons également des contenants recyclables, des bonbonnières pour les boissons et limitons le gaspillage alimentaire.
 				</Typography>
-				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					L'aspect écologique sur nos prestations
-				</Typography>
-				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Nous avons à coeur de réduire l'impact de nos prestations. Pour cela, toutes nos recettes sont de saison mais nous utilisons également des contenants
-					recyclables, des bonbonnières pour les boissons mais également des éco-cup.
-				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>

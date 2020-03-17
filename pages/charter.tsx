@@ -24,7 +24,7 @@ export class Charter extends React.Component<ICharterProps, {}> {
 
 		return (
 			<Layout>
-				<Grid container justify="space-around" alignItems="center" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Content components={components} />
 				</Grid>
 			</Layout>

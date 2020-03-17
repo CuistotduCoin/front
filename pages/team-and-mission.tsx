@@ -15,7 +15,7 @@ export default function teamAndMission() {
 
 	return (
 		<Layout>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					L'équipe de Cuistot du coin
 				</Typography>
@@ -63,7 +63,7 @@ export default function teamAndMission() {
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Envie d'en savoir plus ?
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="/faq">
 						Consultez notre FAQ !
 					</Button>

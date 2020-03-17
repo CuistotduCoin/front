@@ -85,7 +85,7 @@ export default function teambuilding() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					Partagez une expérience de team building qui conviendra à tous les membres de votre équipe. Pas besoin de compétence en cuisine, il s'agit avant tout d'un
 					moment convivial qui permet de solidifier l'esprit d'équipe !
@@ -111,7 +111,7 @@ export default function teambuilding() {
 					clé du succès. A partir de 20 personnes et jusqu'à 200 personnes, nos challenges conviennent à tous les types de groupe. Vos équipes sont divisés en petits
 					groupes et devrons élaborez les meilleures recettes et réalisez le plus beau dressage en 1H top chrono !
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>

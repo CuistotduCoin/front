@@ -25,12 +25,12 @@ export default function seminar() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					Besoin de réunir votre équipe ou vos collaborateurs lors d'une journée spéciale du genre :<br />
 					séminaire, réunion, journée team building, journée d'entreprise, journée des employés etc.
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>

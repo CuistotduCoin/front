@@ -73,7 +73,7 @@ export default function cocktail() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					Nos assortiments de tapas salées et sucrées sont idéales pour tous vos cocktails, réceptions et autres rassemblements !
 				</Typography>
@@ -84,7 +84,7 @@ export default function cocktail() {
 					Nous concoctons pour vous un assortiment de tapas salées et sucrées : de saison, frais et savoureux ! A partir de 3€/personne Nous recommandons 5 tapas par
 					personnes dans le cadre d'un cocktail déjeunatoire ou dînatoire (en général 4 tapas salées et 1 tapas sucrée)
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>
@@ -92,7 +92,7 @@ export default function cocktail() {
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos engagements qualité
 				</Typography>
-				<Grid container justify="space-around" alignItems="flex-start" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="flex-start" className={classes.grid}>
 					<Steps steps={steps} />
 				</Grid>
 			</Container>

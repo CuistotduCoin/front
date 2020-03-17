@@ -70,7 +70,7 @@ export default function events() {
 
 	return (
 		<Layout>
-			<Container maxWidth="lg" className={classes.container}>
+			<Container className={classes.container}>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Cuistot du Coin, organisateur événementiel d'entreprise.
 				</Typography>
@@ -81,7 +81,7 @@ export default function events() {
 					Une agence événementielle 2.0 à Brest, en plus d'avoir des lieux partenaires, nous sommes expert dans la food ! Le traiteur et l'animation culinaire sont au
 					cœur de notre entreprise. Un merveilleux cocktail pour inviter vos collaborateurs à un voyager lors de vos événements et vos animations
 				</Typography>
-				<Grid container justify="space-around" alignItems="flex-start" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="flex-start" className={classes.grid}>
 					<Steps steps={steps} />
 				</Grid>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
@@ -97,7 +97,7 @@ export default function events() {
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					todo
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>
@@ -108,7 +108,7 @@ export default function events() {
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					todo
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<FlipCardList listCard={products} />
 				</Grid>
 			</Container>

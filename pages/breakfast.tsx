@@ -22,7 +22,7 @@ export default function breakfast() {
 			icon: <CompassOutline fontSize="large" />,
 			title: 'Des tapas de saison et originales',
 			content:
-				'Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Tout est préparé par nos Chefs Cuistots avec des produits frais et de saison. ',
+				'Réveillez vos papilles en dégustant des recettes authentiques aux couleurs de la cuisine du monde. Tout est préparé par nos Chefs Cuistots avec des produits frais et de saison.',
 		},
 		{
 			icon: <AccountMultiple fontSize="large" />,
@@ -49,19 +49,17 @@ export default function breakfast() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
-				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Nos pauses gourmandes sont idéales pour les petits-déjeuners, les pauses cafés ou encore les goûters.
-				</Typography>
+			<Container>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Notre offre sucrée
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Nous concoctons pour vous un assortiment de tapas sucrées : de saison, frais et savoureux ! Voici quelques exemple de ce que nous proposons : pancakes, muffins
-					aux fruits de saison, gâteaux maison, banana bread, carrot cake, biscuits à la noisette, crinkles au citron ou au chocolat, brioches, cookies etc. Assortiment à
-					partir de 5€ par personne
+					Nous concoctons pour vous un assortiment de tapas sucrées : de saison, frais et qui invite à la convivialité !<br />
+					Voici quelques exemples de ce que nous proposons : pancakes, muffins aux fruits de saison, gâteaux maison, banana bread, carrot cake, biscuits à la noisette,
+					crinkles au citron ou au chocolat, brioches, cookies, etc. <br />
+					Assortiment à partir de 5€ par personne
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 						Demander un devis !
 					</Button>
@@ -69,7 +67,7 @@ export default function breakfast() {
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos engagements qualité
 				</Typography>
-				<Grid container justify="space-around" alignItems="flex-start" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="flex-start" className={classes.grid}>
 					<Steps steps={steps} />
 				</Grid>
 			</Container>

@@ -25,7 +25,7 @@ export default function invite() {
 				</Grid>
 			}
 		>
-			<Container maxWidth="lg">
+			<Container>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
 					Votre fidélité est récompensée grâce à la mise en place de notre programme de fidélité à destination des entreprises. Découvrez nos 2 programmes avantage :
 				</Typography>

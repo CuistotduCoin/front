@@ -26,7 +26,7 @@ class Terms extends React.Component<ITermsProps, {}> {
 
 		return (
 			<Layout>
-				<Grid container justify="space-around" alignItems="center" spacing={2} className={classes.grid}>
+				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Content components={components} />
 					<Content2 components={components} />
 				</Grid>

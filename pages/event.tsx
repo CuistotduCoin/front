@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		container: {
 			padding: theme.spacing(3),
+			overflow: 'hidden',
 		},
 		typography: {
 			marginTop: 15,
