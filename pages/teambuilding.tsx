@@ -2,6 +2,10 @@ import { Button, Container, Grid, Typography } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import PricingCardList from '../components/PricingCardList';
+import Steps from '../components/Steps';
+import AccountMultiple from 'mdi-material-ui/AccountMultiple';
+import CompassOutline from 'mdi-material-ui/CompassOutline';
+import EmoticonCool from 'mdi-material-ui/EmoticonCoolOutline';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -39,37 +43,38 @@ export default function teambuilding() {
 		{
 			title: 'Atelier initiation',
 			price: '30',
-			description: [
-				`1H d'atelier festif`,
-				`Réalisation de recettes simples et rapides`,
-				`Défis culinaires en équipe`,
-				'Ingrédients et matériel fournis',
-				'Tabliers et livrets de recettes fournis',
-			],
+			description: [`1H d'atelier avec l'un de nos Chefs Cuistot`, `Réalisation de petites recettes à partager`],
 			buttonText: 'Obtenir un devis',
 		},
 		{
 			title: 'Atelier découverte',
 			price: '50',
-			description: [
-				`2H d'atelier cuisine du monde ou technique`,
-				`Préparation de tapas salées et sucrées dégustées en fin d'atelier`,
-				'Ingrédients et matériel fournis',
-				'Tabliers et livrets de recettes fournis',
-			],
+			description: [`2H d'atelier avec l'un de nos Chefs Cuistot`, `Préparation de tapas salées et sucrées puis dégustation en fin d'atelier`],
 			buttonText: 'Obtenir un devis',
 		},
 		{
 			title: 'Atelier immersion',
 			price: '65',
-			description: [
-				`3H d'atelier cuisine du monde`,
-				`Préparation d'un repas dégusté en fin d'atelier`,
-				`Boissons incluses`,
-				'Ingrédients et matériel fournis',
-				'Tabliers et livrets de recettes fournis',
-			],
+			description: [`3H d'atelier avec l'un de nos Chefs Cuistot`, `Préparation d'un repas (entrée + plat + dessert)`, `Puis dégustation autour de la table`],
 			buttonText: 'Obtenir un devis',
+		},
+	];
+
+	const steps = [
+		{
+			icon: <CompassOutline fontSize="large" />,
+			title: 'Motiver',
+			content: 'La motivation de vos équipes est déterminante pour apporter une dynamique individuelle et collective. Le plus qui fera aussi la différence.',
+		},
+		{
+			icon: <AccountMultiple fontSize="large" />,
+			title: 'Fidéliser',
+			content: 'La fidélisation de vos clients et de vos collaborateurs est vitale pour développer et pérenniser durablement vos relations commerciales et managériales.',
+		},
+		{
+			icon: <EmoticonCool fontSize="large" />,
+			title: 'Créer le lien',
+			content: `Le capital humain est au cœur de toute stratégie d’entreprise et doit se révéler à travers un fil conducteur essentiel : échange et partage.`,
 		},
 	];
 
@@ -87,9 +92,12 @@ export default function teambuilding() {
 		>
 			<Container>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Partagez une expérience de team building qui conviendra à tous les membres de votre équipe. Pas besoin de compétence en cuisine, il s'agit avant tout d'un
+					Partagez une expérience de team building qui conviendra à tous les membres de votre équipe. Pas besoin de compétences en cuisine, il s'agit avant tout d'un
 					moment convivial qui permet de solidifier l'esprit d'équipe !
 				</Typography>
+				<Grid container justify="space-around">
+					<Steps steps={steps} />
+				</Grid>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos formules de Team Building
 				</Typography>
@@ -97,8 +105,11 @@ export default function teambuilding() {
 					Nos Ateliers de Cuisine
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Vos collaborateurs seront réunis auprès de nos Chefs Cuistots qui leur apprendrons des recettes authentiques. Plus de 15 univers à explorer : Cuisine de monde,
-					pâtisserie, boulangerie, cuisine healthy, ...
+					Vos collaborateurs, réunis aux côtés de nos Chefs Cuistots, découvriront des recettes originales, authentiques et qui invitent au voyage. Plus de 15 univers
+					culinaires sont à explorer : cuisine du monde, pâtisserie, boulangerie, cuisine healthy, ... Il y en a pour tous les goûts et toutes les occasions. Nos ateliers
+					se prêtent à une activité en matinée, suivie du déjeuner mais aussi à un temps convivial en afterwork. Des pettes équipes sont constituées aux côtés de nos
+					chefs cuistots pour permettre une bonne implication de chacun dans l'activité. Ne vous souciez de rien : nous prévoyons le matériel, les ingrédients, des
+					tabliers colorés pour chacun. les gourmets repartent avec le livret des recettes découvertes en atelier.
 				</Typography>
 				<Grid className={classes.grid}>
 					<PricingCardList pricing={pricing} href={'https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html'} />
@@ -107,9 +118,9 @@ export default function teambuilding() {
 					Nos Challenges Culinaires
 				</Typography>
 				<Typography variant="h5" align="justify" component="p" gutterBottom>
-					Une activité de team building originale ludique mêlant cohésion d'équipe et compétition ! Pas besoin d’être un expert en cuisine, la cohésion d’équipe sera la
-					clé du succès. A partir de 20 personnes et jusqu'à 200 personnes, nos challenges conviennent à tous les types de groupe. Vos équipes sont divisés en petits
-					groupes et devrons élaborez les meilleures recettes et réalisez le plus beau dressage en 1H top chrono !
+					Une activité de team building originale ludique mêlant collaboration et compétition ! Pas besoin d’être un expert en cuisine, la cohésion d’équipe sera la clé
+					du succès. A partir de 20 personnes et jusqu'à 200 personnes, nos challenges conviennent à tous les types de groupes. Vos équipes sont divisées en petits
+					groupes et devront élaborer les meilleures recettes et réaliser le plus beau dressage en 1H top chrono !
 				</Typography>
 				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
 					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
