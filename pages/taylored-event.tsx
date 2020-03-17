@@ -32,11 +32,6 @@ export default function events() {
 					Vous souhaitez organiser un événement pour votre entreprise et être accompagné pour vous garantir de la réussite de votre temps-fort. Et si Cuistot du Coin
 					s'occupait de tout ?
 				</Typography>
-				<Grid container justify="space-around" alignItems="center" className={classes.grid}>
-					<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
-						Demander un devis !
-					</Button>
-				</Grid>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					Nos Prestations événementielles
 				</Typography>

@@ -31,7 +31,7 @@ export default function events() {
 		{
 			icon: <CompassOutline fontSize="large" />,
 			title: 'Motiver',
-			content: 'La motivation de vos équipes est déterminante pour apporter une dynamique individuelle et collective, le plus qui fera aussi la différence.',
+			content: 'La motivation de vos équipes est déterminante pour apporter une dynamique individuelle et collective. Le plus qui fera aussi la différence !',
 		},
 		{
 			icon: <AccountMultiple fontSize="large" />,
@@ -48,22 +48,23 @@ export default function events() {
 	const products = [
 		{
 			title: "Nos journées d'équipes / Séminaires",
-			content: `Besoin de réunir votre équipe ou tous vos collaborateurs lors d'une journée spéciale (séminaire, journée team building ...) ?
+			content: `Besoin de réunir votre équipe ou tous vos collaborateurs lors d'une journée spéciale (séminaire, journée team building, ...) ?
       On vous propose:
-        - Des lieux: Salle de réunion, lieux privatisés
-      - Le traiteur : Pauses gourmandes, cocktails, repas etc.`,
+      - Nos lieux partenaires : Salle de réunion, lieux privatisés
+      - Notre service traiteur : pauses gourmandes, cocktails, repas, etc.`,
 			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
 			link: '/seminar',
 		},
 		{
 			title: 'Nos Challenges Culinaires',
-			content: `A partir de 20 collaborateurs, organisez une animation inédite et accessible à tous ! Vos collaborateurs auront 1h top chrono' pour relever le défi : cuisiner les meilleurs plats et les plus beaux dressages !`,
+			content: `A partir de 20 collaborateurs, organisez une animation inédite et accessible à tous !
+			Vos collaborateurs auront 1h top chrono' pour relever le défi : cuisinez les meilleurs plats et réalisez les plus beaux dressages ! `,
 			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
 			link: '/challenge',
 		},
 		{
 			title: 'Nos pop-up stations',
-			content: `todo`,
+			content: `Envie d'une animation originale et gourmande ? Nous dressons des bars à ... Jus, cocktail, crêpes, tapas, etc.`,
 			image: 'https://static.cuistotducoin.com/img/home/plateau-repas.jpg',
 			link: '/pop-up-station',
 		},
@@ -76,11 +77,11 @@ export default function events() {
 					Cuistot du Coin, organisateur événementiel d'entreprise.
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Pas le temps de gérer vos événements ? Notre service événementiel s'occupe de tout !<br />
-					Depuis plus d'un an nous avons organisé pas moins de <b>50 événements</b> divers tels que : Séminaires, journées d'équipe, soirées de fin d'année pour des
-					entreprises à Brest et partout dans le Finistère !<br />
-					Une agence événementielle 2.0 à Brest, en plus d'avoir des lieux partenaires, nous sommes expert dans la food ! Le traiteur et l'animation culinaire sont au
-					cœur de notre entreprise. Un merveilleux cocktail pour inviter vos collaborateurs à un voyager lors de vos événements et vos animations
+					L'organisation d'un événement en entreprise nécessite du temps et de l'énergie. Notre service événementiel s'occupe de tout pour vous apporter de la sérénité et
+					vous garantir de la réussite dans vos temps forts en interne ! Nous organisons divers événements tels que : séminaires, journées d'équipes, soirées
+					d'entreprises à Brest et partout dans le Finistère ! Acteur de l'événementiel 2.0 à Brest, nous pouvons vous accueillir dans des lieux partenaires chaleureux et
+					originaux. Le traiteur et l'animation culinaire sont de plus au cœur de notre entreprise. Un merveilleux cocktail pour inviter vos collaborateurs à un événement
+					convivial et qu'ils n'oublieront pas !
 				</Typography>
 				<Grid container justify="space-around" alignItems="flex-start" spacing={2} className={classes.grid}>
 					<Steps steps={steps} />
@@ -89,8 +90,8 @@ export default function events() {
 					Evenement sur mesure
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					Vous et votre équipe avez quelques choses à fêter ? L'anniversaire de votre entreprise, les fêtes de fin d'années, la journée des salariés etc. Notre agence
-					événementielle Cuistot du coin se chargera de vous trouver le lieu idéal, du service traiteur et même des animations !
+					Vous et votre équipe avez quelque chose à fêter ? L'anniversaire de votre entreprise, les fêtes de fin d'année, la journée des salariés, etc. Nous nous
+					chargeons du lieu, du traiteur et même des animations !
 				</Typography>
 				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
 					<Button variant="contained" color="secondary" href="/taylored-event">
@@ -101,7 +102,7 @@ export default function events() {
 					Nos services événementiels classiques
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
-					todo
+					Réunissez vos équipes le temps d'une journée, d'un séminaire ou d'un événement festif et convivial.
 				</Typography>
 				<Grid container justify="space-around" alignItems="center" className={classes.grid} spacing={2}>
 					<FlipCardList listCard={products} />
