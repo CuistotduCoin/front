@@ -140,19 +140,19 @@ export default function index() {
 
 	const howItWorks = [
 		{
-			icon: <img src="https://static.cuistotducoin.com/img/home/taking-needs.png" />,
+			icon: <img src="https://static.cuistotducoin.com/img/home/taking-needs.png" width={100} height={100} />,
 			title: '1. Vous indiquez vos besoins',
 			content:
 				'Un expert Cuistot du coin est à votre service pour recueillir votre besoin et identifier vos enjeux de cohésion, mais aussi les préférences alimentaires de vos salariés et clients.',
 		},
 		{
-			icon: <img src="https://static.cuistotducoin.com/img/home/we-cook.png" />,
+			icon: <img src="https://static.cuistotducoin.com/img/home/we-cook.png" width={100} height={100} />,
 			title: "2. La cuisine s'active",
 			content:
 				"L'équipe de Cuistot du coin s'occupe de l'organisation, de la restauration et de la cohésion, que ce soit pour une commande unique, un événement, un programme de restauration régulier ou encore un atelier de cuisine.",
 		},
 		{
-			icon: <img src="https://static.cuistotducoin.com/img/home/we-take-care.png" />,
+			icon: <img src="https://static.cuistotducoin.com/img/home/we-take-care.png" width={100} height={100} />,
 			title: "3. On s'occupe de tout",
 			content:
 				"On arrive sur le lieu de votre choix, à votre horaire et on s'occupe de tout ! Après chaque prestation, nous recueillons votre avis et des commentaires qualitatifs et quantitatifs.",
