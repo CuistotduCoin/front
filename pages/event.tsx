@@ -52,20 +52,20 @@ export default function events() {
       On vous propose:
       - Nos lieux partenaires : Salle de réunion, lieux privatisés
       - Notre service traiteur : pauses gourmandes, cocktails, repas, etc.`,
-			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
+			image: 'https://static.cuistotducoin.com/img/event/event-journee-equipe-flipcard.jpg',
 			link: '/seminar',
 		},
 		{
 			title: 'Nos Challenges Culinaires',
 			content: `A partir de 20 collaborateurs, organisez une animation inédite et accessible à tous !
 			Vos collaborateurs auront 1h top chrono' pour relever le défi : cuisinez les meilleurs plats et réalisez les plus beaux dressages ! `,
-			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
+			image: 'https://static.cuistotducoin.com/img/event/event-challenge-flipcard.jpg',
 			link: '/challenge',
 		},
 		{
 			title: 'Nos pop-up stations',
 			content: `Envie d'une animation originale et gourmande ? Nous dressons des bars à ... Jus, cocktail, crêpes, tapas, etc.`,
-			image: 'https://static.cuistotducoin.com/img/home/plateau-repas.jpg',
+			image: 'https://static.cuistotducoin.com/img/event/event-paragraphe-animation.jpg',
 			link: '/pop-up-station',
 		},
 	];

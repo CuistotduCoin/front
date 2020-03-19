@@ -29,25 +29,25 @@ export default function cater() {
 		{
 			title: 'Cocktail / Reception',
 			content: 'Cuistot du Coin propose un assortiment de tapas du monde pour vos cocktails dînatoires ou déjeunatoires ou toutes autres réceptions.',
-			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
+			image: 'https://static.cuistotducoin.com/img/cater/cocktail-flipcard.jpg',
 			link: '/cocktail',
 		},
 		{
 			title: 'Repas (Family Style)',
 			content: `Vous souhaitez plutôt manger à table ? Dans ce cas, choisissez l'une de nos 2 formules : Format "Family Style" à partager ou format individuel.`,
-			image: 'https://static.cuistotducoin.com/img/home/plateau-repas.jpg',
+			image: 'https://static.cuistotducoin.com/img/cater/repas-flipcard.jpg',
 			link: '/lunch',
 		},
 		{
 			title: 'Pause gourmande',
 			content: 'Préparation de tapas sucrées pour vos pauses, vos petits-déjeuner ou vos goûters. Service de jus artisanaux et boissons chaudes bio.',
-			image: 'https://static.cuistotducoin.com/img/home/repas-a-table.jpg',
+			image: 'https://static.cuistotducoin.com/img/cater/pause-gourmande-flipcard.jpg',
 			link: '/breakfast',
 		},
 		{
 			title: 'Pop Up station / Animation',
 			content: `Envie d'une animation originale lors de vos événements ou réceptions ? Nous pouvons nous occuper de dresser et tenir des : bar à crêpes, bar à tapas, bar à cocktails et bien plus encore !`,
-			image: 'https://static.cuistotducoin.com/img/home/repas-a-table.jpg',
+			image: 'https://static.cuistotducoin.com/img/cater/popup-station-flipcard.jpg',
 			link: '/pop-up-station',
 		},
 	];
@@ -67,7 +67,7 @@ export default function cater() {
 		{
 			icon: <EmoticonCool fontSize="large" />,
 			title: 'Une démarche éco-responsable',
-			content: `Dans un aspect écologique, nous limitons les déchets sur toutes nos prestations. Aussi, tous nos contenants sont réutilisables, compostables ou recyclables :) Nous mettons à la disposition des convives des box à l'issue de nos prestations pour limiter le gaspillage alimentaire et faire des heureux !`,
+			content: `Nous limitons les déchets sur toutes nos prestations. Tous nos contenants sont réutilisables, compostables ou recyclables :) Nous mettons à la disposition des convives des box à l'issue de nos prestations pour limiter le gaspillage alimentaire et faire des heureux !`,
 		},
 	];
 
@@ -89,7 +89,7 @@ export default function cater() {
 					</Container>
 				</section>
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
-					Nos prestations traiteurs
+					Nos prestations traiteur
 				</Typography>
 				<Typography variant="h5" align="center" component="p" gutterBottom>
 					Nos équipes vous proposent divers services traiteur pour rythmer vos journées et éveillez vos papilles !

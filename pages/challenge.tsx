@@ -62,7 +62,6 @@ export default function events() {
 					</Grid>
 				</Container>
 			</section>
-
 			<section className={classes.block}>
 				<Container>
 					<Grid container>

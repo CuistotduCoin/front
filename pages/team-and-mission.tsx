@@ -25,7 +25,7 @@ export default function teamAndMission() {
 					et d'authenticités grâce à la cuisine. Après ce voyage d’une année, ils ont décidés de poser leurs bagages en Bretagne (leurs terres d’origines !) afin de
 					recréer ces moments uniques. C’est maintenant à nous de vous faire voyager les papilles.
 				</Typography>
-				<img src="https://static.cuistotducoin.com/img/team/anaelle-and-romain.jpg" alt="anaelle-and-romain" height="24" width="40" />
+				<img src="https://static.cuistotducoin.com/img/team/anaelle-and-romain.jpg" alt="anaelle-and-romain" height="600" width="337" />
 				<Typography variant="h3" align="center" component="h2" gutterBottom>
 					La mission de Cuistot du Coin
 				</Typography>
