@@ -33,6 +33,13 @@ const meta = {
 		metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
 		metaDescription: 'Le traiteur qui vous accompagne pour que vos événements soient uniques',
 	},
+	challenge: {
+		href: 'https://www.cuistotducoin.com/challenge',
+		title: 'Challenge culinaire',
+		description: 'Une activité clé en main',
+		metaTitle: 'Challenge culinaire',
+		metaDescription: 'Les engagements des cuistots du réseau cuistotducoin.com',
+	},
 	charter: {
 		description: 'Les engagements des cuistots du réseau cuistotducoin.com',
 		href: 'https://www.cuistotducoin.com/charter',
@@ -46,6 +53,13 @@ const meta = {
 		metaTitle: "Traiteur pour vos événements d'entreprise dans le finistère",
 		description: 'Cocktails déjeunatoires ou dinatoires sur mesure aux saveurs d’ici et d’ailleurs !',
 		metaDescription: 'Le traiteur qui vous accompagne pour que vos événements soient uniques',
+	},
+	'current-offer': {
+		href: 'https://www.cuistotducoin.com/current-offer',
+		title: 'Nos offres traiteur du moment',
+		metaTitle: '',
+		description: 'Accordez vos événements internes aux événements culinaires du moment',
+		metaDescription: "Faites voyager les papilles le temps d'un grand événement d'entreprise",
 	},
 	event: {
 		href: 'https://www.cuistotducoin.com/event',

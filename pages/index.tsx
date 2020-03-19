@@ -28,49 +28,40 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		blockHowItWorks: {
 			backgroundColor: '#66666',
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 		},
 		blockCharter: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 		},
 		button: {
-			marginTop: theme.spacing(5),
-			marginBottom: theme.spacing(2),
+			margin: theme.spacing(5, 2),
 		},
 		blockIntro: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 		},
 		blockServices: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 			background: `linear-gradient(to right bottom, ${green[500]}, ${lightGreen[200]})`,
 		},
 		blockFollow: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 			background: `linear-gradient(to right bottom, ${lightGreen[500]}, ${green[200]})`,
 		},
 		marginLeft: {
 			marginLeft: 75,
 		},
 		blockSales: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 			background: `linear-gradient(to right bottom, ${red[500]}, ${pink[200]})`,
 		},
 		marginLeftMax: {
 			marginLeft: 125,
 		},
 		blockTestimony: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 		},
 		blockFAQ: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 			background: `linear-gradient(to right bottom, ${teal[200]}, ${lightGreen[200]})`,
 		},
 		marginRight: {
@@ -201,7 +192,7 @@ export default function index() {
 						Nos prestations
 					</Typography>
 					<Typography variant="h5" align="center" component="p" gutterBottom>
-						Cuistot du Coin se mobilise sur divers événements en entreprise . Nous facilitons le quotidien de vos collaborateurs en apportant ses services traiteur pour
+						Cuistot du Coin se mobilise sur divers événements en entreprise . Nous facilitons le quotidien de vos collaborateurs en apportant nos services traiteur pour
 						de petites et grandes occasions. Nous vous invitons à proposer des activités fédératrices pour renforcer la cohésion et le partage. Nous sommes aussi votre
 						interlocuteur unique pour l'organisation d'événements de plus grande ampleur.
 					</Typography>

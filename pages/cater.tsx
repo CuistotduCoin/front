@@ -17,8 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			padding: theme.spacing(3),
 		},
 		blockService: {
-			paddingTop: theme.spacing(5),
-			paddingBottom: theme.spacing(2),
+			padding: theme.spacing(5, 2),
 		},
 	}),
 );
