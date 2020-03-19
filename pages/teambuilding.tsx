@@ -109,7 +109,7 @@ export default function teambuilding() {
 					culinaires sont à explorer : cuisine du monde, pâtisserie, boulangerie, cuisine healthy, ... Il y en a pour tous les goûts et toutes les occasions. Nos ateliers
 					se prêtent à une activité en matinée, suivie du déjeuner mais aussi à un temps convivial en afterwork. Des pettes équipes sont constituées aux côtés de nos
 					chefs cuistots pour permettre une bonne implication de chacun dans l'activité. Ne vous souciez de rien : nous prévoyons le matériel, les ingrédients, des
-					tabliers colorés pour chacun. les gourmets repartent avec le livret des recettes découvertes en atelier.
+					tabliers colorés pour chacun. Les gourmets repartent avec le livret des recettes découvertes en atelier.
 				</Typography>
 				<Grid className={classes.grid}>
 					<PricingCardList pricing={pricing} href={'https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html'} />

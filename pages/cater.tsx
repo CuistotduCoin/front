@@ -40,7 +40,7 @@ export default function cater() {
 		},
 		{
 			title: 'Pause gourmande',
-			content: 'Préparation de tapas sucrées pour vos pauses, vos petits-déjeuner ou vos goûters. Service de jus artisanaux et boissons chaudes bio.',
+			content: 'Préparation de tapas sucrées pour vos pauses, vos petits-déjeuners ou vos goûters. Service de jus artisanaux et boissons chaudes bio.',
 			image: 'https://static.cuistotducoin.com/img/cater/pause-gourmande-flipcard.jpg',
 			link: '/breakfast',
 		},

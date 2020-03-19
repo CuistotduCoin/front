@@ -58,7 +58,7 @@ export default function events() {
 		{
 			title: 'Nos Challenges Culinaires',
 			content: `A partir de 20 collaborateurs, organisez une animation inédite et accessible à tous !
-			Vos collaborateurs auront 1h top chrono' pour relever le défi : cuisinez les meilleurs plats et réalisez les plus beaux dressages ! `,
+			Vos collaborateurs auront 1h top chrono' pour relever le défi : cuisiner les meilleurs plats et réaliser les plus beaux dressages ! `,
 			image: 'https://static.cuistotducoin.com/img/event/event-challenge-flipcard.jpg',
 			link: '/challenge',
 		},
