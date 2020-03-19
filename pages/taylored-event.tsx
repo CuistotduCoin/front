@@ -115,28 +115,6 @@ export default function events() {
 				<Container>
 					<Grid container>
 						<Grid item xs={12} lg={6} className={classes.gridSpacing}>
-							<Typography variant="h3" align="center" component="h2" gutterBottom>
-								Une démarche éco-responsable
-							</Typography>
-							<Typography variant="h5" align="center" component="p" gutterBottom>
-								Nous avons à cœur de réduire l'impact écologique de nos prestations. Pour cela, nos travaillons exclusivement avec des partenaires locaux. Toutes nos
-								recettes sont de saison et nous utilisons également des contenants recyclables, des bonbonnières pour les boissons et limitons le gaspillage alimentaire.
-							</Typography>
-						</Grid>
-						<Grid item xs={12} lg={6} className={classes.gridSpacing}>
-							<Hidden smDown>
-								<Grid container justify="space-around" alignItems="center">
-									<img src="https://static.cuistotducoin.com/img/taylored-event/eco-resp.jpg" height={400} width={568} alt="eco-resp" />
-								</Grid>
-							</Hidden>
-						</Grid>
-					</Grid>
-				</Container>
-			</section>
-			<section className={classes.block}>
-				<Container>
-					<Grid container>
-						<Grid item xs={12} lg={6} className={classes.gridSpacing}>
 							<Hidden smDown>
 								<Grid container justify="space-around" alignItems="center">
 									<img src="https://static.cuistotducoin.com/img/taylored-event/equipe.jpg" height={400} width={568} alt="equipe" />
@@ -158,6 +136,28 @@ export default function events() {
 						<Button variant="contained" color="secondary" href="https://landbot.io/u/H-214796-F8FY3NT3A55SSFET/index.html" target="_blank">
 							Demander un devis !
 						</Button>
+					</Grid>
+				</Container>
+			</section>
+			<section className={classes.block}>
+				<Container>
+					<Grid container>
+						<Grid item xs={12} lg={6} className={classes.gridSpacing}>
+							<Typography variant="h3" align="center" component="h2" gutterBottom>
+								Une démarche éco-responsable
+							</Typography>
+							<Typography variant="h5" align="center" component="p" gutterBottom>
+								Nous avons à cœur de réduire l'impact écologique de nos prestations. Pour cela, nos travaillons exclusivement avec des partenaires locaux. Toutes nos
+								recettes sont de saison et nous utilisons également des contenants recyclables, des bonbonnières pour les boissons et limitons le gaspillage alimentaire.
+							</Typography>
+						</Grid>
+						<Grid item xs={12} lg={6} className={classes.gridSpacing}>
+							<Hidden smDown>
+								<Grid container justify="space-around" alignItems="center">
+									<img src="https://static.cuistotducoin.com/img/taylored-event/eco-resp.jpg" height={400} width={568} alt="eco-resp" />
+								</Grid>
+							</Hidden>
+						</Grid>
 					</Grid>
 				</Container>
 			</section>
