@@ -121,19 +121,19 @@ export default function index() {
 		{
 			title: 'Traiteur',
 			content: 'Découvrez nos services traiteur pour diverses occasions : pauses gourmandes, repas ou encore cocktails.',
-			image: 'https://static.cuistotducoin.com/img/home/breakfast.jpg',
+			image: 'https://static.cuistotducoin.com/img/home/traiteur-flipcard.jpg',
 			link: '/cater',
 		},
 		{
 			title: 'Evenementiel',
 			content: `Nous nous chargeons d'organiser des événements sur mesure pour vos collaborateurs`,
-			image: 'https://static.cuistotducoin.com/img/home/plateau-repas.jpg',
+			image: 'https://static.cuistotducoin.com/img/home/event-flipcard.jpg',
 			link: '/event',
 		},
 		{
 			title: 'Atelier Teambuilding',
 			content: 'Proposez une activité fédératrice et qui plaira à tous.',
-			image: 'https://static.cuistotducoin.com/img/home/repas-a-table.jpg',
+			image: 'https://static.cuistotducoin.com/img/home/atelier-flipcard.jpg',
 			link: '/teambuilding',
 		},
 	];
