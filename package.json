@@ -51,6 +51,7 @@
 		"react-instantsearch-dom": "^6.4.0",
 		"react-instantsearch-dom-maps": "^6.4.0",
 		"react-intl": "^4.1.1",
+		"react-images": "^0.5.19",
 		"react-mailchimp-subscribe": "^2.1.0",
 		"react-photo-gallery": "^8.0.0",
 		"react-scroll": "^1.7.16",
